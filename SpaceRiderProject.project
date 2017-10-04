@@ -8,22 +8,27 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
-    <File Name="main.cpp"/>
-    <File Name="IMovingGameObject.h" ExcludeProjConfig=""/>
-    <File Name="IMovingGameObject.cpp" ExcludeProjConfig=""/>
-    <File Name="IGameCharacter.h" ExcludeProjConfig=""/>
-    <File Name="IGameCharacter.cpp" ExcludeProjConfig=""/>
-    <File Name="PlayerLogic.h" ExcludeProjConfig=""/>
-    <File Name="PlayerLogic.cpp" ExcludeProjConfig=""/>
-    <File Name="GameCommonData.h" ExcludeProjConfig=""/>
-    <File Name="PlayerPresentation.h"/>
-    <File Name="PlayerPresentation.cpp"/>
-    <File Name="GameLogic.h"/>
-    <File Name="GameLogic.cpp"/>
-    <File Name="GameWindow.h"/>
-    <File Name="GameWindow.cpp"/>
-    <File Name="CreateWindow.cpp"/>
-    <File Name="CreateWindow.h"/>
+    <File Name="main.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="IMovingGameObject.h" ExcludeProjConfig="Debug"/>
+    <File Name="IMovingGameObject.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="IGameCharacter.h" ExcludeProjConfig="Debug"/>
+    <File Name="IGameCharacter.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerLogic.h" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerLogic.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="GameCommonData.h" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerPresentation.h" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerPresentation.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="GameLogic.h" ExcludeProjConfig="Debug"/>
+    <File Name="GameLogic.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="GameWindow.h" ExcludeProjConfig="Debug"/>
+    <File Name="GameWindow.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="CreateWindow.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="CreateWindow.h" ExcludeProjConfig="Debug"/>
+    <File Name="EnemyLogic.h" ExcludeProjConfig=""/>
+    <File Name="EnemyLogic.cpp" ExcludeProjConfig=""/>
+    <File Name="EnemyPresentation.h" ExcludeProjConfig=""/>
+    <File Name="EnemyPresentation.cpp" ExcludeProjConfig=""/>
+    <File Name="TestingEnemyLayers.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
@@ -37,10 +42,10 @@
     </GlobalSettings>
     <Configuration Name="Debug" CompilerType="MinGW ( TDM-GCC-32 )" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
-        <IncludePath Value="C:\Users\User\Documents\SoftwareDev2Project\SpaceRiderProject\include"/>
+        <IncludePath Value="C:\Users\William\Documents\ELEN3009\SpaceRiderProject\include"/>
       </Compiler>
       <Linker Options="" Required="yes">
-        <LibraryPath Value="C:\Users\User\Documents\SoftwareDev2Project\SpaceRiderProject\lib"/>
+        <LibraryPath Value="C:\Users\William\Documents\ELEN3009\SpaceRiderProject\lib"/>
         <Library Value="sfml-audio"/>
         <Library Value="sfml-graphics"/>
         <Library Value="sfml-window"/>

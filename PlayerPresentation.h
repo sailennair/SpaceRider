@@ -16,7 +16,7 @@ public:
 
     Sprite getPlayer();
 
-    void draw(RenderWindow& window);
+    void draw(RenderWindow& window, int xPos, int yPos);
 
 private:
     Texture _playerSpaceshipTexture;
