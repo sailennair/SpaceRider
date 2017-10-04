@@ -20,7 +20,7 @@ public:
    virtual void moveLeftY() = 0;
    virtual void moveRightX() = 0;
    virtual void moveRightY() = 0;
-   virtual void setAngleofRotation(int angle) = 0;
+   virtual float getAngleofRotation() = 0;
    virtual bool isAlive() = 0;
    virtual int getXposition() =0;
    virtual int getYposition() =0;

@@ -2,7 +2,9 @@
 #define GAMELOGIC_H
 
 #include "PlayerLogic.h"
-
+#include <memory>
+#include <vector>
+#include "PlayerBullet.h"
 class GameLogic
 {
 public:
@@ -10,10 +12,21 @@ public:
 
     void playerUpdate(Direction dir);
     
-     PlayerLogic player;
+    void createPlayerBullet();
+    
+    void playerBulletUpdate();
+    
+    vector<PlayerBullet> getPlayerLogicBullets();
+
+    PlayerLogic getPlayerLogic();
 
 private:
-   
+ 
+ PlayerLogic player;
+ 
+ 
+ vector<PlayerBullet> playerBulletLogicVector;
+ 
 };
 
 #endif // GAMELOGIC_H

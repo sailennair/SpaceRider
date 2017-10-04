@@ -2,25 +2,20 @@
 
 GameWindow::GameWindow()
 {
-    GameLogic _gameLogic();
+   
     GamePresentation _gamePresentation();
-    CreateWindow _createGameWindow();
+    
+   
+   
 }
 
-void GameWindow::checkEvent()
-{
-    //for(auto i = 0; i < 10; i++) {
-        _gameLogic.playerUpdate(Direction::LEFT);
-   // }
-}
+
 
 void GameWindow::generateWindow()
 {
     sf::RenderWindow _window(sf::VideoMode(GameXWindow, GameYWindow), "My Window");
    
-   rectangle.setSize(Vector2f(20,20));
-   rectangle.setFillColor(sf::Color::Blue);
-   rectangle.setPosition(300,300);
+  
     _window.setVerticalSyncEnabled(true);
     
     
@@ -33,19 +28,49 @@ void GameWindow::generateWindow()
                 _window.close();
                 break;
             }
+            if(event.key.code == sf::Keyboard::A){
+                _direction = Direction::LEFT;
+                 checkKeyBoardEvent();
+            }
+            
+            if (event.key.code == sf::Keyboard::D){
+                _direction = Direction::RIGHT;
+                 checkKeyBoardEvent();
+            }
+            
+            if(event.key.code == sf::Keyboard::Space){
+                firePlayerBullet();
+            }
+            
         }
-        checkEvent();
+        
+       
         _window.clear(sf::Color::Black);
         renderCharacters(_window);
-          //_window.draw(rectangle);
-        _window.display();
+         _window.display();
        
      
     }
 }
 
 void GameWindow::renderCharacters(RenderWindow &window){
-    window.draw(rectangle);
+   
     _gamePresentation.renderSprite(window);
     
 }
+
+void GameWindow::checkKeyBoardEvent()
+{
+       _gamePresentation.gameLogic_shared_pointer->playerUpdate(_direction);
+       _gamePresentation.upDatePosition();
+      _gamePresentation.upDatePlayerBulletPresentation();
+}
+
+void GameWindow::firePlayerBullet()
+{
+    _gamePresentation.gameLogic_shared_pointer->createPlayerBullet();
+    
+    
+   // auto tempVector  = _gamePresentation.gameLogic_shared_pointer->getPlayerLogicBullets();
+}
+

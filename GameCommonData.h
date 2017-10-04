@@ -4,7 +4,10 @@
 const int GameXWindow = 800;
 const int GameYWindow = 600;
 
-const int radius = (GameYWindow - 70) /2 - 20;
+const int CenterXGameWindow = GameXWindow/2;
+const int CenterYGameWindow = GameYWindow/2;
+
+const int radius = (GameYWindow - 70) / 2 - 20;
 
 const int NumberOfEnemies = 10;
 

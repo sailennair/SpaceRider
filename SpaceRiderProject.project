@@ -24,6 +24,12 @@
     <File Name="GameWindow.cpp"/>
     <File Name="GamePresentation.h"/>
     <File Name="GamePresentation.cpp"/>
+    <File Name="IBullet.h"/>
+    <File Name="IBullet.cpp"/>
+    <File Name="PlayerBullet.h"/>
+    <File Name="PlayerBullet.cpp"/>
+    <File Name="PlayerBulletPresentation.h"/>
+    <File Name="PlayerBulletPresentation.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

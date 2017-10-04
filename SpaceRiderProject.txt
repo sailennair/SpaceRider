@@ -1,1 +1,1 @@
-./Debug/main.cpp.o ./Debug/IMovingGameObject.cpp.o ./Debug/IGameCharacter.cpp.o ./Debug/PlayerLogic.cpp.o ./Debug/PlayerPresentation.cpp.o ./Debug/GameLogic.cpp.o ./Debug/GameWindow.cpp.o ./Debug/GamePresentation.cpp.o   
+./Debug/main.cpp.o ./Debug/IMovingGameObject.cpp.o ./Debug/IGameCharacter.cpp.o ./Debug/PlayerLogic.cpp.o ./Debug/PlayerPresentation.cpp.o ./Debug/GameLogic.cpp.o ./Debug/GameWindow.cpp.o ./Debug/GamePresentation.cpp.o ./Debug/IBullet.cpp.o ./Debug/PlayerBullet.cpp.o ./Debug/PlayerBulletPresentation.cpp.o   

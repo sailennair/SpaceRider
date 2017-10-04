@@ -10,36 +10,37 @@ PlayerLogic::PlayerLogic()
 
 void PlayerLogic::moveLeftX()
 {
-    _theta = _theta + degreesToRadians(-2);
+    _theta = _theta + degreesToRadians(2);
     _xpos = (radius)*cos(_theta);
     _xpos += xOrigin;
 }
 
 void PlayerLogic::moveLeftY()
 {
-    _theta = _theta + degreesToRadians(-2);
+    _theta = _theta + degreesToRadians(2);
     _ypos = (radius)*sin(_theta);
-    _ypos +=yOrigin;
+    _ypos += yOrigin;
 }
 
 void PlayerLogic::moveRightX()
 {
-    _theta = _theta + degreesToRadians(2);
+    _theta = _theta + degreesToRadians(-2);
     _xpos = (radius)*cos(_theta);
     _xpos += xOrigin;
+    // std::cout<<_theta<<std::endl;
 }
 
 void PlayerLogic::moveRightY()
 {
-    _theta = _theta + degreesToRadians(2);
+    _theta = _theta + degreesToRadians(-2);
     _ypos = (radius)*sin(_theta);
-    _ypos +=yOrigin;
+    _ypos += yOrigin;
 }
 
-void PlayerLogic::setAngleofRotation(int angle)
+float PlayerLogic::getAngleofRotation()
 {
 
-    _angleOfRotation = angle;
+   return _angleOfRotation;
 }
 
 bool PlayerLogic::isAlive()
@@ -78,13 +79,24 @@ float PlayerLogic::degreesToRadians(float x)
 
 void PlayerLogic::playerMove(Direction dir)
 {
-    if(dir == Direction::LEFT) {
+
+    switch(dir)
+    {
+    case Direction::LEFT:
         moveLeftX();
         moveLeftY();
-    }
-
-    if(dir == Direction::RIGHT) {
+       
+        _angleOfRotation = 4;
+        break;
+    case Direction::RIGHT:
+       
         moveRightX();
         moveRightY();
+        _angleOfRotation = -4;
+        break;
+    default:
+        break;
     }
+
+   
 }

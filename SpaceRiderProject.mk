@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=User
-Date                   :=04/10/2017
+Date                   :=05/10/2017
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/TDM-GCC-64/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-64/bin/g++.exe -shared -fPIC
@@ -62,7 +62,8 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix) $(IntermediateDirectory)/IGameCharacter.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix) $(IntermediateDirectory)/IGameCharacter.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/PlayerBulletPresentation.cpp$(ObjectSuffix) 
 
 
 
@@ -156,6 +157,30 @@ $(IntermediateDirectory)/GamePresentation.cpp$(DependSuffix): GamePresentation.c
 
 $(IntermediateDirectory)/GamePresentation.cpp$(PreprocessSuffix): GamePresentation.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/GamePresentation.cpp$(PreprocessSuffix) GamePresentation.cpp
+
+$(IntermediateDirectory)/IBullet.cpp$(ObjectSuffix): IBullet.cpp $(IntermediateDirectory)/IBullet.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/IBullet.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/IBullet.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/IBullet.cpp$(DependSuffix): IBullet.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/IBullet.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/IBullet.cpp$(DependSuffix) -MM IBullet.cpp
+
+$(IntermediateDirectory)/IBullet.cpp$(PreprocessSuffix): IBullet.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/IBullet.cpp$(PreprocessSuffix) IBullet.cpp
+
+$(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix): PlayerBullet.cpp $(IntermediateDirectory)/PlayerBullet.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/PlayerBullet.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/PlayerBullet.cpp$(DependSuffix): PlayerBullet.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/PlayerBullet.cpp$(DependSuffix) -MM PlayerBullet.cpp
+
+$(IntermediateDirectory)/PlayerBullet.cpp$(PreprocessSuffix): PlayerBullet.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/PlayerBullet.cpp$(PreprocessSuffix) PlayerBullet.cpp
+
+$(IntermediateDirectory)/PlayerBulletPresentation.cpp$(ObjectSuffix): PlayerBulletPresentation.cpp $(IntermediateDirectory)/PlayerBulletPresentation.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/PlayerBulletPresentation.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/PlayerBulletPresentation.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/PlayerBulletPresentation.cpp$(DependSuffix): PlayerBulletPresentation.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/PlayerBulletPresentation.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/PlayerBulletPresentation.cpp$(DependSuffix) -MM PlayerBulletPresentation.cpp
+
+$(IntermediateDirectory)/PlayerBulletPresentation.cpp$(PreprocessSuffix): PlayerBulletPresentation.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/PlayerBulletPresentation.cpp$(PreprocessSuffix) PlayerBulletPresentation.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

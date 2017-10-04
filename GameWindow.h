@@ -1,31 +1,49 @@
 #ifndef GAMEWINDOW_H
 #define GAMEWINDOW_H
 
+
+#include "GamePresentation.h"
 #include "GameLogic.h"
 #include "GameCommonData.h"
-#include "GamePresentation.h"
-#include "CreateWindow.h"
+#include <vector>
+#include <memory>
+
 #include <SFML/Graphics.hpp>
+
+using std::unique_ptr;
+using std::make_unique;
+using std::shared_ptr;
+using std::make_shared;
+
 using namespace sf;
 class GameWindow
 {
+    
 public:
     GameWindow();
     
-    void checkEvent();
+    void checkKeyBoardEvent();
     
     void generateWindow();
     
     void renderCharacters(RenderWindow &window);
     
-    GameLogic _gameLogic;
+    void firePlayerBullet();
+    
+    
+   
    
     
 private:
    
     GamePresentation _gamePresentation;
-    sf::RectangleShape rectangle;
-     RenderWindow _window;
+  
+    RenderWindow _window;
+    
+    Direction _direction;
+    
+   
+    
     
   
   

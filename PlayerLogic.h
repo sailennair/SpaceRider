@@ -4,6 +4,7 @@
 #include <iostream>
 #include <math.h>
 #include "IGameCharacter.h"
+#include <memory>
 
 class PlayerLogic : public IGameCharacter
 {
@@ -20,7 +21,7 @@ public:
 
     void moveRightY();
 
-    void setAngleofRotation(int angle);
+    float getAngleofRotation();
 
     bool isAlive();
 
@@ -41,7 +42,7 @@ private:
     float _theta = (PI) / 2;
     int _xpos;
     int _ypos;
-    int _angleOfRotation;
+    float _angleOfRotation;
 };
 
 #endif // PLAYERLOGIC_H

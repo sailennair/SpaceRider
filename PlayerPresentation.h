@@ -5,6 +5,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include "GameCommonData.h"
+#include <memory>
 
 using namespace std;
 using namespace sf;
@@ -17,6 +18,9 @@ public:
     Sprite getPlayer();
 
     void draw(RenderWindow& window);
+    
+    void rotateSprite(float angle);
+    
      Sprite _Player;
 
 private:
