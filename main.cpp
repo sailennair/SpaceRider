@@ -1,7 +1,14 @@
 #include <stdio.h>
+#include "GameWindow.h"
 
 int main(int argc, char **argv)
 {
-	printf("hello world\n");
-	return 0;
+	GameWindow gameWindow;
+    
+    //gameWindow.checkEvent();
+    
+    gameWindow.generateWindow();
+    
+    
+    
 }

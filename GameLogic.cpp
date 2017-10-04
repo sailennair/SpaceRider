@@ -8,11 +8,14 @@ GameLogic::GameLogic()
     
 }
 
-void GameLogic::playerUpdate(){
+void GameLogic::playerUpdate(Direction dir){
     
-   player.playerMove(Direction::LEFT);
-   player.moveLeftX();
-   std:: cout<< player.getXposition()<<"  "<<player.getYposition()<< std::endl;
+  //  std:: cout<< player.getXposition()<<"  "<<player.getYposition()<< std::endl;
+  //  std::cout<<"\n";
+  
+ player.playerMove(dir);
+  
+ //  std:: cout<< player.getXposition()<<"  "<<player.getYposition()<< "   "<<player.getTheta() <<std::endl;
     
 }
 

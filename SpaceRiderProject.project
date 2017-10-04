@@ -22,8 +22,8 @@
     <File Name="GameLogic.cpp"/>
     <File Name="GameWindow.h"/>
     <File Name="GameWindow.cpp"/>
-    <File Name="CreateWindow.cpp"/>
-    <File Name="CreateWindow.h"/>
+    <File Name="GamePresentation.h"/>
+    <File Name="GamePresentation.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

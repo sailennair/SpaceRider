@@ -12,24 +12,28 @@ void PlayerLogic::moveLeftX()
 {
     _theta = _theta + degreesToRadians(-2);
     _xpos = (radius)*cos(_theta);
+    _xpos += xOrigin;
 }
 
 void PlayerLogic::moveLeftY()
 {
     _theta = _theta + degreesToRadians(-2);
     _ypos = (radius)*sin(_theta);
+    _ypos +=yOrigin;
 }
 
 void PlayerLogic::moveRightX()
 {
     _theta = _theta + degreesToRadians(2);
     _xpos = (radius)*cos(_theta);
+    _xpos += xOrigin;
 }
 
 void PlayerLogic::moveRightY()
 {
     _theta = _theta + degreesToRadians(2);
     _ypos = (radius)*sin(_theta);
+    _ypos +=yOrigin;
 }
 
 void PlayerLogic::setAngleofRotation(int angle)

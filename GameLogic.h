@@ -8,10 +8,12 @@ class GameLogic
 public:
     GameLogic();
 
-    void playerUpdate();
+    void playerUpdate(Direction dir);
+    
+     PlayerLogic player;
 
 private:
-    PlayerLogic player;
+   
 };
 
 #endif // GAMELOGIC_H

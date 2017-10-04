@@ -1,5 +1,4 @@
-Debug/main.cpp.o: main.cpp GameWindow.h GameLogic.h PlayerLogic.h \
- IGameCharacter.h IMovingGameObject.h GameCommonData.h GamePresentation.h \
+Debug/GamePresentation.cpp.o: GamePresentation.cpp GamePresentation.h \
  SFML/Window.hpp SFML/System.hpp SFML/Config.hpp SFML/System/Clock.hpp \
  SFML/System/Export.hpp SFML/System/Time.hpp SFML/System/Err.hpp \
  SFML/System/FileInputStream.hpp SFML/System/InputStream.hpp \
@@ -29,19 +28,8 @@ Debug/main.cpp.o: main.cpp GameWindow.h GameLogic.h PlayerLogic.h \
  SFML/Graphics/RenderTarget.hpp SFML/Graphics/View.hpp \
  SFML/Graphics/RenderTexture.hpp SFML/Graphics/RenderWindow.hpp \
  SFML/Graphics/Shader.hpp SFML/Graphics/Sprite.hpp SFML/Graphics/Text.hpp \
- CreateWindow.h
-
-GameWindow.h:
-
-GameLogic.h:
-
-PlayerLogic.h:
-
-IGameCharacter.h:
-
-IMovingGameObject.h:
-
-GameCommonData.h:
+ GameCommonData.h GameLogic.h PlayerLogic.h IGameCharacter.h \
+ IMovingGameObject.h
 
 GamePresentation.h:
 
@@ -185,4 +173,12 @@ SFML/Graphics/Sprite.hpp:
 
 SFML/Graphics/Text.hpp:
 
-CreateWindow.h:
+GameCommonData.h:
+
+GameLogic.h:
+
+PlayerLogic.h:
+
+IGameCharacter.h:
+
+IMovingGameObject.h:

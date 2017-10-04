@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix) $(IntermediateDirectory)/IGameCharacter.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/CreateWindow.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix) $(IntermediateDirectory)/IGameCharacter.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix) 
 
 
 
@@ -149,13 +149,13 @@ $(IntermediateDirectory)/GameWindow.cpp$(DependSuffix): GameWindow.cpp
 $(IntermediateDirectory)/GameWindow.cpp$(PreprocessSuffix): GameWindow.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/GameWindow.cpp$(PreprocessSuffix) GameWindow.cpp
 
-$(IntermediateDirectory)/CreateWindow.cpp$(ObjectSuffix): CreateWindow.cpp $(IntermediateDirectory)/CreateWindow.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/CreateWindow.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/CreateWindow.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/CreateWindow.cpp$(DependSuffix): CreateWindow.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/CreateWindow.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/CreateWindow.cpp$(DependSuffix) -MM CreateWindow.cpp
+$(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix): GamePresentation.cpp $(IntermediateDirectory)/GamePresentation.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/GamePresentation.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/GamePresentation.cpp$(DependSuffix): GamePresentation.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/GamePresentation.cpp$(DependSuffix) -MM GamePresentation.cpp
 
-$(IntermediateDirectory)/CreateWindow.cpp$(PreprocessSuffix): CreateWindow.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/CreateWindow.cpp$(PreprocessSuffix) CreateWindow.cpp
+$(IntermediateDirectory)/GamePresentation.cpp$(PreprocessSuffix): GamePresentation.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/GamePresentation.cpp$(PreprocessSuffix) GamePresentation.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

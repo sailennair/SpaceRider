@@ -17,11 +17,14 @@ public:
     Sprite getPlayer();
 
     void draw(RenderWindow& window);
+     Sprite _Player;
 
 private:
     Texture _playerSpaceshipTexture;
     
-    Sprite _Player;
+   
+    
+    RectangleShape _rect;
 };
 
 #endif // PLAYERPRESENTATION_H
