@@ -21,6 +21,10 @@ public:
     
     void draw(RenderWindow &window);
     
+    void updateBullet(int xpos, int ypos);
+    
+    
+    
     
     
 private:

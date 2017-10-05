@@ -63,7 +63,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
 Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix) $(IntermediateDirectory)/IGameCharacter.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/PlayerBulletPresentation.cpp$(ObjectSuffix) 
+	$(IntermediateDirectory)/PlayerBulletPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IEnemyBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix) 
 
 
 
@@ -181,6 +181,46 @@ $(IntermediateDirectory)/PlayerBulletPresentation.cpp$(DependSuffix): PlayerBull
 
 $(IntermediateDirectory)/PlayerBulletPresentation.cpp$(PreprocessSuffix): PlayerBulletPresentation.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/PlayerBulletPresentation.cpp$(PreprocessSuffix) PlayerBulletPresentation.cpp
+
+$(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix): EnemyLogic.cpp $(IntermediateDirectory)/EnemyLogic.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/EnemyLogic.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/EnemyLogic.cpp$(DependSuffix): EnemyLogic.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/EnemyLogic.cpp$(DependSuffix) -MM EnemyLogic.cpp
+
+$(IntermediateDirectory)/EnemyLogic.cpp$(PreprocessSuffix): EnemyLogic.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/EnemyLogic.cpp$(PreprocessSuffix) EnemyLogic.cpp
+
+$(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix): EnemyPresentation.cpp $(IntermediateDirectory)/EnemyPresentation.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/EnemyPresentation.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/EnemyPresentation.cpp$(DependSuffix): EnemyPresentation.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/EnemyPresentation.cpp$(DependSuffix) -MM EnemyPresentation.cpp
+
+$(IntermediateDirectory)/EnemyPresentation.cpp$(PreprocessSuffix): EnemyPresentation.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/EnemyPresentation.cpp$(PreprocessSuffix) EnemyPresentation.cpp
+
+$(IntermediateDirectory)/IEnemyBullet.cpp$(ObjectSuffix): IEnemyBullet.cpp $(IntermediateDirectory)/IEnemyBullet.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/IEnemyBullet.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/IEnemyBullet.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/IEnemyBullet.cpp$(DependSuffix): IEnemyBullet.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/IEnemyBullet.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/IEnemyBullet.cpp$(DependSuffix) -MM IEnemyBullet.cpp
+
+$(IntermediateDirectory)/IEnemyBullet.cpp$(PreprocessSuffix): IEnemyBullet.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/IEnemyBullet.cpp$(PreprocessSuffix) IEnemyBullet.cpp
+
+$(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix): EnemyBulletLogic.cpp $(IntermediateDirectory)/EnemyBulletLogic.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/EnemyBulletLogic.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/EnemyBulletLogic.cpp$(DependSuffix): EnemyBulletLogic.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/EnemyBulletLogic.cpp$(DependSuffix) -MM EnemyBulletLogic.cpp
+
+$(IntermediateDirectory)/EnemyBulletLogic.cpp$(PreprocessSuffix): EnemyBulletLogic.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/EnemyBulletLogic.cpp$(PreprocessSuffix) EnemyBulletLogic.cpp
+
+$(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix): EnemyBulletPresentation.cpp $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/EnemyBulletPresentation.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/EnemyBulletPresentation.cpp$(DependSuffix): EnemyBulletPresentation.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/EnemyBulletPresentation.cpp$(DependSuffix) -MM EnemyBulletPresentation.cpp
+
+$(IntermediateDirectory)/EnemyBulletPresentation.cpp$(PreprocessSuffix): EnemyBulletPresentation.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(PreprocessSuffix) EnemyBulletPresentation.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

@@ -5,6 +5,7 @@
 #include <memory>
 #include <vector>
 #include "PlayerBullet.h"
+#include "EnemyLogic.h"
 class GameLogic
 {
 public:
@@ -16,16 +17,28 @@ public:
     
     void playerBulletUpdate();
     
+    void updatePlayerBulletLogic();
+    
+    void checkBulletScope();
+    
+    void createEnemyLogicObject();
+    
+    void updateEnemyLogic();
+    
     vector<PlayerBullet> getPlayerLogicBullets();
 
     PlayerLogic getPlayerLogic();
+    
+    vector<PlayerBullet> playerBulletLogicVector;
+    
+    vector<EnemyLogic> enemyLogicVector;
 
 private:
  
  PlayerLogic player;
  
  
- vector<PlayerBullet> playerBulletLogicVector;
+ 
  
 };
 

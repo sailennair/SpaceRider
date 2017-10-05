@@ -30,7 +30,8 @@ Debug/GamePresentation.cpp.o: GamePresentation.cpp GamePresentation.h \
  SFML/Graphics/Shader.hpp SFML/Graphics/Sprite.hpp SFML/Graphics/Text.hpp \
  PlayerPresentation.h GameCommonData.h GameLogic.h PlayerLogic.h \
  IGameCharacter.h IMovingGameObject.h PlayerBullet.h IBullet.h \
- PlayerBulletPresentation.h
+ EnemyLogic.h EnemyBulletLogic.h PlayerBulletPresentation.h \
+ EnemyPresentation.h EnemyBulletPresentation.h
 
 GamePresentation.h:
 
@@ -188,4 +189,12 @@ PlayerBullet.h:
 
 IBullet.h:
 
+EnemyLogic.h:
+
+EnemyBulletLogic.h:
+
 PlayerBulletPresentation.h:
+
+EnemyPresentation.h:
+
+EnemyBulletPresentation.h:

@@ -1,5 +1,4 @@
-Debug/main.cpp.o: main.cpp GameWindow.h GameLogic.h PlayerLogic.h \
- IGameCharacter.h IMovingGameObject.h GameCommonData.h GamePresentation.h \
+Debug/main.cpp.o: main.cpp GameWindow.h GamePresentation.h \
  SFML/Window.hpp SFML/System.hpp SFML/Config.hpp SFML/System/Clock.hpp \
  SFML/System/Export.hpp SFML/System/Time.hpp SFML/System/Err.hpp \
  SFML/System/FileInputStream.hpp SFML/System/InputStream.hpp \
@@ -16,32 +15,25 @@ Debug/main.cpp.o: main.cpp GameWindow.h GameLogic.h PlayerLogic.h \
  SFML/Window/Mouse.hpp SFML/Window/Sensor.hpp SFML/Window/Touch.hpp \
  SFML/Window/VideoMode.hpp SFML/Window/Window.hpp \
  SFML/Window/WindowHandle.hpp SFML/Window/WindowStyle.hpp \
- PlayerPresentation.h SFML/Graphics.hpp SFML/Graphics/BlendMode.hpp \
- SFML/Graphics/Export.hpp SFML/Graphics/CircleShape.hpp \
- SFML/Graphics/Shape.hpp SFML/Graphics/Drawable.hpp \
- SFML/Graphics/RenderStates.hpp SFML/Graphics/Transform.hpp \
- SFML/Graphics/Rect.hpp SFML/Graphics/Rect.inl \
- SFML/Graphics/Transformable.hpp SFML/Graphics/VertexArray.hpp \
- SFML/Graphics/Vertex.hpp SFML/Graphics/Color.hpp \
- SFML/Graphics/PrimitiveType.hpp SFML/Graphics/ConvexShape.hpp \
- SFML/Graphics/Font.hpp SFML/Graphics/Glyph.hpp SFML/Graphics/Texture.hpp \
+ SFML/Graphics.hpp SFML/Graphics/BlendMode.hpp SFML/Graphics/Export.hpp \
+ SFML/Graphics/CircleShape.hpp SFML/Graphics/Shape.hpp \
+ SFML/Graphics/Drawable.hpp SFML/Graphics/RenderStates.hpp \
+ SFML/Graphics/Transform.hpp SFML/Graphics/Rect.hpp \
+ SFML/Graphics/Rect.inl SFML/Graphics/Transformable.hpp \
+ SFML/Graphics/VertexArray.hpp SFML/Graphics/Vertex.hpp \
+ SFML/Graphics/Color.hpp SFML/Graphics/PrimitiveType.hpp \
+ SFML/Graphics/ConvexShape.hpp SFML/Graphics/Font.hpp \
+ SFML/Graphics/Glyph.hpp SFML/Graphics/Texture.hpp \
  SFML/Graphics/Image.hpp SFML/Graphics/RectangleShape.hpp \
  SFML/Graphics/RenderTarget.hpp SFML/Graphics/View.hpp \
  SFML/Graphics/RenderTexture.hpp SFML/Graphics/RenderWindow.hpp \
  SFML/Graphics/Shader.hpp SFML/Graphics/Sprite.hpp SFML/Graphics/Text.hpp \
- CreateWindow.h
+ PlayerPresentation.h GameCommonData.h GameLogic.h PlayerLogic.h \
+ IGameCharacter.h IMovingGameObject.h PlayerBullet.h IBullet.h \
+ EnemyLogic.h EnemyBulletLogic.h PlayerBulletPresentation.h \
+ EnemyPresentation.h
 
 GameWindow.h:
-
-GameLogic.h:
-
-PlayerLogic.h:
-
-IGameCharacter.h:
-
-IMovingGameObject.h:
-
-GameCommonData.h:
 
 GamePresentation.h:
 
@@ -127,8 +119,6 @@ SFML/Window/WindowHandle.hpp:
 
 SFML/Window/WindowStyle.hpp:
 
-PlayerPresentation.h:
-
 SFML/Graphics.hpp:
 
 SFML/Graphics/BlendMode.hpp:
@@ -185,4 +175,26 @@ SFML/Graphics/Sprite.hpp:
 
 SFML/Graphics/Text.hpp:
 
-CreateWindow.h:
+PlayerPresentation.h:
+
+GameCommonData.h:
+
+GameLogic.h:
+
+PlayerLogic.h:
+
+IGameCharacter.h:
+
+IMovingGameObject.h:
+
+PlayerBullet.h:
+
+IBullet.h:
+
+EnemyLogic.h:
+
+EnemyBulletLogic.h:
+
+PlayerBulletPresentation.h:
+
+EnemyPresentation.h:

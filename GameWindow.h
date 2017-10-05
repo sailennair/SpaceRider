@@ -30,6 +30,10 @@ public:
     
     void firePlayerBullet();
     
+    void updatePlayerBullets();
+    
+    void updateAllEnemies();
+    
     
    
    

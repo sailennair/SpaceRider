@@ -9,6 +9,8 @@
 #include "GameCommonData.h"
 #include <memory>
 #include "PlayerBulletPresentation.h"
+#include "EnemyPresentation.h"
+#include <vector>
 
 using std::unique_ptr;
 using std::make_unique;
@@ -24,23 +26,33 @@ public:
     
     void renderSprite(RenderWindow &window);
     
-    void upDatePosition();
+    void upDatePlayerPosition();
     
     void upDatePlayerBulletPresentation();
     
+    void createPlayerBulletPresentation();
     
-   // shared_ptr<GameLogic> gameLogic_shared_pointer(new GameLogic());
+    void drawAllBullets(RenderWindow &window);
+    
+    void deleteOutofScopeBullets();
+    
+    void createEnemyPresentationObject();
+    
+    void updateEnemyPresentation();
+    
+    void drawAllEnemies(RenderWindow& window);
    
-     shared_ptr<GameLogic> gameLogic_shared_pointer;
+    shared_ptr<GameLogic> gameLogic_shared_pointer;
      
-     //= make_shared<GameLogic>;
-    //auto gameLogic_shared_pointer = make_shared<GameLogic>;
+  
     
 private:
     PlayerPresentation _playerPresentation;
     
     vector<PlayerBulletPresentation> playerBulletPresentationVector;
-    //GameLogic _gameLogic;
+    
+    vector<EnemyPresentation> enemyPresentationVector;
+   
     
     
 

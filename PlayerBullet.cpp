@@ -34,7 +34,7 @@ float PlayerBullet::getAngleofRotation()
 
 bool PlayerBullet::isAlive()
 {
-    return true;
+    return _isAlive;
 }
 
 int PlayerBullet::getXposition()
@@ -58,7 +58,11 @@ int PlayerBullet::getDamage()
 }
 
 void PlayerBullet::fire(){
-    std::cout<<"fire"<<std::endl;
+  //  std::cout<<"fire"<<std::endl;
     moveLeftX();
     moveLeftY();
+}
+
+void PlayerBullet::setLife(bool life){
+    _isAlive = life;
 }

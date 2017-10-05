@@ -16,4 +16,9 @@ void PlayerBulletPresentation:: draw(RenderWindow &window){
     window.draw(_rect);
 }
 
+void PlayerBulletPresentation::updateBullet(int xpos, int ypos){
+    _rect.setPosition(xpos,ypos);
+    
+}
+
 

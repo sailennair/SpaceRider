@@ -20,6 +20,8 @@ public:
     void setDamage(int damage);
     int getDamage();
     
+    void setLife(bool life);
+    
     void fire();
 
 private:
@@ -28,6 +30,7 @@ private:
     float _theta;
     int _speedOfBullets = 25;
     int _damage;
+    bool _isAlive = true;
 };
 
 #endif // PLAYERBULLET_H

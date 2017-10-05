@@ -30,6 +30,16 @@
     <File Name="PlayerBullet.cpp"/>
     <File Name="PlayerBulletPresentation.h"/>
     <File Name="PlayerBulletPresentation.cpp"/>
+    <File Name="EnemyLogic.h"/>
+    <File Name="EnemyLogic.cpp"/>
+    <File Name="EnemyPresentation.h"/>
+    <File Name="EnemyPresentation.cpp"/>
+    <File Name="IEnemyBullet.h"/>
+    <File Name="IEnemyBullet.cpp"/>
+    <File Name="EnemyBulletLogic.h"/>
+    <File Name="EnemyBulletLogic.cpp"/>
+    <File Name="EnemyBulletPresentation.h"/>
+    <File Name="EnemyBulletPresentation.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
