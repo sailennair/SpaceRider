@@ -43,3 +43,8 @@ int EnemyBulletLogic::getDamage()
 {
     return _damage;
 }
+
+void EnemyBulletLogic::setLife(bool life)
+{
+    _isAlive = life;
+}

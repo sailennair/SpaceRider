@@ -20,9 +20,6 @@ void GamePresentation::renderSprite(RenderWindow& window)
 {
 
     _playerPresentation.draw(window);
-    
-    
-    
 }
 
 void GamePresentation::createPlayerBulletPresentation()
@@ -72,34 +69,51 @@ void GamePresentation::deleteOutofScopeBullets()
     }
 }
 
-void GamePresentation::createEnemyPresentationObject(){
-    
+void GamePresentation::createEnemyPresentationObject()
+{
+
     EnemyPresentation enemyPresentation;
     enemyPresentationVector.push_back(enemyPresentation);
-    
 }
 
-void GamePresentation::updateEnemyPresentation(){
-    
+void GamePresentation::updateEnemyPresentation()
+{
+    _timer++;
+
+    // This loop updates the enemies sprite position by checking the updated logics position
     for(auto iter = 0; iter < enemyPresentationVector.size(); iter++) {
 
-        enemyPresentationVector[iter].updateEnemy(
-            gameLogic_shared_pointer->enemyLogicVector[iter].getXposition(),
+        enemyPresentationVector[iter].updateEnemy(gameLogic_shared_pointer->enemyLogicVector[iter].getXposition(),
             gameLogic_shared_pointer->enemyLogicVector[iter].getYposition());
-            
-            enemyPresentationVector[iter].updateEnemyBullet(gameLogic_shared_pointer->enemyLogicVector[iter]._enemyBulletLogic.getXposition(),
+
+        enemyPresentationVector[iter].updateEnemyBullet(
+            gameLogic_shared_pointer->enemyLogicVector[iter]._enemyBulletLogic.getXposition(),
             gameLogic_shared_pointer->enemyLogicVector[iter]._enemyBulletLogic.getYposition());
-            
-           std::cout<<gameLogic_shared_pointer->enemyLogicVector[iter]._enemyBulletLogic.getXposition()<<"   "<<
-            gameLogic_shared_pointer->enemyLogicVector[iter]._enemyBulletLogic.getYposition()<<std::endl;
+
+        // Checking if the enemy has gone out of scope and if so, it will recenter the enemy
+        if(_timer % 55 == 0) {
+            if(gameLogic_shared_pointer->enemyLogicVector[iter].isOutOfBounds() == true &&
+                gameLogic_shared_pointer->enemyLogicVector.size() == 5) {
+
+                gameLogic_shared_pointer->enemyLogicVector[iter].setOutofBounds(false);
+                (gameLogic_shared_pointer->enemyLogicVector[iter])
+                    .moveToCenter(
+                        CenterXGameWindow, CenterYGameWindow, gameLogic_shared_pointer->getPlayerLogic().getTheta());
+                std::cout << "center" << std::endl;
+            }
+        }
     }
 }
 
-
-void GamePresentation::drawAllEnemies(RenderWindow& window){
-    //drawing all the enemies
-    for(auto iter = 0; iter < enemyPresentationVector.size(); iter++) {
-
-        enemyPresentationVector[iter].draw(window);
+void GamePresentation::drawAllEnemies(RenderWindow& window)
+{
+    // drawing all the enemies
+    for(auto& iter:enemyPresentationVector) {
+        iter.draw(window);
     }
+}
+
+vector<EnemyPresentation> GamePresentation::getEnemyPresentationVector()
+{
+    return enemyPresentationVector;
 }

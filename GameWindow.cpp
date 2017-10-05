@@ -12,10 +12,11 @@ void GameWindow::generateWindow()
 
     _window.setVerticalSyncEnabled(true);
     int timer = 0;
+
     while(_window.isOpen()) {
 
         sf::Event event;
-        if(timer % 100 == 0) {
+        if(timer % 100 == 0 && _gamePresentation.getEnemyPresentationVector().size() < 5) {
             _gamePresentation.gameLogic_shared_pointer->createEnemyLogicObject();
             _gamePresentation.createEnemyPresentationObject();
         }
@@ -41,6 +42,7 @@ void GameWindow::generateWindow()
         }
 
         updatePlayerBullets();
+
         updateAllEnemies();
 
         _window.clear(sf::Color::Black);
@@ -49,18 +51,16 @@ void GameWindow::generateWindow()
 
         timer++;
     }
+
+    std::cout << _gamePresentation.getEnemyPresentationVector().size() << std::endl;
 }
 
 void GameWindow::renderCharacters(RenderWindow& window)
 {
 
-    _gamePresentation.renderSprite(window);
-
     _gamePresentation.drawAllBullets(window);
-    
     _gamePresentation.drawAllEnemies(window);
-    
-    
+     _gamePresentation.renderSprite(window);
 }
 
 void GameWindow::checkKeyBoardEvent()
@@ -86,5 +86,5 @@ void GameWindow::updateAllEnemies()
 {
     _gamePresentation.gameLogic_shared_pointer->updateEnemyLogic();
     _gamePresentation.updateEnemyPresentation();
-    
+    _gamePresentation.gameLogic_shared_pointer->checkEnemyScope();
 }

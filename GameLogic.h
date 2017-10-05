@@ -25,6 +25,8 @@ public:
     
     void updateEnemyLogic();
     
+    void checkEnemyScope();
+    
     vector<PlayerBullet> getPlayerLogicBullets();
 
     PlayerLogic getPlayerLogic();
@@ -32,6 +34,8 @@ public:
     vector<PlayerBullet> playerBulletLogicVector;
     
     vector<EnemyLogic> enemyLogicVector;
+    
+    
 
 private:
  

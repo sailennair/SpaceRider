@@ -20,7 +20,7 @@ void EnemyPresentation::draw(RenderWindow& window)
     _enemyBulletPresentation.draw(window);
     window.draw(_enemySprite);
     
-   // window.draw(_enemyBulletPresentation.getEnemyBullet());
+  
 }
 
 Sprite EnemyPresentation::getEnemySprite()

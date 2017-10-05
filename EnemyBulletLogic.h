@@ -25,16 +25,18 @@ EnemyBulletLogic();
     
      int getDamage();
      
+     void setLife(bool life);
+     
 private:
      float _xPosition;
      
      float _yPosition;
      
-     bool _isAlive = true;
+     bool _isAlive ;
      
      int _damage;
      
-     float _bulletSpeed = 0.008;
+     float _bulletSpeed = 0.015;
      
      float _theta;
      

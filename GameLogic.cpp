@@ -47,13 +47,29 @@ void GameLogic::checkBulletScope()
     }
 }
 
-void GameLogic::createEnemyLogicObject(){
-    EnemyLogic enemyLogic(CenterXGameWindow,CenterYGameWindow, player.getTheta());
+void GameLogic::createEnemyLogicObject()
+{
+    EnemyLogic enemyLogic(CenterXGameWindow, CenterYGameWindow, player.getTheta());
     enemyLogicVector.push_back(enemyLogic);
 }
 
-void GameLogic::updateEnemyLogic(){
-    for(auto& iter: enemyLogicVector){
+void GameLogic::updateEnemyLogic()
+{
+    for(auto& iter : enemyLogicVector) {
         iter.move();
     }
+}
+
+void GameLogic::checkEnemyScope()
+{
+    for(auto& iter : enemyLogicVector) {
+        
+        if(iter.getXposition() < 0 || iter.getXposition() > GameXWindow ||
+            iter.getYposition() < 0 || iter.getYposition() > GameYWindow) {
+            iter.setOutofBounds(true);
+            //std::cout<<"out"<<std::endl; 
+        }
+    }
+    
+    
 }

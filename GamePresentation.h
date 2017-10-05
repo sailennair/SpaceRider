@@ -41,6 +41,9 @@ public:
     void updateEnemyPresentation();
     
     void drawAllEnemies(RenderWindow& window);
+    
+    
+    vector<EnemyPresentation> getEnemyPresentationVector();
    
     shared_ptr<GameLogic> gameLogic_shared_pointer;
      
@@ -52,6 +55,9 @@ private:
     vector<PlayerBulletPresentation> playerBulletPresentationVector;
     
     vector<EnemyPresentation> enemyPresentationVector;
+    
+    //this is just a test variable
+     int _timer;
    
     
     
