@@ -5,7 +5,7 @@
 
 class EnemyLogic{
 public:
-    EnemyLogic(float x, float y, int width, int height ,float theta);
+    EnemyLogic(float x, float y, float width, float height ,float theta);
     // The move function changes the position invariants of the enemy which can be accessed using the getters
     void move();
     
@@ -17,6 +17,8 @@ public:
     int getTheta();    
     int getHealth();
     float getScale();
+    float getWidth();
+    float getHeight();
    
    void moveToCenter(float x, float y, float theta);
     // This function decreases the health invariant by the damage.

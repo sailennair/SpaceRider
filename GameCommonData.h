@@ -3,7 +3,8 @@
 
 const int GameXWindow = 700;
 const int GameYWindow = 1000;
-
+const int centerOfScreenX = GameXWindow/2;
+const int centerOfScreenY = GameYWindow/2;
 const int radius = GameYWindow - 70;
 
 const int NumberOfEnemies = 10;

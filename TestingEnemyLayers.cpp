@@ -12,9 +12,10 @@ int main(){
     const int PI = 3.14159265;
     
     sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Testing Enemy Layers");
-    
-    EnemyLogic enemyLogic(WINDOW_WIDTH/2, WINDOW_HEIGHT/2, 20, 20, 0.89);
-    EnemyPresentation enemyPresentation(WINDOW_WIDTH, WINDOW_HEIGHT);
+    const int RECTANGLE_WIDTH = 20;
+    const int RECTANGLE_HEIGHT = 20;
+    EnemyLogic enemyLogic(WINDOW_WIDTH/2, WINDOW_HEIGHT/2, RECTANGLE_WIDTH, RECTANGLE_HEIGHT, 0.89);
+    EnemyPresentation enemyPresentation(WINDOW_WIDTH, WINDOW_HEIGHT, RECTANGLE_HEIGHT, RECTANGLE_HEIGHT);
     
     
     while(window.isOpen()){
@@ -37,7 +38,7 @@ int main(){
            enemyLogic.moveToCenter(WINDOW_WIDTH/2,  WINDOW_HEIGHT/2, 0.89);
            
         }
-        enemyPresentation.draw(window, enemyLogic.getXPosition(), enemyLogic.getYPosition(), enemyLogic.getScale());
+        enemyPresentation.draw(window, enemyLogic.getXPosition(), enemyLogic.getYPosition(), enemyLogic.getScale(), enemyLogic.getWidth(), enemyLogic.getHeight());
         window.display();
         std::cout << std::endl;
         std::cout << "Enemy x Pos" <<enemyLogic.getXPosition() << std::endl;

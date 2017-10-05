@@ -1,6 +1,7 @@
 #include "EnemyLogic.h"
+#include "GameCommonData.h"
 #include  <iostream>
-EnemyLogic::EnemyLogic(float x, float y, int width, int height, float theta):
+EnemyLogic::EnemyLogic(float x, float y, float width, float height, float theta):
     _xPos{x},
     _yPos{y},
     _width{width},
@@ -18,17 +19,21 @@ EnemyLogic::EnemyLogic(float x, float y, int width, int height, float theta):
     }
     
 void EnemyLogic::move(){
+    auto Origin = 400 - _xPos;
     _xPos += deltaX*cos(_theta)*0.0007;
     _yPos += deltaY*cos(_theta)*0.0007;
     
-
+    auto currentRadius = sqrt(pow(_xPos - centerOfScreenX,2) + pow(_yPos - centerOfScreenY, 2));
+    auto percentageChange = currentRadius/radius;
     
-    _width += 0.25;
-    _height += 0.25;
+//    _width += 0.25*percentageChange;
+//    _height += 0.25*percentageChange;
+    _width += 0.5*percentageChange;
+    _height += 0.5*percentageChange;
     std::cout << _width << " " << _height << std::endl;
     
-    
-    _scale += (((_width + 0.5)/_width) - 1)*0.05;
+    _scale = percentageChange;
+    //_scale += (((_width + 0.5)/_width) - 1)*0.05;
 }
 
 void EnemyLogic::moveToCenter(float x, float y, float theta){
@@ -77,4 +82,10 @@ int EnemyLogic::getHealth(){
 }
 float EnemyLogic::getScale(){
     return _scale;
+}
+float EnemyLogic::getWidth(){
+    return _width;
+}
+float EnemyLogic::getHeight(){
+    return _height;
 }
