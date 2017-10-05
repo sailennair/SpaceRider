@@ -1,4 +1,5 @@
 #include "EnemyPresentation.h"
+#include <iostream>
 
 EnemyPresentation::EnemyPresentation(int windowWidth, int windowHeight){
 
@@ -12,13 +13,20 @@ EnemyPresentation::EnemyPresentation(int windowWidth, int windowHeight){
     _centerOfWindow.y = windowHeight/2;
     
     _enemy.setPosition(_centerOfWindow.x, _centerOfWindow.y);
-    _scale.x = 0.3;
-    _scale.y = 0.3;
+    _scale.x = 0.2;
+    _scale.y = 0.2;
     _enemy.setScale(_scale);
+    
+    
+   
 }
 
-void EnemyPresentation::draw(sf::RenderWindow& window, int xPos, int yPos){
+void EnemyPresentation::draw(sf::RenderWindow& window, int xPos, int yPos, float scale){
     _enemy.setPosition(xPos, yPos);
+    std::cout << xPos << " " << yPos << std::endl;
+    _scale.x = scale;
+    _scale.y = scale;
+   _enemy.setScale(_scale);
     window.draw(_enemy);
 }
 
@@ -29,3 +37,4 @@ bool EnemyPresentation::isOutOfScreen(const int windowWidth, const int windowHei
         
     return true;    
 }
+

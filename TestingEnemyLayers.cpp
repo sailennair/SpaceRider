@@ -13,8 +13,9 @@ int main(){
     
     sf::RenderWindow window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "Testing Enemy Layers");
     
-    EnemyLogic enemyLogic(400, 300, 20, 20, PI/3);
+    EnemyLogic enemyLogic(WINDOW_WIDTH/2, WINDOW_HEIGHT/2, 20, 20, 0.89);
     EnemyPresentation enemyPresentation(WINDOW_WIDTH, WINDOW_HEIGHT);
+    
     
     while(window.isOpen()){
         sf::Event event;
@@ -25,15 +26,21 @@ int main(){
                 break;
             }
             
+            
         }
+        //
         
         enemyLogic.move();
+        
         window.clear();
-        if(!enemyPresentation.isOutOfScreen(WINDOW_WIDTH, WINDOW_HEIGHT, enemyLogic.getXPosition(), enemyLogic.getYPosition())){
-            enemyPresentation.draw(window, enemyLogic.getXPosition(), enemyLogic.getYPosition());
+        if(enemyPresentation.isOutOfScreen(WINDOW_WIDTH, WINDOW_HEIGHT, enemyLogic.getXPosition(), enemyLogic.getYPosition())){
+           enemyLogic.moveToCenter(WINDOW_WIDTH/2,  WINDOW_HEIGHT/2, 0.89);
+           
         }
+        enemyPresentation.draw(window, enemyLogic.getXPosition(), enemyLogic.getYPosition(), enemyLogic.getScale());
         window.display();
-        //cout << x << "  " << y << endl;
+        std::cout << std::endl;
+        std::cout << "Enemy x Pos" <<enemyLogic.getXPosition() << std::endl;
     }
         
     return 0;

@@ -8,10 +8,11 @@ public:
     EnemyPresentation(int windowWidth, int windowHeight);
     
     // This function draws the enemy in the window at positon (xPos, yPos)
-    void draw(sf::RenderWindow& window, int xPos, int yPos);
+    void draw(sf::RenderWindow& window, int xPos, int yPos, float scale);
     
     // Returns true if the enemy is outside the screen
     bool isOutOfScreen(const int windowWidth, const int windowHeight, const int xPos, const int yPos)const;
+    
 private:
     sf::Sprite _enemy;
     sf::Texture _enemyTexture;

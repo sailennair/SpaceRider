@@ -5,18 +5,20 @@
 
 class EnemyLogic{
 public:
-    EnemyLogic(int x, int y, int width, int height ,float theta);
+    EnemyLogic(float x, float y, int width, int height ,float theta);
     // The move function changes the position invariants of the enemy which can be accessed using the getters
     void move();
     
     //Getters Of Enemy Invariants
-    int getXPosition();
-    int getYPosition();    
+    float getXPosition();
+    float getYPosition();    
     int getCenterX();
     int getCenterY();
     int getTheta();    
     int getHealth();
+    float getScale();
    
+   void moveToCenter(float x, float y, float theta);
     // This function decreases the health invariant by the damage.
     void decreaseHealth(int damage);
     
@@ -27,17 +29,24 @@ public:
     void reSize(int changeInWidth, int changeInHeight);
 private:
     // Position and Dimensions of enemy;
-    int _xPos;
-    int _yPos;
-    int _width;
-    int _height;
+    float _xPos;
+    float _yPos;
+    float _width;
+    float _height;
+    float _originalWidth;
+    float _originalHeight;
     float _theta;
         
     // The size scale of the enemy.
-    int _scale;
+    float _scale;
+    float _originalScale;
     
     //Health of enemy
     int _health;
+    
+    
+    int deltaX;
+    int deltaY;
     
 };
 #endif
