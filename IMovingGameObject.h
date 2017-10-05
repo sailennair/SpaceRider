@@ -16,14 +16,11 @@ class IMovingGameObject
 {
 public:
   // virtual void setPosition(int xPosition, int yPosotion) = 0;
-   virtual void moveLeftX() = 0;
-   virtual void moveLeftY() = 0;
-   virtual void moveRightX() = 0;
-   virtual void moveRightY() = 0;
-   virtual void setAngleofRotation(int angle) = 0;
-   virtual bool isAlive() = 0;
-   virtual int getXposition() =0;
-   virtual int getYposition() =0;
+    virtual void move() = 0;
+    virtual void setAngleofRotation(int angle) = 0;
+    virtual bool isAlive() = 0;
+    virtual int getXposition() =0;
+    virtual int getYposition() =0;
    
 
 };

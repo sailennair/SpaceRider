@@ -29,6 +29,8 @@
     <File Name="EnemyPresentation.h" ExcludeProjConfig=""/>
     <File Name="EnemyPresentation.cpp" ExcludeProjConfig=""/>
     <File Name="TestingEnemyLayers.cpp"/>
+    <File Name="Collision.h"/>
+    <File Name="Collision.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
