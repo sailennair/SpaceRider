@@ -1,8 +1,7 @@
 #include "EnemyLogic.h"
 
-EnemyLogic::EnemyLogic(int initalXposition, int initalYposition, float theta)
+EnemyLogic::EnemyLogic(float initalXposition, float initalYposition, float theta)
 {
-
     _xpos = CenterXGameWindow;
     _ypos = CenterYGameWindow;
     _theta = theta;

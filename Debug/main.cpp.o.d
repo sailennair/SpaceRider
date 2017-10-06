@@ -31,7 +31,7 @@ Debug/main.cpp.o: main.cpp GameWindow.h GamePresentation.h \
  PlayerPresentation.h GameCommonData.h GameLogic.h PlayerLogic.h \
  IGameCharacter.h IMovingGameObject.h PlayerBullet.h IBullet.h \
  EnemyLogic.h EnemyBulletLogic.h PlayerBulletPresentation.h \
- EnemyPresentation.h
+ EnemyPresentation.h EnemyBulletPresentation.h
 
 GameWindow.h:
 
@@ -198,3 +198,5 @@ EnemyBulletLogic.h:
 PlayerBulletPresentation.h:
 
 EnemyPresentation.h:
+
+EnemyBulletPresentation.h:

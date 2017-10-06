@@ -6,7 +6,7 @@
 #include "IGameCharacter.h"
 #include <memory>
 
-class PlayerLogic : public IGameCharacter
+class PlayerLogic : public IMovingGameObject
 {
 public:
     PlayerLogic();
@@ -23,13 +23,15 @@ public:
 
     float getAngleofRotation();
 
-    bool isAlive();
+    virtual bool isAlive() override;
 
     void reduceHealth(int _damage);
 
-    int getXposition();
+    virtual float getXposition() override;
     
-    int getYposition();
+    virtual float getYposition() override;
+    virtual float getWidth() override;
+    virtual float getHeight() override;
     
     float getTheta(); 
     

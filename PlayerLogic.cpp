@@ -57,14 +57,21 @@ void PlayerLogic::reduceHealth(int _damage)
     _health -= _damage;
 }
 
-int PlayerLogic::getXposition()
+float PlayerLogic::getXposition()
 {
     return _xpos;
 }
 
-int PlayerLogic::getYposition()
+float PlayerLogic::getYposition()
 {
     return _ypos;
+}
+
+float PlayerLogic::getHeight(){
+    return _ypos+70;
+}
+float PlayerLogic::getWidth(){
+    return _xpos+40;
 }
 
 float PlayerLogic::getTheta()

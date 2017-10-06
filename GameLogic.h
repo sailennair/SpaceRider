@@ -6,6 +6,7 @@
 #include <vector>
 #include "PlayerBullet.h"
 #include "EnemyLogic.h"
+#include "IMovingGameObject.h"
 class GameLogic
 {
 public:

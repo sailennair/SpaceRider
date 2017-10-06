@@ -9,7 +9,8 @@ GameWindow::GameWindow()
 void GameWindow::generateWindow()
 {
     sf::RenderWindow _window(sf::VideoMode(GameXWindow, GameYWindow), "My Window");
-
+    Collision collision;
+    
     _window.setVerticalSyncEnabled(true);
     int timer = 0;
 
@@ -40,6 +41,7 @@ void GameWindow::generateWindow()
                 firePlayerBullet();
             }
         }
+        
 
         updatePlayerBullets();
 

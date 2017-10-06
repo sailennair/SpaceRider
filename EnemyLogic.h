@@ -6,23 +6,25 @@
 #include "GameCommonData.h"
 #include "math.h"
 #include <iostream>
-
-class EnemyLogic
+//#include "IMovingGameObject.h"
+class EnemyLogic: private IMovingGameObject
 {
 public:
-    EnemyLogic(int initalXposition, int initalYposition, float theta);
+    EnemyLogic(){};
+    EnemyLogic(float initalXposition, float initalYposition, float theta);
+    virtual ~EnemyLogic(){};
 
     void move();
 
     float getAngleofRotation();
 
-    bool isAlive();
+    virtual bool isAlive() override;
 
     void reduceHealth(int _damage);
 
-    float getXposition();
+    virtual float getXposition()override;
 
-    float getYposition();
+    virtual float getYposition()override;
 
     void setLife(bool life);
 
@@ -30,9 +32,9 @@ public:
 
     void setOutofBounds(bool outOfBounds);
 
-    float getWidth();
+    virtual float getWidth()override;
 
-    float getHeight();
+    virtual float getHeight()override;
 
     void moveToCenter(float xPosition, float yPosition, float theta);
     

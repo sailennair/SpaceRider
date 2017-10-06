@@ -31,7 +31,7 @@ Debug/GameWindow.cpp.o: GameWindow.cpp GameWindow.h GamePresentation.h \
  PlayerPresentation.h GameCommonData.h GameLogic.h PlayerLogic.h \
  IGameCharacter.h IMovingGameObject.h PlayerBullet.h IBullet.h \
  EnemyLogic.h EnemyBulletLogic.h PlayerBulletPresentation.h \
- EnemyPresentation.h EnemyBulletPresentation.h
+ EnemyPresentation.h EnemyBulletPresentation.h Collision.h
 
 GameWindow.h:
 
@@ -200,3 +200,5 @@ PlayerBulletPresentation.h:
 EnemyPresentation.h:
 
 EnemyBulletPresentation.h:
+
+Collision.h:

@@ -5,6 +5,7 @@
 #include "GamePresentation.h"
 #include "GameLogic.h"
 #include "GameCommonData.h"
+#include "Collision.h"
 #include <vector>
 #include <memory>
 
