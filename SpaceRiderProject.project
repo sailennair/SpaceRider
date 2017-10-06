@@ -8,40 +8,45 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
-    <File Name="main.cpp"/>
-    <File Name="IMovingGameObject.h" ExcludeProjConfig=""/>
-    <File Name="IMovingGameObject.cpp" ExcludeProjConfig=""/>
-    <File Name="IGameCharacter.h" ExcludeProjConfig=""/>
-    <File Name="IGameCharacter.cpp" ExcludeProjConfig=""/>
-    <File Name="PlayerLogic.h" ExcludeProjConfig=""/>
-    <File Name="PlayerLogic.cpp" ExcludeProjConfig=""/>
-    <File Name="GameCommonData.h" ExcludeProjConfig=""/>
-    <File Name="PlayerPresentation.h"/>
-    <File Name="PlayerPresentation.cpp"/>
-    <File Name="GameLogic.h"/>
-    <File Name="GameLogic.cpp"/>
-    <File Name="GameWindow.h"/>
-    <File Name="GameWindow.cpp"/>
-    <File Name="GamePresentation.h"/>
-    <File Name="GamePresentation.cpp"/>
-    <File Name="IBullet.h"/>
-    <File Name="IBullet.cpp"/>
-    <File Name="PlayerBullet.h"/>
-    <File Name="PlayerBullet.cpp"/>
-    <File Name="PlayerBulletPresentation.h"/>
-    <File Name="PlayerBulletPresentation.cpp"/>
-    <File Name="EnemyLogic.h"/>
-    <File Name="EnemyLogic.cpp"/>
-    <File Name="EnemyPresentation.h"/>
-    <File Name="EnemyPresentation.cpp"/>
-    <File Name="IEnemyBullet.h"/>
-    <File Name="IEnemyBullet.cpp"/>
-    <File Name="EnemyBulletLogic.h"/>
-    <File Name="EnemyBulletLogic.cpp"/>
-    <File Name="EnemyBulletPresentation.h"/>
-    <File Name="EnemyBulletPresentation.cpp"/>
-    <File Name="Collision.h"/>
-    <File Name="Collision.cpp"/>
+    <File Name="main.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="IMovingGameObject.h" ExcludeProjConfig="Debug"/>
+    <File Name="IMovingGameObject.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="IGameCharacter.h" ExcludeProjConfig="Debug"/>
+    <File Name="IGameCharacter.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerLogic.h" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerLogic.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="GameCommonData.h" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerPresentation.h" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerPresentation.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="GameLogic.h" ExcludeProjConfig="Debug"/>
+    <File Name="GameLogic.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="GameWindow.h" ExcludeProjConfig="Debug"/>
+    <File Name="GameWindow.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="GamePresentation.h" ExcludeProjConfig="Debug"/>
+    <File Name="GamePresentation.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="IBullet.h" ExcludeProjConfig="Debug"/>
+    <File Name="IBullet.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerBullet.h" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerBullet.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerBulletPresentation.h" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerBulletPresentation.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="EnemyLogic.h" ExcludeProjConfig="Debug"/>
+    <File Name="EnemyLogic.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="EnemyPresentation.h" ExcludeProjConfig="Debug"/>
+    <File Name="EnemyPresentation.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="IEnemyBullet.h" ExcludeProjConfig="Debug"/>
+    <File Name="IEnemyBullet.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="EnemyBulletLogic.h" ExcludeProjConfig="Debug"/>
+    <File Name="EnemyBulletLogic.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="EnemyBulletPresentation.h" ExcludeProjConfig="Debug"/>
+    <File Name="EnemyBulletPresentation.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="Collision.h" ExcludeProjConfig="Debug"/>
+    <File Name="Collision.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="SatelliteLogic.cpp"/>
+    <File Name="SatelliteLogic.h"/>
+    <File Name="SatellitePresentation.cpp"/>
+    <File Name="SatellitePresentation.h"/>
+    <File Name="TestingSatelliteLayers.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
