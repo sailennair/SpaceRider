@@ -8,7 +8,7 @@ EnemyPresentation::EnemyPresentation()
     }
      enemySpriteTexture.setSmooth(true);
     _enemySprite.setTexture(enemySpriteTexture);
-    _enemySprite.setScale(Vector2f(0.05, 0.05));
+    _enemySprite.setScale(Vector2f(0.1, 0.1));
     _enemySprite.setPosition(CenterXGameWindow, CenterYGameWindow);
     
     EnemyBulletPresentation enemyBulletPresentation(CenterXGameWindow,CenterYGameWindow);

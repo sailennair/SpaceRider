@@ -25,6 +25,18 @@ public:
    virtual int getXposition() =0;
    virtual int getYposition() =0;
    
+   //virtual void move() =0;
+   //virtual bool isAlive() = 0;
+   //virtual float getXposition() =0;
+   //virtual float getYposition() = 0;
+   //virtual float getAngleofRoattion() = 0;
+   //virtual float getWidth() = 0;
+   //virtual float getHeight() = 0;
+   
+   //Enemy and player 
+   //virtual void getHealth() = 0;
+   //virtual void reduceHealth(int damage) = 0 This fucntion will decrease the health of the player or enemy
+   
 
 };
 

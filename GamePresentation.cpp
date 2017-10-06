@@ -31,29 +31,25 @@ void GamePresentation::createPlayerBulletPresentation()
 
 void GamePresentation::upDatePlayerBulletPresentation()
 {
-    for(auto iter = 0; iter < playerBulletPresentationVector.size(); iter++) {
+    for(auto index = 0; index < playerBulletPresentationVector.size(); index++) {
 
-        playerBulletPresentationVector[iter].updateBullet(
-            gameLogic_shared_pointer->getPlayerLogicBullets()[iter].getXposition(),
-            gameLogic_shared_pointer->getPlayerLogicBullets()[iter].getYposition());
+        playerBulletPresentationVector[index].updateBullet(
+            gameLogic_shared_pointer->getPlayerLogicBullets()[index].getXposition(),
+            gameLogic_shared_pointer->getPlayerLogicBullets()[index].getYposition());
     }
 }
 
 void GamePresentation::drawAllBullets(RenderWindow& window)
 {
     deleteOutofScopeBullets();
-    for(auto iter = 0; iter < playerBulletPresentationVector.size(); iter++) {
-
-        playerBulletPresentationVector[iter].draw(window);
+    for(auto& iter : playerBulletPresentationVector) {
+        iter.draw(window);
     }
 }
 
 void GamePresentation::deleteOutofScopeBullets()
 {
-
     for(auto iter = 0; iter < playerBulletPresentationVector.size(); iter++) {
-
-        std::cout << gameLogic_shared_pointer->getPlayerLogicBullets()[iter].isAlive() << std::endl;
 
         if(playerBulletPresentationVector.size() > 0 && gameLogic_shared_pointer->getPlayerLogicBullets().size() > 0) {
 
@@ -63,7 +59,6 @@ void GamePresentation::deleteOutofScopeBullets()
 
                 (gameLogic_shared_pointer->playerBulletLogicVector)
                     .erase((gameLogic_shared_pointer->playerBulletLogicVector).begin() + iter);
-                std::cout << "deleted" << std::endl;
             }
         }
     }
@@ -71,7 +66,6 @@ void GamePresentation::deleteOutofScopeBullets()
 
 void GamePresentation::createEnemyPresentationObject()
 {
-
     EnemyPresentation enemyPresentation;
     enemyPresentationVector.push_back(enemyPresentation);
 }
@@ -108,7 +102,7 @@ void GamePresentation::updateEnemyPresentation()
 void GamePresentation::drawAllEnemies(RenderWindow& window)
 {
     // drawing all the enemies
-    for(auto& iter:enemyPresentationVector) {
+    for(auto& iter : enemyPresentationVector) {
         iter.draw(window);
     }
 }

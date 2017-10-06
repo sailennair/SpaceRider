@@ -36,13 +36,10 @@ void GameLogic::playerBulletUpdate()
 
 void GameLogic::checkBulletScope()
 {
-    for(auto iter = 0; iter < playerBulletLogicVector.size(); iter++) {
-        if(playerBulletLogicVector[iter].getXposition() < CenterXGameWindow + 20 &&
-            playerBulletLogicVector[iter].getXposition() > CenterXGameWindow - 20 &&
-            playerBulletLogicVector[iter].getYposition() > CenterYGameWindow - 20 &&
-            playerBulletLogicVector[iter].getYposition() < CenterYGameWindow + 20) {
-
-            playerBulletLogicVector[iter].setLife(false);
+    for(auto& iter : playerBulletLogicVector) {
+        if(iter.getXposition() < CenterXGameWindow + 20 && iter.getXposition() > CenterXGameWindow - 20 &&
+            iter.getYposition() > CenterYGameWindow - 20 && iter.getYposition() < CenterYGameWindow + 20) {
+            iter.setLife(false);
         }
     }
 }
@@ -63,13 +60,9 @@ void GameLogic::updateEnemyLogic()
 void GameLogic::checkEnemyScope()
 {
     for(auto& iter : enemyLogicVector) {
-        
-        if(iter.getXposition() < 0 || iter.getXposition() > GameXWindow ||
-            iter.getYposition() < 0 || iter.getYposition() > GameYWindow) {
+        if(iter.getXposition() < 0 || iter.getXposition() > GameXWindow || iter.getYposition() < 0 ||
+            iter.getYposition() > GameYWindow) {
             iter.setOutofBounds(true);
-            //std::cout<<"out"<<std::endl; 
         }
     }
-    
-    
 }

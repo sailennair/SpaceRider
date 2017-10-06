@@ -6,7 +6,7 @@ EnemyBulletPresentation::EnemyBulletPresentation(float xPosition , float yPositi
 {
      _rect.setSize(Vector2f(5,5));
     _rect.setFillColor(Color::Red);
-    _rect.setPosition(xPosition,yPosition);
+   // _rect.setPosition(xPosition,yPosition);
 }
 
 
