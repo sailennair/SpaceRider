@@ -62,8 +62,8 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix) $(IntermediateDirectory)/IGameCharacter.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/PlayerBulletPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IEnemyBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBulletPresentation.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IPlayer.cpp$(ObjectSuffix) $(IntermediateDirectory)/IEnemy.cpp$(ObjectSuffix) 
 
 
 
@@ -109,14 +109,6 @@ $(IntermediateDirectory)/IMovingGameObject.cpp$(DependSuffix): IMovingGameObject
 
 $(IntermediateDirectory)/IMovingGameObject.cpp$(PreprocessSuffix): IMovingGameObject.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/IMovingGameObject.cpp$(PreprocessSuffix) IMovingGameObject.cpp
-
-$(IntermediateDirectory)/IGameCharacter.cpp$(ObjectSuffix): IGameCharacter.cpp $(IntermediateDirectory)/IGameCharacter.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/IGameCharacter.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/IGameCharacter.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/IGameCharacter.cpp$(DependSuffix): IGameCharacter.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/IGameCharacter.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/IGameCharacter.cpp$(DependSuffix) -MM IGameCharacter.cpp
-
-$(IntermediateDirectory)/IGameCharacter.cpp$(PreprocessSuffix): IGameCharacter.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/IGameCharacter.cpp$(PreprocessSuffix) IGameCharacter.cpp
 
 $(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix): PlayerLogic.cpp $(IntermediateDirectory)/PlayerLogic.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/PlayerLogic.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix) $(IncludePath)
@@ -198,14 +190,6 @@ $(IntermediateDirectory)/EnemyPresentation.cpp$(DependSuffix): EnemyPresentation
 $(IntermediateDirectory)/EnemyPresentation.cpp$(PreprocessSuffix): EnemyPresentation.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/EnemyPresentation.cpp$(PreprocessSuffix) EnemyPresentation.cpp
 
-$(IntermediateDirectory)/IEnemyBullet.cpp$(ObjectSuffix): IEnemyBullet.cpp $(IntermediateDirectory)/IEnemyBullet.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/IEnemyBullet.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/IEnemyBullet.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/IEnemyBullet.cpp$(DependSuffix): IEnemyBullet.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/IEnemyBullet.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/IEnemyBullet.cpp$(DependSuffix) -MM IEnemyBullet.cpp
-
-$(IntermediateDirectory)/IEnemyBullet.cpp$(PreprocessSuffix): IEnemyBullet.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/IEnemyBullet.cpp$(PreprocessSuffix) IEnemyBullet.cpp
-
 $(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix): EnemyBulletLogic.cpp $(IntermediateDirectory)/EnemyBulletLogic.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/EnemyBulletLogic.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/EnemyBulletLogic.cpp$(DependSuffix): EnemyBulletLogic.cpp
@@ -221,6 +205,22 @@ $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(DependSuffix): EnemyBullet
 
 $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(PreprocessSuffix): EnemyBulletPresentation.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(PreprocessSuffix) EnemyBulletPresentation.cpp
+
+$(IntermediateDirectory)/IPlayer.cpp$(ObjectSuffix): IPlayer.cpp $(IntermediateDirectory)/IPlayer.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/IPlayer.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/IPlayer.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/IPlayer.cpp$(DependSuffix): IPlayer.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/IPlayer.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/IPlayer.cpp$(DependSuffix) -MM IPlayer.cpp
+
+$(IntermediateDirectory)/IPlayer.cpp$(PreprocessSuffix): IPlayer.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/IPlayer.cpp$(PreprocessSuffix) IPlayer.cpp
+
+$(IntermediateDirectory)/IEnemy.cpp$(ObjectSuffix): IEnemy.cpp $(IntermediateDirectory)/IEnemy.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/IEnemy.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/IEnemy.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/IEnemy.cpp$(DependSuffix): IEnemy.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/IEnemy.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/IEnemy.cpp$(DependSuffix) -MM IEnemy.cpp
+
+$(IntermediateDirectory)/IEnemy.cpp$(PreprocessSuffix): IEnemy.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/IEnemy.cpp$(PreprocessSuffix) IEnemy.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

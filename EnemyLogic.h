@@ -2,12 +2,13 @@
 #define ENEMYLOGIC_H
 
 #include "EnemyBulletLogic.h"
-#include "IGameCharacter.h"
+
 #include "GameCommonData.h"
 #include "math.h"
 #include <iostream>
+#include "IEnemy.h"
 
-class EnemyLogic
+class EnemyLogic : IEnemy
 {
 public:
     EnemyLogic(int initalXposition, int initalYposition, float theta);

@@ -3,48 +3,53 @@
 
 //#include "IEnemyBullet.h"
 #include "math.h"
-//class EnemyLogic; 
+#include "IBullet.h"
+// class EnemyLogic;
 
-
-
-class EnemyBulletLogic //: public IEnemyBullet
+class EnemyBulletLogic : public IBullet
 {
 public:
-EnemyBulletLogic();
-     EnemyBulletLogic(float enemyXPosition, float enemyYPosition , float theta);
-    
-     void move();
+    EnemyBulletLogic();
+    EnemyBulletLogic(float enemyXPosition, float enemyYPosition, float theta);
 
-     float getXposition();
+    void move();
 
-     float getYposition();
+    float getXposition();
 
-     bool isAlive();
-    
-     void setDamage(int damage);
-    
-     int getDamage();
-     
-     void setLife(bool life);
-     
+    float getYposition();
+
+    bool isAlive();
+
+    void setDamage(int damage);
+
+    int getDamage();
+
+    void setLife(bool life);
+
+    float getWidth();
+
+    float getHeight();
+
 private:
-     float _xPosition;
-     
-     float _yPosition;
-     
-     bool _isAlive ;
-     
-     int _damage;
-     
-     float _bulletSpeed = 0.015;
-     
-     float _theta;
-     
-     float _initialXposition;
-     
-     float _initialYposition;
-     
+    float _xPosition;
 
+    float _yPosition;
+
+    bool _isAlive;
+
+    int _damage;
+
+    float _bulletSpeed = 0.015;
+
+    float _theta;
+
+    float _initialXposition;
+
+    float _initialYposition;
+
+    float _width;
+
+    float _height;
 };
 
 #endif // ENEMYBULLETLOGIC_H

@@ -9,18 +9,30 @@ class PlayerBullet : public IBullet
 public:
     PlayerBullet(int xPosition, int yPosition, float theta);
 
-    void moveLeftX();
-    void moveLeftY();
-    void moveRightX();
-    void moveRightY();
-    float getAngleofRotation();
-    bool isAlive();
-    int getXposition();
-    int getYposition();
-    void setDamage(int damage);
-    int getDamage();
+//    void moveLeftX();
+//    void moveLeftY();
+//    void moveRightX();
+//    void moveRightY();
+//    
+   
     
-    void setLife(bool life);
+    
+      void move() ;
+
+     void setDamage(int damage);
+
+     int getDamage() ;
+
+     bool isAlive() ;
+
+     float getXposition() ;
+
+     float getYposition();
+     float getWidth() ;
+
+     float getHeight() ;
+    
+     void setLife(bool life);
     
     void fire();
 
@@ -31,6 +43,8 @@ private:
     int _speedOfBullets = 25;
     int _damage;
     bool _isAlive = true;
+    int _width;
+    int _height;
 };
 
 #endif // PLAYERBULLET_H

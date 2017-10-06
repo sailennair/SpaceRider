@@ -1,9 +1,9 @@
-Debug/PlayerLogic.cpp.o: PlayerLogic.cpp PlayerLogic.h IGameCharacter.h \
+Debug/PlayerLogic.cpp.o: PlayerLogic.cpp PlayerLogic.h IPlayer.h \
  IMovingGameObject.h GameCommonData.h
 
 PlayerLogic.h:
 
-IGameCharacter.h:
+IPlayer.h:
 
 IMovingGameObject.h:
 

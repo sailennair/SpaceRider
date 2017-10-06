@@ -1,12 +1,12 @@
-Debug/GameLogic.cpp.o: GameLogic.cpp GameLogic.h PlayerLogic.h \
- IGameCharacter.h IMovingGameObject.h GameCommonData.h PlayerBullet.h \
- IBullet.h EnemyLogic.h EnemyBulletLogic.h
+Debug/GameLogic.cpp.o: GameLogic.cpp GameLogic.h PlayerLogic.h IPlayer.h \
+ IMovingGameObject.h GameCommonData.h PlayerBullet.h IBullet.h \
+ EnemyLogic.h EnemyBulletLogic.h IGameCharacter.h
 
 GameLogic.h:
 
 PlayerLogic.h:
 
-IGameCharacter.h:
+IPlayer.h:
 
 IMovingGameObject.h:
 
@@ -19,3 +19,5 @@ IBullet.h:
 EnemyLogic.h:
 
 EnemyBulletLogic.h:
+
+IGameCharacter.h:

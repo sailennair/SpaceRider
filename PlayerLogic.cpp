@@ -6,6 +6,8 @@ PlayerLogic::PlayerLogic()
     _xpos = PlayerXPosition;
     _ypos = PlayerYPosition;
     _health = PlayerHealth;
+    _width = 40;
+    _height = 70;
 }
 
 void PlayerLogic::moveLeftX()
@@ -57,12 +59,12 @@ void PlayerLogic::reduceHealth(int _damage)
     _health -= _damage;
 }
 
-int PlayerLogic::getXposition()
+float PlayerLogic::getXposition()
 {
     return _xpos;
 }
 
-int PlayerLogic::getYposition()
+float PlayerLogic::getYposition()
 {
     return _ypos;
 }
@@ -99,4 +101,12 @@ void PlayerLogic::playerMove(Direction dir)
     }
 
    
+}
+
+float PlayerLogic::getWidth(){
+    return _width;
+}
+
+float PlayerLogic::getHeight(){
+    return _height;
 }

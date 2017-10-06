@@ -3,10 +3,10 @@
 
 #include <iostream>
 #include <math.h>
-#include "IGameCharacter.h"
+#include "IPlayer.h"
 #include <memory>
 
-class PlayerLogic : public IGameCharacter
+class PlayerLogic : public IPlayer
 {
 public:
     PlayerLogic();
@@ -27,15 +27,19 @@ public:
 
     void reduceHealth(int _damage);
 
-    int getXposition();
+    float getXposition();
     
-    int getYposition();
+    float getYposition();
     
     float getTheta(); 
     
     float degreesToRadians(float x);
     
     void playerMove(Direction dir);
+    
+     float getWidth() ;
+
+     float getHeight();
 
 private:
     int _health;
@@ -43,6 +47,8 @@ private:
     int _xpos;
     int _ypos;
     float _angleOfRotation;
+    float _width;
+    float _height;
 };
 
 #endif // PLAYERLOGIC_H

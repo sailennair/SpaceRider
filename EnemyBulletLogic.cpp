@@ -9,6 +9,8 @@ EnemyBulletLogic::EnemyBulletLogic(float enemyXPosition, float enemyYPosition, f
     _theta = theta;
     _initialXposition = enemyXPosition;
     _initialYposition = enemyYPosition;
+    _width = 5;
+    _height =5;
     
 }
 
@@ -47,4 +49,12 @@ int EnemyBulletLogic::getDamage()
 void EnemyBulletLogic::setLife(bool life)
 {
     _isAlive = life;
+}
+
+float EnemyBulletLogic::getWidth(){
+    return _width;
+}
+
+float EnemyBulletLogic::getHeight(){
+    return _height;
 }

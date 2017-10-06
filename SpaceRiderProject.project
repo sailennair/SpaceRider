@@ -11,8 +11,6 @@
     <File Name="main.cpp"/>
     <File Name="IMovingGameObject.h" ExcludeProjConfig=""/>
     <File Name="IMovingGameObject.cpp" ExcludeProjConfig=""/>
-    <File Name="IGameCharacter.h" ExcludeProjConfig=""/>
-    <File Name="IGameCharacter.cpp" ExcludeProjConfig=""/>
     <File Name="PlayerLogic.h" ExcludeProjConfig=""/>
     <File Name="PlayerLogic.cpp" ExcludeProjConfig=""/>
     <File Name="GameCommonData.h" ExcludeProjConfig=""/>
@@ -23,7 +21,7 @@
     <File Name="GameWindow.h"/>
     <File Name="GameWindow.cpp"/>
     <File Name="GamePresentation.h"/>
-    <File Name="GamePresentation.cpp"/>
+    <File Name="GamePresentation.cpp" ExcludeProjConfig=""/>
     <File Name="IBullet.h"/>
     <File Name="IBullet.cpp"/>
     <File Name="PlayerBullet.h"/>
@@ -34,12 +32,14 @@
     <File Name="EnemyLogic.cpp"/>
     <File Name="EnemyPresentation.h"/>
     <File Name="EnemyPresentation.cpp"/>
-    <File Name="IEnemyBullet.h"/>
-    <File Name="IEnemyBullet.cpp"/>
     <File Name="EnemyBulletLogic.h"/>
     <File Name="EnemyBulletLogic.cpp"/>
     <File Name="EnemyBulletPresentation.h"/>
     <File Name="EnemyBulletPresentation.cpp"/>
+    <File Name="IPlayer.h"/>
+    <File Name="IPlayer.cpp"/>
+    <File Name="IEnemy.h"/>
+    <File Name="IEnemy.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

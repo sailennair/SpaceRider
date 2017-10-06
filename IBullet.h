@@ -3,19 +3,26 @@
 
 #include "IMovingGameObject.h"
 
-class IBullet
+class IBullet : public IMovingGameObject
 {
 public:
-    virtual void moveLeftX() = 0;
-    virtual void moveLeftY() = 0;
-    virtual void moveRightX() = 0;
-    virtual void moveRightY() = 0;
-    virtual float getAngleofRotation() = 0;
-    virtual bool isAlive() = 0;
-    virtual int getXposition() = 0;
-    virtual int getYposition() = 0;
+    virtual void move() = 0;
+
     virtual void setDamage(int damage) = 0;
+
     virtual int getDamage() = 0;
+
+    virtual bool isAlive() = 0;
+
+    virtual float getXposition() = 0;
+
+    virtual float getYposition() = 0;
+
+    virtual float getWidth() = 0;
+
+    virtual float getHeight() = 0;
+    
+    virtual void setLife(bool life) = 0 ;
 };
 
 #endif // IBULLET_H
