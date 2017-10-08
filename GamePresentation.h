@@ -42,6 +42,10 @@ public:
     
     void drawAllEnemies(RenderWindow& window);
     
+    void deleteDeadEnemies();
+    
+    
+    
     
     vector<EnemyPresentation> getEnemyPresentationVector();
    

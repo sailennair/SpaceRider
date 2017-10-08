@@ -25,7 +25,7 @@ public:
 
     // virtual void move() =0;
     virtual bool isAlive() = 0;
-
+//These are used to get the top left corner of the sprite
     virtual float getXposition() = 0;
 
     virtual float getYposition() = 0;
@@ -33,6 +33,13 @@ public:
     virtual float getWidth() = 0;
 
     virtual float getHeight() = 0;
+    
+    virtual float getRadius() = 0;
+    
+    //This is to get the center of the sprite
+    virtual float getCenterXPosition() = 0;
+    
+    virtual float getCenterYPosition() = 0;
     // virtual float getAngleofRoattion() = 0;
 
     // Enemy and player

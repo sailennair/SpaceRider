@@ -30,6 +30,12 @@ public:
 
     float getHeight();
 
+    float getRadius();
+    
+    float getCenterXPosition();
+    
+    float getCenterYPosition();
+
 private:
     float _xPosition;
 
@@ -50,6 +56,10 @@ private:
     float _width;
 
     float _height;
+    
+    float _radius;
+    float _centerXPosition;
+    float _centerYPosition;
 };
 
 #endif // ENEMYBULLETLOGIC_H

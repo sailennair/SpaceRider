@@ -8,6 +8,9 @@
 #include <memory>
 #include "EnemyBulletPresentation.h"
 
+
+#include "EnemyLogic.h"
+
 using namespace sf;
 using namespace std;
 class EnemyPresentation
@@ -26,6 +29,8 @@ public:
    void updateEnemyBullet(float xPosition, float yPosition);
    
    EnemyBulletPresentation _enemyBulletPresentation;
+   
+   CircleShape _circle;
    
 private:
    

@@ -6,6 +6,9 @@
 #include <vector>
 #include "PlayerBullet.h"
 #include "EnemyLogic.h"
+#include "CollisionDetection.h"
+
+
 class GameLogic
 {
 public:
@@ -27,6 +30,8 @@ public:
     
     void checkEnemyScope();
     
+    void checkCollision();
+    
     vector<PlayerBullet> getPlayerLogicBullets();
 
     PlayerLogic getPlayerLogic();
@@ -34,6 +39,8 @@ public:
     vector<PlayerBullet> playerBulletLogicVector;
     
     vector<EnemyLogic> enemyLogicVector;
+    
+    CollisionDetection collisionDetection;
     
     
 

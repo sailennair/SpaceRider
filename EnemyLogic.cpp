@@ -10,10 +10,14 @@ EnemyLogic::EnemyLogic(int initalXposition, int initalYposition, float theta)
     _initialYposition = CenterXGameWindow;
     _width = 20;
     _height = 20;
+    _centerXPosition = _xpos + 20;
+    _centerYPosition = _ypos + 20;
+
+    _radius = 15;
 
     EnemyBulletLogic enemyBulletLogic{ getXposition(), getYposition(), getAngleofRotation() };
     _enemyBulletLogic = enemyBulletLogic;
-    
+
     enemyBulletLogicVector.push_back(_enemyBulletLogic);
 }
 
@@ -21,25 +25,31 @@ void EnemyLogic::move()
 {
     _xpos += _initialXposition * cos(_theta) * _enemySpeed;
     _ypos += _initialYposition * sin(_theta) * _enemySpeed;
+
+    _centerXPosition += (_initialXposition - 10) * cos(_theta) * _enemySpeed;
+    _centerYPosition += (_initialYposition - 10) * sin(_theta) * _enemySpeed;
+
     _enemyBulletLogic.move();
 }
 
 void EnemyLogic::moveToCenter(float xPosition, float yPosition, float theta)
 {
     enemyBulletLogicVector.clear();
-    
-    EnemyBulletLogic enemyBulletLogic{xPosition, yPosition, theta };
+
+    EnemyBulletLogic enemyBulletLogic{ xPosition, yPosition, theta };
     _enemyBulletLogic = enemyBulletLogic;
     enemyBulletLogicVector.push_back(_enemyBulletLogic);
-    
+
     _xpos = xPosition;
     _ypos = yPosition;
     _theta = theta;
-    
-    
+
+    _centerXPosition = _xpos + 20;
+    _centerYPosition = _ypos + 20;
 }
 
-vector<EnemyBulletLogic> EnemyLogic::getEnemyBulletLogicVector(){
+vector<EnemyBulletLogic> EnemyLogic::getEnemyBulletLogicVector()
+{
     return enemyBulletLogicVector;
 }
 
@@ -50,7 +60,11 @@ float EnemyLogic::getAngleofRotation()
 
 bool EnemyLogic::isAlive()
 {
-    return _isAlive;
+    if(_health > 0) {
+        return _isAlive;
+    } else {
+        return false;
+    }
 }
 
 void EnemyLogic::reduceHealth(int _damage)
@@ -91,4 +105,18 @@ float EnemyLogic::getWidth()
 float EnemyLogic::getHeight()
 {
     return _height;
+}
+
+float EnemyLogic::getRadius()
+{
+    return _radius;
+}
+
+float EnemyLogic::getCenterXPosition()
+{
+    return _centerXPosition;
+}
+float EnemyLogic::getCenterYPosition()
+{
+    return _centerYPosition;
 }

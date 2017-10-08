@@ -11,6 +11,8 @@ EnemyBulletLogic::EnemyBulletLogic(float enemyXPosition, float enemyYPosition, f
     _initialYposition = enemyYPosition;
     _width = 5;
     _height =5;
+    _centerXPosition = _xPosition -5 ;
+    _centerYPosition = _yPosition -5;
     
 }
 
@@ -19,6 +21,11 @@ void EnemyBulletLogic::move()
     _xPosition += _initialXposition*cos(_theta)*_bulletSpeed;
     
     _yPosition += _initialYposition*sin(_theta)*_bulletSpeed;
+    
+    _centerXPosition += _initialXposition*cos(_theta)*_bulletSpeed;
+    
+    _centerYPosition +=  _initialYposition*sin(_theta)*_bulletSpeed;
+    
 }
 
 float EnemyBulletLogic::getXposition()
@@ -57,4 +64,19 @@ float EnemyBulletLogic::getWidth(){
 
 float EnemyBulletLogic::getHeight(){
     return _height;
+}
+
+float EnemyBulletLogic::getRadius(){
+    return _radius;
+}
+
+
+float EnemyBulletLogic::getCenterXPosition(){
+    return _centerXPosition;
+    
+}
+
+float EnemyBulletLogic::getCenterYPosition(){
+    return _centerYPosition;
+    
 }

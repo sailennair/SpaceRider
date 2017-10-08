@@ -8,6 +8,9 @@
 #include "GameCommonData.h"
 #include <memory>
 
+
+
+
 using namespace sf;
 using namespace std;
 
@@ -29,6 +32,8 @@ public:
     
 private:
     RectangleShape _rect;
+    
+
 
 };
 

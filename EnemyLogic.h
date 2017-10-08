@@ -8,7 +8,7 @@
 #include <iostream>
 #include "IEnemy.h"
 
-class EnemyLogic : IEnemy
+class EnemyLogic : public IEnemy
 {
 public:
     EnemyLogic(int initalXposition, int initalYposition, float theta);
@@ -37,6 +37,12 @@ public:
 
     void moveToCenter(float xPosition, float yPosition, float theta);
     
+    float getRadius();
+    
+    float getCenterXPosition();
+    
+    float getCenterYPosition();
+    
     vector<EnemyBulletLogic> getEnemyBulletLogicVector();
 
     // EnemyBulletLogic createEnemyBullet();
@@ -47,15 +53,17 @@ private:
     float _theta;
     float _xpos;
     float _ypos;
-    bool _isAlive;
-    int _health;
+    bool _isAlive = true;
+    int _health = 15;
     int _initialXposition;
     int _initialYposition;
     float _enemySpeed = 0.007;
     bool _outOfBounds = false;
     float _width;
     float _height;
-    
+    float _radius;
+    float _centerXPosition;
+    float _centerYPosition;
     vector<EnemyBulletLogic> enemyBulletLogicVector;
 
     // EnemyBulletLogic enemyBulletLogic;

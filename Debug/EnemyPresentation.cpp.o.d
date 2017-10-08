@@ -28,7 +28,8 @@ Debug/EnemyPresentation.cpp.o: EnemyPresentation.cpp EnemyPresentation.h \
  SFML/Graphics/RenderTarget.hpp SFML/Graphics/View.hpp \
  SFML/Graphics/RenderTexture.hpp SFML/Graphics/RenderWindow.hpp \
  SFML/Graphics/Shader.hpp SFML/Graphics/Sprite.hpp SFML/Graphics/Text.hpp \
- GameCommonData.h EnemyBulletPresentation.h
+ GameCommonData.h EnemyBulletPresentation.h EnemyLogic.h \
+ EnemyBulletLogic.h IBullet.h IMovingGameObject.h IEnemy.h
 
 EnemyPresentation.h:
 
@@ -173,3 +174,13 @@ SFML/Graphics/Text.hpp:
 GameCommonData.h:
 
 EnemyBulletPresentation.h:
+
+EnemyLogic.h:
+
+EnemyBulletLogic.h:
+
+IBullet.h:
+
+IMovingGameObject.h:
+
+IEnemy.h:

@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=User
-Date                   :=06/10/2017
+Date                   :=08/10/2017
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/TDM-GCC-64/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-64/bin/g++.exe -shared -fPIC
@@ -63,7 +63,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
 Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBulletPresentation.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IPlayer.cpp$(ObjectSuffix) $(IntermediateDirectory)/IEnemy.cpp$(ObjectSuffix) 
+	$(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IPlayer.cpp$(ObjectSuffix) $(IntermediateDirectory)/IEnemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/CollisionDetection.cpp$(ObjectSuffix) 
 
 
 
@@ -221,6 +221,14 @@ $(IntermediateDirectory)/IEnemy.cpp$(DependSuffix): IEnemy.cpp
 
 $(IntermediateDirectory)/IEnemy.cpp$(PreprocessSuffix): IEnemy.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/IEnemy.cpp$(PreprocessSuffix) IEnemy.cpp
+
+$(IntermediateDirectory)/CollisionDetection.cpp$(ObjectSuffix): CollisionDetection.cpp $(IntermediateDirectory)/CollisionDetection.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/CollisionDetection.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/CollisionDetection.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/CollisionDetection.cpp$(DependSuffix): CollisionDetection.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/CollisionDetection.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/CollisionDetection.cpp$(DependSuffix) -MM CollisionDetection.cpp
+
+$(IntermediateDirectory)/CollisionDetection.cpp$(PreprocessSuffix): CollisionDetection.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/CollisionDetection.cpp$(PreprocessSuffix) CollisionDetection.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

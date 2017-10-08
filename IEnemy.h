@@ -2,6 +2,7 @@
 #define IENEMY_H
 
 #include "IMovingGameObject.h"
+
 class IEnemy : public IMovingGameObject
 {
 public:
@@ -22,6 +23,11 @@ public:
     virtual float getWidth() = 0;
 
     virtual float getHeight() = 0;
+    
+    virtual float getRadius() = 0;
+     virtual float getCenterXPosition() = 0;
+    
+    virtual float getCenterYPosition() = 0;
 };
 
 #endif // IENEMY_H

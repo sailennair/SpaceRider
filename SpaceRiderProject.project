@@ -40,6 +40,8 @@
     <File Name="IPlayer.cpp"/>
     <File Name="IEnemy.h"/>
     <File Name="IEnemy.cpp"/>
+    <File Name="CollisionDetection.h"/>
+    <File Name="CollisionDetection.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
