@@ -41,7 +41,7 @@ private:
 
     float _yPosition;
 
-    bool _isAlive;
+    bool _isAlive = true;
 
     int _damage;
 

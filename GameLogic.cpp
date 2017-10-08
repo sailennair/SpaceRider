@@ -3,7 +3,7 @@
 GameLogic::GameLogic()
 {
     PlayerLogic player();
-    
+
     CollisionDetection collisionDetection();
 }
 
@@ -54,61 +54,55 @@ void GameLogic::createEnemyLogicObject()
 
 void GameLogic::updateEnemyLogic()
 {
-    for(auto& iter : enemyLogicVector) {
-        iter.move();
-        
+    if(enemyLogicVector.size() > 0) {
+        for(auto& iter : enemyLogicVector) {
+            iter.move();
+        }
     }
-    
-//    for (auto index = 0; index < enemyLogicVector.size(); index++){
-//        if( collisionDetection.didObjectsCollide(player, enemyLogicVector[index]) == true){
-//            std::cout <<"collision" << std:: endl;
-//             std::cout<<  enemyLogicVector[index].isAlive() << std::endl;
-//            enemyLogicVector[index].setLife(false); 
-//
-//std::cout<<  enemyLogicVector[index].isAlive() << std::endl;
-//            
-//        }
-        
-      //  std::cout<<  enemyLogicVector[index].isAlive() << std::endl;
-    //}
-    
-    
-    
-   
 }
 
 void GameLogic::checkEnemyScope()
 {
-    for(auto& iter : enemyLogicVector) {
-        if(iter.getXposition() < 0 || iter.getXposition() > GameXWindow || iter.getYposition() < 0 ||
-            iter.getYposition() > GameYWindow) {
-            iter.setOutofBounds(true);
-        }
-    }
-    
-}
-void GameLogic::checkCollision(){
-    
-    for (auto index = 0; index < enemyLogicVector.size(); index++){
-        //Checking collision between player and enemy
-        if( collisionDetection.didObjectsCollide(player, enemyLogicVector[index]) == true){
-            std::cout <<"collision" << std::endl;
-            enemyLogicVector[index].setLife(false); 
-        }
-        
-        //check collision between all player bullets and enemies
-        for(auto& iter: playerBulletLogicVector){
-            if(collisionDetection.didObjectsCollide(iter,enemyLogicVector[index]) == true){
-                std::cout <<"collision" << std::endl;
-                enemyLogicVector[index].reduceHealth(iter.getDamage());
-                iter.setLife(false);
+    if(enemyLogicVector.size() > 0) {
+        for(auto& iter : enemyLogicVector) {
+            if(iter.getXposition() < 0 || iter.getXposition() > GameXWindow || iter.getYposition() < 0 ||
+                iter.getYposition() > GameYWindow) {
+                iter.setOutofBounds(true);
             }
         }
-        
-        
+    }
 }
+void GameLogic::checkCollision()
+{
 
+    if(enemyLogicVector.size() > 0) {
+        for(auto index = 0; index < enemyLogicVector.size(); index++) {
+            // Checking collision between player and enemy
+            if(collisionDetection.didObjectsCollide(player, enemyLogicVector[index]) == true) {
+                // std::cout <<"collision" << std::endl;
+                enemyLogicVector[index].setLife(false);
+            }
 
+            if(enemyLogicVector[index].enemyBulletLogicVector.size() > 0) {
+                if(collisionDetection.didObjectsCollide(
+                       player, enemyLogicVector[index].getEnemyBulletLogicVector()[0]) == true) {
 
+                    // std::cout << "collision" << std::endl;
+
+                    enemyLogicVector[index].enemyBulletLogicVector[0].setLife(false);
+
+                    player.reduceHealth(enemyLogicVector[index].getEnemyBulletLogicVector()[0].getDamage());
+                }
+            }
+
+            // check collision between all player bullets and enemies
+            for(auto& iter : playerBulletLogicVector) {
+                if(collisionDetection.didObjectsCollide(iter, enemyLogicVector[index]) == true) {
+                    // std::cout<<"collision"<<std::endl;
+                    enemyLogicVector[index].reduceHealth(iter.getDamage());
+                    iter.setLife(false);
+                }
+            }
+        }
+    }
 }
-

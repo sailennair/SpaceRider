@@ -2,9 +2,10 @@
 
 PlayerBullet::PlayerBullet(int xPosition, int yPosition, float theta)
 {
-    _playerBulletXposition = xPosition;
-    _playerBulletYposition = yPosition;
-    _theta = theta;
+     _theta = theta;
+    _playerBulletXposition = xPosition + 36*cos(_theta);
+    _playerBulletYposition = yPosition + 36*sin(_theta);
+   
     _width = 5;
     _height = 5;
     _centerXPosition = xPosition + 2.5;

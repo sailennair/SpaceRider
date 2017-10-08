@@ -15,8 +15,8 @@ EnemyLogic::EnemyLogic(int initalXposition, int initalYposition, float theta)
 
     _radius = 15;
 
-    EnemyBulletLogic enemyBulletLogic{ getXposition(), getYposition(), getAngleofRotation() };
-    _enemyBulletLogic = enemyBulletLogic;
+    EnemyBulletLogic _enemyBulletLogic{ getXposition(), getYposition(), getAngleofRotation() };
+    //_enemyBulletLogic = enemyBulletLogic;
 
     enemyBulletLogicVector.push_back(_enemyBulletLogic);
 }
@@ -29,15 +29,20 @@ void EnemyLogic::move()
     _centerXPosition += (_initialXposition - 10) * cos(_theta) * _enemySpeed;
     _centerYPosition += (_initialYposition - 10) * sin(_theta) * _enemySpeed;
 
-    _enemyBulletLogic.move();
+    //_enemyBulletLogic.move();
+    if(enemyBulletLogicVector.size()>0){
+    enemyBulletLogicVector[0].move();
+    
+    }
 }
 
 void EnemyLogic::moveToCenter(float xPosition, float yPosition, float theta)
 {
+    
     enemyBulletLogicVector.clear();
 
-    EnemyBulletLogic enemyBulletLogic{ xPosition, yPosition, theta };
-    _enemyBulletLogic = enemyBulletLogic;
+    EnemyBulletLogic _enemyBulletLogic{ xPosition, yPosition, theta };
+   // _enemyBulletLogic = enemyBulletLogic;
     enemyBulletLogicVector.push_back(_enemyBulletLogic);
 
     _xpos = xPosition;

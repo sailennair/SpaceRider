@@ -44,10 +44,13 @@ public:
     float getCenterYPosition();
     
     vector<EnemyBulletLogic> getEnemyBulletLogicVector();
+    
+      vector<EnemyBulletLogic> enemyBulletLogicVector;
+
 
     // EnemyBulletLogic createEnemyBullet();
 
-    EnemyBulletLogic _enemyBulletLogic;
+    //EnemyBulletLogic _enemyBulletLogic;
 
 private:
     float _theta;
@@ -64,8 +67,7 @@ private:
     float _radius;
     float _centerXPosition;
     float _centerYPosition;
-    vector<EnemyBulletLogic> enemyBulletLogicVector;
-
+  
     // EnemyBulletLogic enemyBulletLogic;
 };
 

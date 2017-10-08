@@ -28,9 +28,13 @@ public:
    
    void updateEnemyBullet(float xPosition, float yPosition);
    
-   EnemyBulletPresentation _enemyBulletPresentation;
+   void moveToCenter();
+   
+  // EnemyBulletPresentation _enemyBulletPresentation;
    
    CircleShape _circle;
+   
+   vector<EnemyBulletPresentation> _enemyBulletPresentationVector;
    
 private:
    

@@ -4,15 +4,16 @@
 EnemyBulletLogic::EnemyBulletLogic(){}
 EnemyBulletLogic::EnemyBulletLogic(float enemyXPosition, float enemyYPosition, float theta)
 {
-    _xPosition = enemyXPosition;
-    _yPosition = enemyYPosition;
-    _theta = theta;
+      _theta = theta;
+    _xPosition = enemyXPosition + 10*cos(_theta);
+    _yPosition = enemyYPosition + 10*sin(_theta);
     _initialXposition = enemyXPosition;
     _initialYposition = enemyYPosition;
     _width = 5;
     _height =5;
     _centerXPosition = _xPosition -5 ;
     _centerYPosition = _yPosition -5;
+    _radius = 5;
     
 }
 
