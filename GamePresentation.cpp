@@ -78,34 +78,34 @@ void GamePresentation::updateEnemyPresentation()
     _timer++;
 
     // This loop updates the enemies sprite position by checking the updated logics position
-    if (enemyPresentationVector.size()>0 && gameLogic_shared_pointer->enemyLogicVector.size()>0){
-    for(auto iter = 0; iter < enemyPresentationVector.size(); iter++) {
+    if(enemyPresentationVector.size() > 0 && gameLogic_shared_pointer->enemyLogicVector.size() > 0) {
+        for(auto iter = 0; iter < enemyPresentationVector.size(); iter++) {
 
-        enemyPresentationVector[iter].updateEnemy(gameLogic_shared_pointer->enemyLogicVector[iter].getXposition(),
-            gameLogic_shared_pointer->enemyLogicVector[iter].getYposition());
+            enemyPresentationVector[iter].updateEnemy(gameLogic_shared_pointer->enemyLogicVector[iter].getXposition(),
+                gameLogic_shared_pointer->enemyLogicVector[iter].getYposition());
 
-        enemyPresentationVector[iter]._circle.setPosition(
-            gameLogic_shared_pointer->enemyLogicVector[iter].getCenterXPosition(),
-            gameLogic_shared_pointer->enemyLogicVector[iter].getCenterYPosition());
+            enemyPresentationVector[iter]._circle.setPosition(
+                gameLogic_shared_pointer->enemyLogicVector[iter].getCenterXPosition(),
+                gameLogic_shared_pointer->enemyLogicVector[iter].getCenterYPosition());
 
-        if(gameLogic_shared_pointer->enemyLogicVector[iter].enemyBulletLogicVector.size() > 0) {
-            enemyPresentationVector[iter].updateEnemyBullet(
-                gameLogic_shared_pointer->enemyLogicVector[iter].getEnemyBulletLogicVector()[0].getXposition(),
-                gameLogic_shared_pointer->enemyLogicVector[iter].getEnemyBulletLogicVector()[0].getYposition());
-        }
+            if(gameLogic_shared_pointer->enemyLogicVector[iter].enemyBulletLogicVector.size() > 0) {
+                enemyPresentationVector[iter].updateEnemyBullet(
+                    gameLogic_shared_pointer->enemyLogicVector[iter].getEnemyBulletLogicVector()[0].getXposition(),
+                    gameLogic_shared_pointer->enemyLogicVector[iter].getEnemyBulletLogicVector()[0].getYposition());
+            }
 
-        // Checking if the enemy has gone out of scope and if so, it will recenter the enemy
-        if(_timer % 55 == 0) {
-            if(gameLogic_shared_pointer->enemyLogicVector[iter].isOutOfBounds() == true) {
+            // Checking if the enemy has gone out of scope and if so, it will recenter the enemy
+            if(_timer % 55 == 0) {
+                if(gameLogic_shared_pointer->enemyLogicVector[iter].isOutOfBounds() == true) {
 
-                gameLogic_shared_pointer->enemyLogicVector[iter].setOutofBounds(false);
-                (gameLogic_shared_pointer->enemyLogicVector[iter])
-                    .moveToCenter(
-                        CenterXGameWindow, CenterYGameWindow, gameLogic_shared_pointer->getPlayerLogic().getTheta());
-                enemyPresentationVector[iter].moveToCenter();
+                    gameLogic_shared_pointer->enemyLogicVector[iter].setOutofBounds(false);
+                    (gameLogic_shared_pointer->enemyLogicVector[iter])
+                        .moveToCenter(CenterXGameWindow, CenterYGameWindow,
+                            gameLogic_shared_pointer->getPlayerLogic().getTheta());
+                    enemyPresentationVector[iter].moveToCenter();
+                }
             }
         }
-    }
     }
 }
 
@@ -145,14 +145,13 @@ void GamePresentation::deleteDeadEnemies()
             }
 
             // delete bullets when they hit the player
-            if(enemyPresentationVector.size()>0){
-            if(enemyPresentationVector[iter]._enemyBulletPresentationVector.size() > 0 &&
-                gameLogic_shared_pointer->enemyLogicVector[iter].enemyBulletLogicVector.size() > 0) {
-                    
-                if(gameLogic_shared_pointer->enemyLogicVector[iter].enemyBulletLogicVector[0].isAlive() == false) {
-                    enemyPresentationVector[iter]._enemyBulletPresentationVector.clear();
-                    gameLogic_shared_pointer->enemyLogicVector[iter].enemyBulletLogicVector.clear();
-                }
+            if(enemyPresentationVector.size() > 0) {
+                if(enemyPresentationVector[iter]._enemyBulletPresentationVector.size() > 0 &&
+                    gameLogic_shared_pointer->enemyLogicVector[iter].enemyBulletLogicVector.size() > 0) {
+                    if(gameLogic_shared_pointer->enemyLogicVector[iter].enemyBulletLogicVector[0].isAlive() == false) {
+                        enemyPresentationVector[iter]._enemyBulletPresentationVector.clear();
+                        gameLogic_shared_pointer->enemyLogicVector[iter].enemyBulletLogicVector.clear();
+                    }
                 }
             }
         }

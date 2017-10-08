@@ -29,9 +29,9 @@ Debug/main.cpp.o: main.cpp GameWindow.h GamePresentation.h \
  SFML/Graphics/RenderTexture.hpp SFML/Graphics/RenderWindow.hpp \
  SFML/Graphics/Shader.hpp SFML/Graphics/Sprite.hpp SFML/Graphics/Text.hpp \
  PlayerPresentation.h GameCommonData.h GameLogic.h PlayerLogic.h \
- IGameCharacter.h IMovingGameObject.h PlayerBullet.h IBullet.h \
- EnemyLogic.h EnemyBulletLogic.h PlayerBulletPresentation.h \
- EnemyPresentation.h
+ IPlayer.h IMovingGameObject.h PlayerBullet.h IBullet.h EnemyLogic.h \
+ EnemyBulletLogic.h IEnemy.h CollisionDetection.h \
+ PlayerBulletPresentation.h EnemyPresentation.h EnemyBulletPresentation.h
 
 GameWindow.h:
 
@@ -183,7 +183,7 @@ GameLogic.h:
 
 PlayerLogic.h:
 
-IGameCharacter.h:
+IPlayer.h:
 
 IMovingGameObject.h:
 
@@ -195,6 +195,12 @@ EnemyLogic.h:
 
 EnemyBulletLogic.h:
 
+IEnemy.h:
+
+CollisionDetection.h:
+
 PlayerBulletPresentation.h:
 
 EnemyPresentation.h:
+
+EnemyBulletPresentation.h:
