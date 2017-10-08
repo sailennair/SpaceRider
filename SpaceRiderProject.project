@@ -42,6 +42,10 @@
     <File Name="IEnemy.cpp"/>
     <File Name="CollisionDetection.h"/>
     <File Name="CollisionDetection.cpp"/>
+    <File Name="SatelliteLogic.h"/>
+    <File Name="SatelliteLogic.cpp"/>
+    <File Name="SatellitePresentation.h"/>
+    <File Name="SatellitePresentation.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

@@ -63,7 +63,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
 Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBulletPresentation.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IPlayer.cpp$(ObjectSuffix) $(IntermediateDirectory)/IEnemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/CollisionDetection.cpp$(ObjectSuffix) 
+	$(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IPlayer.cpp$(ObjectSuffix) $(IntermediateDirectory)/IEnemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/CollisionDetection.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatelliteLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatellitePresentation.cpp$(ObjectSuffix) 
 
 
 
@@ -229,6 +229,22 @@ $(IntermediateDirectory)/CollisionDetection.cpp$(DependSuffix): CollisionDetecti
 
 $(IntermediateDirectory)/CollisionDetection.cpp$(PreprocessSuffix): CollisionDetection.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/CollisionDetection.cpp$(PreprocessSuffix) CollisionDetection.cpp
+
+$(IntermediateDirectory)/SatelliteLogic.cpp$(ObjectSuffix): SatelliteLogic.cpp $(IntermediateDirectory)/SatelliteLogic.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/SatelliteLogic.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/SatelliteLogic.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/SatelliteLogic.cpp$(DependSuffix): SatelliteLogic.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/SatelliteLogic.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/SatelliteLogic.cpp$(DependSuffix) -MM SatelliteLogic.cpp
+
+$(IntermediateDirectory)/SatelliteLogic.cpp$(PreprocessSuffix): SatelliteLogic.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/SatelliteLogic.cpp$(PreprocessSuffix) SatelliteLogic.cpp
+
+$(IntermediateDirectory)/SatellitePresentation.cpp$(ObjectSuffix): SatellitePresentation.cpp $(IntermediateDirectory)/SatellitePresentation.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/SatellitePresentation.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/SatellitePresentation.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/SatellitePresentation.cpp$(DependSuffix): SatellitePresentation.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/SatellitePresentation.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/SatellitePresentation.cpp$(DependSuffix) -MM SatellitePresentation.cpp
+
+$(IntermediateDirectory)/SatellitePresentation.cpp$(PreprocessSuffix): SatellitePresentation.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/SatellitePresentation.cpp$(PreprocessSuffix) SatellitePresentation.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
