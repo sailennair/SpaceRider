@@ -37,8 +37,6 @@ public:
    vector<EnemyBulletPresentation> _enemyBulletPresentationVector;
    
 private:
-   
-   
    Texture enemySpriteTexture;
 
 };
