@@ -29,7 +29,7 @@ Debug/ScorePresentation.cpp.o: ScorePresentation.cpp ScorePresentation.h \
  SFML/Graphics/RenderTarget.hpp SFML/Graphics/View.hpp \
  SFML/Graphics/RenderTexture.hpp SFML/Graphics/RenderWindow.hpp \
  SFML/Graphics/Shader.hpp SFML/Graphics/Sprite.hpp SFML/Graphics/Text.hpp \
- ScoreDatabase.h
+ ScoreDatabase.h GameCommonData.h
 
 ScorePresentation.h:
 
@@ -172,3 +172,5 @@ SFML/Graphics/Sprite.hpp:
 SFML/Graphics/Text.hpp:
 
 ScoreDatabase.h:
+
+GameCommonData.h:

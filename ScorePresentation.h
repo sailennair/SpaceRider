@@ -9,10 +9,12 @@ class ScorePresentation{
 public:
     ScorePresentation(int highestScore);
     void draw(sf::RenderWindow& window , float x, float y);
+    
+    // If the highest score changes during the game 
+    //then this will change the highestes score message displayeed
     void setScoreMessage(int highestScore);
 
 private:
-    void setUpText();
     sf::Font _scoreFont;
     sf::Text _scoreText;
     std::string _scoreMessage;

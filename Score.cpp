@@ -18,7 +18,9 @@ Score::Score(std::string name):
 
 /// PLAYER SCORE MANAGEMENT
 void Score::increasePoints(int scoreIncrement){
-    _currentScore += scoreIncrement;     
+    _currentScore += scoreIncrement;
+    if(_currentScore > _highestScore)
+        _highestScore = _currentScore;
 }
 
 void Score::insertScore(){
@@ -29,10 +31,12 @@ void Score::insertScore(){
         _scoresVect.push_back(_currentScore);
         std::sort(begin(_scoresVect), end(_scoresVect));
         std::reverse(begin(_scoresVect), end(_scoresVect));
+        _highestScore = _scoresVect[0];
     }else{
         _scoresVect.push_back(_currentScore);
         std::sort(begin(_scoresVect), end(_scoresVect));
         std::reverse(begin(_scoresVect), end(_scoresVect));
+        _highestScore = _scoresVect[0];
         _scoresVect.pop_back(); 
     }
 }
@@ -66,6 +70,7 @@ void Score::loadingScores(){
 //}
 
 void Score::storeScore(){
+    insertScore();
     _Database.writeScoreToFile(_scoresVect);   
 }
 /// This will be to write a Player Details vector
@@ -74,18 +79,3 @@ void Score::storeScore(){
 //}
 
 
-
-//else{
-//        auto it = begin(_scoresVect);
-//        for(unsigned int i = 0; i < _scoresVect.size(); i++){
-//            it++;
-//            if((i == 0 &&  _scoresVect[i] < _currentScore)){
-//                _scoresVect.insert(it, _currentScore);
-//                //_scoresVect[i] = _currentScore;
-//                //_scoresVect.pop_back();
-//            }
-//            
-//            if((i != 0 && i!=_scoresVect.size()-1) && ((_scoresVect[i] < _currentScore) && _scoresVect[i+1] > _currentScore )){
-//                     _scoresVect.insert(it, _currentScore);
-//                   // _scoresVect.pop_back();
-//            }
