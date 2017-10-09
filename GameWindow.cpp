@@ -19,14 +19,14 @@ void GameWindow::generateWindow()
     while(_window.isOpen()) {
 
         sf::Event event;
-        if(timer % 100 == 0 && enemies < 0) {
+        if(timer % 100 == 0 && enemies < 5) {
             _gamePresentation.gameLogic_shared_pointer->createEnemyLogicObject();
             _gamePresentation.createEnemyPresentationObject();
             enemies++;
             std::cout << enemies << std::endl;
         }
 
-        if(timer % 500 == 0 && _gamePresentation.getSatellitePresentationVector().size() == 0 && timer > 0) {
+        if(timer % 175 == 0 && _gamePresentation.getSatellitePresentationVector().size() == 0 && timer > 0) {
              
             _gamePresentation.gameLogic_shared_pointer->createSatellites();
              
@@ -43,7 +43,7 @@ void GameWindow::generateWindow()
         }
         
         
-        if(timer%75 == 0 && _gamePresentation.asteroidPresentationVector.size() == 0 ){
+        if(timer%75 == 0 && _gamePresentation.asteroidPresentationVector.size() == 0  && timer> 0){
             _gamePresentation.gameLogic_shared_pointer->createAsteroid();
             _gamePresentation.createAsteroidPresentation();
         }
@@ -51,7 +51,7 @@ void GameWindow::generateWindow()
         
      //   std::cout<<"one"<<std::endl;
         
-        if(timer% 250 == 0 && timer > 0 && _gamePresentation._laserGeneratorPresentation.size() == 0){
+        if(timer% 300 == 0 && timer > 0 && _gamePresentation._laserGeneratorPresentation.size() == 0){
           //  std::cout<<"two"<<std::endl;
             _gamePresentation.gameLogic_shared_pointer->createLaserGeneratorLogic();
            // std::cout<<"three"<<std::endl;
