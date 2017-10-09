@@ -7,15 +7,16 @@
 
 class ScorePresentation{
 public:
-    ScorePresentation();
+    ScorePresentation(int highestScore);
     void draw(sf::RenderWindow& window , float x, float y);
+    void setScoreMessage(int highestScore);
+
 private:
     void setUpText();
-    void setScoreMessage();
     sf::Font _scoreFont;
     sf::Text _scoreText;
     std::string _scoreMessage;
 
-}
+};
 
 #endif

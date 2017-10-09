@@ -8,46 +8,47 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
-    <File Name="main.cpp"/>
-    <File Name="IMovingGameObject.h" ExcludeProjConfig=""/>
-    <File Name="IMovingGameObject.cpp" ExcludeProjConfig=""/>
-    <File Name="PlayerLogic.h" ExcludeProjConfig=""/>
-    <File Name="PlayerLogic.cpp" ExcludeProjConfig=""/>
-    <File Name="GameCommonData.h" ExcludeProjConfig=""/>
-    <File Name="PlayerPresentation.h"/>
-    <File Name="PlayerPresentation.cpp"/>
-    <File Name="GameLogic.h"/>
-    <File Name="GameLogic.cpp"/>
-    <File Name="GameWindow.h"/>
-    <File Name="GameWindow.cpp"/>
-    <File Name="GamePresentation.h"/>
-    <File Name="GamePresentation.cpp" ExcludeProjConfig=""/>
-    <File Name="IBullet.h"/>
-    <File Name="IBullet.cpp"/>
-    <File Name="PlayerBullet.h"/>
-    <File Name="PlayerBullet.cpp"/>
-    <File Name="PlayerBulletPresentation.h"/>
-    <File Name="PlayerBulletPresentation.cpp"/>
-    <File Name="EnemyLogic.h"/>
-    <File Name="EnemyLogic.cpp"/>
-    <File Name="EnemyPresentation.h"/>
-    <File Name="EnemyPresentation.cpp"/>
-    <File Name="EnemyBulletLogic.h"/>
-    <File Name="EnemyBulletLogic.cpp"/>
-    <File Name="EnemyBulletPresentation.h"/>
-    <File Name="EnemyBulletPresentation.cpp"/>
-    <File Name="IPlayer.h"/>
-    <File Name="IPlayer.cpp"/>
-    <File Name="IEnemy.h"/>
-    <File Name="IEnemy.cpp"/>
-    <File Name="CollisionDetection.h"/>
-    <File Name="CollisionDetection.cpp"/>
+    <File Name="main.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="IMovingGameObject.h" ExcludeProjConfig="Debug"/>
+    <File Name="IMovingGameObject.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerLogic.h" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerLogic.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="GameCommonData.h" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerPresentation.h" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerPresentation.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="GameLogic.h" ExcludeProjConfig="Debug"/>
+    <File Name="GameLogic.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="GameWindow.h" ExcludeProjConfig="Debug"/>
+    <File Name="GameWindow.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="GamePresentation.h" ExcludeProjConfig="Debug"/>
+    <File Name="GamePresentation.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="IBullet.h" ExcludeProjConfig="Debug"/>
+    <File Name="IBullet.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerBullet.h" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerBullet.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerBulletPresentation.h" ExcludeProjConfig="Debug"/>
+    <File Name="PlayerBulletPresentation.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="EnemyLogic.h" ExcludeProjConfig="Debug"/>
+    <File Name="EnemyLogic.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="EnemyPresentation.h" ExcludeProjConfig="Debug"/>
+    <File Name="EnemyPresentation.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="EnemyBulletLogic.h" ExcludeProjConfig="Debug"/>
+    <File Name="EnemyBulletLogic.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="EnemyBulletPresentation.h" ExcludeProjConfig="Debug"/>
+    <File Name="EnemyBulletPresentation.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="IPlayer.h" ExcludeProjConfig="Debug"/>
+    <File Name="IPlayer.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="IEnemy.h" ExcludeProjConfig="Debug"/>
+    <File Name="IEnemy.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="CollisionDetection.h" ExcludeProjConfig="Debug"/>
+    <File Name="CollisionDetection.cpp" ExcludeProjConfig="Debug"/>
     <File Name="Score.h" ExcludeProjConfig="Debug"/>
     <File Name="Score.cpp" ExcludeProjConfig="Debug"/>
     <File Name="ScoreDatabase.cpp"/>
     <File Name="ScoreDatabase.h"/>
     <File Name="ScorePresentation.h"/>
     <File Name="ScorePresentation.cpp"/>
+    <File Name="Testing-Score-Presentation.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
