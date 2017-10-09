@@ -4,8 +4,9 @@ EnemyBulletPresentation::EnemyBulletPresentation(){}
 
 EnemyBulletPresentation::EnemyBulletPresentation(float xPosition , float yPosition)
 {
-     _rect.setSize(Vector2f(5,5));
-    _rect.setFillColor(Color::Red);
+     //_rect.setSize(Vector2f(5,5));
+    _rect.setFillColor(Color::Blue);
+    _rect.setRadius(2.5);
    // _rect.setPosition(xPosition,yPosition);
 }
 
@@ -20,6 +21,6 @@ void EnemyBulletPresentation::draw(RenderWindow &window){
     window.draw(_rect);
 }
 
-RectangleShape EnemyBulletPresentation::getEnemyBullet(){
+CircleShape EnemyBulletPresentation::getEnemyBullet(){
     return _rect;
 }

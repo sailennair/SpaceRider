@@ -60,7 +60,7 @@ private:
     int _health = 15;
     int _initialXposition;
     int _initialYposition;
-    float _enemySpeed = 0.007;
+    float _enemySpeed = 0.0035;
     bool _outOfBounds = false;
     float _width;
     float _height;

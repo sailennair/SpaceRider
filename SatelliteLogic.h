@@ -2,8 +2,9 @@
 #define SATELLITELOGIC_H
 #include <math.h>
 #include "IMovingGameObject.h"
+#include "EnemyBulletLogic.h"
 
-class SatelliteLogic : private IMovingGameObject
+class SatelliteLogic : public IMovingGameObject
 {
 public:
     SatelliteLogic(float x, float y, float theta);
@@ -47,6 +48,8 @@ private:
     float _centerXPosition;
     
     float _centerYPosition;
+    
+  
 };
 
 #endif

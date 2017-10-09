@@ -1,14 +1,23 @@
 #include "PlayerBulletPresentation.h"
 
-PlayerBulletPresentation::PlayerBulletPresentation(int xpos, int ypos)
+PlayerBulletPresentation::PlayerBulletPresentation(int xpos, int ypos, int type)
 {
-    _rect.setSize(Vector2f(5,5));
+    if(type == 1){
+    _rect.setRadius(3);
+    _rect.setFillColor(Color::Green);
+    }
+    
+    if(type == 2){
+    _rect.setRadius(6);
     _rect.setFillColor(Color::Red);
+    }
+    
+    
     _rect.setPosition(xpos,ypos);
     
 }
 
-RectangleShape PlayerBulletPresentation::getBullet(){
+CircleShape PlayerBulletPresentation::getBullet(){
     return _rect;
 }
 

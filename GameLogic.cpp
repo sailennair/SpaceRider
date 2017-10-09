@@ -19,7 +19,7 @@ PlayerLogic GameLogic::getPlayerLogic()
 void GameLogic::createPlayerBullet()
 {
 
-    PlayerBullet playerBullet(player.getXposition(), player.getYposition(), player.getTheta());
+    PlayerBullet playerBullet(player.getXposition(), player.getYposition(), player.getTheta(), _playerBulletType);
 
     playerBulletLogicVector.push_back(playerBullet);
 }
@@ -36,6 +36,15 @@ void GameLogic::playerBulletUpdate()
     }
 }
 
+void GameLogic::setPlayerBulletType(int type){
+    _playerBulletType = type;
+    std::cout<<"Type"<<_playerBulletType<<std::endl; 
+}
+
+int GameLogic::getPlayerBulletType(){
+    return _playerBulletType;
+}
+ 
 void GameLogic::checkBulletScope()
 {
     for(auto& iter : playerBulletLogicVector) {
@@ -105,4 +114,70 @@ void GameLogic::checkCollision()
             }
         }
     }
+
+    if(satelliteLogicVector.size() > 0) {
+        for(auto& iter : satelliteLogicVector) {
+
+            if(playerBulletLogicVector.size() > 0) {
+                for(auto& iter1 : playerBulletLogicVector) {
+                    if(collisionDetection.didObjectsCollide(iter, iter1)) {
+                        iter1.setLife(false);
+                        iter.decreaseHealth(iter1.getDamage());
+                    }
+                }
+            }
+        }
+    }
+    
+    if(satelliteBulletLogic.size() > 0){
+        for(auto& iter : satelliteBulletLogic){
+            if(collisionDetection.didObjectsCollide(player, iter)==true){
+                iter.setLife(false);
+                player.reduceHealth(iter.getDamage());
+            }
+        }
+    }
+    
 }
+
+void GameLogic::createSatellites()
+{
+    for(auto i = 0; i < 3; i++) {
+        SatelliteLogic satelliteLogic(player.getXposition() - radius * 0.6 * (cos(player.getTheta())) + 30 * i,
+            player.getYposition() - radius * 0.6 * (sin(player.getTheta())) + 30 * i, 0.05);
+        std::cout << player.getXposition() - radius * 0.5 * (cos(player.getTheta())) + 30 * i << "   "
+                  << player.getYposition() - radius * 0.5 * (sin(player.getTheta())) + 30 * i << std::endl;
+        satelliteLogicVector.push_back(satelliteLogic);
+    }
+}
+
+void GameLogic::updateSatelliteLogic()
+{
+    if(satelliteLogicVector.size() > 0) {
+        for(auto& iter : satelliteLogicVector) {
+            iter.move();
+        }
+    }
+}
+
+void GameLogic::fireSatelliteBulletLogic()
+{
+    if(satelliteLogicVector.size() > 0) {
+        for(auto& iter : satelliteLogicVector) {
+            EnemyBulletLogic satelliteBullet(iter.getXposition(), iter.getYposition(), player.getTheta());
+            satelliteBulletLogic.push_back(satelliteBullet);
+        }
+    }
+}
+
+void GameLogic::checkSatelliteBulletScope()
+{
+    for(auto& iter : satelliteBulletLogic) {
+        if(iter.getXposition() < 0 || iter.getXposition() > GameXWindow || iter.getYposition() < 0 ||
+            iter.getYposition() > GameYWindow) {
+                std::cout<<"delete bullet"<<std::endl;
+            iter.setLife(false);
+        }
+    }
+}
+

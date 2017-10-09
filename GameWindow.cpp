@@ -14,14 +14,32 @@ void GameWindow::generateWindow()
     int timer = 0;
     int enemies = 0;
     bool isFiring = false;
+    
+    
     while(_window.isOpen()) {
 
         sf::Event event;
-        if(timer % 100 == 0 && enemies < 5) {
+        if(timer % 100 == 0 && enemies < NumberOfEnemies) {
             _gamePresentation.gameLogic_shared_pointer->createEnemyLogicObject();
             _gamePresentation.createEnemyPresentationObject();
             enemies++;
-            std::cout<< enemies <<std::endl;
+            std::cout << enemies << std::endl;
+        }
+
+        if(timer % 250 == 0 && _gamePresentation.getSatellitePresentationVector().size() == 0 && timer > 0) {
+             
+            _gamePresentation.gameLogic_shared_pointer->createSatellites();
+             
+            _gamePresentation.createSatellitePresenetation();
+            
+
+        }
+        //Fires a bullet from the satellite every few seconds
+        if(timer%255 == 0 && _gamePresentation.getSatellitePresentationVector().size()>0){
+            
+            _gamePresentation.gameLogic_shared_pointer->fireSatelliteBulletLogic();
+            
+            _gamePresentation.createSatelliteBulletPresentation();
         }
 
         while(_window.pollEvent(event)) {
@@ -41,11 +59,10 @@ void GameWindow::generateWindow()
 
             if(event.key.code == sf::Keyboard::Space) {
                 isFiring = true;
-                
             }
         }
-        
-        if(isFiring == true){
+
+        if(isFiring == true) {
             firePlayerBullet();
             isFiring = false;
         }
@@ -69,7 +86,9 @@ void GameWindow::renderCharacters(RenderWindow& window)
 
     _gamePresentation.drawAllBullets(window);
     _gamePresentation.drawAllEnemies(window);
-     _gamePresentation.renderSprite(window);
+    _gamePresentation.renderSprite(window);
+    _gamePresentation.drawSatellites(window);
+    _gamePresentation.drawSatelliteBullets(window);
 }
 
 void GameWindow::checkKeyBoardEvent()
@@ -94,8 +113,9 @@ void GameWindow::updatePlayerBullets()
 void GameWindow::updateAllEnemies()
 {
     _gamePresentation.gameLogic_shared_pointer->updateEnemyLogic();
+     _gamePresentation.updateEnemyPresentation();
+     _gamePresentation.gameLogic_shared_pointer->checkEnemyScope();
     _gamePresentation.deleteDeadEnemies();
-   
-    _gamePresentation.updateEnemyPresentation();
-    _gamePresentation.gameLogic_shared_pointer->checkEnemyScope();
+    _gamePresentation.gameLogic_shared_pointer->updateSatelliteLogic();
+    _gamePresentation.gameLogic_shared_pointer->checkSatelliteBulletScope();
 }

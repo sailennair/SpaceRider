@@ -45,7 +45,7 @@ private:
 
     int _damage;
 
-    float _bulletSpeed = 0.015;
+    float _bulletSpeed = 0.01;
 
     float _theta;
 

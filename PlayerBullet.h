@@ -7,7 +7,7 @@
 class PlayerBullet : public IBullet
 {
 public:
-    PlayerBullet(int xPosition, int yPosition, float theta);
+    PlayerBullet(int xPosition, int yPosition, float theta, int type);
 
     //    void moveLeftX();
     //    void moveLeftY();

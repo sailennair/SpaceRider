@@ -21,13 +21,15 @@ public:
     
     void updateEnemyBullet(float xPosition , float yPosition);
     
-    RectangleShape getEnemyBullet();
+ //   RectangleShape getEnemyBullet();
    
+   CircleShape getEnemyBullet();
    
    
 private:
 
-  RectangleShape _rect;
+  //RectangleShape _rect;
+  CircleShape _rect;
    
     
     

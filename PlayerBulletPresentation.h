@@ -18,9 +18,11 @@ class PlayerBulletPresentation
 {
 public:
 
-    PlayerBulletPresentation(int xpos, int ypos);
+    PlayerBulletPresentation(int xpos, int ypos, int type);
     
-    RectangleShape getBullet();
+    //RectangleShape getBullet();
+    
+    CircleShape getBullet();
     
     void draw(RenderWindow &window);
     
@@ -29,9 +31,10 @@ public:
     
     
     
-    
+  
 private:
-    RectangleShape _rect;
+  //  RectangleShape _rect;
+  CircleShape _rect;
     
 
 

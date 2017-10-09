@@ -1,39 +1,29 @@
 #include "PlayerBullet.h"
 
-PlayerBullet::PlayerBullet(int xPosition, int yPosition, float theta)
+PlayerBullet::PlayerBullet(int xPosition, int yPosition, float theta, int type)
 {
-     _theta = theta;
-    _playerBulletXposition = xPosition + 36*cos(_theta);
-    _playerBulletYposition = yPosition + 36*sin(_theta);
-   
-    _width = 5;
-    _height = 5;
+    _theta = theta;
+    _playerBulletXposition = xPosition + 36 * cos(_theta);
+    _playerBulletYposition = yPosition + 36 * sin(_theta);
+
     _centerXPosition = xPosition + 2.5;
-    _centerYPosition = yPosition +2.5;
-    _radius = 5;
+    _centerYPosition = yPosition + 2.5;
+
+    if(type == 1) {
+        _width = 5;
+        _height = 5;
+        _radius = 5;
+        _damage = 5;
+    }
+    if(type == 2) {
+        _width = 10;
+        _height = 10;
+        _radius = 10;
+        _damage = 20;
+    }
 }
 
-// void PlayerBullet::moveLeftX()
-//{
-//    _playerBulletXposition = _playerBulletXposition + _speedOfBullets * (CenterXGameWindow - getXposition()) / radius;
-//}
-//
-// void PlayerBullet::moveLeftY()
-//{
-//     _playerBulletXposition = _playerBulletXposition + _speedOfBullets * (CenterXGameWindow - getXposition()) /
-//     radius;
-//    _playerBulletYposition = _playerBulletYposition + _speedOfBullets * (CenterYGameWindow - getYposition()) / radius;
-//}
-//
-// void PlayerBullet::moveRightX()
-//{
-//    _playerBulletXposition = _playerBulletXposition + _speedOfBullets * (CenterXGameWindow - getXposition()) / radius;
-//}
-//
-// void PlayerBullet::moveRightY()
-//{
-//    _playerBulletYposition = _playerBulletYposition + _speedOfBullets * (CenterYGameWindow - getYposition()) / radius;
-//}
+
 
 void PlayerBullet::move()
 {
@@ -41,9 +31,9 @@ void PlayerBullet::move()
     _playerBulletXposition = _playerBulletXposition + _speedOfBullets * (CenterXGameWindow - getXposition()) / radius;
 
     _playerBulletYposition = _playerBulletYposition + _speedOfBullets * (CenterYGameWindow - getYposition()) / radius;
-    
-    _centerXPosition = _centerXPosition  + _speedOfBullets * (CenterXGameWindow - getXposition()) / radius;
-    
+
+    _centerXPosition = _centerXPosition + _speedOfBullets * (CenterXGameWindow - getXposition()) / radius;
+
     _centerYPosition = _centerYPosition + _speedOfBullets * (CenterYGameWindow - getYposition()) / radius;
 }
 

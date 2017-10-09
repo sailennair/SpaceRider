@@ -10,7 +10,7 @@ const int CenterYGameWindow = GameYWindow/2;
 const int radius = (GameYWindow - 70) / 2 - 20;
 const int centerPlayerRadius = (GameYWindow - 30) / 2 - 10;
 
-const int NumberOfEnemies = 10;
+const int NumberOfEnemies = 5;
 
 // Size of Player
 const int PlayerWidth = 47;

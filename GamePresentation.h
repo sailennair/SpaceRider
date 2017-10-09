@@ -11,6 +11,7 @@
 #include "PlayerBulletPresentation.h"
 #include "EnemyPresentation.h"
 #include <vector>
+#include "SatellitePresentation.h"
 
 using std::unique_ptr;
 using std::make_unique;
@@ -44,8 +45,23 @@ public:
     
     void deleteDeadEnemies();
     
+    void createSatellitePresenetation();
+    
+    void drawSatellites(RenderWindow& window);
+    
+    void deleteDeadEnemyBullets();
+    
+    vector<SatellitePresentation> getSatellitePresentationVector();
+    
+     void createSatelliteBulletPresentation();
+    
+    void drawSatelliteBullets(RenderWindow& window);
+    
+   
     
     
+    
+    vector<EnemyBulletPresentation> satelliteBulletPresentationVector;
     
     vector<EnemyPresentation> getEnemyPresentationVector();
    
@@ -60,8 +76,12 @@ private:
     
     vector<EnemyPresentation> enemyPresentationVector;
     
+    vector<SatellitePresentation> satellitePresentationVector;
+    
     //this is just a test variable
      int _timer;
+     
+     int _satellitesKilled = 0;
    
     
     

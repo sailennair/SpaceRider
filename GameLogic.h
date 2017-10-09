@@ -7,6 +7,7 @@
 #include "PlayerBullet.h"
 #include "EnemyLogic.h"
 #include "CollisionDetection.h"
+#include "SatelliteLogic.h"
 
 
 class GameLogic
@@ -32,6 +33,18 @@ public:
     
     void checkCollision();
     
+    void createSatellites();
+    
+    void updateSatelliteLogic();
+    
+    void fireSatelliteBulletLogic();
+    
+    void checkSatelliteBulletScope();
+    
+    void setPlayerBulletType(int type);
+    
+    int getPlayerBulletType();
+    
     vector<PlayerBullet> getPlayerLogicBullets();
 
     PlayerLogic getPlayerLogic();
@@ -40,7 +53,11 @@ public:
     
     vector<EnemyLogic> enemyLogicVector;
     
+    vector<SatelliteLogic> satelliteLogicVector;
+    
     CollisionDetection collisionDetection;
+    
+    vector<EnemyBulletLogic> satelliteBulletLogic;
     
     
 
@@ -48,6 +65,7 @@ private:
  
  PlayerLogic player;
  
+ int _playerBulletType = 1;
  
  
  
