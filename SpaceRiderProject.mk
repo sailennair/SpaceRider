@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=User
-Date                   :=09/10/2017
+Date                   :=10/10/2017
 CodeLitePath           :="C:/Program Files/CodeLite"
 LinkerName             :=C:/TDM-GCC-64/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-64/bin/g++.exe -shared -fPIC
@@ -64,7 +64,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 CodeLiteDir:=C:\Program Files\CodeLite
 Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBulletPresentation.cpp$(ObjectSuffix) \
 	$(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IPlayer.cpp$(ObjectSuffix) $(IntermediateDirectory)/IEnemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/CollisionDetection.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatelliteLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatellitePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/LifeLogic.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/LifePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/LaserGeneratorLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(ObjectSuffix) 
+	$(IntermediateDirectory)/LifePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/LaserGeneratorLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/AsteroidLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/AsteroidPresentation.cpp$(ObjectSuffix) 
 
 
 
@@ -278,6 +278,22 @@ $(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(DependSuffix): LaserGen
 
 $(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(PreprocessSuffix): LaserGeneratorPresentation.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(PreprocessSuffix) LaserGeneratorPresentation.cpp
+
+$(IntermediateDirectory)/AsteroidLogic.cpp$(ObjectSuffix): AsteroidLogic.cpp $(IntermediateDirectory)/AsteroidLogic.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/AsteroidLogic.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/AsteroidLogic.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/AsteroidLogic.cpp$(DependSuffix): AsteroidLogic.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/AsteroidLogic.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/AsteroidLogic.cpp$(DependSuffix) -MM AsteroidLogic.cpp
+
+$(IntermediateDirectory)/AsteroidLogic.cpp$(PreprocessSuffix): AsteroidLogic.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/AsteroidLogic.cpp$(PreprocessSuffix) AsteroidLogic.cpp
+
+$(IntermediateDirectory)/AsteroidPresentation.cpp$(ObjectSuffix): AsteroidPresentation.cpp $(IntermediateDirectory)/AsteroidPresentation.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/AsteroidPresentation.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/AsteroidPresentation.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/AsteroidPresentation.cpp$(DependSuffix): AsteroidPresentation.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/AsteroidPresentation.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/AsteroidPresentation.cpp$(DependSuffix) -MM AsteroidPresentation.cpp
+
+$(IntermediateDirectory)/AsteroidPresentation.cpp$(PreprocessSuffix): AsteroidPresentation.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/AsteroidPresentation.cpp$(PreprocessSuffix) AsteroidPresentation.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

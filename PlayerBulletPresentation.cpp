@@ -5,6 +5,7 @@ PlayerBulletPresentation::PlayerBulletPresentation(int xpos, int ypos, int type)
     if(type == 1){
     _rect.setRadius(3);
     _rect.setFillColor(Color::Green);
+    
     }
     
     if(type == 2){

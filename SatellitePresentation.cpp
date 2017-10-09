@@ -19,7 +19,7 @@ void SatellitePresentation::draw(sf::RenderWindow& window, float x, float y)
     _satellite.setTexture(_satelliteTexture);
     _satellite.setPosition(sf::Vector2f(x, y));
     
-    window.draw(_satellite);
+window.draw(_satellite);
  window.draw(_rect);
 }
 

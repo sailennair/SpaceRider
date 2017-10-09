@@ -14,6 +14,7 @@
 #include "SatellitePresentation.h"
 #include "LifePresentation.h"
 #include "LaserGeneratorPresentation.h"
+#include "AsteroidPresentation.h"
 
 using std::unique_ptr;
 using std::make_unique;
@@ -69,6 +70,12 @@ public:
     
     void deleteLaserGenerator();
     
+    void createAsteroidPresentation();
+    
+    void updateAsteroidPresentation();
+    
+    void drawAsteroid(RenderWindow &window);
+    
    
     
     
@@ -80,6 +87,8 @@ public:
     shared_ptr<GameLogic> gameLogic_shared_pointer;
     
     vector<LaserGeneratorPresentation> _laserGeneratorPresentation;
+    
+    vector<AsteroidPresentation>  asteroidPresentationVector;
  
      
   

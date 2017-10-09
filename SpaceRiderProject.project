@@ -54,6 +54,10 @@
     <File Name="LaserGeneratorLogic.cpp"/>
     <File Name="LaserGeneratorPresentation.h"/>
     <File Name="LaserGeneratorPresentation.cpp"/>
+    <File Name="AsteroidLogic.h"/>
+    <File Name="AsteroidLogic.cpp"/>
+    <File Name="AsteroidPresentation.h"/>
+    <File Name="AsteroidPresentation.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

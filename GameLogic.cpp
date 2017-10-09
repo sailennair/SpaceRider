@@ -262,3 +262,14 @@ void GameLogic::checkLaserGeneratorScope()
 }
 
 
+void GameLogic::createAsteroid(){
+    AsteroidLogic asteroidLogic(player.getTheta());
+    asteroidLogicVector.push_back(asteroidLogic);
+}
+
+
+void GameLogic::updateAsteroidLogic(){
+    if(asteroidLogicVector.size() > 0){
+        asteroidLogicVector[0].move();
+    }
+}

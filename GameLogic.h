@@ -10,6 +10,7 @@
 #include "SatelliteLogic.h"
 #include "LifeLogic.h"
 #include "LaserGeneratorLogic.h"
+#include "AsteroidLogic.h"
 
 
 class GameLogic
@@ -57,6 +58,10 @@ public:
     
     void checkLaserGeneratorScope();
     
+    void createAsteroid();
+    
+    void updateAsteroidLogic();
+    
     vector<LaserGeneratorLogic> _laserGeneratorLogic; 
     
     
@@ -75,6 +80,8 @@ public:
     CollisionDetection collisionDetection;
     
     vector<EnemyBulletLogic> satelliteBulletLogic;
+    
+    vector<AsteroidLogic> asteroidLogicVector;
     
    
     

@@ -19,14 +19,14 @@ void GameWindow::generateWindow()
     while(_window.isOpen()) {
 
         sf::Event event;
-        if(timer % 100 == 0 && enemies < 5) {
+        if(timer % 100 == 0 && enemies < 0) {
             _gamePresentation.gameLogic_shared_pointer->createEnemyLogicObject();
             _gamePresentation.createEnemyPresentationObject();
             enemies++;
             std::cout << enemies << std::endl;
         }
 
-        if(timer % 250 == 0 && _gamePresentation.getSatellitePresentationVector().size() == 0 && timer > 0) {
+        if(timer % 500 == 0 && _gamePresentation.getSatellitePresentationVector().size() == 0 && timer > 0) {
              
             _gamePresentation.gameLogic_shared_pointer->createSatellites();
              
@@ -43,10 +43,15 @@ void GameWindow::generateWindow()
         }
         
         
+        if(timer%75 == 0 && _gamePresentation.asteroidPresentationVector.size() == 0 ){
+            _gamePresentation.gameLogic_shared_pointer->createAsteroid();
+            _gamePresentation.createAsteroidPresentation();
+        }
+        
         
      //   std::cout<<"one"<<std::endl;
         
-        if(timer% 50 == 0 && timer > 0 && _gamePresentation._laserGeneratorPresentation.size() == 0){
+        if(timer% 250 == 0 && timer > 0 && _gamePresentation._laserGeneratorPresentation.size() == 0){
           //  std::cout<<"two"<<std::endl;
             _gamePresentation.gameLogic_shared_pointer->createLaserGeneratorLogic();
            // std::cout<<"three"<<std::endl;
@@ -102,6 +107,7 @@ void GameWindow::renderCharacters(RenderWindow& window)
     _gamePresentation.drawSatellites(window);
     _gamePresentation.drawSatelliteBullets(window);
     _gamePresentation.drawLaserGenerator(window);
+    _gamePresentation.drawAsteroid(window);
 }
 
 void GameWindow::checkKeyBoardEvent()
@@ -137,5 +143,8 @@ void GameWindow::updateAllEnemies()
     _gamePresentation.gameLogic_shared_pointer->updateLaserLogic();
     _gamePresentation.updateLaserGeneratorPresentation();
     _gamePresentation.deleteLaserGenerator();
+    
+    _gamePresentation.gameLogic_shared_pointer->updateAsteroidLogic();
+    _gamePresentation.updateAsteroidPresentation();
     
 }

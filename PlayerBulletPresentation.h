@@ -34,6 +34,7 @@ public:
   
 private:
   //  RectangleShape _rect;
+ // Sprite _playerBulletSprite;
   CircleShape _rect;
     
 

@@ -293,51 +293,76 @@ void GamePresentation::drawSatelliteBullets(RenderWindow& window)
 
 void GamePresentation::updateLaserGeneratorPresentation()
 {
-    if(_laserGeneratorPresentation.size() > 0){
-    for(auto i = 0; i < _laserGeneratorPresentation[0].laserGeneratorPresentationVector.size(); i++) {
-        _laserGeneratorPresentation[0].laserGeneratorPresentationVector[i].updateEnemy(
-            gameLogic_shared_pointer->_laserGeneratorLogic[0]._laserGeneratorEnemyLogicVector[i].getXposition(),
-            gameLogic_shared_pointer->_laserGeneratorLogic[0]._laserGeneratorEnemyLogicVector[i].getYposition());
-    }
+    if(_laserGeneratorPresentation.size() > 0) {
+        for(auto i = 0; i < _laserGeneratorPresentation[0].laserGeneratorPresentationVector.size(); i++) {
+            _laserGeneratorPresentation[0].laserGeneratorPresentationVector[i].updateEnemy(
+                gameLogic_shared_pointer->_laserGeneratorLogic[0]._laserGeneratorEnemyLogicVector[i].getXposition(),
+                gameLogic_shared_pointer->_laserGeneratorLogic[0]._laserGeneratorEnemyLogicVector[i].getYposition());
+        }
 
-    for(auto i = 0; i < _laserGeneratorPresentation[0].laserBulletPresentationVector.size(); i++) {
-        _laserGeneratorPresentation[0].laserBulletPresentationVector[i].updateEnemyBullet(
-            gameLogic_shared_pointer->_laserGeneratorLogic[0]._laserGeneratorEnemyBulletLogicVector[i].getXposition(),
-            gameLogic_shared_pointer->_laserGeneratorLogic[0]._laserGeneratorEnemyBulletLogicVector[i].getYposition());
-            std::cout<<"one"<<std::endl;
-    }
-    
-    }
-}
-
-void GamePresentation::drawLaserGenerator(RenderWindow &window){
-    if(_laserGeneratorPresentation.size() > 0){
-    _laserGeneratorPresentation[0].draw(window);
-    }
-}
-
-
-void GamePresentation::createLaserGenerator(){
-    LaserGeneratorPresentation laserGeneratorPresentation;
-    _laserGeneratorPresentation.push_back(laserGeneratorPresentation);
-    
-}
-
-void GamePresentation::deleteLaserGenerator(){
-    bool isDead = false;
-    if(_laserGeneratorPresentation.size() > 0){
-        for(auto i = 0; i < 2 ; i++){
-        if(gameLogic_shared_pointer->_laserGeneratorLogic[0]._laserGeneratorEnemyLogicVector[i].isAlive() == false){
-            isDead = true;
+        for(auto i = 0; i < _laserGeneratorPresentation[0].laserBulletPresentationVector.size(); i++) {
+            _laserGeneratorPresentation[0].laserBulletPresentationVector[i].updateEnemyBullet(
+                gameLogic_shared_pointer->_laserGeneratorLogic[0]
+                    ._laserGeneratorEnemyBulletLogicVector[i]
+                    .getXposition(),
+                gameLogic_shared_pointer->_laserGeneratorLogic[0]
+                    ._laserGeneratorEnemyBulletLogicVector[i]
+                    .getYposition());
+            std::cout << "one" << std::endl;
         }
     }
-    
+}
+
+void GamePresentation::drawLaserGenerator(RenderWindow& window)
+{
+    if(_laserGeneratorPresentation.size() > 0) {
+        _laserGeneratorPresentation[0].draw(window);
     }
-    
-    if (isDead == true){
-        
+}
+
+void GamePresentation::createLaserGenerator()
+{
+    LaserGeneratorPresentation laserGeneratorPresentation;
+    _laserGeneratorPresentation.push_back(laserGeneratorPresentation);
+}
+
+void GamePresentation::deleteLaserGenerator()
+{
+    bool isDead = false;
+    if(_laserGeneratorPresentation.size() > 0) {
+        for(auto i = 0; i < 2; i++) {
+            if(gameLogic_shared_pointer->_laserGeneratorLogic[0]._laserGeneratorEnemyLogicVector[i].isAlive() ==
+                false) {
+                isDead = true;
+            }
+        }
+    }
+
+    if(isDead == true) {
+
         _laserGeneratorPresentation.clear();
         gameLogic_shared_pointer->_laserGeneratorLogic.clear();
     }
-    
+}
+
+void GamePresentation::createAsteroidPresentation()
+{
+    AsteroidPresentation asteroidPresentation;
+    asteroidPresentationVector.push_back(asteroidPresentation);
+}
+
+void GamePresentation::updateAsteroidPresentation()
+{
+
+    if(asteroidPresentationVector.size() > 0) {
+        asteroidPresentationVector[0].updateAsteroid(gameLogic_shared_pointer->asteroidLogicVector[0].getXposition(),
+            gameLogic_shared_pointer->asteroidLogicVector[0].getYposition());
+    }
+}
+
+
+void GamePresentation::drawAsteroid(RenderWindow &window){
+     if(asteroidPresentationVector.size() > 0) {
+        asteroidPresentationVector[0].draw(window);
+    }
 }
