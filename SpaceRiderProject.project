@@ -46,6 +46,10 @@
     <File Name="SatelliteLogic.cpp"/>
     <File Name="SatellitePresentation.h"/>
     <File Name="SatellitePresentation.cpp"/>
+    <File Name="LifeLogic.h"/>
+    <File Name="LifeLogic.cpp"/>
+    <File Name="LifePresentation.h"/>
+    <File Name="LifePresentation.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

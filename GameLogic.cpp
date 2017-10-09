@@ -5,6 +5,10 @@ GameLogic::GameLogic()
     PlayerLogic player();
 
     CollisionDetection collisionDetection();
+    
+    LifeLogic lifeLogic(20,570);
+    _lifeLogic = lifeLogic;
+   
 }
 
 void GameLogic::playerUpdate(Direction dir)
@@ -16,6 +20,20 @@ PlayerLogic GameLogic::getPlayerLogic()
 {
     return player;
 }
+
+void GameLogic::updatePlayerLife(){
+  _playerLifesRemaining =  _lifeLogic.getNumberOfLivesRemaining(player.getHealth());
+ // std::cout<<_playerLifesRemaining<<std::endl;
+}
+
+int GameLogic::getPlayerLivesRemaining(){
+    return _playerLifesRemaining;
+}
+
+LifeLogic GameLogic::getPlayerLifeLogic(){
+    return _lifeLogic;
+}
+
 void GameLogic::createPlayerBullet()
 {
 
@@ -38,7 +56,7 @@ void GameLogic::playerBulletUpdate()
 
 void GameLogic::setPlayerBulletType(int type){
     _playerBulletType = type;
-    std::cout<<"Type"<<_playerBulletType<<std::endl; 
+   
 }
 
 int GameLogic::getPlayerBulletType(){
@@ -134,6 +152,7 @@ void GameLogic::checkCollision()
             if(collisionDetection.didObjectsCollide(player, iter)==true){
                 iter.setLife(false);
                 player.reduceHealth(iter.getDamage());
+                std::cout<<player.getHealth()<<std::endl;
             }
         }
     }
@@ -175,7 +194,7 @@ void GameLogic::checkSatelliteBulletScope()
     for(auto& iter : satelliteBulletLogic) {
         if(iter.getXposition() < 0 || iter.getXposition() > GameXWindow || iter.getYposition() < 0 ||
             iter.getYposition() > GameYWindow) {
-                std::cout<<"delete bullet"<<std::endl;
+              //  std::cout<<"delete bullet"<<std::endl;
             iter.setLife(false);
         }
     }

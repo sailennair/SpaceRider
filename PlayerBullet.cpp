@@ -12,13 +12,13 @@ PlayerBullet::PlayerBullet(int xPosition, int yPosition, float theta, int type)
     if(type == 1) {
         _width = 5;
         _height = 5;
-        _radius = 5;
+        _radius = 3;
         _damage = 5;
     }
     if(type == 2) {
         _width = 10;
         _height = 10;
-        _radius = 10;
+        _radius = 6;
         _damage = 20;
     }
 }

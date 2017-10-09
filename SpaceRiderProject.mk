@@ -63,7 +63,8 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
 Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBulletPresentation.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IPlayer.cpp$(ObjectSuffix) $(IntermediateDirectory)/IEnemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/CollisionDetection.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatelliteLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatellitePresentation.cpp$(ObjectSuffix) 
+	$(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IPlayer.cpp$(ObjectSuffix) $(IntermediateDirectory)/IEnemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/CollisionDetection.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatelliteLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatellitePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/LifeLogic.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/LifePresentation.cpp$(ObjectSuffix) 
 
 
 
@@ -245,6 +246,22 @@ $(IntermediateDirectory)/SatellitePresentation.cpp$(DependSuffix): SatellitePres
 
 $(IntermediateDirectory)/SatellitePresentation.cpp$(PreprocessSuffix): SatellitePresentation.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/SatellitePresentation.cpp$(PreprocessSuffix) SatellitePresentation.cpp
+
+$(IntermediateDirectory)/LifeLogic.cpp$(ObjectSuffix): LifeLogic.cpp $(IntermediateDirectory)/LifeLogic.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/LifeLogic.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/LifeLogic.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/LifeLogic.cpp$(DependSuffix): LifeLogic.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/LifeLogic.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/LifeLogic.cpp$(DependSuffix) -MM LifeLogic.cpp
+
+$(IntermediateDirectory)/LifeLogic.cpp$(PreprocessSuffix): LifeLogic.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/LifeLogic.cpp$(PreprocessSuffix) LifeLogic.cpp
+
+$(IntermediateDirectory)/LifePresentation.cpp$(ObjectSuffix): LifePresentation.cpp $(IntermediateDirectory)/LifePresentation.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/LifePresentation.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/LifePresentation.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/LifePresentation.cpp$(DependSuffix): LifePresentation.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/LifePresentation.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/LifePresentation.cpp$(DependSuffix) -MM LifePresentation.cpp
+
+$(IntermediateDirectory)/LifePresentation.cpp$(PreprocessSuffix): LifePresentation.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/LifePresentation.cpp$(PreprocessSuffix) LifePresentation.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

@@ -14,21 +14,19 @@ PlayerLogic::PlayerLogic()
     _centerXPosition = CenterXGameWindow;
     // this will be the center of the bottom of the y window minus half the height of the sprite
     _centerYPosition = GameYWindow - 40;
-    
-//    _centerXPosition = PlayerXPosition;
-//    _centerYPosition = PlayerYPosition;
-    
+
+    //    _centerXPosition = PlayerXPosition;
+    //    _centerYPosition = PlayerYPosition;
 }
 
 void PlayerLogic::moveLeftX()
 {
     _theta = _theta + degreesToRadians(2);
     _xpos = (radius)*cos(_theta);
-    _xpos += xOrigin ;
-    
-    
-    _centerXPosition = (centerPlayerRadius)*cos(_theta );
-    _centerXPosition += xOrigin + 10*cos(_theta);
+    _xpos += xOrigin;
+
+    _centerXPosition = (centerPlayerRadius)*cos(_theta);
+    _centerXPosition += xOrigin + 10 * cos(_theta);
 }
 
 void PlayerLogic::moveLeftY()
@@ -36,9 +34,9 @@ void PlayerLogic::moveLeftY()
     _theta = _theta + degreesToRadians(2);
     _ypos = (radius)*sin(_theta);
     _ypos += yOrigin;
-    
+
     _centerYPosition = (centerPlayerRadius)*sin(_theta);
-    _centerYPosition += yOrigin;// +25*sin(_theta);
+    _centerYPosition += yOrigin; // +25*sin(_theta);
 }
 
 void PlayerLogic::moveRightX()
@@ -46,9 +44,9 @@ void PlayerLogic::moveRightX()
     _theta = _theta + degreesToRadians(-2);
     _xpos = (radius)*cos(_theta);
     _xpos += xOrigin;
-    
+
     _centerXPosition = (centerPlayerRadius)*cos(_theta);
-    _centerXPosition += xOrigin + 10*cos(_theta);
+    _centerXPosition += xOrigin + 10 * cos(_theta);
     // std::cout<<_theta<<std::endl;
 }
 
@@ -57,9 +55,9 @@ void PlayerLogic::moveRightY()
     _theta = _theta + degreesToRadians(-2);
     _ypos = (radius)*sin(_theta);
     _ypos += yOrigin;
-    
+
     _centerYPosition = (centerPlayerRadius)*sin(_theta);
-    _centerYPosition += yOrigin ;//+25*sin(_theta);
+    _centerYPosition += yOrigin; //+25*sin(_theta);
 }
 
 float PlayerLogic::getAngleofRotation()
@@ -111,8 +109,7 @@ void PlayerLogic::playerMove(Direction dir)
         moveLeftY();
 
         _angleOfRotation = 4;
-        
-       
+
         break;
     case Direction::RIGHT:
 
@@ -148,4 +145,9 @@ float PlayerLogic::getCenterXPosition()
 float PlayerLogic::getCenterYPosition()
 {
     return _centerYPosition;
+}
+
+int PlayerLogic::getHealth()
+{
+    return _health;
 }

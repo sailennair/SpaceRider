@@ -67,7 +67,7 @@ void GameWindow::generateWindow()
             isFiring = false;
         }
 
-        updatePlayerBullets();
+        updatePlayer();
 
         updateAllEnemies();
 
@@ -103,11 +103,12 @@ void GameWindow::firePlayerBullet()
     _gamePresentation.createPlayerBulletPresentation();
 }
 
-void GameWindow::updatePlayerBullets()
+void GameWindow::updatePlayer()
 {
     _gamePresentation.gameLogic_shared_pointer->checkBulletScope();
     _gamePresentation.gameLogic_shared_pointer->playerBulletUpdate();
     _gamePresentation.upDatePlayerBulletPresentation();
+    _gamePresentation.setPlayerLifeCount();
 }
 
 void GameWindow::updateAllEnemies()

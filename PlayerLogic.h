@@ -46,6 +46,8 @@ public:
     float getCenterXPosition();
     
     float getCenterYPosition();
+    
+    int getHealth();
 
 private:
     int _health;

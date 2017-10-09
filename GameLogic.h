@@ -8,6 +8,7 @@
 #include "EnemyLogic.h"
 #include "CollisionDetection.h"
 #include "SatelliteLogic.h"
+#include "LifeLogic.h"
 
 
 class GameLogic
@@ -45,6 +46,12 @@ public:
     
     int getPlayerBulletType();
     
+    void updatePlayerLife();
+    
+    int getPlayerLivesRemaining();
+    
+    LifeLogic getPlayerLifeLogic();
+    
     vector<PlayerBullet> getPlayerLogicBullets();
 
     PlayerLogic getPlayerLogic();
@@ -59,13 +66,21 @@ public:
     
     vector<EnemyBulletLogic> satelliteBulletLogic;
     
+   
+    
     
 
 private:
  
  PlayerLogic player;
  
+LifeLogic _lifeLogic;
+
+
+ 
  int _playerBulletType = 1;
+ 
+ int _playerLifesRemaining;
  
  
  

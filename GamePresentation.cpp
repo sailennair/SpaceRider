@@ -5,6 +5,7 @@ GamePresentation::GamePresentation()
     PlayerPresentation _playerPresentation();
 
     gameLogic_shared_pointer = make_shared<GameLogic>();
+     LifePresentation _lifePresentation();
 }
 
 void GamePresentation::upDatePlayerPosition()
@@ -23,6 +24,18 @@ void GamePresentation::renderSprite(RenderWindow& window)
 {
 
     _playerPresentation.draw(window);
+    
+    //Drawing the lifes at the bottom of the screen
+    
+    _lifePresentation.draw(window, gameLogic_shared_pointer->getPlayerLifeLogic().getXpos(),  gameLogic_shared_pointer->getPlayerLifeLogic().getYpos());
+    
+  
+}
+
+void GamePresentation::setPlayerLifeCount(){
+    
+    gameLogic_shared_pointer->updatePlayerLife();
+    _lifePresentation.setLifeCount(gameLogic_shared_pointer->getPlayerLivesRemaining());
 }
 
 void GamePresentation::createPlayerBulletPresentation()
@@ -269,7 +282,7 @@ void GamePresentation::drawSatelliteBullets(RenderWindow& window)
     for(auto i = 0; i < satelliteBulletPresentationVector.size(); i++) {
         gameLogic_shared_pointer->satelliteBulletLogic[i].move();
 
-        std::cout << satelliteBulletPresentationVector.size() << std::endl;
+        //std::cout << satelliteBulletPresentationVector.size() << std::endl;
         satelliteBulletPresentationVector[i].draw(window);
 
         satelliteBulletPresentationVector[i].updateEnemyBullet(

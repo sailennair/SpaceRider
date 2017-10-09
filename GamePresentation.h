@@ -12,6 +12,7 @@
 #include "EnemyPresentation.h"
 #include <vector>
 #include "SatellitePresentation.h"
+#include "LifePresentation.h"
 
 using std::unique_ptr;
 using std::make_unique;
@@ -57,6 +58,8 @@ public:
     
     void drawSatelliteBullets(RenderWindow& window);
     
+    void setPlayerLifeCount();
+    
    
     
     
@@ -77,6 +80,8 @@ private:
     vector<EnemyPresentation> enemyPresentationVector;
     
     vector<SatellitePresentation> satellitePresentationVector;
+    
+    LifePresentation _lifePresentation;
     
     //this is just a test variable
      int _timer;

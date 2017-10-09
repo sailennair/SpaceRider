@@ -43,7 +43,7 @@ private:
 
     bool _isAlive = true;
 
-    int _damage;
+    int _damage = 5;
 
     float _bulletSpeed = 0.01;
 
