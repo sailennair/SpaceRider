@@ -1,86 +1,106 @@
 #include "ScoreDatabase.h"
 ScoreDatabase::ScoreDatabase(){
-    _fileName = "score.dat";
-    _highestScore = 0;
-    _tempScore = 0;
+    // This is to make sure the file exists and when we read there are no errors related to reading from empty file
     _WriteFile.open(_fileName, std::ofstream::out | std::ofstream::app);
     _WriteFile.close();
-    _highestScore = readScoreFromFile(); 
-    _currentPlayerHighestScore = 0;
-        //LPCSTR and DWARD are part of window.h
+   
+    //LPCSTR and DWARD are part of window.h This makes the file attrtibutes hidden
     LPCSTR fileLPCWSTR = _fileName.c_str();
     DWORD fileAttributes = GetFileAttributes(fileLPCWSTR);
     SetFileAttributes(fileLPCWSTR, fileAttributes | FILE_ATTRIBUTE_HIDDEN);
 }
 
-ScoreDatabase::ScoreDatabase(std::string fileName):
-    _fileName{fileName},
-    _highestScore{0},
-    _tempScore{0}
-    {
-        _WriteFile.open(_fileName, std::ofstream::out | std::ofstream::app);
-        _WriteFile.close();
-        _WriteFile.clear();
-        _highestScore = readScoreFromFile();
-    //LPCSTR and DWARD are part of window.h
-    LPCSTR fileLPCWSTR = _fileName.c_str();
-    DWORD fileAttributes = GetFileAttributes(fileLPCWSTR);
-    SetFileAttributes(fileLPCWSTR, fileAttributes | FILE_ATTRIBUTE_HIDDEN); 
-    }
 
-int ScoreDatabase::readScoreFromFile(){
+std::vector<int> ScoreDatabase::readScoreFromFileInt(){
     _ReadFile.open(_fileName);    
-    std::string nameInTheList;
-    if(_ReadFile.is_open()){
-        std::cout << "File is Open";
-        if(_ReadFile.peek() == std::ifstream::traits_type::eof()){
-            _ReadFile.close();
-            return _highestScore;
-            
-        }else{
-
-
-            while(_ReadFile >> nameInTheList >> _tempScore){
-                if(_tempScore > _highestScore){
-                    _highestScore = _tempScore;
-                        
-                }
-            }
-        }
-    }else{
-        std::cout << " File is not Open";
+    
+    if(!_ReadFile.is_open()){// If the file could not be open for reading
+        std::cerr << "DataBase Error: Could not read " << _fileName;
     }
     
-    //_Playername = nameInTheList;
+    if(_ReadFile.peek() == std::ifstream::traits_type::eof()){ // File is empty
+        _ReadFile.close();
+        _ReadFile.clear();
+        return _scores;
+        
+    }
+    
+    auto tempScore = 0;
+    while(_ReadFile >> tempScore){
+            _scores.push_back(tempScore);        
+    }
+    
     _ReadFile.close();
     _ReadFile.clear();
     
-    return _highestScore;
+    return _scores;
 }
 
-void ScoreDatabase::writeScoreToFile(int score){
-    _WriteFile.open(_fileName, std::ofstream::out | std::ofstream::app);
-
-    if(_WriteFile.is_open()){
-         _WriteFile << _PlayerName << " " <<_highestScore << "\n";
+std::vector<PlayerDetails> ScoreDatabase::readScoreFromFile(){
+    _ReadFile.open(_fileName);    
+    
+    if(!_ReadFile.is_open()){// If the file could not be open for reading
+        std::cerr << "DataBase Error: Could not read from" << _fileName;
     }
+    
+    if(_ReadFile.peek() == std::ifstream::traits_type::eof()){ // File is empty
+        _ReadFile.close();
+        _ReadFile.clear();
+        return _playerDetailsVect;
+        
+    }
+    
+    PlayerDetails player;
+    while(_ReadFile >> player.name >> player.score){
+            _playerDetailsVect.push_back(player);        
+    }
+    
+    _ReadFile.close();
+    _ReadFile.clear();
+    
+    return _playerDetailsVect;
+}
+
+void ScoreDatabase::writeScoreToFile(const std::vector<int>& scoresVect){
+    // TOGGLE FILE HIDDEN ATTRIBUTES OFF
+    LPCSTR fileLPCWSTR = _fileName.c_str();
+    DWORD fileAttributes = GetFileAttributes(fileLPCWSTR);
+    SetFileAttributes(fileLPCWSTR, fileAttributes ^ FILE_ATTRIBUTE_HIDDEN);
+    
+    _WriteFile.open(_fileName,std::ofstream::out | std::ofstream::trunc); // This line is to append entries
+
+    
+    if(!_WriteFile.is_open()){
+         std::cerr << "DataBase Error: Could not write to " << _fileName;
+    }
+    
+    for(auto iter = begin(scoresVect); iter!=end(scoresVect); ++iter){
+        _WriteFile << (*iter) << "\n";
+    }
+    
     _WriteFile.close();
     _WriteFile.clear();
-
-}
-
-void ScoreDatabase::setScorePoints(int scoreIncrement, const std::string& name){
-    _currentScore += scoreIncrement;
-    _PlayerName = name;
-    if (_currentScore > _currentPlayerHighestScore){
-        _currentPlayerHighestScore = _currentScore;
-        std::cout << " 10 Points" << std::endl;
-    }
-    // need to update the database
-    if (_currentPlayerHighestScore > _highestScore){
-        _highestScore = _currentPlayerHighestScore;
-        std::cout << " Wrtiting to File From within Score" << std::endl ;
-        writeScoreToFile(_highestScore);
-    }      
+        
+  // TOGGLE FILE HIDDEN ATTRIBUTES ON
+    LPCSTR fileL2PCWSTR = _fileName.c_str();
+    DWORD fileAttributes2 = GetFileAttributes(fileL2PCWSTR);
+    SetFileAttributes(fileL2PCWSTR, fileAttributes2 ^ FILE_ATTRIBUTE_HIDDEN);
     
+
 }
+
+//void ScoreDatabase::writeScoreToFile(const std::vector<PlayerDetails>& playerScoreVect){
+//    //_WriteFile.open(_fileName, std::ofstream::out | std::ofstream::app); // This line is to append entries
+//    _WriteFile.open(_fileName);
+//    if(!_WriteFile.is_open()){
+//         
+//         std::cerr << "DataBase Error: Could not write to " << _fileName;
+//    }
+//    for(auto iter = begin(playerScoreVect); iter!=end(playerScoreVect); ++iter){
+//        _WriteFile << iter->name << " " << iter->score << "\n"; 
+//    }
+//    
+//    _WriteFile.close();
+//    _WriteFile.clear();
+//
+//}

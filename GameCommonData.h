@@ -26,5 +26,9 @@ const int yOrigin = (GameYWindow / 2);
 
 enum class Direction { LEFT, RIGHT };
 
+struct PlayerDetails{
+    std::string name;
+    int score;
+};
 // TEsting  the git communication
 #endif // GAMECOMMONDATA_H

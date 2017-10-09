@@ -13,7 +13,7 @@
     <File Name="IMovingGameObject.cpp" ExcludeProjConfig="Debug"/>
     <File Name="PlayerLogic.h" ExcludeProjConfig="Debug"/>
     <File Name="PlayerLogic.cpp" ExcludeProjConfig="Debug"/>
-    <File Name="GameCommonData.h" ExcludeProjConfig="Debug"/>
+    <File Name="GameCommonData.h" ExcludeProjConfig=""/>
     <File Name="PlayerPresentation.h" ExcludeProjConfig="Debug"/>
     <File Name="PlayerPresentation.cpp" ExcludeProjConfig="Debug"/>
     <File Name="GameLogic.h" ExcludeProjConfig="Debug"/>
@@ -43,7 +43,7 @@
     <File Name="CollisionDetection.h" ExcludeProjConfig="Debug"/>
     <File Name="CollisionDetection.cpp" ExcludeProjConfig="Debug"/>
     <File Name="Score.h" ExcludeProjConfig="Debug"/>
-    <File Name="Score.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="Score.cpp" ExcludeProjConfig=""/>
     <File Name="ScoreDatabase.cpp"/>
     <File Name="ScoreDatabase.h"/>
     <File Name="ScorePresentation.h"/>

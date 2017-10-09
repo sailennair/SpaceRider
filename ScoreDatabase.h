@@ -3,31 +3,32 @@
 
 #include <string>
 #include <fstream>
+#include <vector>
 #include <windows.h>
 #include <iostream>
+#include "GameCommonData.h"
 
 class ScoreDatabase{
 public:
     ScoreDatabase();
-    ScoreDatabase(std::string fileName);
-    // This function returns the highest score in Database
-    int readScoreFromFile();
-    // writes the highest score to database and the name of the persong who got that score
-    void writeScoreToFile(int score);
-    void setScorePoints(int scoreIncrement, const std::string& name);
+   
+    // This function returns a vector of integer scores
+    std::vector<int> readScoreFromFileInt();
+    std::vector<PlayerDetails> readScoreFromFile();
+    // writes the highest score to database and the name of the person who got that score
+    void writeScoreToFile(const std::vector<int>& scoresVect);
+   // void writeScoreToFile(const std::vector<PlayerDetails>& playerScoreVect);
+
     
 private:
 // fstream variables
-    std::string _fileName;
+    const std::string _fileName = "score.dat"; // The paths should be constant to avoid possible errors
     std::ifstream _ReadFile;
     std::ofstream _WriteFile;
-// score variables
-    std::string _PlayerName;
-    int _highestScore;
-    int _currentScore;
-    int _currentPlayerHighestScore;
-    int _tempScore;
-//    int _highestScoreLineNumber;
+// Score variables
+    std::vector<PlayerDetails> _playerDetailsVect;
+    std::vector<int> _scores;
+    
 };
 
 #endif

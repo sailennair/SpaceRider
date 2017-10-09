@@ -1,1 +1,1 @@
-./Debug/ScoreDatabase.cpp.o ./Debug/ScorePresentation.cpp.o ./Debug/Testing-Score-Presentation.cpp.o   
+./Debug/Score.cpp.o ./Debug/ScoreDatabase.cpp.o ./Debug/ScorePresentation.cpp.o ./Debug/Testing-Score-Presentation.cpp.o   

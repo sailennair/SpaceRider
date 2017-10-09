@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/ScoreDatabase.cpp$(ObjectSuffix) $(IntermediateDirectory)/ScorePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/Testing-Score-Presentation.cpp$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/Score.cpp$(ObjectSuffix) $(IntermediateDirectory)/ScoreDatabase.cpp$(ObjectSuffix) $(IntermediateDirectory)/ScorePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/Testing-Score-Presentation.cpp$(ObjectSuffix) 
 
 
 
@@ -93,6 +93,14 @@ PreBuild:
 ##
 ## Objects
 ##
+$(IntermediateDirectory)/Score.cpp$(ObjectSuffix): Score.cpp $(IntermediateDirectory)/Score.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/William/Documents/ELEN3009/SpaceRiderProject/Score.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Score.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Score.cpp$(DependSuffix): Score.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Score.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Score.cpp$(DependSuffix) -MM Score.cpp
+
+$(IntermediateDirectory)/Score.cpp$(PreprocessSuffix): Score.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Score.cpp$(PreprocessSuffix) Score.cpp
+
 $(IntermediateDirectory)/ScoreDatabase.cpp$(ObjectSuffix): ScoreDatabase.cpp $(IntermediateDirectory)/ScoreDatabase.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/William/Documents/ELEN3009/SpaceRiderProject/ScoreDatabase.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/ScoreDatabase.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/ScoreDatabase.cpp$(DependSuffix): ScoreDatabase.cpp
