@@ -10,6 +10,8 @@
 #include <memory>
 #include "PlayerBulletPresentation.h"
 #include "EnemyPresentation.h"
+#include "Score.h"
+#include "ScoreDatabase.h"
 #include <vector>
 
 using std::unique_ptr;
@@ -62,6 +64,8 @@ private:
     
     //this is just a test variable
      int _timer;
+     
+     ScoreDatabase _gameScore;
    
     
     

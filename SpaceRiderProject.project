@@ -42,6 +42,10 @@
     <File Name="IEnemy.cpp"/>
     <File Name="CollisionDetection.h"/>
     <File Name="CollisionDetection.cpp"/>
+    <File Name="Score.h" ExcludeProjConfig="Debug"/>
+    <File Name="Score.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="ScoreDatabase.cpp"/>
+    <File Name="ScoreDatabase.h"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
@@ -55,10 +59,10 @@
     </GlobalSettings>
     <Configuration Name="Debug" CompilerType="MinGW ( TDM-GCC-32 )" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
-        <IncludePath Value="C:\Users\User\Documents\SoftwareDev2Project\SpaceRiderProject\include"/>
+        <IncludePath Value="C:\Users\William\Documents\ELEN3009\SpaceRiderProject\include"/>
       </Compiler>
       <Linker Options="" Required="yes">
-        <LibraryPath Value="C:\Users\User\Documents\SoftwareDev2Project\SpaceRiderProject\lib"/>
+        <LibraryPath Value="C:\Users\William\Documents\ELEN3009\SpaceRiderProject\lib"/>
         <Library Value="sfml-audio"/>
         <Library Value="sfml-graphics"/>
         <Library Value="sfml-window"/>

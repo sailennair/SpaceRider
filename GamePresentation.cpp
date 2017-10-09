@@ -5,6 +5,7 @@ GamePresentation::GamePresentation()
     PlayerPresentation _playerPresentation();
 
     gameLogic_shared_pointer = make_shared<GameLogic>();
+    Score _gameScore();
 }
 
 void GamePresentation::upDatePlayerPosition()
@@ -150,6 +151,9 @@ void GamePresentation::deleteDeadEnemies()
 
                 (gameLogic_shared_pointer->enemyLogicVector)
                     .erase((gameLogic_shared_pointer->enemyLogicVector).begin() + iter);
+                    
+                    _gameScore.setScorePoints(10, "William");
+                    
             }
         }
     }

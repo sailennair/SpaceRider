@@ -31,7 +31,8 @@ Debug/GamePresentation.cpp.o: GamePresentation.cpp GamePresentation.h \
  PlayerPresentation.h GameCommonData.h GameLogic.h PlayerLogic.h \
  IPlayer.h IMovingGameObject.h PlayerBullet.h IBullet.h EnemyLogic.h \
  EnemyBulletLogic.h IEnemy.h CollisionDetection.h \
- PlayerBulletPresentation.h EnemyPresentation.h EnemyBulletPresentation.h
+ PlayerBulletPresentation.h EnemyPresentation.h EnemyBulletPresentation.h \
+ Score.h ScoreDatabase.h
 
 GamePresentation.h:
 
@@ -202,3 +203,7 @@ PlayerBulletPresentation.h:
 EnemyPresentation.h:
 
 EnemyBulletPresentation.h:
+
+Score.h:
+
+ScoreDatabase.h:
