@@ -46,6 +46,8 @@
     <File Name="Score.cpp" ExcludeProjConfig="Debug"/>
     <File Name="ScoreDatabase.cpp"/>
     <File Name="ScoreDatabase.h"/>
+    <File Name="ScorePresentation.h"/>
+    <File Name="ScorePresentation.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
