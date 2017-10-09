@@ -21,6 +21,27 @@ EnemyPresentation::EnemyPresentation()
     _enemyBulletPresentationVector.push_back(enemyBulletPresentation);
 }
 
+EnemyPresentation::EnemyPresentation(int type)
+{
+
+    if(!enemySpriteTexture.loadFromFile("laserGenerator.png")) {
+        std::cerr << "Error Loading Player Texture";
+    }
+    enemySpriteTexture.setSmooth(true);
+    _enemySprite.setTexture(enemySpriteTexture);
+    _enemySprite.setScale(Vector2f(0.6, 0.6));
+    _enemySprite.setPosition(CenterXGameWindow, CenterYGameWindow);
+
+    //    _circle.setRadius(5);
+    //    _circle.setFillColor(sf::Color::Red);
+
+    EnemyBulletPresentation enemyBulletPresentation(CenterXGameWindow, CenterYGameWindow);
+    //  auto _enemyBulletPresentation = make_unique<EnemyBulletPresentation>(CenterXGameWindow,CenterYGameWindow)
+    // _enemyBulletPresentation = enemyBulletPresentation;
+
+    _enemyBulletPresentationVector.push_back(enemyBulletPresentation);
+}
+
 void EnemyPresentation::draw(RenderWindow& window)
 {
 

@@ -35,6 +35,8 @@ public:
     float getCenterXPosition();
     
     float getCenterYPosition();
+    
+    float setBulletSpeed(float speed);
 
 private:
     float _xPosition;
@@ -45,7 +47,7 @@ private:
 
     int _damage = 5;
 
-    float _bulletSpeed = 0.01;
+    float _bulletSpeed = 0.015;
 
     float _theta;
 

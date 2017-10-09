@@ -19,7 +19,7 @@ void GameWindow::generateWindow()
     while(_window.isOpen()) {
 
         sf::Event event;
-        if(timer % 100 == 0 && enemies < NumberOfEnemies) {
+        if(timer % 100 == 0 && enemies < 5) {
             _gamePresentation.gameLogic_shared_pointer->createEnemyLogicObject();
             _gamePresentation.createEnemyPresentationObject();
             enemies++;
@@ -35,16 +35,28 @@ void GameWindow::generateWindow()
 
         }
         //Fires a bullet from the satellite every few seconds
-        if(timer%255 == 0 && _gamePresentation.getSatellitePresentationVector().size()>0){
+        if(timer%100 == 0 && _gamePresentation.getSatellitePresentationVector().size()>0){
             
             _gamePresentation.gameLogic_shared_pointer->fireSatelliteBulletLogic();
             
             _gamePresentation.createSatelliteBulletPresentation();
         }
+        
+        
+        
+     //   std::cout<<"one"<<std::endl;
+        
+        if(timer% 50 == 0 && timer > 0 && _gamePresentation._laserGeneratorPresentation.size() == 0){
+          //  std::cout<<"two"<<std::endl;
+            _gamePresentation.gameLogic_shared_pointer->createLaserGeneratorLogic();
+           // std::cout<<"three"<<std::endl;
+            _gamePresentation.createLaserGenerator();
+        }
+        
 
         while(_window.pollEvent(event)) {
             if(event.type == sf::Event::Closed) {
-                _window.close();
+                _window.close(); 
                 break;
             }
             if(event.key.code == sf::Keyboard::A) {
@@ -89,6 +101,7 @@ void GameWindow::renderCharacters(RenderWindow& window)
     _gamePresentation.renderSprite(window);
     _gamePresentation.drawSatellites(window);
     _gamePresentation.drawSatelliteBullets(window);
+    _gamePresentation.drawLaserGenerator(window);
 }
 
 void GameWindow::checkKeyBoardEvent()
@@ -119,4 +132,10 @@ void GameWindow::updateAllEnemies()
     _gamePresentation.deleteDeadEnemies();
     _gamePresentation.gameLogic_shared_pointer->updateSatelliteLogic();
     _gamePresentation.gameLogic_shared_pointer->checkSatelliteBulletScope();
+    _gamePresentation.gameLogic_shared_pointer->updateLaserLogic();
+    
+    _gamePresentation.gameLogic_shared_pointer->updateLaserLogic();
+    _gamePresentation.updateLaserGeneratorPresentation();
+    _gamePresentation.deleteLaserGenerator();
+    
 }

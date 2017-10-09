@@ -3,8 +3,8 @@
 EnemyLogic::EnemyLogic(int initalXposition, int initalYposition, float theta)
 {
 
-    _xpos = CenterXGameWindow;
-    _ypos = CenterYGameWindow;
+    _xpos = CenterXGameWindow -8;
+    _ypos = CenterYGameWindow ;
     _theta = theta;
     _initialXposition = CenterXGameWindow;
     _initialYposition = CenterXGameWindow;
@@ -124,4 +124,11 @@ float EnemyLogic::getCenterXPosition()
 float EnemyLogic::getCenterYPosition()
 {
     return _centerYPosition;
+}
+float EnemyLogic::setEnemySpeed(float speed){
+    _enemySpeed = speed;
+}
+
+int EnemyLogic::setRadius(int radius){
+    _radius = radius;
 }

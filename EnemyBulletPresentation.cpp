@@ -1,6 +1,8 @@
 #include "EnemyBulletPresentation.h"
 
-EnemyBulletPresentation::EnemyBulletPresentation(){}
+EnemyBulletPresentation::EnemyBulletPresentation(){
+     _rect.setFillColor(Color::Red);
+    _rect.setRadius(10);}
 
 EnemyBulletPresentation::EnemyBulletPresentation(float xPosition , float yPosition)
 {

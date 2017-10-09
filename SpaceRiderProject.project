@@ -50,6 +50,10 @@
     <File Name="LifeLogic.cpp"/>
     <File Name="LifePresentation.h"/>
     <File Name="LifePresentation.cpp"/>
+    <File Name="LaserGeneratorLogic.h"/>
+    <File Name="LaserGeneratorLogic.cpp"/>
+    <File Name="LaserGeneratorPresentation.h"/>
+    <File Name="LaserGeneratorPresentation.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

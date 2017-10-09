@@ -48,8 +48,11 @@ public:
     float getCenterYPosition();
     
     int getHealth();
+    
+    bool setLife(bool life);
 
 private:
+bool _life = true;
     int _health;
     float _theta =  (PI) / 2;
     int _xpos;

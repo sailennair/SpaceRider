@@ -17,6 +17,8 @@ class EnemyPresentation
 {
 public:
     EnemyPresentation();
+    
+    EnemyPresentation(int type);
    
    void draw(RenderWindow &window);
    

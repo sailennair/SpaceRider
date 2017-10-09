@@ -64,7 +64,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 CodeLiteDir:=C:\Program Files\CodeLite
 Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBulletPresentation.cpp$(ObjectSuffix) \
 	$(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IPlayer.cpp$(ObjectSuffix) $(IntermediateDirectory)/IEnemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/CollisionDetection.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatelliteLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatellitePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/LifeLogic.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/LifePresentation.cpp$(ObjectSuffix) 
+	$(IntermediateDirectory)/LifePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/LaserGeneratorLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(ObjectSuffix) 
 
 
 
@@ -262,6 +262,22 @@ $(IntermediateDirectory)/LifePresentation.cpp$(DependSuffix): LifePresentation.c
 
 $(IntermediateDirectory)/LifePresentation.cpp$(PreprocessSuffix): LifePresentation.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/LifePresentation.cpp$(PreprocessSuffix) LifePresentation.cpp
+
+$(IntermediateDirectory)/LaserGeneratorLogic.cpp$(ObjectSuffix): LaserGeneratorLogic.cpp $(IntermediateDirectory)/LaserGeneratorLogic.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/LaserGeneratorLogic.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/LaserGeneratorLogic.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/LaserGeneratorLogic.cpp$(DependSuffix): LaserGeneratorLogic.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/LaserGeneratorLogic.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/LaserGeneratorLogic.cpp$(DependSuffix) -MM LaserGeneratorLogic.cpp
+
+$(IntermediateDirectory)/LaserGeneratorLogic.cpp$(PreprocessSuffix): LaserGeneratorLogic.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/LaserGeneratorLogic.cpp$(PreprocessSuffix) LaserGeneratorLogic.cpp
+
+$(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(ObjectSuffix): LaserGeneratorPresentation.cpp $(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/LaserGeneratorPresentation.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(DependSuffix): LaserGeneratorPresentation.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(DependSuffix) -MM LaserGeneratorPresentation.cpp
+
+$(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(PreprocessSuffix): LaserGeneratorPresentation.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(PreprocessSuffix) LaserGeneratorPresentation.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

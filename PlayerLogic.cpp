@@ -69,10 +69,12 @@ float PlayerLogic::getAngleofRotation()
 bool PlayerLogic::isAlive()
 {
     if(_health > 0) {
-        return true;
+        _life = true;
     } else {
-        return false;
+        _life =  false;
     }
+    
+    return _life;
 }
 
 void PlayerLogic::reduceHealth(int _damage)
@@ -150,4 +152,8 @@ float PlayerLogic::getCenterYPosition()
 int PlayerLogic::getHealth()
 {
     return _health;
+}
+
+bool PlayerLogic::setLife(bool life){
+    _life = life;
 }

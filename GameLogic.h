@@ -9,6 +9,7 @@
 #include "CollisionDetection.h"
 #include "SatelliteLogic.h"
 #include "LifeLogic.h"
+#include "LaserGeneratorLogic.h"
 
 
 class GameLogic
@@ -49,6 +50,15 @@ public:
     void updatePlayerLife();
     
     int getPlayerLivesRemaining();
+    
+    void updateLaserLogic();
+    
+    void createLaserGeneratorLogic();
+    
+    void checkLaserGeneratorScope();
+    
+    vector<LaserGeneratorLogic> _laserGeneratorLogic; 
+    
     
     LifeLogic getPlayerLifeLogic();
     

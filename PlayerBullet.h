@@ -45,7 +45,7 @@ private:
     int _playerBulletXposition;
     int _playerBulletYposition;
     float _theta;
-    int _speedOfBullets = 25;
+    int _speedOfBullets = 15;
     int _damage = 5;
     bool _isAlive = true;
     int _width;

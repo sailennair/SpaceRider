@@ -43,6 +43,10 @@ public:
     
     float getCenterYPosition();
     
+    float setEnemySpeed(float speed);
+    
+    int setRadius(int radius);
+    
     vector<EnemyBulletLogic> getEnemyBulletLogicVector();
     
       vector<EnemyBulletLogic> enemyBulletLogicVector;
@@ -60,7 +64,7 @@ private:
     int _health = 15;
     int _initialXposition;
     int _initialYposition;
-    float _enemySpeed = 0.0035;
+    float _enemySpeed = 0.005;
     bool _outOfBounds = false;
     float _width;
     float _height;

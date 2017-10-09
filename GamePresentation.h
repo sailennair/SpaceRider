@@ -13,6 +13,7 @@
 #include <vector>
 #include "SatellitePresentation.h"
 #include "LifePresentation.h"
+#include "LaserGeneratorPresentation.h"
 
 using std::unique_ptr;
 using std::make_unique;
@@ -59,6 +60,14 @@ public:
     void drawSatelliteBullets(RenderWindow& window);
     
     void setPlayerLifeCount();
+
+    void createLaserGenerator();
+    
+    void drawLaserGenerator(RenderWindow& window);
+    
+    void updateLaserGeneratorPresentation();
+    
+    void deleteLaserGenerator();
     
    
     
@@ -69,6 +78,9 @@ public:
     vector<EnemyPresentation> getEnemyPresentationVector();
    
     shared_ptr<GameLogic> gameLogic_shared_pointer;
+    
+    vector<LaserGeneratorPresentation> _laserGeneratorPresentation;
+ 
      
   
     
