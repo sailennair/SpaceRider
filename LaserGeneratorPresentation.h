@@ -20,12 +20,18 @@ public:
     
     void draw(RenderWindow &window);
     
+    //vector<EnemyBulletPresentation> getLaserBulletPresentationVector();
+    
+  // void updateLaserBulletPresentation(int index, float xPosition, float yPosition);
+    
     //void updateAllEntities();
     
     //void updateSingleEntity(float xPosition, float yPositon);
-    vector<EnemyBulletPresentation> laserBulletPresentationVector;
+    //vector<EnemyBulletPresentation> laserBulletPresentationVector;
     vector<EnemyPresentation> laserGeneratorPresentationVector;
     
+    vector<EnemyBulletPresentation> laserBulletPresentationVector;
+//private:    
 
 };
 

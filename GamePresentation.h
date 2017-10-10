@@ -1,7 +1,6 @@
 #ifndef GAMEPRESENTATION_H
 #define GAMEPRESENTATION_H
 
-
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include "PlayerPresentation.h"
@@ -27,91 +26,91 @@ class GamePresentation
 {
 public:
     GamePresentation();
-    
-    void renderSprite(RenderWindow &window);
-    
+
+    void renderSprite(RenderWindow& window);
+
     void upDatePlayerPosition();
-    
+
     void upDatePlayerBulletPresentation();
-    
+
     void createPlayerBulletPresentation();
-    
-    void drawAllBullets(RenderWindow &window);
-    
+
+    void drawAllBullets(RenderWindow& window);
+
     void deleteOutofScopeBullets();
-    
+
     void createEnemyPresentationObject();
-    
+
     void updateEnemyPresentation();
-    
+
     void drawAllEnemies(RenderWindow& window);
-    
+
     void deleteDeadEnemies();
-    
+
     void createSatellitePresenetation();
-    
+
     void drawSatellites(RenderWindow& window);
-    
+
     void deleteDeadEnemyBullets();
-    
+
     vector<SatellitePresentation> getSatellitePresentationVector();
-    
-     void createSatelliteBulletPresentation();
-    
+
+    void createSatelliteBulletPresentation();
+
     void drawSatelliteBullets(RenderWindow& window);
-    
+
     void setPlayerLifeCount();
 
     void createLaserGenerator();
-    
+
     void drawLaserGenerator(RenderWindow& window);
-    
+
     void updateLaserGeneratorPresentation();
-    
+
     void deleteLaserGenerator();
-    
+
     void createAsteroidPresentation();
-    
+
     void updateAsteroidPresentation();
-    
-    void drawAsteroid(RenderWindow &window);
-    
-   
-    
-    
-    
-    vector<EnemyBulletPresentation> satelliteBulletPresentationVector;
-    
+
+    void drawAsteroid(RenderWindow& window);
+
+    // vector<EnemyBulletPresentation> satelliteBulletPresentationVector;
+
     vector<EnemyPresentation> getEnemyPresentationVector();
-   
+
+    vector<LaserGeneratorPresentation> getLaserGeneratorPresentation();
+
+    vector<AsteroidPresentation> getAsteroidPresentationVector();
+
     shared_ptr<GameLogic> gameLogic_shared_pointer;
-    
-    vector<LaserGeneratorPresentation> _laserGeneratorPresentation;
-    
-    vector<AsteroidPresentation>  asteroidPresentationVector;
- 
-     
-  
-    
+
+    //  vector<LaserGeneratorPresentation> _laserGeneratorPresentation;
+
+    // vector<AsteroidPresentation>  asteroidPresentationVector;
+
 private:
     PlayerPresentation _playerPresentation;
-    
-    vector<PlayerBulletPresentation> playerBulletPresentationVector;
-    
-    vector<EnemyPresentation> enemyPresentationVector;
-    
-    vector<SatellitePresentation> satellitePresentationVector;
-    
-    LifePresentation _lifePresentation;
-    
-    //this is just a test variable
-     int _timer;
-     
-     int _satellitesKilled = 0;
-   
-    
-    
 
+    vector<PlayerBulletPresentation> playerBulletPresentationVector;
+
+    vector<EnemyPresentation> enemyPresentationVector;
+
+    vector<SatellitePresentation> satellitePresentationVector;
+
+    LifePresentation _lifePresentation;
+
+    ///
+    vector<EnemyBulletPresentation> satelliteBulletPresentationVector;
+
+    vector<LaserGeneratorPresentation> _laserGeneratorPresentation;
+
+    vector<AsteroidPresentation> asteroidPresentationVector;
+
+    // this is just a test variable
+    int _timer;
+
+    int _satellitesKilled = 0;
 };
 
 #endif // GAMEPRESENTATION_H

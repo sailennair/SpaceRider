@@ -18,7 +18,7 @@ public:
 
     float getYposition();
 
-    bool isAlive();
+    bool isAlive() ;
 
     void setDamage(int damage);
 

@@ -43,7 +43,7 @@ void GameWindow::generateWindow()
         }
         
         
-        if(timer%75 == 0 && _gamePresentation.asteroidPresentationVector.size() == 0  && timer> 0){
+        if(timer%75 == 0 && _gamePresentation.getAsteroidPresentationVector().size() == 0  && timer> 0){
             _gamePresentation.gameLogic_shared_pointer->createAsteroid();
             _gamePresentation.createAsteroidPresentation();
         }
@@ -51,11 +51,12 @@ void GameWindow::generateWindow()
         
      //   std::cout<<"one"<<std::endl;
         
-        if(timer% 300 == 0 && timer > 0 && _gamePresentation._laserGeneratorPresentation.size() == 0){
-          //  std::cout<<"two"<<std::endl;
+        if(timer% 25 == 0 && timer > 0 && _gamePresentation.getLaserGeneratorPresentation().size() == 0){
+            std::cout<<"two"<<std::endl;
             _gamePresentation.gameLogic_shared_pointer->createLaserGeneratorLogic();
-           // std::cout<<"three"<<std::endl;
+            std::cout<<"three"<<std::endl;
             _gamePresentation.createLaserGenerator();
+             std::cout<<"four"<<std::endl;
         }
         
 

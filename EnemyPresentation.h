@@ -32,14 +32,19 @@ public:
    
    void moveToCenter();
    
+    vector<EnemyBulletPresentation> getEnemyBulletPresentationVector();
+    
+    void deleteEnemyBulletPresentation();
+   
   // EnemyBulletPresentation _enemyBulletPresentation;
    
    CircleShape _circle;
    
-   vector<EnemyBulletPresentation> _enemyBulletPresentationVector;
+   //vector<EnemyBulletPresentation> _enemyBulletPresentationVector;
    
 private:
    
+   vector<EnemyBulletPresentation> _enemyBulletPresentationVector;
    
    Texture enemySpriteTexture;
 

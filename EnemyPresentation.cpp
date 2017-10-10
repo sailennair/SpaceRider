@@ -82,3 +82,14 @@ void EnemyPresentation::moveToCenter()
     EnemyBulletPresentation enemyBulletPresentation(CenterXGameWindow, CenterYGameWindow);
     _enemyBulletPresentationVector.push_back(enemyBulletPresentation);
 }
+
+vector<EnemyBulletPresentation> EnemyPresentation::getEnemyBulletPresentationVector(){
+    return _enemyBulletPresentationVector;
+}
+
+void EnemyPresentation::deleteEnemyBulletPresentation(){
+    if(_enemyBulletPresentationVector.size()>0){
+    _enemyBulletPresentationVector.clear();
+    
+    }
+}

@@ -38,7 +38,7 @@ void EnemyLogic::move()
 
 void EnemyLogic::moveToCenter(float xPosition, float yPosition, float theta)
 {
-    
+   // std::cout<<"Center"<<std::endl;
     enemyBulletLogicVector.clear();
 
     EnemyBulletLogic _enemyBulletLogic{ xPosition, yPosition, theta };
@@ -48,7 +48,7 @@ void EnemyLogic::moveToCenter(float xPosition, float yPosition, float theta)
     _xpos = xPosition;
     _ypos = yPosition;
     _theta = theta;
-
+//std::cout<<xPosition<<"   "<<yPosition<<"   "<<theta<<std::endl;
     _centerXPosition = _xpos + 20;
     _centerYPosition = _ypos + 20;
 }
@@ -125,10 +125,18 @@ float EnemyLogic::getCenterYPosition()
 {
     return _centerYPosition;
 }
-float EnemyLogic::setEnemySpeed(float speed){
+void EnemyLogic::setEnemySpeed(float speed){
     _enemySpeed = speed;
 }
 
-int EnemyLogic::setRadius(int radius){
+void EnemyLogic::setRadius(int radius){
     _radius = radius;
+}
+
+void EnemyLogic::clearEnemyBulletVector(){
+    enemyBulletLogicVector.clear();
+}
+
+void EnemyLogic::setEnemyBulletLife(bool life){
+    enemyBulletLogicVector[0].setLife(life);
 }

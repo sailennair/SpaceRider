@@ -4,7 +4,7 @@ GameLogic::GameLogic()
 {
     // PlayerLogic player();
 
-    CollisionDetection collisionDetection();
+   // CollisionDetection collisionDetection();
 
     LifeLogic lifeLogic(20, 570);
     _lifeLogic = lifeLogic;
@@ -113,13 +113,13 @@ void GameLogic::checkCollision()
                 enemyLogicVector[index].setLife(false);
             }
 
-            if(enemyLogicVector[index].enemyBulletLogicVector.size() > 0) {
+            if(enemyLogicVector[index].getEnemyBulletLogicVector().size() > 0) {
                 if(collisionDetection.didObjectsCollide(
                        player, enemyLogicVector[index].getEnemyBulletLogicVector()[0]) == true) {
 
-                    // std::cout << "collision" << std::endl;
+                     std::cout << "collision" << std::endl;
 
-                    enemyLogicVector[index].enemyBulletLogicVector[0].setLife(false);
+                    enemyLogicVector[index].setEnemyBulletLife(false);
 
                     player.reduceHealth(enemyLogicVector[index].getEnemyBulletLogicVector()[0].getDamage());
                 }
@@ -241,10 +241,12 @@ void GameLogic::createLaserGeneratorLogic()
 {
     LaserGeneratorLogic LaserGeneratorLogic;
     _laserGeneratorLogic.push_back(LaserGeneratorLogic);
+  
 }
 
 void GameLogic::checkLaserGeneratorScope()
 {
+      
     bool isOutOfScope = false;
     if(_laserGeneratorLogic.size() > 0) {
         for(auto& iter : _laserGeneratorLogic[0]._laserGeneratorEnemyLogicVector) {
@@ -273,3 +275,67 @@ void GameLogic::updateAsteroidLogic(){
         asteroidLogicVector[0].move();
     }
 }
+
+vector<LaserGeneratorLogic> GameLogic::getlaserGeneratorLogic(){
+    return _laserGeneratorLogic;
+}
+
+void GameLogic::deleteLaserGenerator(){
+    
+    
+    if(_laserGeneratorLogic.size() > 0){
+    _laserGeneratorLogic.clear();
+    }
+    
+}
+
+
+void GameLogic::deletePlayerBullet(int index){
+    playerBulletLogicVector.erase(playerBulletLogicVector.begin() + index);
+}
+
+vector<EnemyLogic> GameLogic::getEnemyLogicVector(){
+    return enemyLogicVector;
+}
+
+void GameLogic::deleteEnemyLogic(int index){
+    enemyLogicVector.erase(enemyLogicVector.begin() + index);
+}
+
+void GameLogic::setEnemyBounds(bool isInBounds, int index){
+    enemyLogicVector[index].setOutofBounds(isInBounds);
+}
+
+void GameLogic::moveEnemyToCenter(int index){
+    enemyLogicVector[index].moveToCenter(CenterXGameWindow, CenterYGameWindow, player.getTheta());
+}
+
+void GameLogic::clearEnemyBullet(int index){
+    enemyLogicVector[index].clearEnemyBulletVector();
+}
+
+ vector<SatelliteLogic> GameLogic::getSatelliteLogicVector(){
+     return satelliteLogicVector;
+ }
+ 
+ void GameLogic::deleteSatelliteLogic(int index){
+     satelliteLogicVector.erase(satelliteLogicVector.begin() + index);
+ }
+ 
+ vector<EnemyBulletLogic> GameLogic::getSatellietBulletLogicVector(){
+     return satelliteBulletLogic;
+ }
+ 
+ void GameLogic::deleteSatelliteBulletLogic(int index){
+     satelliteBulletLogic.erase(satelliteBulletLogic.begin() + index);
+ }
+ 
+ void GameLogic::updateSatelliteBullets(int index){
+     
+     satelliteBulletLogic[index].move();
+     
+ }
+ 
+ vector<AsteroidLogic> GameLogic::getAsteroidLogicVector(){
+     return asteroidLogicVector;
+ }

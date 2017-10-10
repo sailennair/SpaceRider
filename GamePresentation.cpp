@@ -77,18 +77,23 @@ void GamePresentation::deleteOutofScopeBullets()
 
                 playerBulletPresentationVector.erase(playerBulletPresentationVector.begin() + iter);
 
-                (gameLogic_shared_pointer->playerBulletLogicVector)
-                    .erase((gameLogic_shared_pointer->playerBulletLogicVector).begin() + iter);
+                //                (gameLogic_shared_pointer->playerBulletLogicVector)
+                //                    .erase((gameLogic_shared_pointer->playerBulletLogicVector).begin() + iter);
+
+                gameLogic_shared_pointer->deletePlayerBullet(iter);
             }
         }
     }
 
     for(auto index = 0; index < satelliteBulletPresentationVector.size(); index++) {
         if(satelliteBulletPresentationVector.size() > 0) {
-            if(gameLogic_shared_pointer->satelliteBulletLogic[index].isAlive() == false) {
+            if(gameLogic_shared_pointer->getSatellietBulletLogicVector()[index].isAlive() == false) {
 
-                gameLogic_shared_pointer->satelliteBulletLogic.erase(
-                    gameLogic_shared_pointer->satelliteBulletLogic.begin() + index);
+                gameLogic_shared_pointer->deleteSatelliteBulletLogic(index);
+                
+//                gameLogic_shared_pointer->satelliteBulletLogic.erase(
+//                    gameLogic_shared_pointer->satelliteBulletLogic.begin() + index);
+
                 satelliteBulletPresentationVector.erase(satelliteBulletPresentationVector.begin() + index);
             }
         }
@@ -106,31 +111,40 @@ void GamePresentation::updateEnemyPresentation()
     _timer++;
 
     // This loop updates the enemies sprite position by checking the updated logics position
-    if(enemyPresentationVector.size() > 0 && gameLogic_shared_pointer->enemyLogicVector.size() > 0) {
+    if(enemyPresentationVector.size() > 0 && gameLogic_shared_pointer->getEnemyLogicVector().size() > 0) {
         for(auto iter = 0; iter < enemyPresentationVector.size(); iter++) {
 
-            enemyPresentationVector[iter].updateEnemy(gameLogic_shared_pointer->enemyLogicVector[iter].getXposition(),
-                gameLogic_shared_pointer->enemyLogicVector[iter].getYposition());
+            enemyPresentationVector[iter].updateEnemy(
+                gameLogic_shared_pointer->getEnemyLogicVector()[iter].getXposition(),
+                gameLogic_shared_pointer->getEnemyLogicVector()[iter].getYposition());
             // std::cout << "one" << std::endl;
             enemyPresentationVector[iter]._circle.setPosition(
-                gameLogic_shared_pointer->enemyLogicVector[iter].getCenterXPosition(),
-                gameLogic_shared_pointer->enemyLogicVector[iter].getCenterYPosition());
+                gameLogic_shared_pointer->getEnemyLogicVector()[iter].getCenterXPosition(),
+                gameLogic_shared_pointer->getEnemyLogicVector()[iter].getCenterYPosition());
             // std::cout << "two" << std::endl;
-            if(gameLogic_shared_pointer->enemyLogicVector[iter].enemyBulletLogicVector.size() > 0) {
+            if(gameLogic_shared_pointer->getEnemyLogicVector()[iter].getEnemyBulletLogicVector().size() > 0) {
                 enemyPresentationVector[iter].updateEnemyBullet(
-                    gameLogic_shared_pointer->enemyLogicVector[iter].getEnemyBulletLogicVector()[0].getXposition(),
-                    gameLogic_shared_pointer->enemyLogicVector[iter].getEnemyBulletLogicVector()[0].getYposition());
+                    gameLogic_shared_pointer->getEnemyLogicVector()[iter].getEnemyBulletLogicVector()[0].getXposition(),
+                    gameLogic_shared_pointer->getEnemyLogicVector()[iter]
+                        .getEnemyBulletLogicVector()[0]
+                        .getYposition());
                 // std::cout << "three" << std::endl;
             }
 
             // Checking if the enemy has gone out of scope and if so, it will recenter the enemy
-            if(_timer % 1000 == 0) {
-                if(gameLogic_shared_pointer->enemyLogicVector[iter].isOutOfBounds() == true) {
+            if(_timer % 50 == 0 && _timer > 0) {
+                if(gameLogic_shared_pointer->getEnemyLogicVector()[iter].isOutOfBounds() == true) {
 
-                    gameLogic_shared_pointer->enemyLogicVector[iter].setOutofBounds(false);
-                    (gameLogic_shared_pointer->enemyLogicVector[iter])
-                        .moveToCenter(CenterXGameWindow, CenterYGameWindow,
-                            gameLogic_shared_pointer->getPlayerLogic().getTheta());
+                    gameLogic_shared_pointer->setEnemyBounds(false, iter);
+
+                    std::cout << gameLogic_shared_pointer->getEnemyLogicVector()[iter].isOutOfBounds() << std::endl;
+
+                    gameLogic_shared_pointer->moveEnemyToCenter(iter);
+
+                    //                    (gameLogic_shared_pointer->getEnemyLogicVector()[iter])
+                    //                        .moveToCenter(CenterXGameWindow, CenterYGameWindow,
+                    //                            gameLogic_shared_pointer->getPlayerLogic().getTheta());
+
                     enemyPresentationVector[iter].moveToCenter();
                 }
             }
@@ -165,15 +179,17 @@ void GamePresentation::deleteDeadEnemies()
 
     for(auto iter = 0; iter < enemyPresentationVector.size(); iter++) {
         // delete enemies when they die
-        if(enemyPresentationVector.size() > 0 && gameLogic_shared_pointer->enemyLogicVector.size() > 0 &&
-            enemyPresentationVector.size() == gameLogic_shared_pointer->enemyLogicVector.size()) {
+        if(enemyPresentationVector.size() > 0 && gameLogic_shared_pointer->getEnemyLogicVector().size() > 0 &&
+            enemyPresentationVector.size() == gameLogic_shared_pointer->getEnemyLogicVector().size()) {
             //   std::cout << "one" << std::endl;
-            if(gameLogic_shared_pointer->enemyLogicVector[iter].isAlive() == false) {
+            if(gameLogic_shared_pointer->getEnemyLogicVector()[iter].isAlive() == false) {
                 //   std::cout << "two" << std::endl;
                 enemyPresentationVector.erase(enemyPresentationVector.begin() + iter);
 
-                (gameLogic_shared_pointer->enemyLogicVector)
-                    .erase((gameLogic_shared_pointer->enemyLogicVector).begin() + iter);
+                //                (gameLogic_shared_pointer->enemyLogicVector)
+                //                    .erase((gameLogic_shared_pointer->enemyLogicVector).begin() + iter);
+
+                gameLogic_shared_pointer->deleteEnemyLogic(iter);
                 //  std::cout << "three" << std::endl;
                 // std::cout << "dead" << std::endl;
             }
@@ -198,11 +214,15 @@ void GamePresentation::deleteDeadEnemies()
         }
     }
 
-    for(auto index = 0; index < gameLogic_shared_pointer->satelliteLogicVector.size(); index++) {
-        if(gameLogic_shared_pointer->satelliteLogicVector[index].isAlive() == false) {
+    for(auto index = 0; index < gameLogic_shared_pointer-> getSatelliteLogicVector().size(); index++) {
+        if(gameLogic_shared_pointer-> getSatelliteLogicVector()[index].isAlive() == false) {
             _satellitesKilled++;
-            gameLogic_shared_pointer->satelliteLogicVector.erase(
-                gameLogic_shared_pointer->satelliteLogicVector.begin() + index);
+            
+            
+             gameLogic_shared_pointer->deleteSatelliteLogic(index);
+            
+//            gameLogic_shared_pointer->satelliteLogicVector.erase(
+//                gameLogic_shared_pointer->satelliteLogicVector.begin() + index);
             satellitePresentationVector.erase(satellitePresentationVector.begin() + index);
 
             // if(gameLogic_shared_pointer->satelliteBulletLogic > 0)
@@ -218,17 +238,17 @@ void GamePresentation::deleteDeadEnemyBullets()
 
     for(auto iter = 0; iter < enemyPresentationVector.size(); iter++) {
         // delete bullets when they hit the player
-        if(enemyPresentationVector.size() > 0 && gameLogic_shared_pointer->enemyLogicVector.size() > 0) {
-
-            if(enemyPresentationVector[iter]._enemyBulletPresentationVector.size() > 0 &&
-                gameLogic_shared_pointer->enemyLogicVector[iter].enemyBulletLogicVector.size() > 0) {
-
-                if(gameLogic_shared_pointer->enemyLogicVector[iter].enemyBulletLogicVector[0].isAlive() == false) {
-
-                    if(enemyPresentationVector[iter]._enemyBulletPresentationVector.size() > 0) {
-
-                        enemyPresentationVector[iter]._enemyBulletPresentationVector.clear();
-                        gameLogic_shared_pointer->enemyLogicVector[iter].enemyBulletLogicVector.clear();
+        if(enemyPresentationVector.size() > 0 && gameLogic_shared_pointer->getEnemyLogicVector().size() > 0) {
+            // std::cout<<"one"<<std::endl;
+            if(enemyPresentationVector[iter].getEnemyBulletPresentationVector().size() > 0 &&
+                gameLogic_shared_pointer->getEnemyLogicVector()[iter].getEnemyBulletLogicVector().size() > 0) {
+               
+                if(gameLogic_shared_pointer->getEnemyLogicVector()[iter].getEnemyBulletLogicVector()[0].isAlive() == false) {
+                    if(enemyPresentationVector[iter].getEnemyBulletPresentationVector().size() > 0) {
+                        enemyPresentationVector[iter].deleteEnemyBulletPresentation();
+                        gameLogic_shared_pointer->clearEnemyBullet(iter);
+                        
+                        //std::cout<<gameLogic_shared_pointer->getEnemyLogicVector()[iter].getEnemyBulletLogicVector().size()<<std::endl;
                     }
                 }
             }
@@ -248,16 +268,16 @@ void GamePresentation::createSatellitePresenetation()
 
 void GamePresentation::drawSatellites(RenderWindow& window)
 {
-    if(satellitePresentationVector.size() > 0 && gameLogic_shared_pointer->satelliteLogicVector.size() > 0) {
+    if(satellitePresentationVector.size() > 0 && gameLogic_shared_pointer->getSatelliteLogicVector().size() > 0) {
         for(auto index = 0; index < satellitePresentationVector.size(); index++) {
 
             satellitePresentationVector[index]._rect.setPosition(
-                gameLogic_shared_pointer->satelliteLogicVector[index].getCenterXPosition(),
-                gameLogic_shared_pointer->satelliteLogicVector[index].getCenterYPosition());
+                gameLogic_shared_pointer->getSatelliteLogicVector()[index].getCenterXPosition(),
+                gameLogic_shared_pointer->getSatelliteLogicVector()[index].getCenterYPosition());
 
             satellitePresentationVector[index].draw(window,
-                gameLogic_shared_pointer->satelliteLogicVector[index].getXposition(),
-                gameLogic_shared_pointer->satelliteLogicVector[index].getYposition());
+                gameLogic_shared_pointer->getSatelliteLogicVector()[index].getXposition(),
+                gameLogic_shared_pointer->getSatelliteLogicVector()[index].getYposition());
         }
     }
 }
@@ -271,8 +291,8 @@ void GamePresentation::createSatelliteBulletPresentation()
 {
     for(auto i = 0; i < satellitePresentationVector.size(); i++) {
         EnemyBulletPresentation satelliteBulletPresentation(
-            gameLogic_shared_pointer->satelliteLogicVector[i].getXposition(),
-            gameLogic_shared_pointer->satelliteLogicVector[i].getYposition());
+            gameLogic_shared_pointer->getSatelliteLogicVector()[i].getXposition(),
+            gameLogic_shared_pointer->getSatelliteLogicVector()[i].getYposition());
         satelliteBulletPresentationVector.push_back(satelliteBulletPresentation);
     }
 }
@@ -280,14 +300,15 @@ void GamePresentation::createSatelliteBulletPresentation()
 void GamePresentation::drawSatelliteBullets(RenderWindow& window)
 {
     for(auto i = 0; i < satelliteBulletPresentationVector.size(); i++) {
-        gameLogic_shared_pointer->satelliteBulletLogic[i].move();
+        
+        gameLogic_shared_pointer->updateSatelliteBullets(i);
 
         // std::cout << satelliteBulletPresentationVector.size() << std::endl;
         satelliteBulletPresentationVector[i].draw(window);
 
         satelliteBulletPresentationVector[i].updateEnemyBullet(
-            gameLogic_shared_pointer->satelliteBulletLogic[i].getXposition(),
-            gameLogic_shared_pointer->satelliteBulletLogic[i].getYposition());
+            gameLogic_shared_pointer->getSatellietBulletLogicVector()[i].getXposition(),
+            gameLogic_shared_pointer->getSatellietBulletLogicVector()[i].getYposition());
     }
 }
 
@@ -296,19 +317,21 @@ void GamePresentation::updateLaserGeneratorPresentation()
     if(_laserGeneratorPresentation.size() > 0) {
         for(auto i = 0; i < _laserGeneratorPresentation[0].laserGeneratorPresentationVector.size(); i++) {
             _laserGeneratorPresentation[0].laserGeneratorPresentationVector[i].updateEnemy(
-                gameLogic_shared_pointer->_laserGeneratorLogic[0]._laserGeneratorEnemyLogicVector[i].getXposition(),
-                gameLogic_shared_pointer->_laserGeneratorLogic[0]._laserGeneratorEnemyLogicVector[i].getYposition());
+                gameLogic_shared_pointer->getlaserGeneratorLogic()[0]._laserGeneratorEnemyLogicVector[i].getXposition(),
+                gameLogic_shared_pointer->getlaserGeneratorLogic()[0]
+                    ._laserGeneratorEnemyLogicVector[i]
+                    .getYposition());
         }
 
         for(auto i = 0; i < _laserGeneratorPresentation[0].laserBulletPresentationVector.size(); i++) {
             _laserGeneratorPresentation[0].laserBulletPresentationVector[i].updateEnemyBullet(
-                gameLogic_shared_pointer->_laserGeneratorLogic[0]
+                gameLogic_shared_pointer->getlaserGeneratorLogic()[0]
                     ._laserGeneratorEnemyBulletLogicVector[i]
                     .getXposition(),
-                gameLogic_shared_pointer->_laserGeneratorLogic[0]
+                gameLogic_shared_pointer->getlaserGeneratorLogic()[0]
                     ._laserGeneratorEnemyBulletLogicVector[i]
                     .getYposition());
-            std::cout << "one" << std::endl;
+            // std::cout << "one" << std::endl;
         }
     }
 }
@@ -331,7 +354,7 @@ void GamePresentation::deleteLaserGenerator()
     bool isDead = false;
     if(_laserGeneratorPresentation.size() > 0) {
         for(auto i = 0; i < 2; i++) {
-            if(gameLogic_shared_pointer->_laserGeneratorLogic[0]._laserGeneratorEnemyLogicVector[i].isAlive() ==
+            if(gameLogic_shared_pointer->getlaserGeneratorLogic()[0]._laserGeneratorEnemyLogicVector[i].isAlive() ==
                 false) {
                 isDead = true;
             }
@@ -340,8 +363,11 @@ void GamePresentation::deleteLaserGenerator()
 
     if(isDead == true) {
 
+        if (_laserGeneratorPresentation.size() >0){
         _laserGeneratorPresentation.clear();
-        gameLogic_shared_pointer->_laserGeneratorLogic.clear();
+        // gameLogic_shared_pointer->_laserGeneratorLogic.clear(); 
+        gameLogic_shared_pointer->deleteLaserGenerator();
+    }
     }
 }
 
@@ -355,14 +381,22 @@ void GamePresentation::updateAsteroidPresentation()
 {
 
     if(asteroidPresentationVector.size() > 0) {
-        asteroidPresentationVector[0].updateAsteroid(gameLogic_shared_pointer->asteroidLogicVector[0].getXposition(),
-            gameLogic_shared_pointer->asteroidLogicVector[0].getYposition());
+        asteroidPresentationVector[0].updateAsteroid(gameLogic_shared_pointer->getAsteroidLogicVector()[0].getXposition(),
+            gameLogic_shared_pointer->getAsteroidLogicVector()[0].getYposition());
     }
 }
 
-
-void GamePresentation::drawAsteroid(RenderWindow &window){
-     if(asteroidPresentationVector.size() > 0) {
+void GamePresentation::drawAsteroid(RenderWindow& window)
+{
+    if(asteroidPresentationVector.size() > 0) {
         asteroidPresentationVector[0].draw(window);
     }
 }
+
+ vector<LaserGeneratorPresentation> GamePresentation::getLaserGeneratorPresentation(){
+     return _laserGeneratorPresentation;
+ }
+ 
+ vector<AsteroidPresentation> GamePresentation::getAsteroidPresentationVector(){
+     return asteroidPresentationVector;
+ }

@@ -43,13 +43,17 @@ public:
     
     float getCenterYPosition();
     
-    float setEnemySpeed(float speed);
+    void setEnemySpeed(float speed);
     
-    int setRadius(int radius);
+    void setRadius(int radius);
     
     vector<EnemyBulletLogic> getEnemyBulletLogicVector();
     
-      vector<EnemyBulletLogic> enemyBulletLogicVector;
+    void clearEnemyBulletVector();
+    
+    void setEnemyBulletLife(bool life);
+    
+    
 
 
     // EnemyBulletLogic createEnemyBullet();
@@ -57,6 +61,8 @@ public:
     //EnemyBulletLogic _enemyBulletLogic;
 
 private:
+vector<EnemyBulletLogic> enemyBulletLogicVector;
+
     float _theta;
     float _xpos;
     float _ypos;
