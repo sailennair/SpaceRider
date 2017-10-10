@@ -60,6 +60,14 @@ public:
     void createAsteroid();
 
     void updateAsteroidLogic();
+    
+    void checkAsteroidBounds();
+    
+    void deleteOutOfScopeAsteroids(int index);
+    
+    bool checkPlayerLifeDead();
+    
+    bool isPlayerDead();
 
     LifeLogic getPlayerLifeLogic();
 
@@ -131,6 +139,8 @@ private:
     int _playerBulletType = 1;
 
     int _playerLifesRemaining;
+    
+    int _currentLife = 5;
 };
 
 #endif // GAMELOGIC_H

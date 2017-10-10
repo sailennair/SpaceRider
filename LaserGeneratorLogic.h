@@ -17,13 +17,24 @@ public:
 
     void move();
     
-    vector<EnemyLogic> _laserGeneratorEnemyLogicVector;
+    void reduceHealthOfGenerator(int index, int damage);
     
-    vector<EnemyBulletLogic> _laserGeneratorEnemyBulletLogicVector;
+    void setGeneratorEnemyLife(int index,bool life);
+    
+  //  vector<EnemyLogic> _laserGeneratorEnemyLogicVector;
+    
+    vector<EnemyLogic> getLaserGeneratorEnemyLogicVector();
+    
+    vector<EnemyBulletLogic> getLaserGeneratorBulletLogicVector();
+    
+    
+    //vector<EnemyBulletLogic> _laserGeneratorEnemyBulletLogicVector;
     
 
 private:
-//    vector<EnemyLogic> _laserGeneratorEnemyLogicVector;
+    vector<EnemyLogic> _laserGeneratorEnemyLogicVector;
+    
+    vector<EnemyBulletLogic> _laserGeneratorEnemyBulletLogicVector;
 //    
 //    vector<EnemyBulletLogic> _laserGeneratorEnemyBulletLogicVector;
 

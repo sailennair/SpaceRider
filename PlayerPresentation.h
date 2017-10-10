@@ -7,8 +7,6 @@
 #include "GameCommonData.h"
 #include <memory>
 
-
-
 using namespace std;
 using namespace sf;
 
@@ -20,18 +18,17 @@ public:
     Sprite getPlayer();
 
     void draw(RenderWindow& window);
-    
+
     void rotateSprite(float angle);
     
-     Sprite _Player;
-       CircleShape _rect;
+    void restartPlayerPresentation();
+
+    CircleShape _rect;
+    
+    Sprite _Player;
 
 private:
     Texture _playerSpaceshipTexture;
-    
-   
-    
-  
 };
 
 #endif // PLAYERPRESENTATION_H

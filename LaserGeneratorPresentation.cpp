@@ -7,12 +7,12 @@ LaserGeneratorPresentation::LaserGeneratorPresentation()
         EnemyPresentation laserGeneratorPresentation(1);
         laserGeneratorPresentationVector.push_back(laserGeneratorPresentation);
     }
-std::cout<<"success"<<std::endl;
+
     for(auto i = 0; i < 20; i++) {
         EnemyBulletPresentation laserBulletPresentation;
         laserBulletPresentationVector.push_back(laserBulletPresentation);
     }
-    std::cout<<"success111"<<std::endl;
+    
 }
 
 void LaserGeneratorPresentation::draw(RenderWindow& window)
@@ -26,14 +26,25 @@ void LaserGeneratorPresentation::draw(RenderWindow& window)
     }
 }
 
-//vector<EnemyBulletPresentation> LaserGeneratorPresentation::getLaserBulletPresentationVector()
-//{
-//    return laserBulletPresentationVector;
-//}
+vector<EnemyPresentation> LaserGeneratorPresentation::getLaserGeneratorPresentationVector(){
+    return laserGeneratorPresentationVector;
+}
 
-//void LaserGeneratorPresentation::updateLaserBulletPresentation(int index, float xPosition, float yPosition)
-//{
-//    if(laserBulletPresentationVector.size() > 0) {
-//        laserBulletPresentationVector[index].updateEnemyBullet(xPosition, yPosition);
-//    }
-//}
+ void LaserGeneratorPresentation::updateLaserGeneratorEnemy(int index, float xPosition, float yPosition){
+     if(laserGeneratorPresentationVector.size() > 0){
+     laserGeneratorPresentationVector[index].updateEnemy(xPosition, yPosition);
+     
+     }
+ }
+
+vector<EnemyBulletPresentation> LaserGeneratorPresentation::getLaserBulletPresentationVector()
+{
+    return laserBulletPresentationVector;
+}
+
+void LaserGeneratorPresentation::updateLaserBulletPresentation(int index, float xPosition, float yPosition)
+{
+    if(laserBulletPresentationVector.size() > 0) {
+        laserBulletPresentationVector[index].updateEnemyBullet(xPosition, yPosition);
+    }
+}

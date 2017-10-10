@@ -50,6 +50,8 @@ public:
     int getHealth();
     
     bool setLife(bool life);
+    
+    void playerRestart();
 
 private:
 bool _life = true;

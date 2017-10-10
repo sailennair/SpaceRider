@@ -30,6 +30,8 @@ public:
     void renderSprite(RenderWindow& window);
 
     void upDatePlayerPosition();
+    
+    void checkPlayerPresentationLifeDead();
 
     void upDatePlayerBulletPresentation();
 
@@ -74,6 +76,8 @@ public:
     void updateAsteroidPresentation();
 
     void drawAsteroid(RenderWindow& window);
+    
+    void deleteOutofScopeAsteroidsPresentation();
 
     // vector<EnemyBulletPresentation> satelliteBulletPresentationVector;
 

@@ -36,6 +36,14 @@ public:
      float getCenterXPosition();
 
      float getCenterYPosition();
+     
+     void setOutOfBounds(bool bounds);
+     
+     bool isOutOfBounds();
+     
+     float getDamage();
+         
+     
 private:
 
     float _theta;
@@ -52,6 +60,7 @@ private:
     float _radius;
     float _centerXPosition;
     float _centerYPosition;
+    float _damage = 20;
     
    
 };

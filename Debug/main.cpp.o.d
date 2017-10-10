@@ -30,8 +30,11 @@ Debug/main.cpp.o: main.cpp GameWindow.h GamePresentation.h \
  SFML/Graphics/Shader.hpp SFML/Graphics/Sprite.hpp SFML/Graphics/Text.hpp \
  PlayerPresentation.h GameCommonData.h GameLogic.h PlayerLogic.h \
  IPlayer.h IMovingGameObject.h PlayerBullet.h IBullet.h EnemyLogic.h \
- EnemyBulletLogic.h IEnemy.h CollisionDetection.h \
- PlayerBulletPresentation.h EnemyPresentation.h EnemyBulletPresentation.h
+ EnemyBulletLogic.h IEnemy.h CollisionDetection.h SatelliteLogic.h \
+ LifeLogic.h LaserGeneratorLogic.h AsteroidLogic.h \
+ PlayerBulletPresentation.h EnemyPresentation.h EnemyBulletPresentation.h \
+ SatellitePresentation.h LifePresentation.h LaserGeneratorPresentation.h \
+ AsteroidPresentation.h
 
 GameWindow.h:
 
@@ -199,8 +202,24 @@ IEnemy.h:
 
 CollisionDetection.h:
 
+SatelliteLogic.h:
+
+LifeLogic.h:
+
+LaserGeneratorLogic.h:
+
+AsteroidLogic.h:
+
 PlayerBulletPresentation.h:
 
 EnemyPresentation.h:
 
 EnemyBulletPresentation.h:
+
+SatellitePresentation.h:
+
+LifePresentation.h:
+
+LaserGeneratorPresentation.h:
+
+AsteroidPresentation.h:

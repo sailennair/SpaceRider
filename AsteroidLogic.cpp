@@ -78,3 +78,14 @@ float AsteroidLogic::getCenterYPosition()
 {
     return _centerYPosition;
 }
+void AsteroidLogic::setOutOfBounds(bool bounds){
+    _outOfBounds = bounds;
+}
+
+bool AsteroidLogic::isOutOfBounds(){
+    return _outOfBounds;
+}
+
+float AsteroidLogic::getDamage(){
+    return _damage;
+}

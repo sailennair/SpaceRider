@@ -4,7 +4,7 @@ GameLogic::GameLogic()
 {
     // PlayerLogic player();
 
-   // CollisionDetection collisionDetection();
+    // CollisionDetection collisionDetection();
 
     LifeLogic lifeLogic(20, 570);
     _lifeLogic = lifeLogic;
@@ -102,6 +102,26 @@ void GameLogic::checkEnemyScope()
         }
     }
 }
+
+bool GameLogic::checkPlayerLifeDead()
+{
+    if(_currentLife > getPlayerLivesRemaining()) {
+        player.playerRestart();
+        _currentLife = getPlayerLivesRemaining();
+        return true;
+    } else {
+        return false;
+    }
+}
+
+bool GameLogic::isPlayerDead()
+{
+    if(getPlayerLivesRemaining() <= 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
 void GameLogic::checkCollision()
 {
 
@@ -111,13 +131,14 @@ void GameLogic::checkCollision()
             if(collisionDetection.didObjectsCollide(player, enemyLogicVector[index]) == true) {
                 // std::cout <<"collision" << std::endl;
                 enemyLogicVector[index].setLife(false);
+                player.reduceHealth(20);
             }
 
             if(enemyLogicVector[index].getEnemyBulletLogicVector().size() > 0) {
                 if(collisionDetection.didObjectsCollide(
                        player, enemyLogicVector[index].getEnemyBulletLogicVector()[0]) == true) {
 
-                     std::cout << "collision" << std::endl;
+                    //   std::cout << "collision" << std::endl;
 
                     enemyLogicVector[index].setEnemyBulletLife(false);
 
@@ -161,25 +182,56 @@ void GameLogic::checkCollision()
     }
 
     if(_laserGeneratorLogic.size() > 0) {
-        for(auto& iter : _laserGeneratorLogic[0]._laserGeneratorEnemyLogicVector) {
 
-            if(playerBulletLogicVector.size() > 0) {
-                for(auto& iter1 : playerBulletLogicVector) {
-                    if(collisionDetection.didObjectsCollide(iter, iter1) == true) {
-                        iter1.setLife(false);
-                        iter.reduceHealth(iter1.getDamage());
+        if(_laserGeneratorLogic.size() > 0) {
+            for(auto index = 0; index < _laserGeneratorLogic[0].getLaserGeneratorEnemyLogicVector().size(); index++) {
+                if(playerBulletLogicVector.size() > 0) {
+                    for(auto& iter : playerBulletLogicVector) {
+                        if(collisionDetection.didObjectsCollide(
+                               iter, _laserGeneratorLogic[0].getLaserGeneratorEnemyLogicVector()[index]) == true) {
+                            iter.setLife(false);
+                            _laserGeneratorLogic[0].reduceHealthOfGenerator(index, iter.getDamage());
+                        }
                     }
                 }
-            }
-
-            if(collisionDetection.didObjectsCollide(player, iter) == true) {
-                player.reduceHealth(100);
+                if(collisionDetection.didObjectsCollide(
+                       player, _laserGeneratorLogic[0].getLaserGeneratorEnemyLogicVector()[index]) == true) {
+                    std::cout << "generator" << std::endl;
+                    player.reduceHealth(20);
+                }
             }
         }
 
-        for(auto& iter2 : _laserGeneratorLogic[0]._laserGeneratorEnemyBulletLogicVector) {
-            if(collisionDetection.didObjectsCollide(player, iter2) == true) {
-                player.reduceHealth(iter2.getDamage());
+        //        for(auto& iter2 : _laserGeneratorLogic[0]._laserGeneratorEnemyBulletLogicVector) {
+        //            if(collisionDetection.didObjectsCollide(player, iter2) == true) {
+        //                std::cout<<"deader"<<std::endl;
+        //                player.reduceHealth(iter2.getDamage());
+        //            }
+        //        }
+        //        *****
+        for(int index = 0; index < _laserGeneratorLogic[0].getLaserGeneratorBulletLogicVector().size(); index++) {
+            if(collisionDetection.didObjectsCollide(
+                   player, _laserGeneratorLogic[0].getLaserGeneratorBulletLogicVector()[index]) == true) {
+                // player.reduceHealth(_laserGeneratorLogic[0].getLaserGeneratorBulletLogicVector()[index].getDamage());
+                player.reduceHealth(20);
+                break;
+            }
+        }
+    }
+
+    if(asteroidLogicVector.size() > 0) {
+        for(auto& iter : asteroidLogicVector) {
+            if(collisionDetection.didObjectsCollide(iter, player) == true) {
+                player.reduceHealth(iter.getDamage());
+
+                iter.setLife(false);
+            }
+            if(playerBulletLogicVector.size() > 0) {
+                for(auto& iter1 : playerBulletLogicVector) {
+                    if(collisionDetection.didObjectsCollide(iter1, iter) == true) {
+                        iter1.setLife(false);
+                    }
+                }
             }
         }
     }
@@ -229,7 +281,7 @@ void GameLogic::checkSatelliteBulletScope()
 void GameLogic::updateLaserLogic()
 {
     checkLaserGeneratorScope();
-    
+
     if(_laserGeneratorLogic.size() > 0) {
         _laserGeneratorLogic[0].move();
     }
@@ -241,101 +293,129 @@ void GameLogic::createLaserGeneratorLogic()
 {
     LaserGeneratorLogic LaserGeneratorLogic;
     _laserGeneratorLogic.push_back(LaserGeneratorLogic);
-  
 }
 
 void GameLogic::checkLaserGeneratorScope()
 {
-      
+
     bool isOutOfScope = false;
     if(_laserGeneratorLogic.size() > 0) {
-        for(auto& iter : _laserGeneratorLogic[0]._laserGeneratorEnemyLogicVector) {
+        for(auto& iter : _laserGeneratorLogic[0].getLaserGeneratorEnemyLogicVector()) {
             if(iter.getXposition() < 0 || iter.getXposition() > GameXWindow || iter.getYposition() < 0 ||
-                iter.getYposition() > GameYWindow){
-                    isOutOfScope = true;
-                }
+                iter.getYposition() > GameYWindow) {
+                isOutOfScope = true;
+            }
         }
     }
-    
-    if (isOutOfScope == true){
-        _laserGeneratorLogic[0]._laserGeneratorEnemyLogicVector[0].setLife(false);
-        
+
+    if(isOutOfScope == true) {
+        _laserGeneratorLogic[0].setGeneratorEnemyLife(0, false);
     }
 }
 
-
-void GameLogic::createAsteroid(){
+void GameLogic::createAsteroid()
+{
     AsteroidLogic asteroidLogic(player.getTheta());
     asteroidLogicVector.push_back(asteroidLogic);
 }
 
-
-void GameLogic::updateAsteroidLogic(){
-    if(asteroidLogicVector.size() > 0){
-        asteroidLogicVector[0].move();
+void GameLogic::updateAsteroidLogic()
+{
+    if(asteroidLogicVector.size() > 0) {
+        checkAsteroidBounds();
+        for(auto& iter : asteroidLogicVector) {
+            iter.move();
+        }
     }
 }
 
-vector<LaserGeneratorLogic> GameLogic::getlaserGeneratorLogic(){
+void GameLogic::checkAsteroidBounds()
+{
+    for(auto& iter : asteroidLogicVector) {
+        if(iter.getXposition() < 0 || iter.getXposition() > GameXWindow || iter.getYposition() < 0 ||
+            iter.getYposition() > GameYWindow) {
+            iter.setOutOfBounds(true);
+        }
+    }
+}
+
+void GameLogic::deleteOutOfScopeAsteroids(int index)
+{
+    if(asteroidLogicVector.size() > 0) {
+        asteroidLogicVector.erase(asteroidLogicVector.begin() + index);
+    }
+}
+
+vector<LaserGeneratorLogic> GameLogic::getlaserGeneratorLogic()
+{
     return _laserGeneratorLogic;
 }
 
-void GameLogic::deleteLaserGenerator(){
-    
-    
-    if(_laserGeneratorLogic.size() > 0){
-    _laserGeneratorLogic.clear();
+void GameLogic::deleteLaserGenerator()
+{
+
+    if(_laserGeneratorLogic.size() > 0) {
+        _laserGeneratorLogic.clear();
     }
-    
 }
 
-
-void GameLogic::deletePlayerBullet(int index){
+void GameLogic::deletePlayerBullet(int index)
+{
     playerBulletLogicVector.erase(playerBulletLogicVector.begin() + index);
 }
 
-vector<EnemyLogic> GameLogic::getEnemyLogicVector(){
+vector<EnemyLogic> GameLogic::getEnemyLogicVector()
+{
     return enemyLogicVector;
 }
 
-void GameLogic::deleteEnemyLogic(int index){
+void GameLogic::deleteEnemyLogic(int index)
+{
     enemyLogicVector.erase(enemyLogicVector.begin() + index);
 }
 
-void GameLogic::setEnemyBounds(bool isInBounds, int index){
+void GameLogic::setEnemyBounds(bool isInBounds, int index)
+{
     enemyLogicVector[index].setOutofBounds(isInBounds);
 }
 
-void GameLogic::moveEnemyToCenter(int index){
+void GameLogic::moveEnemyToCenter(int index)
+{
     enemyLogicVector[index].moveToCenter(CenterXGameWindow, CenterYGameWindow, player.getTheta());
 }
 
-void GameLogic::clearEnemyBullet(int index){
+void GameLogic::clearEnemyBullet(int index)
+{
     enemyLogicVector[index].clearEnemyBulletVector();
 }
 
- vector<SatelliteLogic> GameLogic::getSatelliteLogicVector(){
-     return satelliteLogicVector;
- }
- 
- void GameLogic::deleteSatelliteLogic(int index){
-     satelliteLogicVector.erase(satelliteLogicVector.begin() + index);
- }
- 
- vector<EnemyBulletLogic> GameLogic::getSatellietBulletLogicVector(){
-     return satelliteBulletLogic;
- }
- 
- void GameLogic::deleteSatelliteBulletLogic(int index){
-     satelliteBulletLogic.erase(satelliteBulletLogic.begin() + index);
- }
- 
- void GameLogic::updateSatelliteBullets(int index){
-     
-     satelliteBulletLogic[index].move();
-     
- }
- 
- vector<AsteroidLogic> GameLogic::getAsteroidLogicVector(){
-     return asteroidLogicVector;
- }
+vector<SatelliteLogic> GameLogic::getSatelliteLogicVector()
+{
+    return satelliteLogicVector;
+}
+
+void GameLogic::deleteSatelliteLogic(int index)
+{
+    satelliteLogicVector.erase(satelliteLogicVector.begin() + index);
+}
+
+vector<EnemyBulletLogic> GameLogic::getSatellietBulletLogicVector()
+{
+    return satelliteBulletLogic;
+}
+
+void GameLogic::deleteSatelliteBulletLogic(int index)
+{
+    satelliteBulletLogic.erase(satelliteBulletLogic.begin() + index);
+}
+
+void GameLogic::updateSatelliteBullets(int index)
+{
+
+    satelliteBulletLogic[index].move();
+}
+
+vector<AsteroidLogic> GameLogic::getAsteroidLogicVector()
+{
+    return asteroidLogicVector;
+}

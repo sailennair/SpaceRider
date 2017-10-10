@@ -26,7 +26,7 @@ void GameWindow::generateWindow()
             std::cout << enemies << std::endl;
         }
 
-        if(timer % 175 == 0 && _gamePresentation.getSatellitePresentationVector().size() == 0 && timer > 0) {
+        if(timer % 500 == 0 && _gamePresentation.getSatellitePresentationVector().size() == 0 && timer > 0) {
              
             _gamePresentation.gameLogic_shared_pointer->createSatellites();
              
@@ -35,7 +35,7 @@ void GameWindow::generateWindow()
 
         }
         //Fires a bullet from the satellite every few seconds
-        if(timer%100 == 0 && _gamePresentation.getSatellitePresentationVector().size()>0){
+        if(timer%75 == 0 && _gamePresentation.getSatellitePresentationVector().size()>0){
             
             _gamePresentation.gameLogic_shared_pointer->fireSatelliteBulletLogic();
             
@@ -43,7 +43,7 @@ void GameWindow::generateWindow()
         }
         
         
-        if(timer%75 == 0 && _gamePresentation.getAsteroidPresentationVector().size() == 0  && timer> 0){
+        if(timer%50 == 0 && _gamePresentation.getAsteroidPresentationVector().size() == 0  && timer> 0){
             _gamePresentation.gameLogic_shared_pointer->createAsteroid();
             _gamePresentation.createAsteroidPresentation();
         }
@@ -52,11 +52,8 @@ void GameWindow::generateWindow()
      //   std::cout<<"one"<<std::endl;
         
         if(timer% 25 == 0 && timer > 0 && _gamePresentation.getLaserGeneratorPresentation().size() == 0){
-            std::cout<<"two"<<std::endl;
             _gamePresentation.gameLogic_shared_pointer->createLaserGeneratorLogic();
-            std::cout<<"three"<<std::endl;
             _gamePresentation.createLaserGenerator();
-             std::cout<<"four"<<std::endl;
         }
         
 
@@ -129,6 +126,9 @@ void GameWindow::updatePlayer()
     _gamePresentation.gameLogic_shared_pointer->playerBulletUpdate();
     _gamePresentation.upDatePlayerBulletPresentation();
     _gamePresentation.setPlayerLifeCount();
+    _gamePresentation.checkPlayerPresentationLifeDead();
+    
+    
 }
 
 void GameWindow::updateAllEnemies()
@@ -147,5 +147,6 @@ void GameWindow::updateAllEnemies()
     
     _gamePresentation.gameLogic_shared_pointer->updateAsteroidLogic();
     _gamePresentation.updateAsteroidPresentation();
+    _gamePresentation.deleteOutofScopeAsteroidsPresentation();
     
 }

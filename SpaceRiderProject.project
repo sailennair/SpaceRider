@@ -58,6 +58,8 @@
     <File Name="AsteroidLogic.cpp"/>
     <File Name="AsteroidPresentation.h"/>
     <File Name="AsteroidPresentation.cpp"/>
+    <File Name="ScoreDatabase.h"/>
+    <File Name="ScoreDatabase.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

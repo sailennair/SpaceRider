@@ -19,6 +19,16 @@ PlayerLogic::PlayerLogic()
     //    _centerYPosition = PlayerYPosition;
 }
 
+void PlayerLogic::playerRestart()
+{
+    _xpos = PlayerXPosition;
+    _ypos = PlayerYPosition;
+    _centerXPosition = CenterXGameWindow;
+    _centerYPosition = GameYWindow - 40;
+    _theta = (PI) / 2;
+   _angleOfRotation = 0;
+}
+
 void PlayerLogic::moveLeftX()
 {
     _theta = _theta + degreesToRadians(2);
@@ -71,9 +81,9 @@ bool PlayerLogic::isAlive()
     if(_health > 0) {
         _life = true;
     } else {
-        _life =  false;
+        _life = false;
     }
-    
+
     return _life;
 }
 
@@ -154,6 +164,7 @@ int PlayerLogic::getHealth()
     return _health;
 }
 
-bool PlayerLogic::setLife(bool life){
+bool PlayerLogic::setLife(bool life)
+{
     _life = life;
 }
