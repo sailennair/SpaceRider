@@ -24,10 +24,10 @@ ScorePresentation::ScorePresentation(int highestScore):_scoreMessage{"Highest Sc
 
 
 void ScorePresentation::draw(sf::RenderWindow& window , float x, float y){
-    std::cout << _scoreMessage << std::endl;
+   // std::cout << _scoreMessage << std::endl;
     _scoreText.setPosition(sf::Vector2f(x, y));
     window.draw(_scoreText);
-    std::cout << " I am Drawing" << std::endl;
+    //std::cout << " I am Drawing" << std::endl;
 }
 
 void ScorePresentation::setScoreMessage(int highestScore){

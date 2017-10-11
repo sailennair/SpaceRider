@@ -378,8 +378,7 @@ void GameLogic::deleteEnemyLogic(int index)
 {
     enemyLogicVector.erase(enemyLogicVector.begin() + index);
     score.increasePoints(15);
-    std::cout << score.getScore() << std::endl;
-    std::cout << getHighScore() << std::endl;
+  
 }
 
 void GameLogic::setEnemyBounds(bool isInBounds, int index)

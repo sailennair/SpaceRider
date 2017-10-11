@@ -7,6 +7,8 @@
 #include "GameCommonData.h"
 #include <vector>
 #include <memory>
+#include "IntroductionWindow.h"
+#include "FinalWindow.h"
 
 #include <SFML/Graphics.hpp>
 
@@ -34,6 +36,8 @@ public:
     
     void updateAllEnemies();
     
+    void runGame();
+    
     
     
     
@@ -47,6 +51,10 @@ private:
     RenderWindow _window;
     
     Direction _direction;
+    
+    IntroductionWindow introductionWindow;
+    
+    FinalWindow finalWindow;
     
    
     

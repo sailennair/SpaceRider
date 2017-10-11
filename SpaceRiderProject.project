@@ -64,6 +64,10 @@
     <File Name="Score.cpp"/>
     <File Name="ScorePresentation.h"/>
     <File Name="ScorePresentation.cpp"/>
+    <File Name="IntroductionWindow.h"/>
+    <File Name="IntroductionWindow.cpp"/>
+    <File Name="FinalWindow.h"/>
+    <File Name="FinalWindow.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

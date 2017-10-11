@@ -6,16 +6,36 @@ GameWindow::GameWindow()
     GamePresentation _gamePresentation();
 }
 
-void GameWindow::generateWindow()
+void GameWindow::runGame()
 {
+ //   while(finalWindow.isPlayerQuittingGame() == false){
+        
+    introductionWindow.run();
+    
+    introductionWindow.closeWindow();
+    
+    generateWindow();
+    
+    _window.close();
+    
+    finalWindow.run();
+    
+    finalWindow.closeWindow();
+  //  }
+    
+}
+
+void GameWindow::generateWindow()
+
+{
+std::cout<<"game WIndow"<<std::endl;
     sf::RenderWindow _window(sf::VideoMode(GameXWindow, GameYWindow), "My Window");
 
     _window.setVerticalSyncEnabled(true);
     int timer = 0;
     int enemies = 0;
     bool isFiring = false;
-    
-    
+
     while(_window.isOpen()) {
 
         sf::Event event;
@@ -27,39 +47,32 @@ void GameWindow::generateWindow()
         }
 
         if(timer % 500 == 0 && _gamePresentation.getSatellitePresentationVector().size() == 0 && timer > 0) {
-             
-            _gamePresentation.gameLogic_shared_pointer->createSatellites();
-             
-            _gamePresentation.createSatellitePresenetation();
-            
 
+            _gamePresentation.gameLogic_shared_pointer->createSatellites();
+
+            _gamePresentation.createSatellitePresenetation();
         }
-        //Fires a bullet from the satellite every few seconds
-        if(timer%75 == 0 && _gamePresentation.getSatellitePresentationVector().size()>0){
-            
+
+        if(timer % 75 == 0 && _gamePresentation.getSatellitePresentationVector().size() > 0) {
+
             _gamePresentation.gameLogic_shared_pointer->fireSatelliteBulletLogic();
-            
+
             _gamePresentation.createSatelliteBulletPresentation();
         }
-        
-        
-        if(timer%50 == 0 && _gamePresentation.getAsteroidPresentationVector().size() == 0  && timer> 0){
+
+        if(timer % 50 == 0 && _gamePresentation.getAsteroidPresentationVector().size() == 0 && timer > 0) {
             _gamePresentation.gameLogic_shared_pointer->createAsteroid();
             _gamePresentation.createAsteroidPresentation();
         }
-        
-        
-     //   std::cout<<"one"<<std::endl;
-        
-        if(timer% 25 == 0 && timer > 0 && _gamePresentation.getLaserGeneratorPresentation().size() == 0){
+
+        if(timer % 25 == 0 && timer > 0 && _gamePresentation.getLaserGeneratorPresentation().size() == 0) {
             _gamePresentation.gameLogic_shared_pointer->createLaserGeneratorLogic();
             _gamePresentation.createLaserGenerator();
         }
-        
 
         while(_window.pollEvent(event)) {
             if(event.type == sf::Event::Closed) {
-                _window.close(); 
+                _window.close();
                 break;
             }
             if(event.key.code == sf::Keyboard::A) {
@@ -81,20 +94,26 @@ void GameWindow::generateWindow()
             firePlayerBullet();
             isFiring = false;
         }
-//std::cout<<"scoring"<<std::endl;
+
         updatePlayer();
-//std::cout<<"scoring1"<<std::endl;
         updateAllEnemies();
-//std::cout<<"scoring3"<<std::endl;
+
         _window.clear(sf::Color::Black);
         renderCharacters(_window);
-        //std::cout<<"scoring4"<<std::endl;
         _window.display();
 
         timer++;
     }
+    
+    if(_gamePresentation.getEnemiesKilled() == 5){
+        finalWindow.setPLayerLostGame(false);
+    }else{
+        finalWindow.setPLayerLostGame(true);
+    }
     _gamePresentation.gameLogic_shared_pointer->saveScoretoFile();
     std::cout << _gamePresentation.getEnemyPresentationVector().size() << std::endl;
+    
+   
 }
 
 void GameWindow::renderCharacters(RenderWindow& window)
@@ -130,26 +149,23 @@ void GameWindow::updatePlayer()
     _gamePresentation.upDatePlayerBulletPresentation();
     _gamePresentation.setPlayerLifeCount();
     _gamePresentation.checkPlayerPresentationLifeDead();
-    
-    
 }
 
 void GameWindow::updateAllEnemies()
 {
     _gamePresentation.gameLogic_shared_pointer->updateEnemyLogic();
-     _gamePresentation.updateEnemyPresentation();
-     _gamePresentation.gameLogic_shared_pointer->checkEnemyScope();
+    _gamePresentation.updateEnemyPresentation();
+    _gamePresentation.gameLogic_shared_pointer->checkEnemyScope();
     _gamePresentation.deleteDeadEnemies();
     _gamePresentation.gameLogic_shared_pointer->updateSatelliteLogic();
     _gamePresentation.gameLogic_shared_pointer->checkSatelliteBulletScope();
     _gamePresentation.gameLogic_shared_pointer->updateLaserLogic();
-    
+
     _gamePresentation.gameLogic_shared_pointer->updateLaserLogic();
     _gamePresentation.updateLaserGeneratorPresentation();
     _gamePresentation.deleteLaserGenerator();
-    
+
     _gamePresentation.gameLogic_shared_pointer->updateAsteroidLogic();
     _gamePresentation.updateAsteroidPresentation();
     _gamePresentation.deleteOutofScopeAsteroidsPresentation();
-    
 }

@@ -38,3 +38,7 @@ void PlayerPresentation::restartPlayerPresentation()
     float rotation = _Player.getRotation();
     _Player.rotate(-rotation);
 }
+
+void PlayerPresentation::setPositionofPlayer(float xPosition, float yPosition){
+    _Player.setPosition(xPosition, yPosition);
+}

@@ -21,14 +21,18 @@ public:
 
     void rotateSprite(float angle);
     
+    void setPositionofPlayer(float xPosition, float yPosition);
+    
     void restartPlayerPresentation();
 
     CircleShape _rect;
     
-    Sprite _Player;
+    
 
 private:
     Texture _playerSpaceshipTexture;
+    
+    Sprite _Player;
 };
 
 #endif // PLAYERPRESENTATION_H

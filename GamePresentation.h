@@ -31,7 +31,7 @@ public:
     void renderSprite(RenderWindow& window);
 
     void upDatePlayerPosition();
-    
+
     void checkPlayerPresentationLifeDead();
 
     void upDatePlayerBulletPresentation();
@@ -77,12 +77,14 @@ public:
     void updateAsteroidPresentation();
 
     void drawAsteroid(RenderWindow& window);
-    
+
     void deleteOutofScopeAsteroidsPresentation();
-    
+
     void updateScorePresentation();
-//    
-    void drawScorePresentation(RenderWindow &window);
+    //
+    void drawScorePresentation(RenderWindow& window);
+
+    int getEnemiesKilled();
 
     // vector<EnemyBulletPresentation> satelliteBulletPresentationVector;
 
@@ -91,8 +93,8 @@ public:
     vector<LaserGeneratorPresentation> getLaserGeneratorPresentation();
 
     vector<AsteroidPresentation> getAsteroidPresentationVector();
-    
-  //  vector<ScorePresentation> getScorePresentationVector();
+
+    //  vector<ScorePresentation> getScorePresentationVector();
 
     shared_ptr<GameLogic> gameLogic_shared_pointer;
 
@@ -101,8 +103,6 @@ public:
     // vector<AsteroidPresentation>  asteroidPresentationVector;
 
 private:
-
-
     PlayerPresentation _playerPresentation;
 
     vector<PlayerBulletPresentation> playerBulletPresentationVector;
@@ -119,9 +119,11 @@ private:
     vector<LaserGeneratorPresentation> _laserGeneratorPresentation;
 
     vector<AsteroidPresentation> asteroidPresentationVector;
-    
-  //  vector<ScorePresentation> _scorePresentationVector;
-  ScorePresentation scorePresentation;
+
+    //  vector<ScorePresentation> _scorePresentationVector;
+    ScorePresentation scorePresentation;
+
+    int _enemiesKilled = 0;
 
     // this is just a test variable
     int _timer;

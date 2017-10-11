@@ -31,10 +31,11 @@ Debug/main.cpp.o: main.cpp GameWindow.h GamePresentation.h \
  PlayerPresentation.h GameCommonData.h GameLogic.h PlayerLogic.h \
  IPlayer.h IMovingGameObject.h PlayerBullet.h IBullet.h EnemyLogic.h \
  EnemyBulletLogic.h IEnemy.h CollisionDetection.h SatelliteLogic.h \
- LifeLogic.h LaserGeneratorLogic.h AsteroidLogic.h \
- PlayerBulletPresentation.h EnemyPresentation.h EnemyBulletPresentation.h \
- SatellitePresentation.h LifePresentation.h LaserGeneratorPresentation.h \
- AsteroidPresentation.h
+ LifeLogic.h LaserGeneratorLogic.h AsteroidLogic.h Score.h \
+ ScoreDatabase.h PlayerBulletPresentation.h EnemyPresentation.h \
+ EnemyBulletPresentation.h SatellitePresentation.h LifePresentation.h \
+ LaserGeneratorPresentation.h AsteroidPresentation.h ScorePresentation.h \
+ IntroductionWindow.h
 
 GameWindow.h:
 
@@ -210,6 +211,10 @@ LaserGeneratorLogic.h:
 
 AsteroidLogic.h:
 
+Score.h:
+
+ScoreDatabase.h:
+
 PlayerBulletPresentation.h:
 
 EnemyPresentation.h:
@@ -223,3 +228,7 @@ LifePresentation.h:
 LaserGeneratorPresentation.h:
 
 AsteroidPresentation.h:
+
+ScorePresentation.h:
+
+IntroductionWindow.h:
