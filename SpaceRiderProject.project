@@ -60,6 +60,10 @@
     <File Name="AsteroidPresentation.cpp"/>
     <File Name="ScoreDatabase.h"/>
     <File Name="ScoreDatabase.cpp"/>
+    <File Name="Score.h"/>
+    <File Name="Score.cpp"/>
+    <File Name="ScorePresentation.h"/>
+    <File Name="ScorePresentation.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

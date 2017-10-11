@@ -6,7 +6,30 @@ GamePresentation::GamePresentation()
 
     gameLogic_shared_pointer = make_shared<GameLogic>();
     LifePresentation _lifePresentation();
+    
+    ScorePresentation scorePresentation(gameLogic_shared_pointer->getHighScore());
+    
+//    ScorePresentation scorePresentation(gameLogic_shared_pointer->getHighScore());
+//    scorePresentation.setScoreMessage(gameLogic_shared_pointer->getHighScore());
+//    _scorePresentationVector.push_back(scorePresentation);
 }
+
+//ScorePresentation GamePresentation::getScorePresentationVector(){
+//    return scorePresentation;
+//}
+//
+void GamePresentation::updateScorePresentation(){
+    scorePresentation.setScoreMessage(gameLogic_shared_pointer->getHighScore());
+}
+//
+void GamePresentation::drawScorePresentation(RenderWindow &window){
+   
+        std::cout<<"in the loop"<<std::endl;
+        scorePresentation.setScoreMessage(gameLogic_shared_pointer->getHighScore());
+    scorePresentation.draw(window, 10 , 10);
+    
+    }
+
 
 void GamePresentation::upDatePlayerPosition()
 {

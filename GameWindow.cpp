@@ -81,18 +81,19 @@ void GameWindow::generateWindow()
             firePlayerBullet();
             isFiring = false;
         }
-
+//std::cout<<"scoring"<<std::endl;
         updatePlayer();
-
+//std::cout<<"scoring1"<<std::endl;
         updateAllEnemies();
-
+//std::cout<<"scoring3"<<std::endl;
         _window.clear(sf::Color::Black);
         renderCharacters(_window);
+        //std::cout<<"scoring4"<<std::endl;
         _window.display();
 
         timer++;
     }
-
+    _gamePresentation.gameLogic_shared_pointer->saveScoretoFile();
     std::cout << _gamePresentation.getEnemyPresentationVector().size() << std::endl;
 }
 
@@ -106,6 +107,7 @@ void GameWindow::renderCharacters(RenderWindow& window)
     _gamePresentation.drawSatelliteBullets(window);
     _gamePresentation.drawLaserGenerator(window);
     _gamePresentation.drawAsteroid(window);
+    _gamePresentation.drawScorePresentation(window);
 }
 
 void GameWindow::checkKeyBoardEvent()
@@ -122,6 +124,7 @@ void GameWindow::firePlayerBullet()
 
 void GameWindow::updatePlayer()
 {
+    _gamePresentation.updateScorePresentation();
     _gamePresentation.gameLogic_shared_pointer->checkBulletScope();
     _gamePresentation.gameLogic_shared_pointer->playerBulletUpdate();
     _gamePresentation.upDatePlayerBulletPresentation();

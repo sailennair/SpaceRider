@@ -14,6 +14,7 @@
 #include "LifePresentation.h"
 #include "LaserGeneratorPresentation.h"
 #include "AsteroidPresentation.h"
+#include "ScorePresentation.h"
 
 using std::unique_ptr;
 using std::make_unique;
@@ -78,6 +79,10 @@ public:
     void drawAsteroid(RenderWindow& window);
     
     void deleteOutofScopeAsteroidsPresentation();
+    
+    void updateScorePresentation();
+//    
+    void drawScorePresentation(RenderWindow &window);
 
     // vector<EnemyBulletPresentation> satelliteBulletPresentationVector;
 
@@ -86,6 +91,8 @@ public:
     vector<LaserGeneratorPresentation> getLaserGeneratorPresentation();
 
     vector<AsteroidPresentation> getAsteroidPresentationVector();
+    
+  //  vector<ScorePresentation> getScorePresentationVector();
 
     shared_ptr<GameLogic> gameLogic_shared_pointer;
 
@@ -94,6 +101,8 @@ public:
     // vector<AsteroidPresentation>  asteroidPresentationVector;
 
 private:
+
+
     PlayerPresentation _playerPresentation;
 
     vector<PlayerBulletPresentation> playerBulletPresentationVector;
@@ -110,6 +119,9 @@ private:
     vector<LaserGeneratorPresentation> _laserGeneratorPresentation;
 
     vector<AsteroidPresentation> asteroidPresentationVector;
+    
+  //  vector<ScorePresentation> _scorePresentationVector;
+  ScorePresentation scorePresentation;
 
     // this is just a test variable
     int _timer;

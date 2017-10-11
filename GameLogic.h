@@ -11,6 +11,7 @@
 #include "LifeLogic.h"
 #include "LaserGeneratorLogic.h"
 #include "AsteroidLogic.h"
+#include "Score.h"
 
 class GameLogic
 {
@@ -102,19 +103,12 @@ public:
     void updateSatelliteBullets(int index);
     
     vector<AsteroidLogic> getAsteroidLogicVector();
+    
+    void saveScoretoFile();
+    
+    int getHighScore();
+    
 
-     //vector<LaserGeneratorLogic> _laserGeneratorLogic;
-
-    // vector<PlayerBullet> playerBulletLogicVector;
-
-    //vector<EnemyLogic> enemyLogicVector;
-
-    //vector<SatelliteLogic> satelliteLogicVector;
-
-
-    //vector<EnemyBulletLogic> satelliteBulletLogic;
-
-   // vector<AsteroidLogic> asteroidLogicVector;
 
 private:
     PlayerLogic player;
@@ -122,6 +116,10 @@ private:
     LifeLogic _lifeLogic;
 
     CollisionDetection collisionDetection;
+    
+    Score score;
+    
+    
 
     /////
     vector<LaserGeneratorLogic> _laserGeneratorLogic;

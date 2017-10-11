@@ -64,7 +64,7 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 CodeLiteDir:=C:\Program Files\CodeLite
 Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBulletPresentation.cpp$(ObjectSuffix) \
 	$(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IPlayer.cpp$(ObjectSuffix) $(IntermediateDirectory)/IEnemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/CollisionDetection.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatelliteLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatellitePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/LifeLogic.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/LifePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/LaserGeneratorLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/AsteroidLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/AsteroidPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/ScoreDatabase.cpp$(ObjectSuffix) 
+	$(IntermediateDirectory)/LifePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/LaserGeneratorLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/AsteroidLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/AsteroidPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/ScoreDatabase.cpp$(ObjectSuffix) $(IntermediateDirectory)/Score.cpp$(ObjectSuffix) $(IntermediateDirectory)/ScorePresentation.cpp$(ObjectSuffix) 
 
 
 
@@ -302,6 +302,22 @@ $(IntermediateDirectory)/ScoreDatabase.cpp$(DependSuffix): ScoreDatabase.cpp
 
 $(IntermediateDirectory)/ScoreDatabase.cpp$(PreprocessSuffix): ScoreDatabase.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/ScoreDatabase.cpp$(PreprocessSuffix) ScoreDatabase.cpp
+
+$(IntermediateDirectory)/Score.cpp$(ObjectSuffix): Score.cpp $(IntermediateDirectory)/Score.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/Score.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/Score.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/Score.cpp$(DependSuffix): Score.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/Score.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/Score.cpp$(DependSuffix) -MM Score.cpp
+
+$(IntermediateDirectory)/Score.cpp$(PreprocessSuffix): Score.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/Score.cpp$(PreprocessSuffix) Score.cpp
+
+$(IntermediateDirectory)/ScorePresentation.cpp$(ObjectSuffix): ScorePresentation.cpp $(IntermediateDirectory)/ScorePresentation.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/ScorePresentation.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/ScorePresentation.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/ScorePresentation.cpp$(DependSuffix): ScorePresentation.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/ScorePresentation.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/ScorePresentation.cpp$(DependSuffix) -MM ScorePresentation.cpp
+
+$(IntermediateDirectory)/ScorePresentation.cpp$(PreprocessSuffix): ScorePresentation.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/ScorePresentation.cpp$(PreprocessSuffix) ScorePresentation.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

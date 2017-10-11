@@ -1,5 +1,7 @@
 #ifndef GAMECOMMONDATA_H_INCLUDED
 #define GAMECOMMONDATA_H_INCLUDED
+#include <string>
+#include <iostream>
 
 const int GameXWindow = 800;
 const int GameYWindow = 600;
@@ -25,6 +27,11 @@ const int xOrigin = PlayerXPosition;
 const int yOrigin = (GameYWindow / 2);
 
 enum class Direction { LEFT, RIGHT };
+
+struct PlayerDetails{ 
+    std::string name; 
+    int score; 
+};
 
 // TEsting  the git communication
 #endif // GAMECOMMONDATA_H

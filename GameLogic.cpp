@@ -8,6 +8,8 @@ GameLogic::GameLogic()
 
     LifeLogic lifeLogic(20, 570);
     _lifeLogic = lifeLogic;
+
+    // Score score();
 }
 
 void GameLogic::playerUpdate(Direction dir)
@@ -68,6 +70,7 @@ int GameLogic::getPlayerBulletType()
 
 void GameLogic::checkBulletScope()
 {
+
     for(auto& iter : playerBulletLogicVector) {
         if(iter.getXposition() < CenterXGameWindow + 20 && iter.getXposition() > CenterXGameWindow - 20 &&
             iter.getYposition() > CenterYGameWindow - 20 && iter.getYposition() < CenterYGameWindow + 20) {
@@ -331,6 +334,7 @@ void GameLogic::updateAsteroidLogic()
 
 void GameLogic::checkAsteroidBounds()
 {
+
     for(auto& iter : asteroidLogicVector) {
         if(iter.getXposition() < 0 || iter.getXposition() > GameXWindow || iter.getYposition() < 0 ||
             iter.getYposition() > GameYWindow) {
@@ -356,6 +360,7 @@ void GameLogic::deleteLaserGenerator()
 
     if(_laserGeneratorLogic.size() > 0) {
         _laserGeneratorLogic.clear();
+        // score.increasePoints(50);
     }
 }
 
@@ -372,6 +377,9 @@ vector<EnemyLogic> GameLogic::getEnemyLogicVector()
 void GameLogic::deleteEnemyLogic(int index)
 {
     enemyLogicVector.erase(enemyLogicVector.begin() + index);
+    score.increasePoints(15);
+    std::cout << score.getScore() << std::endl;
+    std::cout << getHighScore() << std::endl;
 }
 
 void GameLogic::setEnemyBounds(bool isInBounds, int index)
@@ -397,6 +405,7 @@ vector<SatelliteLogic> GameLogic::getSatelliteLogicVector()
 void GameLogic::deleteSatelliteLogic(int index)
 {
     satelliteLogicVector.erase(satelliteLogicVector.begin() + index);
+    score.increasePoints(25);
 }
 
 vector<EnemyBulletLogic> GameLogic::getSatellietBulletLogicVector()
@@ -418,4 +427,14 @@ void GameLogic::updateSatelliteBullets(int index)
 vector<AsteroidLogic> GameLogic::getAsteroidLogicVector()
 {
     return asteroidLogicVector;
+}
+
+void GameLogic::saveScoretoFile()
+{
+    score.storeScore();
+}
+
+int GameLogic::getHighScore()
+{
+    score.getHighestScore();
 }
