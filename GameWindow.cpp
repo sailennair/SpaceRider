@@ -28,7 +28,7 @@ void GameWindow::runGame()
 void GameWindow::generateWindow()
 
 {
-std::cout<<"game WIndow"<<std::endl;
+
     sf::RenderWindow _window(sf::VideoMode(GameXWindow, GameYWindow), "My Window");
 
     _window.setVerticalSyncEnabled(true);
@@ -103,13 +103,18 @@ std::cout<<"game WIndow"<<std::endl;
         _window.display();
 
         timer++;
+        if(_gamePresentation.getEnemiesKilled() == 5){
+        break;
+            }
     }
     
     if(_gamePresentation.getEnemiesKilled() == 5){
         finalWindow.setPLayerLostGame(false);
+       
     }else{
         finalWindow.setPLayerLostGame(true);
     }
+    
     _gamePresentation.gameLogic_shared_pointer->saveScoretoFile();
     std::cout << _gamePresentation.getEnemyPresentationVector().size() << std::endl;
     
