@@ -1,0 +1,342 @@
+\hypertarget{class_enemy_logic}{}\section{Enemy\+Logic Class Reference}
+\label{class_enemy_logic}\index{Enemy\+Logic@{Enemy\+Logic}}
+Inheritance diagram for Enemy\+Logic\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_enemy_logic}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_enemy_logic_a6b405895fa7556810b8002b0d276d6cc}{Enemy\+Logic} (int inital\+Xposition, int inital\+Yposition, float theta)
+\begin{DoxyCompactList}\small\item\em Constructor intitializes the enemy to position and a direction angle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_logic_a2bc8ba642d677ab31f4b54ec00299e25}\label{class_enemy_logic_a2bc8ba642d677ab31f4b54ec00299e25}} 
+void \hyperlink{class_enemy_logic_a2bc8ba642d677ab31f4b54ec00299e25}{move} ()
+\begin{DoxyCompactList}\small\item\em Moves the enemy in the direction of the angle it is initialized to. \end{DoxyCompactList}\item 
+float \hyperlink{class_enemy_logic_ade03be41505c71de49f20fc855c8fede}{get\+Angleof\+Rotation} ()
+\begin{DoxyCompactList}\small\item\em Returns the angle of rotation of the enemy. \end{DoxyCompactList}\item 
+bool \hyperlink{class_enemy_logic_a8dd48fa112c41249e46728d7ec8f820e}{is\+Alive} ()
+\begin{DoxyCompactList}\small\item\em Returns true if the enemy\textquotesingle{}s health is greater than zero. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_logic_aaf2f8ff785c8f7410e04cfb3cb192b9b}{reduce\+Health} (int \+\_\+damage)
+\begin{DoxyCompactList}\small\item\em Decreases the health of the enemy by an amount given by the parameteter. \end{DoxyCompactList}\item 
+float \hyperlink{class_enemy_logic_a7eed969ab8e3d2527cdac04ef39a5aba}{get\+Xposition} ()
+\begin{DoxyCompactList}\small\item\em Returns the x co-\/ordinate of the enemy. \end{DoxyCompactList}\item 
+float \hyperlink{class_enemy_logic_ae614032054926a4a25ed56f61111392b}{get\+Yposition} ()
+\begin{DoxyCompactList}\small\item\em Returns the y co-\/ordinate of the enemy. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_logic_a12bce0a6b6cad1af96aee3b401ea2c45}{set\+Life} (bool life)
+\begin{DoxyCompactList}\small\item\em Sets the enemy\textquotesingle{}s life status to dead or alive according to the parameter. \end{DoxyCompactList}\item 
+bool \hyperlink{class_enemy_logic_a2e3e9e006259b36745beff4b55fd9bdc}{is\+Out\+Of\+Bounds} ()
+\begin{DoxyCompactList}\small\item\em Returns the out\+Of\+Bounds status of the enemy. out\+Of\+Bounds is defined by the enemy mving outside of the screen. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_logic_a0ac79ee7c0acf99b27aa4e22f98ce2d1}{set\+Outof\+Bounds} (bool out\+Of\+Bounds)
+\begin{DoxyCompactList}\small\item\em Sets the outbounds status of the enemy to the out\+Of\+Bounds parameter. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_logic_a560cc578db8a77f250b63a111f51125e}{move\+To\+Center} (float x\+Position, float y\+Position, float theta)
+\begin{DoxyCompactList}\small\item\em Moves the enemy to the center\+Position of the screen and sets the angle of direction for the enemy to move. \end{DoxyCompactList}\item 
+float \hyperlink{class_enemy_logic_ab6736c870e69bc20bef8d6d010946eb2}{get\+Radius} ()
+\begin{DoxyCompactList}\small\item\em Returns the radius of the enemy. \end{DoxyCompactList}\item 
+float \hyperlink{class_enemy_logic_a1429e91a81da7646d9b0280f26519d8c}{get\+Center\+X\+Position} ()
+\begin{DoxyCompactList}\small\item\em Returns the center x co-\/ordinate of the enemy\textquotesingle{}s current position. \end{DoxyCompactList}\item 
+float \hyperlink{class_enemy_logic_a8eb47a87a47288783e0c8963c39d24e4}{get\+Center\+Y\+Position} ()
+\begin{DoxyCompactList}\small\item\em Returns the center y co-\/ordinate of the enemy\textquotesingle{}s current position. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_logic_aae66ecc1d28feaef7c814a0dff7eed95}{set\+Enemy\+Speed} (float speed)
+\begin{DoxyCompactList}\small\item\em Sets the enemy\textquotesingle{}s Speed. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_logic_acabb2cb226edc71300ba1f2bc3e7a577}{set\+Radius} (int radius)
+\begin{DoxyCompactList}\small\item\em Sets the enemy\textquotesingle{}s radius. \end{DoxyCompactList}\item 
+vector$<$ \hyperlink{class_enemy_bullet_logic}{Enemy\+Bullet\+Logic} $>$ \hyperlink{class_enemy_logic_ae4e49b9f854bc0407510de8e3824c7c4}{get\+Enemy\+Bullet\+Logic\+Vector} ()
+\begin{DoxyCompactList}\small\item\em Returns a vector of type \hyperlink{class_enemy_bullet_logic}{Enemy\+Bullet\+Logic}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_enemy_logic_af85aebe59b9cdee37bdab690fa496348}\label{class_enemy_logic_af85aebe59b9cdee37bdab690fa496348}} 
+void \hyperlink{class_enemy_logic_af85aebe59b9cdee37bdab690fa496348}{clear\+Enemy\+Bullet\+Vector} ()
+\begin{DoxyCompactList}\small\item\em Clears the Enemy\+Bulle\+Vector. \end{DoxyCompactList}\item 
+void \hyperlink{class_enemy_logic_a88584f95e49bfd6b174b9b1d9a274cc5}{set\+Enemy\+Bullet\+Life} (bool life)
+\begin{DoxyCompactList}\small\item\em Sets the enemy bullets life to alive or dead. A bullets life is defined to be dead after collision and alive if it hasnt collided with a game object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_enemy_logic_a6b405895fa7556810b8002b0d276d6cc}\label{class_enemy_logic_a6b405895fa7556810b8002b0d276d6cc}} 
+\index{Enemy\+Logic@{Enemy\+Logic}!Enemy\+Logic@{Enemy\+Logic}}
+\index{Enemy\+Logic@{Enemy\+Logic}!Enemy\+Logic@{Enemy\+Logic}}
+\subsubsection{\texorpdfstring{Enemy\+Logic()}{EnemyLogic()}}
+{\footnotesize\ttfamily Enemy\+Logic\+::\+Enemy\+Logic (\begin{DoxyParamCaption}\item[{int}]{inital\+Xposition,  }\item[{int}]{inital\+Yposition,  }\item[{float}]{theta }\end{DoxyParamCaption})}
+
+
+
+Constructor intitializes the enemy to position and a direction angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inital\+Xposition} & the x-\/cordinate of initial position. \\
+\hline
+{\em inital\+Yposition} & the y-\/cordinate of initial position. \\
+\hline
+{\em theta} & the angle of direction the enemy moves to. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_enemy_logic_ade03be41505c71de49f20fc855c8fede}\label{class_enemy_logic_ade03be41505c71de49f20fc855c8fede}} 
+\index{Enemy\+Logic@{Enemy\+Logic}!get\+Angleof\+Rotation@{get\+Angleof\+Rotation}}
+\index{get\+Angleof\+Rotation@{get\+Angleof\+Rotation}!Enemy\+Logic@{Enemy\+Logic}}
+\subsubsection{\texorpdfstring{get\+Angleof\+Rotation()}{getAngleofRotation()}}
+{\footnotesize\ttfamily float Enemy\+Logic\+::get\+Angleof\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the angle of rotation of the enemy. 
+
+\begin{DoxyReturn}{Returns}
+float containing the angle of rotation of the enemy. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_enemy}{I\+Enemy}.
+
+\mbox{\Hypertarget{class_enemy_logic_a1429e91a81da7646d9b0280f26519d8c}\label{class_enemy_logic_a1429e91a81da7646d9b0280f26519d8c}} 
+\index{Enemy\+Logic@{Enemy\+Logic}!get\+Center\+X\+Position@{get\+Center\+X\+Position}}
+\index{get\+Center\+X\+Position@{get\+Center\+X\+Position}!Enemy\+Logic@{Enemy\+Logic}}
+\subsubsection{\texorpdfstring{get\+Center\+X\+Position()}{getCenterXPosition()}}
+{\footnotesize\ttfamily float Enemy\+Logic\+::get\+Center\+X\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the center x co-\/ordinate of the enemy\textquotesingle{}s current position. 
+
+\begin{DoxyReturn}{Returns}
+float containing enemy\textquotesingle{}s x co-\/ordinate of the center. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_enemy}{I\+Enemy}.
+
+\mbox{\Hypertarget{class_enemy_logic_a8eb47a87a47288783e0c8963c39d24e4}\label{class_enemy_logic_a8eb47a87a47288783e0c8963c39d24e4}} 
+\index{Enemy\+Logic@{Enemy\+Logic}!get\+Center\+Y\+Position@{get\+Center\+Y\+Position}}
+\index{get\+Center\+Y\+Position@{get\+Center\+Y\+Position}!Enemy\+Logic@{Enemy\+Logic}}
+\subsubsection{\texorpdfstring{get\+Center\+Y\+Position()}{getCenterYPosition()}}
+{\footnotesize\ttfamily float Enemy\+Logic\+::get\+Center\+Y\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the center y co-\/ordinate of the enemy\textquotesingle{}s current position. 
+
+\begin{DoxyReturn}{Returns}
+float containing enemy\textquotesingle{}s y co-\/ordinate of the center. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_enemy}{I\+Enemy}.
+
+\mbox{\Hypertarget{class_enemy_logic_ae4e49b9f854bc0407510de8e3824c7c4}\label{class_enemy_logic_ae4e49b9f854bc0407510de8e3824c7c4}} 
+\index{Enemy\+Logic@{Enemy\+Logic}!get\+Enemy\+Bullet\+Logic\+Vector@{get\+Enemy\+Bullet\+Logic\+Vector}}
+\index{get\+Enemy\+Bullet\+Logic\+Vector@{get\+Enemy\+Bullet\+Logic\+Vector}!Enemy\+Logic@{Enemy\+Logic}}
+\subsubsection{\texorpdfstring{get\+Enemy\+Bullet\+Logic\+Vector()}{getEnemyBulletLogicVector()}}
+{\footnotesize\ttfamily vector$<$ \hyperlink{class_enemy_bullet_logic}{Enemy\+Bullet\+Logic} $>$ Enemy\+Logic\+::get\+Enemy\+Bullet\+Logic\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns a vector of type \hyperlink{class_enemy_bullet_logic}{Enemy\+Bullet\+Logic}. 
+
+\begin{DoxyReturn}{Returns}
+\hyperlink{class_enemy_bullet_logic}{Enemy\+Bullet\+Logic} containing the bullets the enemy fires 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_logic_ab6736c870e69bc20bef8d6d010946eb2}\label{class_enemy_logic_ab6736c870e69bc20bef8d6d010946eb2}} 
+\index{Enemy\+Logic@{Enemy\+Logic}!get\+Radius@{get\+Radius}}
+\index{get\+Radius@{get\+Radius}!Enemy\+Logic@{Enemy\+Logic}}
+\subsubsection{\texorpdfstring{get\+Radius()}{getRadius()}}
+{\footnotesize\ttfamily float Enemy\+Logic\+::get\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the radius of the enemy. 
+
+\begin{DoxyReturn}{Returns}
+float containing enemy\textquotesingle{}s radius. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_enemy}{I\+Enemy}.
+
+\mbox{\Hypertarget{class_enemy_logic_a7eed969ab8e3d2527cdac04ef39a5aba}\label{class_enemy_logic_a7eed969ab8e3d2527cdac04ef39a5aba}} 
+\index{Enemy\+Logic@{Enemy\+Logic}!get\+Xposition@{get\+Xposition}}
+\index{get\+Xposition@{get\+Xposition}!Enemy\+Logic@{Enemy\+Logic}}
+\subsubsection{\texorpdfstring{get\+Xposition()}{getXposition()}}
+{\footnotesize\ttfamily float Enemy\+Logic\+::get\+Xposition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the x co-\/ordinate of the enemy. 
+
+\begin{DoxyReturn}{Returns}
+float containing the x co-\/ordinate of the enemy. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_enemy}{I\+Enemy}.
+
+\mbox{\Hypertarget{class_enemy_logic_ae614032054926a4a25ed56f61111392b}\label{class_enemy_logic_ae614032054926a4a25ed56f61111392b}} 
+\index{Enemy\+Logic@{Enemy\+Logic}!get\+Yposition@{get\+Yposition}}
+\index{get\+Yposition@{get\+Yposition}!Enemy\+Logic@{Enemy\+Logic}}
+\subsubsection{\texorpdfstring{get\+Yposition()}{getYposition()}}
+{\footnotesize\ttfamily float Enemy\+Logic\+::get\+Yposition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the y co-\/ordinate of the enemy. 
+
+\begin{DoxyReturn}{Returns}
+float containing the y co-\/ordinate of the enemy 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_enemy}{I\+Enemy}.
+
+\mbox{\Hypertarget{class_enemy_logic_a8dd48fa112c41249e46728d7ec8f820e}\label{class_enemy_logic_a8dd48fa112c41249e46728d7ec8f820e}} 
+\index{Enemy\+Logic@{Enemy\+Logic}!is\+Alive@{is\+Alive}}
+\index{is\+Alive@{is\+Alive}!Enemy\+Logic@{Enemy\+Logic}}
+\subsubsection{\texorpdfstring{is\+Alive()}{isAlive()}}
+{\footnotesize\ttfamily bool Enemy\+Logic\+::is\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns true if the enemy\textquotesingle{}s health is greater than zero. 
+
+\begin{DoxyReturn}{Returns}
+boolean constaining life status of the enemy. 
+\end{DoxyReturn}
+
+
+Implements \hyperlink{class_i_enemy}{I\+Enemy}.
+
+\mbox{\Hypertarget{class_enemy_logic_a2e3e9e006259b36745beff4b55fd9bdc}\label{class_enemy_logic_a2e3e9e006259b36745beff4b55fd9bdc}} 
+\index{Enemy\+Logic@{Enemy\+Logic}!is\+Out\+Of\+Bounds@{is\+Out\+Of\+Bounds}}
+\index{is\+Out\+Of\+Bounds@{is\+Out\+Of\+Bounds}!Enemy\+Logic@{Enemy\+Logic}}
+\subsubsection{\texorpdfstring{is\+Out\+Of\+Bounds()}{isOutOfBounds()}}
+{\footnotesize\ttfamily bool Enemy\+Logic\+::is\+Out\+Of\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the out\+Of\+Bounds status of the enemy. out\+Of\+Bounds is defined by the enemy mving outside of the screen. 
+
+\begin{DoxyReturn}{Returns}
+boolean containing the out\+Of\+Bounds status of the enemy. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_logic_a560cc578db8a77f250b63a111f51125e}\label{class_enemy_logic_a560cc578db8a77f250b63a111f51125e}} 
+\index{Enemy\+Logic@{Enemy\+Logic}!move\+To\+Center@{move\+To\+Center}}
+\index{move\+To\+Center@{move\+To\+Center}!Enemy\+Logic@{Enemy\+Logic}}
+\subsubsection{\texorpdfstring{move\+To\+Center()}{moveToCenter()}}
+{\footnotesize\ttfamily void Enemy\+Logic\+::move\+To\+Center (\begin{DoxyParamCaption}\item[{float}]{x\+Position,  }\item[{float}]{y\+Position,  }\item[{float}]{theta }\end{DoxyParamCaption})}
+
+
+
+Moves the enemy to the center\+Position of the screen and sets the angle of direction for the enemy to move. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Position} & the x co-\/ordinate of the center of the screen. \\
+\hline
+{\em y\+Position} & the y co-\/ordinate of the center of the screen. \\
+\hline
+{\em theta} & the angle of direction for enemy to move when its respawend. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_enemy_logic_aaf2f8ff785c8f7410e04cfb3cb192b9b}\label{class_enemy_logic_aaf2f8ff785c8f7410e04cfb3cb192b9b}} 
+\index{Enemy\+Logic@{Enemy\+Logic}!reduce\+Health@{reduce\+Health}}
+\index{reduce\+Health@{reduce\+Health}!Enemy\+Logic@{Enemy\+Logic}}
+\subsubsection{\texorpdfstring{reduce\+Health()}{reduceHealth()}}
+{\footnotesize\ttfamily void Enemy\+Logic\+::reduce\+Health (\begin{DoxyParamCaption}\item[{int}]{\+\_\+damage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Decreases the health of the enemy by an amount given by the parameteter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+damage} & interger containing the amount that the health should be decreased by. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_enemy}{I\+Enemy}.
+
+\mbox{\Hypertarget{class_enemy_logic_a88584f95e49bfd6b174b9b1d9a274cc5}\label{class_enemy_logic_a88584f95e49bfd6b174b9b1d9a274cc5}} 
+\index{Enemy\+Logic@{Enemy\+Logic}!set\+Enemy\+Bullet\+Life@{set\+Enemy\+Bullet\+Life}}
+\index{set\+Enemy\+Bullet\+Life@{set\+Enemy\+Bullet\+Life}!Enemy\+Logic@{Enemy\+Logic}}
+\subsubsection{\texorpdfstring{set\+Enemy\+Bullet\+Life()}{setEnemyBulletLife()}}
+{\footnotesize\ttfamily void Enemy\+Logic\+::set\+Enemy\+Bullet\+Life (\begin{DoxyParamCaption}\item[{bool}]{life }\end{DoxyParamCaption})}
+
+
+
+Sets the enemy bullets life to alive or dead. A bullets life is defined to be dead after collision and alive if it hasnt collided with a game object. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em life} & boolen containing the life status of the bullet \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_enemy_logic_aae66ecc1d28feaef7c814a0dff7eed95}\label{class_enemy_logic_aae66ecc1d28feaef7c814a0dff7eed95}} 
+\index{Enemy\+Logic@{Enemy\+Logic}!set\+Enemy\+Speed@{set\+Enemy\+Speed}}
+\index{set\+Enemy\+Speed@{set\+Enemy\+Speed}!Enemy\+Logic@{Enemy\+Logic}}
+\subsubsection{\texorpdfstring{set\+Enemy\+Speed()}{setEnemySpeed()}}
+{\footnotesize\ttfamily void Enemy\+Logic\+::set\+Enemy\+Speed (\begin{DoxyParamCaption}\item[{float}]{speed }\end{DoxyParamCaption})}
+
+
+
+Sets the enemy\textquotesingle{}s Speed. 
+
+\begin{DoxyReturn}{Returns}
+float containing speed of the enemy. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_enemy_logic_a12bce0a6b6cad1af96aee3b401ea2c45}\label{class_enemy_logic_a12bce0a6b6cad1af96aee3b401ea2c45}} 
+\index{Enemy\+Logic@{Enemy\+Logic}!set\+Life@{set\+Life}}
+\index{set\+Life@{set\+Life}!Enemy\+Logic@{Enemy\+Logic}}
+\subsubsection{\texorpdfstring{set\+Life()}{setLife()}}
+{\footnotesize\ttfamily void Enemy\+Logic\+::set\+Life (\begin{DoxyParamCaption}\item[{bool}]{life }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Sets the enemy\textquotesingle{}s life status to dead or alive according to the parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em life} & boolean describing the life status the enemy should be set to \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_enemy}{I\+Enemy}.
+
+\mbox{\Hypertarget{class_enemy_logic_a0ac79ee7c0acf99b27aa4e22f98ce2d1}\label{class_enemy_logic_a0ac79ee7c0acf99b27aa4e22f98ce2d1}} 
+\index{Enemy\+Logic@{Enemy\+Logic}!set\+Outof\+Bounds@{set\+Outof\+Bounds}}
+\index{set\+Outof\+Bounds@{set\+Outof\+Bounds}!Enemy\+Logic@{Enemy\+Logic}}
+\subsubsection{\texorpdfstring{set\+Outof\+Bounds()}{setOutofBounds()}}
+{\footnotesize\ttfamily void Enemy\+Logic\+::set\+Outof\+Bounds (\begin{DoxyParamCaption}\item[{bool}]{out\+Of\+Bounds }\end{DoxyParamCaption})}
+
+
+
+Sets the outbounds status of the enemy to the out\+Of\+Bounds parameter. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+Of\+Bounds} & boolean containing enemy\textquotesingle{}s out of bounds status. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_enemy_logic_acabb2cb226edc71300ba1f2bc3e7a577}\label{class_enemy_logic_acabb2cb226edc71300ba1f2bc3e7a577}} 
+\index{Enemy\+Logic@{Enemy\+Logic}!set\+Radius@{set\+Radius}}
+\index{set\+Radius@{set\+Radius}!Enemy\+Logic@{Enemy\+Logic}}
+\subsubsection{\texorpdfstring{set\+Radius()}{setRadius()}}
+{\footnotesize\ttfamily void Enemy\+Logic\+::set\+Radius (\begin{DoxyParamCaption}\item[{int}]{radius }\end{DoxyParamCaption})}
+
+
+
+Sets the enemy\textquotesingle{}s radius. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em radius} & of the enemy. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+William/\+Documents/\+E\+L\+E\+N3009/\+Space\+Rider\+Project/Enemy\+Logic.\+h\item 
+C\+:/\+Users/\+William/\+Documents/\+E\+L\+E\+N3009/\+Space\+Rider\+Project/Enemy\+Logic.\+cpp\end{DoxyCompactItemize}

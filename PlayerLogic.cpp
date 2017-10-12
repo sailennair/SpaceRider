@@ -139,7 +139,7 @@ int PlayerLogic::getHealth()
     return _health;
 }
 
-bool PlayerLogic::setLife(bool life)
+void PlayerLogic::setLife(bool life)
 {
     _life = life;
 }
