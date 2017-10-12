@@ -62,9 +62,9 @@ AS       := C:/TDM-GCC-64/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBulletPresentation.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IPlayer.cpp$(ObjectSuffix) $(IntermediateDirectory)/IEnemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/CollisionDetection.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatelliteLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatellitePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/LifeLogic.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/LifePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/LaserGeneratorLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/AsteroidLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/AsteroidPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/ScoreDatabase.cpp$(ObjectSuffix) $(IntermediateDirectory)/Score.cpp$(ObjectSuffix) $(IntermediateDirectory)/ScorePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IntroductionWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/FinalWindow.cpp$(ObjectSuffix) \
+Objects0=$(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBulletPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IPlayer.cpp$(ObjectSuffix) $(IntermediateDirectory)/IEnemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/CollisionDetection.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatelliteLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatellitePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/LifeLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/LifePresentation.cpp$(ObjectSuffix) \
+	$(IntermediateDirectory)/LaserGeneratorLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/AsteroidLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/AsteroidPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/ScoreDatabase.cpp$(ObjectSuffix) $(IntermediateDirectory)/Score.cpp$(ObjectSuffix) $(IntermediateDirectory)/ScorePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IntroductionWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/FinalWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/SpaceRiderTests.cpp$(ObjectSuffix) \
 	
 
 
@@ -96,14 +96,6 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
-
-$(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
-
 $(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix): IMovingGameObject.cpp $(IntermediateDirectory)/IMovingGameObject.cpp$(DependSuffix)
 	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/IMovingGameObject.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/IMovingGameObject.cpp$(DependSuffix): IMovingGameObject.cpp
@@ -335,6 +327,14 @@ $(IntermediateDirectory)/FinalWindow.cpp$(DependSuffix): FinalWindow.cpp
 
 $(IntermediateDirectory)/FinalWindow.cpp$(PreprocessSuffix): FinalWindow.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/FinalWindow.cpp$(PreprocessSuffix) FinalWindow.cpp
+
+$(IntermediateDirectory)/SpaceRiderTests.cpp$(ObjectSuffix): SpaceRiderTests.cpp $(IntermediateDirectory)/SpaceRiderTests.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/SpaceRiderTests.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/SpaceRiderTests.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/SpaceRiderTests.cpp$(DependSuffix): SpaceRiderTests.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/SpaceRiderTests.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/SpaceRiderTests.cpp$(DependSuffix) -MM SpaceRiderTests.cpp
+
+$(IntermediateDirectory)/SpaceRiderTests.cpp$(PreprocessSuffix): SpaceRiderTests.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/SpaceRiderTests.cpp$(PreprocessSuffix) SpaceRiderTests.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

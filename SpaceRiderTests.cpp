@@ -612,7 +612,7 @@ TEST_CASE("ScoreupDatesWhenScoreisIncreased")
     score.increasePoints(20);
     CHECK(score.getScore() == 70);
 }
-
+//**** Tests for Collision ****//
 TEST_CASE("CollisionDetcectionWorksForPlayerAndEnemy")
 {
     PlayerLogic playerLogic;
@@ -628,13 +628,24 @@ TEST_CASE("CollisionDetcectionWorksForPlayerAndEnemy")
     CHECK(collisionDetection.didObjectsCollide(playerLogic, enemyLogic2) == true);
 }
 
-TEST_CASE("EnemyBulletCollidesWithPlayer"){
+TEST_CASE("EnemyBulletCollidesWithPlayer")
+{
     PlayerLogic playerLogic;
     playerLogic.playerMove(Direction::LEFT);
-    EnemyBulletLogic enemyBullet(playerLogic.getCenterXPosition(), playerLogic.getCenterYPosition(), playerLogic.getTheta());
+    EnemyBulletLogic enemyBullet(
+        playerLogic.getCenterXPosition(), playerLogic.getCenterYPosition(), playerLogic.getTheta());
     CollisionDetection collisionDetection;
     CHECK(collisionDetection.didObjectsCollide(playerLogic, enemyBullet) == true);
 }
+
+TEST_CASE("PlayerBulletAndEnemyCollide"){
+    PlayerBullet playerbullet(CenterXGameWindow, CenterYGameWindow, PI/4, 2);
+    EnemyLogic enemyLogic(CenterXGameWindow, CenterYGameWindow, PI/4);
+    CollisionDetection collisionDetection;
+    CHECK(collisionDetection.didObjectsCollide(playerbullet, enemyLogic) == true);
+}
+
+
 
 //**** Tests for GameLogic ****//
 TEST_CASE("CheckIfPlayerUpdatesCorrectlyXAxis")
@@ -708,7 +719,6 @@ TEST_CASE("EnemyOutOFBoundsISSetWHenItMovesOutTheScree")
     }
     CHECK(gameLogic.getEnemyLogicVector()[0].isOutOfBounds() == false);
 }
-
 
 TEST_CASE("PlayerLifeISCheckedCorrectly")
 {
@@ -837,7 +847,5 @@ TEST_CASE("PlayerPresentationUpDateswhenPlayerMoves")
     CHECK(gamePresentation.gameLogic_shared_pointer->getPlayerLogic().getXposition() == 388);
     CHECK(gamePresentation.gameLogic_shared_pointer->getPlayerLogic().getYposition() == 544);
 }
-
-
 
 // updateLaserGeneratorLogic
