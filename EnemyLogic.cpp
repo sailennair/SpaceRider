@@ -1,23 +1,18 @@
 #include "EnemyLogic.h"
 
 EnemyLogic::EnemyLogic(int initalXposition, int initalYposition, float theta)
+    : _xpos{ CenterXGameWindow - 10 }
+    , _ypos{ CenterYGameWindow }
+    , _theta{ theta }
+    , _initialXposition{ CenterXGameWindow }
+    , _initialYposition{ CenterXGameWindow }
+    , _centerXPosition{ _xpos + enemySize }
+    , _centerYPosition{ _ypos + enemySize }
+    , _radius{ 15 }
+
 {
 
-    _xpos = CenterXGameWindow -8;
-    _ypos = CenterYGameWindow ;
-    _theta = theta;
-    _initialXposition = CenterXGameWindow;
-    _initialYposition = CenterXGameWindow;
-    _width = 20;
-    _height = 20;
-    _centerXPosition = _xpos + 20;
-    _centerYPosition = _ypos + 20;
-
-    _radius = 15;
-
     EnemyBulletLogic _enemyBulletLogic{ getXposition(), getYposition(), getAngleofRotation() };
-    //_enemyBulletLogic = enemyBulletLogic;
-
     enemyBulletLogicVector.push_back(_enemyBulletLogic);
 }
 
@@ -29,28 +24,23 @@ void EnemyLogic::move()
     _centerXPosition += (_initialXposition - 10) * cos(_theta) * _enemySpeed;
     _centerYPosition += (_initialYposition - 10) * sin(_theta) * _enemySpeed;
 
-    //_enemyBulletLogic.move();
-    if(enemyBulletLogicVector.size()>0){
-    enemyBulletLogicVector[0].move();
-    
+    if(enemyBulletLogicVector.size() > 0) {
+        enemyBulletLogicVector[0].move();
     }
 }
 
 void EnemyLogic::moveToCenter(float xPosition, float yPosition, float theta)
 {
-   // std::cout<<"Center"<<std::endl;
     enemyBulletLogicVector.clear();
 
     EnemyBulletLogic _enemyBulletLogic{ xPosition, yPosition, theta };
-   // _enemyBulletLogic = enemyBulletLogic;
     enemyBulletLogicVector.push_back(_enemyBulletLogic);
 
     _xpos = xPosition;
     _ypos = yPosition;
     _theta = theta;
-//std::cout<<xPosition<<"   "<<yPosition<<"   "<<theta<<std::endl;
-    _centerXPosition = _xpos + 20;
-    _centerYPosition = _ypos + 20;
+    _centerXPosition = _xpos + enemySize;
+    _centerYPosition = _ypos + enemySize;
 }
 
 vector<EnemyBulletLogic> EnemyLogic::getEnemyBulletLogicVector()
@@ -102,16 +92,6 @@ void EnemyLogic::setOutofBounds(bool outOfBounds)
     _outOfBounds = outOfBounds;
 }
 
-float EnemyLogic::getWidth()
-{
-    return _width;
-}
-
-float EnemyLogic::getHeight()
-{
-    return _height;
-}
-
 float EnemyLogic::getRadius()
 {
     return _radius;
@@ -125,18 +105,22 @@ float EnemyLogic::getCenterYPosition()
 {
     return _centerYPosition;
 }
-void EnemyLogic::setEnemySpeed(float speed){
+void EnemyLogic::setEnemySpeed(float speed)
+{
     _enemySpeed = speed;
 }
 
-void EnemyLogic::setRadius(int radius){
+void EnemyLogic::setRadius(int radius)
+{
     _radius = radius;
 }
 
-void EnemyLogic::clearEnemyBulletVector(){
+void EnemyLogic::clearEnemyBulletVector()
+{
     enemyBulletLogicVector.clear();
 }
 
-void EnemyLogic::setEnemyBulletLife(bool life){
+void EnemyLogic::setEnemyBulletLife(bool life)
+{
     enemyBulletLogicVector[0].setLife(life);
 }

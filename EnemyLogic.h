@@ -31,10 +31,6 @@ public:
 
     void setOutofBounds(bool outOfBounds);
 
-    float getWidth();
-
-    float getHeight();
-
     void moveToCenter(float xPosition, float yPosition, float theta);
     
     float getRadius();
@@ -54,6 +50,8 @@ public:
     void setEnemyBulletLife(bool life);
     
     
+    
+    
 
 
     // EnemyBulletLogic createEnemyBullet();
@@ -63,20 +61,20 @@ public:
 private:
 vector<EnemyBulletLogic> enemyBulletLogicVector;
 
-    float _theta;
+     int enemySize = 20;
     float _xpos;
     float _ypos;
+    float _theta;
     bool _isAlive = true;
     int _health = 15;
     int _initialXposition;
     int _initialYposition;
     float _enemySpeed = 0.005;
     bool _outOfBounds = false;
-    float _width;
-    float _height;
-    float _radius;
     float _centerXPosition;
     float _centerYPosition;
+    float _radius;
+   
   
     // EnemyBulletLogic enemyBulletLogic;
 };

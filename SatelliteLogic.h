@@ -11,11 +11,6 @@ public:
 
     void move();
 
-    // Getter functions
-    float getWidth();
-    
-    float getHeight();
-    
     float getXposition();
     
     float getYposition();
@@ -48,6 +43,8 @@ private:
     float _centerXPosition;
     
     float _centerYPosition;
+    
+    int _radiusOfRotation;
     
   
 };

@@ -20,10 +20,6 @@ public:
 
     virtual float getYposition() = 0;
 
-    virtual float getWidth() = 0;
-
-    virtual float getHeight() = 0;
-
     virtual void reduceHealth(int _damage) = 0;
 
     virtual float getTheta() = 0;

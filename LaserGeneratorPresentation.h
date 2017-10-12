@@ -18,16 +18,14 @@ public:
     LaserGeneratorPresentation();
 
     void draw(RenderWindow& window);
-    
+
     vector<EnemyPresentation> getLaserGeneratorPresentationVector();
-    
+
     void updateLaserGeneratorEnemy(int index, float xPosition, float yPosition);
 
-     vector<EnemyBulletPresentation> getLaserBulletPresentationVector();
+    vector<EnemyBulletPresentation> getLaserBulletPresentationVector();
 
-     void updateLaserBulletPresentation(int index, float xPosition, float yPosition);
-
-
+    void updateLaserBulletPresentation(int index, float xPosition, float yPosition);
 
 private:
     vector<EnemyPresentation> laserGeneratorPresentationVector;

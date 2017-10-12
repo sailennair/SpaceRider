@@ -1,68 +1,57 @@
 #ifndef ASTEROIDLOGIC_H
 #define ASTEROIDLOGIC_H
 
-
 #include "GameCommonData.h"
 #include "math.h"
 #include <iostream>
 #include "IEnemy.h"
 
-
-class AsteroidLogic: public IEnemy
+class AsteroidLogic : public IEnemy
 {
 public:
     AsteroidLogic(float theta);
-    
-     void move();
 
-     float getAngleofRotation();
+    void move();
 
-     bool isAlive();
+    float getAngleofRotation();
 
-     void reduceHealth(int _damage);
+    bool isAlive();
 
-     float getXposition();
+    void reduceHealth(int _damage);
 
-     float getYposition();
+    float getXposition();
 
-     void setLife(bool life);
+    float getYposition();
 
-     float getWidth();
+    void setLife(bool life);
 
-     float getHeight();
+    float getRadius();
 
-     float getRadius();
+    float getCenterXPosition();
 
-     float getCenterXPosition();
+    float getCenterYPosition();
 
-     float getCenterYPosition();
-     
-     void setOutOfBounds(bool bounds);
-     
-     bool isOutOfBounds();
-     
-     float getDamage();
-         
-     
+    void setOutOfBounds(bool bounds);
+
+    bool isOutOfBounds();
+
+    float getDamage();
+
 private:
-
-    float _theta;
     float _xpos;
     float _ypos;
+    float _theta;
     bool _isAlive = true;
     int _health = 10000;
     int _initialXposition;
     int _initialYposition;
     float _enemySpeed = 0.005;
     bool _outOfBounds = false;
-    float _width;
-    float _height;
-    float _radius;
     float _centerXPosition;
     float _centerYPosition;
+    float _radius;
     float _damage = 20;
-    
-   
+    int asteroidSize = 20;
 };
 
 #endif // ASTEROIDLOGIC_H

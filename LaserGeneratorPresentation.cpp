@@ -3,16 +3,18 @@
 LaserGeneratorPresentation::LaserGeneratorPresentation()
 {
 
-    for(auto i = 0; i < 2; i++) {
+    int numberofLaserGenerators = 2;
+    int numberofLasers = 20;
+    
+    for(auto i = 0; i < numberofLaserGenerators; i++) {
         EnemyPresentation laserGeneratorPresentation(1);
         laserGeneratorPresentationVector.push_back(laserGeneratorPresentation);
     }
 
-    for(auto i = 0; i < 20; i++) {
+    for(auto i = 0; i < numberofLasers; i++) {
         EnemyBulletPresentation laserBulletPresentation;
         laserBulletPresentationVector.push_back(laserBulletPresentation);
     }
-    
 }
 
 void LaserGeneratorPresentation::draw(RenderWindow& window)
@@ -26,16 +28,17 @@ void LaserGeneratorPresentation::draw(RenderWindow& window)
     }
 }
 
-vector<EnemyPresentation> LaserGeneratorPresentation::getLaserGeneratorPresentationVector(){
+vector<EnemyPresentation> LaserGeneratorPresentation::getLaserGeneratorPresentationVector()
+{
     return laserGeneratorPresentationVector;
 }
 
- void LaserGeneratorPresentation::updateLaserGeneratorEnemy(int index, float xPosition, float yPosition){
-     if(laserGeneratorPresentationVector.size() > 0){
-     laserGeneratorPresentationVector[index].updateEnemy(xPosition, yPosition);
-     
-     }
- }
+void LaserGeneratorPresentation::updateLaserGeneratorEnemy(int index, float xPosition, float yPosition)
+{
+    if(laserGeneratorPresentationVector.size() > 0) {
+        laserGeneratorPresentationVector[index].updateEnemy(xPosition, yPosition);
+    }
+}
 
 vector<EnemyBulletPresentation> LaserGeneratorPresentation::getLaserBulletPresentationVector()
 {

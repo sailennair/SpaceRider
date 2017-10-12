@@ -12,7 +12,6 @@
 class LaserGeneratorLogic
 {
 public:
-//LaserGeneratorLogic();
     LaserGeneratorLogic();
 
     void move();
@@ -21,22 +20,14 @@ public:
     
     void setGeneratorEnemyLife(int index,bool life);
     
-  //  vector<EnemyLogic> _laserGeneratorEnemyLogicVector;
-    
     vector<EnemyLogic> getLaserGeneratorEnemyLogicVector();
     
     vector<EnemyBulletLogic> getLaserGeneratorBulletLogicVector();
-    
-    
-    //vector<EnemyBulletLogic> _laserGeneratorEnemyBulletLogicVector;
-    
 
 private:
     vector<EnemyLogic> _laserGeneratorEnemyLogicVector;
     
     vector<EnemyBulletLogic> _laserGeneratorEnemyBulletLogicVector;
-//    
-//    vector<EnemyBulletLogic> _laserGeneratorEnemyBulletLogicVector;
 
     float _theta;
     

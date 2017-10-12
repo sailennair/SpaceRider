@@ -12,14 +12,17 @@ class AsteroidPresentation
 {
 public:
     AsteroidPresentation();
-    
-    void draw(RenderWindow &window);
-    
+
+    void draw(RenderWindow& window);
+
     void updateAsteroid(float xPosition, float yPosition);
+    
+    Sprite getAsteroidSprite();
+
 private:
-char _spriteSheetcount = 0;
- Sprite _asteroidSprite;
- Texture _asteroidTexture;
+    char _spriteSheetcount = 0;
+    Sprite _asteroidSprite;
+    Texture _asteroidTexture;
 };
 
 #endif // ASTEROIDPRESENTATION_H

@@ -20,9 +20,7 @@ public:
 
     virtual void setLife(bool life) = 0;
 
-    virtual float getWidth() = 0;
 
-    virtual float getHeight() = 0;
 
     virtual float getRadius() = 0;
 

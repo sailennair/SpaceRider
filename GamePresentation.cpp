@@ -2,10 +2,10 @@
 
 GamePresentation::GamePresentation()
 {
-    PlayerPresentation _playerPresentation();
+    //PlayerPresentation _playerPresentation();
 
     gameLogic_shared_pointer = make_shared<GameLogic>();
-    LifePresentation _lifePresentation();
+   // LifePresentation _lifePresentation();
 
     ScorePresentation scorePresentation(gameLogic_shared_pointer->getHighScore());
 }
@@ -18,7 +18,7 @@ void GamePresentation::updateScorePresentation()
 void GamePresentation::drawScorePresentation(RenderWindow& window)
 {
 
-    ;
+    
     scorePresentation.setScoreMessage(gameLogic_shared_pointer->getHighScore());
     scorePresentation.draw(window, 10, 10);
 }
@@ -261,9 +261,7 @@ void GamePresentation::drawSatellites(RenderWindow& window)
     if(satellitePresentationVector.size() > 0 && gameLogic_shared_pointer->getSatelliteLogicVector().size() > 0) {
         for(auto index = 0; index < satellitePresentationVector.size(); index++) {
 
-            satellitePresentationVector[index]._rect.setPosition(
-                gameLogic_shared_pointer->getSatelliteLogicVector()[index].getCenterXPosition(),
-                gameLogic_shared_pointer->getSatelliteLogicVector()[index].getCenterYPosition());
+           
 
             satellitePresentationVector[index].draw(window,
                 gameLogic_shared_pointer->getSatelliteLogicVector()[index].getXposition(),

@@ -20,7 +20,6 @@ public:
 
     Sprite getSprite();
 
-    RectangleShape _rect;
 
 private:
     Sprite _satellite;

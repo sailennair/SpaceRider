@@ -20,8 +20,6 @@ public:
 
     PlayerBulletPresentation(int xpos, int ypos, int type);
     
-    //RectangleShape getBullet();
-    
     CircleShape getBullet();
     
     void draw(RenderWindow &window);
@@ -33,9 +31,7 @@ public:
     
   
 private:
-  //  RectangleShape _rect;
- // Sprite _playerBulletSprite;
-  CircleShape _rect;
+  CircleShape _bullet;
     
 
 

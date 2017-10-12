@@ -6,21 +6,19 @@ SatelliteLogic::SatelliteLogic(float x, float y, float theta)
     , _spawnedXpos{ x }
     , _spawnedYpos{ y }
     , _angleOfRotation{ theta }
-    , _health{ 20 } // Health should always be inititalized to 100%
+    , _health{ 20 }
+    , _radius{ 15 }
+    , _radiusOfRotation{ 10 }
 {
-    // _xPos =   (radius*0.4) * cos(_angleOfRotation);
-    //_yPos =   (radius*0.4) * sin(_angleOfRotation);
-
-    _radius = 15;
-    _centerXPosition = x + 10 * cos(_angleOfRotation);
-    _centerYPosition = y + 10 * sin(_angleOfRotation);
+    _centerXPosition = x + _radiusOfRotation * cos(_angleOfRotation);
+    _centerYPosition = y + _radiusOfRotation * sin(_angleOfRotation);
 }
 
 void SatelliteLogic::move()
 {
     // chosing a new point to rotate about
-    auto xPoint = _spawnedXpos + 10;
-    auto yPoint = _spawnedYpos + 10;
+    auto xPoint = _spawnedXpos + _radiusOfRotation;
+    auto yPoint = _spawnedYpos + _radiusOfRotation;
 
     float s = sin(_angleOfRotation);
     float c = cos(_angleOfRotation);
@@ -41,14 +39,7 @@ void SatelliteLogic::move()
 }
 
 // Getter functions
-float SatelliteLogic::getWidth()
-{
-    return _xPos + 20;
-}
-float SatelliteLogic::getHeight()
-{
-    return _yPos + 20;
-}
+
 float SatelliteLogic::getXposition()
 {
     return _xPos; // - radius * cos(_angleOfRotation);
