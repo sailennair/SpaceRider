@@ -2,14 +2,8 @@
 
 GameLogic::GameLogic()
 {
-    // PlayerLogic player();
-
-    // CollisionDetection collisionDetection();
-
     LifeLogic lifeLogic(20, 570);
     _lifeLogic = lifeLogic;
-
-    // Score score();
 }
 
 void GameLogic::playerUpdate(Direction dir)
@@ -25,7 +19,6 @@ PlayerLogic GameLogic::getPlayerLogic()
 void GameLogic::updatePlayerLife()
 {
     _playerLifesRemaining = _lifeLogic.getNumberOfLivesRemaining(player.getHealth());
-    // std::cout<<_playerLifesRemaining<<std::endl;
 }
 
 int GameLogic::getPlayerLivesRemaining()
@@ -53,7 +46,7 @@ vector<PlayerBullet> GameLogic::getPlayerLogicBullets()
 
 void GameLogic::playerBulletUpdate()
 {
-    for(auto iter = 0; iter < playerBulletLogicVector.size(); iter++) {
+    for(auto iter = 0; iter < unsigned(playerBulletLogicVector.size()); iter++) {
         playerBulletLogicVector[iter].fire();
     }
 }
@@ -70,10 +63,12 @@ int GameLogic::getPlayerBulletType()
 
 void GameLogic::checkBulletScope()
 {
-
+    int bulletCenterTarget = 20;
     for(auto& iter : playerBulletLogicVector) {
-        if(iter.getXposition() < CenterXGameWindow + 20 && iter.getXposition() > CenterXGameWindow - 20 &&
-            iter.getYposition() > CenterYGameWindow - 20 && iter.getYposition() < CenterYGameWindow + 20) {
+        if(iter.getXposition() < CenterXGameWindow + bulletCenterTarget &&
+            iter.getXposition() > CenterXGameWindow - bulletCenterTarget &&
+            iter.getYposition() > CenterYGameWindow - bulletCenterTarget &&
+            iter.getYposition() < CenterYGameWindow + bulletCenterTarget) {
             iter.setLife(false);
         }
     }
@@ -129,30 +124,21 @@ void GameLogic::checkCollision()
 {
 
     if(enemyLogicVector.size() > 0) {
+        // Checking collision between player and enemy
         for(auto index = 0; index < enemyLogicVector.size(); index++) {
-            // Checking collision between player and enemy
             if(collisionDetection.didObjectsCollide(player, enemyLogicVector[index]) == true) {
-                // std::cout <<"collision" << std::endl;
                 enemyLogicVector[index].setLife(false);
                 player.reduceHealth(20);
             }
-
             if(enemyLogicVector[index].getEnemyBulletLogicVector().size() > 0) {
                 if(collisionDetection.didObjectsCollide(
                        player, enemyLogicVector[index].getEnemyBulletLogicVector()[0]) == true) {
-
-                    //   std::cout << "collision" << std::endl;
-
                     enemyLogicVector[index].setEnemyBulletLife(false);
-
                     player.reduceHealth(enemyLogicVector[index].getEnemyBulletLogicVector()[0].getDamage());
                 }
             }
-
-            // check collision between all player bullets and enemies
             for(auto& iter : playerBulletLogicVector) {
                 if(collisionDetection.didObjectsCollide(iter, enemyLogicVector[index]) == true) {
-                    // std::cout<<"collision"<<std::endl;
                     enemyLogicVector[index].reduceHealth(iter.getDamage());
                     iter.setLife(false);
                 }
@@ -160,15 +146,12 @@ void GameLogic::checkCollision()
         }
     }
 
-    if(satelliteLogicVector.size() > 0) {
+    if(satelliteLogicVector.size() > 0 && playerBulletLogicVector.size() > 0) {
         for(auto& iter : satelliteLogicVector) {
-
-            if(playerBulletLogicVector.size() > 0) {
-                for(auto& iter1 : playerBulletLogicVector) {
-                    if(collisionDetection.didObjectsCollide(iter, iter1)) {
-                        iter1.setLife(false);
-                        iter.decreaseHealth(iter1.getDamage());
-                    }
+            for(auto& iter1 : playerBulletLogicVector) {
+                if(collisionDetection.didObjectsCollide(iter, iter1)) {
+                    iter1.setLife(false);
+                    iter.decreaseHealth(iter1.getDamage());
                 }
             }
         }
@@ -179,43 +162,29 @@ void GameLogic::checkCollision()
             if(collisionDetection.didObjectsCollide(player, iter) == true) {
                 iter.setLife(false);
                 player.reduceHealth(iter.getDamage());
-                // std::cout << player.getHealth() << std::endl;
             }
         }
     }
 
     if(_laserGeneratorLogic.size() > 0) {
-
-        if(_laserGeneratorLogic.size() > 0) {
-            for(auto index = 0; index < _laserGeneratorLogic[0].getLaserGeneratorEnemyLogicVector().size(); index++) {
-                if(playerBulletLogicVector.size() > 0) {
-                    for(auto& iter : playerBulletLogicVector) {
-                        if(collisionDetection.didObjectsCollide(
-                               iter, _laserGeneratorLogic[0].getLaserGeneratorEnemyLogicVector()[index]) == true) {
-                            iter.setLife(false);
-                            _laserGeneratorLogic[0].reduceHealthOfGenerator(index, iter.getDamage());
-                        }
+        for(auto index = 0; index < _laserGeneratorLogic[0].getLaserGeneratorEnemyLogicVector().size(); index++) {
+            if(playerBulletLogicVector.size() > 0) {
+                for(auto& iter : playerBulletLogicVector) {
+                    if(collisionDetection.didObjectsCollide(
+                           iter, _laserGeneratorLogic[0].getLaserGeneratorEnemyLogicVector()[index]) == true) {
+                        iter.setLife(false);
+                        _laserGeneratorLogic[0].reduceHealthOfGenerator(index, iter.getDamage());
                     }
                 }
-                if(collisionDetection.didObjectsCollide(
-                       player, _laserGeneratorLogic[0].getLaserGeneratorEnemyLogicVector()[index]) == true) {
-                    std::cout << "generator" << std::endl;
-                    player.reduceHealth(20);
-                }
+            }
+            if(collisionDetection.didObjectsCollide(
+                   player, _laserGeneratorLogic[0].getLaserGeneratorEnemyLogicVector()[index]) == true) {
+                player.reduceHealth(20);
             }
         }
-
-        //        for(auto& iter2 : _laserGeneratorLogic[0]._laserGeneratorEnemyBulletLogicVector) {
-        //            if(collisionDetection.didObjectsCollide(player, iter2) == true) {
-        //                std::cout<<"deader"<<std::endl;
-        //                player.reduceHealth(iter2.getDamage());
-        //            }
-        //        }
-        //        *****
         for(int index = 0; index < _laserGeneratorLogic[0].getLaserGeneratorBulletLogicVector().size(); index++) {
             if(collisionDetection.didObjectsCollide(
                    player, _laserGeneratorLogic[0].getLaserGeneratorBulletLogicVector()[index]) == true) {
-                // player.reduceHealth(_laserGeneratorLogic[0].getLaserGeneratorBulletLogicVector()[index].getDamage());
                 player.reduceHealth(20);
                 break;
             }
@@ -226,7 +195,6 @@ void GameLogic::checkCollision()
         for(auto& iter : asteroidLogicVector) {
             if(collisionDetection.didObjectsCollide(iter, player) == true) {
                 player.reduceHealth(iter.getDamage());
-
                 iter.setLife(false);
             }
             if(playerBulletLogicVector.size() > 0) {
@@ -242,11 +210,13 @@ void GameLogic::checkCollision()
 
 void GameLogic::createSatellites()
 {
-    for(auto i = 0; i < 3; i++) {
-        SatelliteLogic satelliteLogic(player.getXposition() - radius * 0.6 * (cos(player.getTheta())) + 30 * i,
-            player.getYposition() - radius * 0.6 * (sin(player.getTheta())) + 30 * i, 0.05);
-        std::cout << player.getXposition() - radius * 0.5 * (cos(player.getTheta())) + 30 * i << "   "
-                  << player.getYposition() - radius * 0.5 * (sin(player.getTheta())) + 30 * i << std::endl;
+    int numberOfSatellites = 3;
+    float distanceFromPlayer = 0.6;
+    int satelliteSize = 30;
+    for(auto i = 0; i < numberOfSatellites; i++) {
+        SatelliteLogic satelliteLogic(
+            player.getXposition() - radius * distanceFromPlayer * (cos(player.getTheta())) + satelliteSize * i,
+            player.getYposition() - radius * distanceFromPlayer * (sin(player.getTheta())) + satelliteSize * i, 0.05);
         satelliteLogicVector.push_back(satelliteLogic);
     }
 }
@@ -275,21 +245,33 @@ void GameLogic::checkSatelliteBulletScope()
     for(auto& iter : satelliteBulletLogic) {
         if(iter.getXposition() < 0 || iter.getXposition() > GameXWindow || iter.getYposition() < 0 ||
             iter.getYposition() > GameYWindow) {
-            //  std::cout<<"delete bullet"<<std::endl;
             iter.setLife(false);
         }
     }
 }
 
+vector<EnemyBulletLogic> GameLogic::getSatellietBulletLogicVector()
+{
+    return satelliteBulletLogic;
+}
+
+void GameLogic::deleteSatelliteBulletLogic(int index)
+{
+    satelliteBulletLogic.erase(satelliteBulletLogic.begin() + index);
+}
+
+void GameLogic::updateSatelliteBullets(int index)
+{
+
+    satelliteBulletLogic[index].move();
+}
+
 void GameLogic::updateLaserLogic()
 {
     checkLaserGeneratorScope();
-
     if(_laserGeneratorLogic.size() > 0) {
         _laserGeneratorLogic[0].move();
     }
-
-    // std::cout<<_laserGeneratorLogic._laserGeneratorEnemyBulletLogicVector[2].getXposition()<< std::endl;
 }
 
 void GameLogic::createLaserGeneratorLogic()
@@ -300,7 +282,6 @@ void GameLogic::createLaserGeneratorLogic()
 
 void GameLogic::checkLaserGeneratorScope()
 {
-
     bool isOutOfScope = false;
     if(_laserGeneratorLogic.size() > 0) {
         for(auto& iter : _laserGeneratorLogic[0].getLaserGeneratorEnemyLogicVector()) {
@@ -310,7 +291,6 @@ void GameLogic::checkLaserGeneratorScope()
             }
         }
     }
-
     if(isOutOfScope == true) {
         _laserGeneratorLogic[0].setGeneratorEnemyLife(0, false);
     }
@@ -334,7 +314,6 @@ void GameLogic::updateAsteroidLogic()
 
 void GameLogic::checkAsteroidBounds()
 {
-
     for(auto& iter : asteroidLogicVector) {
         if(iter.getXposition() < 0 || iter.getXposition() > GameXWindow || iter.getYposition() < 0 ||
             iter.getYposition() > GameYWindow) {
@@ -357,10 +336,8 @@ vector<LaserGeneratorLogic> GameLogic::getlaserGeneratorLogic()
 
 void GameLogic::deleteLaserGenerator()
 {
-
     if(_laserGeneratorLogic.size() > 0) {
         _laserGeneratorLogic.clear();
-        // score.increasePoints(50);
     }
 }
 
@@ -376,9 +353,9 @@ vector<EnemyLogic> GameLogic::getEnemyLogicVector()
 
 void GameLogic::deleteEnemyLogic(int index)
 {
+    int killedEnemyPoints = 15;
     enemyLogicVector.erase(enemyLogicVector.begin() + index);
-    score.increasePoints(15);
-  
+    score.increasePoints(killedEnemyPoints);
 }
 
 void GameLogic::setEnemyBounds(bool isInBounds, int index)
@@ -403,24 +380,9 @@ vector<SatelliteLogic> GameLogic::getSatelliteLogicVector()
 
 void GameLogic::deleteSatelliteLogic(int index)
 {
+    int killedSatellitePoints = 25;
     satelliteLogicVector.erase(satelliteLogicVector.begin() + index);
-    score.increasePoints(25);
-}
-
-vector<EnemyBulletLogic> GameLogic::getSatellietBulletLogicVector()
-{
-    return satelliteBulletLogic;
-}
-
-void GameLogic::deleteSatelliteBulletLogic(int index)
-{
-    satelliteBulletLogic.erase(satelliteBulletLogic.begin() + index);
-}
-
-void GameLogic::updateSatelliteBullets(int index)
-{
-
-    satelliteBulletLogic[index].move();
+    score.increasePoints(killedSatellitePoints);
 }
 
 vector<AsteroidLogic> GameLogic::getAsteroidLogicVector()
@@ -435,5 +397,10 @@ void GameLogic::saveScoretoFile()
 
 int GameLogic::getHighScore()
 {
-    score.getHighestScore();
+    return score.getHighestScore();
+}
+
+int GameLogic::getCurrentScore()
+{
+    return score.getScore();
 }

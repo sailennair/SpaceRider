@@ -13,6 +13,13 @@
 #include "AsteroidPresentation.h"
 #include "LaserGeneratorLogic.h"
 #include "LaserGeneratorPresentation.h"
+#include "LifeLogic.h"
+#include "Score.h"
+#include "ScorePresentation.h"
+#include "CollisionDetection.h"
+#include "GameLogic.h"
+#include "GamePresentation.h"
+#include "GameWindow.h"
 
 #define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
 #include "doctest.h"
@@ -563,3 +570,274 @@ TEST_CASE("LaserBulletsPresentationUpDatesY")
     laserGeneratorPresentation.updateLaserBulletPresentation(1, 200, 120);
     CHECK(laserGeneratorPresentation.getLaserBulletPresentationVector()[1].getEnemyBullet().getPosition().y == 120);
 }
+
+//**** Tests for LifeLogic ****//
+TEST_CASE("LifeLogicReturnsTheCorrectXValue")
+{
+    LifeLogic lifeLogic(20, 40);
+    CHECK(lifeLogic.getXpos() == 20);
+}
+
+TEST_CASE("LifeLogicReturnsTheCorrectYValue")
+{
+    LifeLogic lifeLogic(20, 40);
+    CHECK(lifeLogic.getYpos() == 40);
+}
+
+TEST_CASE("LivesChangeDepeningOnHealth")
+{
+    LifeLogic lifeLogic(20, 40);
+    CHECK(lifeLogic.getXpos() == 20);
+    CHECK(lifeLogic.getYpos() == 40);
+    CHECK(lifeLogic.getNumberOfLivesRemaining(100) == 5);
+    CHECK(lifeLogic.getNumberOfLivesRemaining(80) == 4);
+    CHECK(lifeLogic.getNumberOfLivesRemaining(60) == 3);
+    CHECK(lifeLogic.getNumberOfLivesRemaining(40) == 2);
+    CHECK(lifeLogic.getNumberOfLivesRemaining(20) == 1);
+    CHECK(lifeLogic.getNumberOfLivesRemaining(0) == 0);
+}
+
+//**** Tests for ScoreLogic ****//
+TEST_CASE("ScoreInitilisesToZeroAtStartOfGame")
+{
+    Score score;
+    CHECK(score.getScore() == 0);
+}
+
+TEST_CASE("ScoreupDatesWhenScoreisIncreased")
+{
+    Score score;
+    score.increasePoints(50);
+    CHECK(score.getScore() == 50);
+    score.increasePoints(20);
+    CHECK(score.getScore() == 70);
+}
+
+TEST_CASE("CollisionDetcectionWorksForPlayerAndEnemy")
+{
+    PlayerLogic playerLogic;
+    playerLogic.playerMove(Direction::LEFT);
+    EnemyLogic enemyLogic(CenterXGameWindow, CenterYGameWindow, PI / 4);
+    EnemyLogic enemyLogic2(CenterXGameWindow, CenterYGameWindow, playerLogic.getTheta());
+    for(int i = 0; i < 100; i++) {
+        enemyLogic2.move();
+    }
+    enemyLogic2.setRadius(100);
+    CollisionDetection collisionDetection;
+    CHECK(collisionDetection.didObjectsCollide(playerLogic, enemyLogic) == false);
+    CHECK(collisionDetection.didObjectsCollide(playerLogic, enemyLogic2) == true);
+}
+
+TEST_CASE("EnemyBulletCollidesWithPlayer"){
+    PlayerLogic playerLogic;
+    playerLogic.playerMove(Direction::LEFT);
+    EnemyBulletLogic enemyBullet(playerLogic.getCenterXPosition(), playerLogic.getCenterYPosition(), playerLogic.getTheta());
+    CollisionDetection collisionDetection;
+    CHECK(collisionDetection.didObjectsCollide(playerLogic, enemyBullet) == true);
+}
+
+//**** Tests for GameLogic ****//
+TEST_CASE("CheckIfPlayerUpdatesCorrectlyXAxis")
+{
+    GameLogic gameLogic;
+    CHECK(gameLogic.getPlayerLogic().getXposition() == PlayerXPosition);
+    gameLogic.playerUpdate(Direction::LEFT);
+    CHECK(gameLogic.getPlayerLogic().getXposition() == 372);
+}
+
+TEST_CASE("CheckIfPlayerUpdatesCorrectlyYAxis")
+{
+    GameLogic gameLogic;
+    CHECK(gameLogic.getPlayerLogic().getYposition() == PlayerYPosition);
+    gameLogic.playerUpdate(Direction::LEFT);
+    CHECK(gameLogic.getPlayerLogic().getYposition() == 544);
+}
+
+TEST_CASE("PlayerLifeUpDates")
+{
+    GameLogic gameLogic;
+    CHECK(gameLogic.getPlayerLogic().getHealth() == 100);
+    gameLogic.updatePlayerLife();
+    CHECK(gameLogic.getPlayerLivesRemaining() == 5);
+}
+
+TEST_CASE("PlayerBulletCreatesAndStoresInVector")
+{
+    GameLogic gameLogic;
+    CHECK(gameLogic.getPlayerLogicBullets().size() == 0);
+    gameLogic.createPlayerBullet();
+    CHECK(gameLogic.getPlayerLogicBullets().size() == 1);
+}
+
+TEST_CASE("PlayerBulletTypeIsSetCorrectly")
+{
+    GameLogic gameLogic;
+    CHECK(gameLogic.getPlayerBulletType() == 1);
+    gameLogic.setPlayerBulletType(2);
+    CHECK(gameLogic.getPlayerBulletType() == 2);
+}
+
+TEST_CASE("PlayerBulletsLifeIsSetToFalseWhenItreachesThecenteroftheWindow")
+{
+    GameLogic gameLogic;
+    gameLogic.createPlayerBullet();
+    CHECK(gameLogic.getPlayerLogicBullets()[0].isAlive() == true);
+    for(int i = 0; i < 100; i++) {
+        gameLogic.playerBulletUpdate();
+    }
+    gameLogic.checkBulletScope();
+    CHECK(gameLogic.getPlayerLogicBullets()[0].isAlive() == false);
+}
+
+TEST_CASE("EnemyObjectISCreatedAndStored")
+{
+    GameLogic gameLogic;
+    CHECK(gameLogic.getEnemyLogicVector().size() == 0);
+    gameLogic.createEnemyLogicObject();
+    CHECK(gameLogic.getEnemyLogicVector().size() == 1);
+}
+
+TEST_CASE("EnemyOutOFBoundsISSetWHenItMovesOutTheScree")
+{
+    GameLogic gameLogic;
+    CHECK(gameLogic.getEnemyLogicVector().size() == 0);
+    gameLogic.createEnemyLogicObject();
+    CHECK(gameLogic.getEnemyLogicVector().size() == 1);
+    for(int i = 0; i < 100; i++) {
+        gameLogic.updateEnemyLogic();
+    }
+    CHECK(gameLogic.getEnemyLogicVector()[0].isOutOfBounds() == false);
+}
+
+
+TEST_CASE("PlayerLifeISCheckedCorrectly")
+{
+    GameLogic gameLogic;
+    CHECK(gameLogic.checkPlayerLifeDead() == true);
+}
+
+TEST_CASE("SatelliteObjectISCreatedAndStored")
+{
+    GameLogic gameLogic;
+    CHECK(gameLogic.getSatelliteLogicVector().size() == 0);
+    gameLogic.createSatellites();
+    CHECK(gameLogic.getSatelliteLogicVector().size() == 3);
+}
+
+TEST_CASE("CheckTheScopeOfSatelliteBullets")
+{
+    GameLogic gameLogic;
+    gameLogic.createSatellites();
+    gameLogic.fireSatelliteBulletLogic();
+    CHECK(gameLogic.getSatellietBulletLogicVector().size() == 3);
+    CHECK(gameLogic.getSatellietBulletLogicVector()[0].isAlive() == true);
+    CHECK(gameLogic.getSatellietBulletLogicVector()[1].isAlive() == true);
+    CHECK(gameLogic.getSatellietBulletLogicVector()[2].isAlive() == true);
+    for(int i = 0; i < 100; i++) {
+        gameLogic.updateSatelliteBullets(0);
+        gameLogic.updateSatelliteBullets(1);
+        gameLogic.updateSatelliteBullets(2);
+    }
+    gameLogic.checkSatelliteBulletScope();
+    CHECK(gameLogic.getSatellietBulletLogicVector()[1].isAlive() == false);
+    CHECK(gameLogic.getSatellietBulletLogicVector()[1].isAlive() == false);
+    CHECK(gameLogic.getSatellietBulletLogicVector()[2].isAlive() == false);
+}
+
+TEST_CASE("LaserGeneratorsLogicIsCreated")
+{
+    GameLogic gameLogic;
+    CHECK(gameLogic.getlaserGeneratorLogic().size() == 0);
+    gameLogic.createLaserGeneratorLogic();
+    CHECK(gameLogic.getlaserGeneratorLogic().size() == 1);
+}
+
+TEST_CASE("LAserGeneratorScopeisSetToTrueWhenOutOfScope")
+{
+    GameLogic gameLogic;
+    gameLogic.createLaserGeneratorLogic();
+    CHECK(gameLogic.getlaserGeneratorLogic()[0].getLaserGeneratorEnemyLogicVector()[0].isAlive() == true);
+}
+
+TEST_CASE("AsteroidISCreated")
+{
+    GameLogic gameLogic;
+    CHECK(gameLogic.getAsteroidLogicVector().size() == 0);
+    gameLogic.createAsteroid();
+    CHECK(gameLogic.getAsteroidLogicVector().size() == 1);
+}
+
+TEST_CASE("AsteroidOuOfBoundsLifeisSettoFalse")
+{
+    GameLogic gameLogic;
+    CHECK(gameLogic.getAsteroidLogicVector().size() == 0);
+    gameLogic.createAsteroid();
+    CHECK(gameLogic.getAsteroidLogicVector().size() == 1);
+    gameLogic.checkAsteroidBounds();
+    CHECK(gameLogic.getAsteroidLogicVector()[0].isOutOfBounds() == false);
+    for(int i = 1; i < 175; i++) {
+        gameLogic.updateAsteroidLogic();
+    }
+    gameLogic.checkAsteroidBounds();
+    CHECK(gameLogic.getAsteroidLogicVector()[0].isOutOfBounds() == true);
+}
+
+TEST_CASE("EnemyMovesToCenter")
+{
+    GameLogic gameLogic;
+    gameLogic.createEnemyLogicObject();
+    CHECK(gameLogic.getEnemyLogicVector().size() == 1);
+    gameLogic.moveEnemyToCenter(0);
+    CHECK(gameLogic.getEnemyLogicVector()[0].getXposition() == CenterXGameWindow);
+}
+
+TEST_CASE("ScoreIncreasesBy15WhenEnemyDies")
+{
+    GameLogic gameLogic;
+    gameLogic.createEnemyLogicObject();
+    CHECK(gameLogic.getCurrentScore() == 0);
+    gameLogic.deleteEnemyLogic(0);
+    CHECK(gameLogic.getCurrentScore() == 15);
+}
+
+TEST_CASE("ScoreIncreasesBy25WhenEnemyDies")
+{
+    GameLogic gameLogic;
+    gameLogic.createSatellites();
+    CHECK(gameLogic.getCurrentScore() == 0);
+    gameLogic.deleteSatelliteLogic(0);
+    CHECK(gameLogic.getCurrentScore() == 25);
+    gameLogic.deleteSatelliteLogic(1);
+    CHECK(gameLogic.getCurrentScore() == 50);
+    gameLogic.deleteSatelliteLogic(2);
+    CHECK(gameLogic.getCurrentScore() == 75);
+}
+
+//**** Tests for GamePresentation ****//
+
+TEST_CASE("PlayerPresentationUpDates")
+{
+    GamePresentation gamePresentation;
+    gamePresentation.upDatePlayerPosition();
+    CHECK(gamePresentation.gameLogic_shared_pointer->getPlayerLogic().getXposition() == PlayerXPosition);
+    CHECK(gamePresentation.gameLogic_shared_pointer->getPlayerLogic().getYposition() == PlayerYPosition);
+}
+
+TEST_CASE("PlayerPresentationUpDateswhenPlayerMoves")
+{
+    GamePresentation gamePresentation;
+    gamePresentation.upDatePlayerPosition();
+    CHECK(gamePresentation.gameLogic_shared_pointer->getPlayerLogic().getXposition() == PlayerXPosition);
+    CHECK(gamePresentation.gameLogic_shared_pointer->getPlayerLogic().getYposition() == PlayerYPosition);
+    gamePresentation.gameLogic_shared_pointer->playerUpdate(Direction::LEFT);
+    CHECK(gamePresentation.gameLogic_shared_pointer->getPlayerLogic().getXposition() == 372);
+    CHECK(gamePresentation.gameLogic_shared_pointer->getPlayerLogic().getYposition() == 544);
+    gamePresentation.gameLogic_shared_pointer->playerUpdate(Direction::RIGHT);
+    gamePresentation.gameLogic_shared_pointer->playerUpdate(Direction::RIGHT);
+    CHECK(gamePresentation.gameLogic_shared_pointer->getPlayerLogic().getXposition() == 388);
+    CHECK(gamePresentation.gameLogic_shared_pointer->getPlayerLogic().getYposition() == 544);
+}
+
+
+
+// updateLaserGeneratorLogic

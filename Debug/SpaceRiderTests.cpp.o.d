@@ -33,7 +33,9 @@ Debug/SpaceRiderTests.cpp.o: SpaceRiderTests.cpp GameCommonData.h \
  EnemyBulletPresentation.h PlayerBullet.h PlayerBulletPresentation.h \
  SatelliteLogic.h SatellitePresentation.h AsteroidLogic.h \
  AsteroidPresentation.h LaserGeneratorLogic.h \
- LaserGeneratorPresentation.h \
+ LaserGeneratorPresentation.h LifeLogic.h Score.h ScoreDatabase.h \
+ ScorePresentation.h CollisionDetection.h GameLogic.h GamePresentation.h \
+ LifePresentation.h GameWindow.h IntroductionWindow.h FinalWindow.h \
  C:\Users\User\Documents\SoftwareDev2Project\SpaceRiderProject\include/doctest.h
 
 GameCommonData.h:
@@ -211,5 +213,27 @@ AsteroidPresentation.h:
 LaserGeneratorLogic.h:
 
 LaserGeneratorPresentation.h:
+
+LifeLogic.h:
+
+Score.h:
+
+ScoreDatabase.h:
+
+ScorePresentation.h:
+
+CollisionDetection.h:
+
+GameLogic.h:
+
+GamePresentation.h:
+
+LifePresentation.h:
+
+GameWindow.h:
+
+IntroductionWindow.h:
+
+FinalWindow.h:
 
 C:\Users\User\Documents\SoftwareDev2Project\SpaceRiderProject\include/doctest.h:

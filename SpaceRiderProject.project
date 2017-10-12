@@ -8,7 +8,7 @@
   <Description/>
   <Dependencies/>
   <VirtualDirectory Name="src">
-    <File Name="main.cpp" ExcludeProjConfig=""/>
+    <File Name="main.cpp" ExcludeProjConfig="Debug"/>
     <File Name="IMovingGameObject.h" ExcludeProjConfig=""/>
     <File Name="IMovingGameObject.cpp" ExcludeProjConfig=""/>
     <File Name="PlayerLogic.h" ExcludeProjConfig=""/>
@@ -68,7 +68,7 @@
     <File Name="IntroductionWindow.cpp"/>
     <File Name="FinalWindow.h"/>
     <File Name="FinalWindow.cpp"/>
-    <File Name="SpaceRiderTests.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="SpaceRiderTests.cpp" ExcludeProjConfig=""/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>

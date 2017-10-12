@@ -8,7 +8,7 @@ GameWindow::GameWindow()
 
 void GameWindow::runGame()
 {
- //   while(finalWindow.isPlayerQuittingGame() == false){
+    //while(finalWindow.isPlayerQuittingGame() == false){
         
     introductionWindow.run();
     
@@ -103,7 +103,8 @@ void GameWindow::generateWindow()
         _window.display();
 
         timer++;
-        if(_gamePresentation.getEnemiesKilled() == 5){
+        
+        if(_gamePresentation.getEnemiesKilled() == 5 || _gamePresentation.gameLogic_shared_pointer->isPlayerDead() == true){
         break;
             }
     }

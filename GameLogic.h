@@ -108,6 +108,8 @@ public:
     
     int getHighScore();
     
+    int getCurrentScore();
+    
 
 
 private:
@@ -118,10 +120,7 @@ private:
     CollisionDetection collisionDetection;
     
     Score score;
-    
-    
 
-    /////
     vector<LaserGeneratorLogic> _laserGeneratorLogic;
 
     vector<PlayerBullet> playerBulletLogicVector;

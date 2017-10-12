@@ -3,10 +3,12 @@
 
 LifeLogic::LifeLogic(){}
 
-LifeLogic::LifeLogic(float x, float y)
+LifeLogic::LifeLogic(float x, float y):
+    _xpos {x},
+    _ypos {y}
+
 {
-    _xpos = x;
-    _ypos = y;
+
 }
 
 float LifeLogic::getXpos() const
