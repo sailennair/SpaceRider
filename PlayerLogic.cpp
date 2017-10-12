@@ -2,9 +2,9 @@
 
 using namespace std;
 PlayerLogic::PlayerLogic()
-    : _xpos{ PlayerXPosition }
+    : _health{ PlayerHealth }
+    , _xpos{ PlayerXPosition }
     , _ypos{ PlayerYPosition }
-    , _health{ PlayerHealth }
     , _radius{ 25 }
     , _centerXPosition{ CenterXGameWindow }
     , _centerYPosition{ GameYWindow - PlayerHeight / 2 }
@@ -36,7 +36,7 @@ void PlayerLogic::moveLeftY()
     _ypos = (radius)*sin(_theta);
     _ypos += yOrigin;
     _centerYPosition = (centerPlayerRadius)*sin(_theta);
-    _centerYPosition += yOrigin; 
+    _centerYPosition += yOrigin;
 }
 
 void PlayerLogic::moveRightX()
@@ -46,7 +46,6 @@ void PlayerLogic::moveRightX()
     _xpos += xOrigin;
     _centerXPosition = (centerPlayerRadius)*cos(_theta);
     _centerXPosition += xOrigin + 10 * cos(_theta);
-  
 }
 
 void PlayerLogic::moveRightY()
@@ -55,7 +54,7 @@ void PlayerLogic::moveRightY()
     _ypos = (radius)*sin(_theta);
     _ypos += yOrigin;
     _centerYPosition = (centerPlayerRadius)*sin(_theta);
-    _centerYPosition += yOrigin; 
+    _centerYPosition += yOrigin;
 }
 
 float PlayerLogic::getAngleofRotation()
