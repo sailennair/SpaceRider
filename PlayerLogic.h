@@ -6,6 +6,12 @@
 #include "IPlayer.h"
 #include <memory>
 
+//! Player Logic Class - controls the movement and life of a player.
+/*! This class is responsible for controlling the movement of the player as well as the players health.
+\author Sailen Nair and William Becerra
+ *
+*/
+
 class PlayerLogic : public IPlayer
 {
 public:

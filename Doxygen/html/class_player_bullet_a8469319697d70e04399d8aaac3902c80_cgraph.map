@@ -1,4 +1,4 @@
 <map id="PlayerBullet::move" name="PlayerBullet::move">
-<area shape="rect" id="node2" href="$class_player_bullet.html#aa9462c44892190316ee479a18693b6ad" title="PlayerBullet::getXposition" alt="" coords="185,5,355,32"/>
-<area shape="rect" id="node3" href="$class_player_bullet.html#a240cab35d5d909366986b8661ee65d3c" title="PlayerBullet::getYposition" alt="" coords="184,56,356,83"/>
+<area shape="rect" id="node2" href="$class_player_bullet.html#aa9462c44892190316ee479a18693b6ad" title="Returns the x co&#45;ordinate of the bullets current position. " alt="" coords="185,5,355,32"/>
+<area shape="rect" id="node3" href="$class_player_bullet.html#a240cab35d5d909366986b8661ee65d3c" title="Returns the y co&#45;ordinate of the bullets current position. " alt="" coords="184,56,356,83"/>
 </map>

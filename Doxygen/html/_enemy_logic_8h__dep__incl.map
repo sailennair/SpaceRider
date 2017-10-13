@@ -1,16 +1,12 @@
 <map id="C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/EnemyLogic.h" name="C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/EnemyLogic.h">
-<area shape="rect" id="node2" href="$_enemy_logic_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/EnemyLogic.cpp" alt="" coords="109,109,325,165"/>
-<area shape="rect" id="node3" href="$_enemy_presentation_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/EnemyPresentation.h" alt="" coords="349,109,565,165"/>
-<area shape="rect" id="node12" href="$_game_logic_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GameLogic.h" alt="" coords="567,213,783,269"/>
-<area shape="rect" id="node14" href="$_laser_generator_logic_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/LaserGeneratorLogic.h" alt="" coords="639,109,855,165"/>
-<area shape="rect" id="node4" href="$_enemy_presentation_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/EnemyPresentation.cpp" alt="" coords="277,213,493,269"/>
-<area shape="rect" id="node5" href="$_game_presentation_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GamePresentation.h" alt="" coords="422,317,638,373"/>
-<area shape="rect" id="node10" href="$_laser_generator_presentation_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/LaserGeneratorPresentation.h" alt="" coords="13,213,253,269"/>
-<area shape="rect" id="node6" href="$_game_presentation_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GamePresentation.cpp" alt="" coords="327,421,543,477"/>
-<area shape="rect" id="node7" href="$_game_window_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GameWindow.h" alt="" coords="567,421,783,477"/>
-<area shape="rect" id="node8" href="$_game_window_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GameWindow.cpp" alt="" coords="447,525,663,581"/>
-<area shape="rect" id="node9" href="$main_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/main.cpp" alt="" coords="687,525,903,581"/>
-<area shape="rect" id="node11" href="$_laser_generator_presentation_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/LaserGeneratorPresentation.cpp" alt="" coords="5,317,260,373"/>
-<area shape="rect" id="node13" href="$_game_logic_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GameLogic.cpp" alt="" coords="713,317,929,373"/>
-<area shape="rect" id="node15" href="$_laser_generator_logic_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/LaserGeneratorLogic.cpp" alt="" coords="807,213,1023,269"/>
+<area shape="rect" id="node2" href="$_enemy_logic_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/EnemyLogic.cpp" alt="" coords="100,109,316,165"/>
+<area shape="rect" id="node3" href="$_game_logic_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GameLogic.h" alt="" coords="245,213,461,269"/>
+<area shape="rect" id="node10" href="$_laser_generator_logic_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/LaserGeneratorLogic.h" alt="" coords="391,109,607,165"/>
+<area shape="rect" id="node4" href="$_game_logic_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GameLogic.cpp" alt="" coords="5,317,221,373"/>
+<area shape="rect" id="node5" href="$_game_presentation_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GamePresentation.h" alt="" coords="245,317,461,373"/>
+<area shape="rect" id="node7" href="$_game_window_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GameWindow.h" alt="" coords="391,421,607,477"/>
+<area shape="rect" id="node6" href="$_game_presentation_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GamePresentation.cpp" alt="" coords="151,421,367,477"/>
+<area shape="rect" id="node8" href="$_game_window_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GameWindow.cpp" alt="" coords="271,525,487,581"/>
+<area shape="rect" id="node9" href="$main_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/main.cpp" alt="" coords="511,525,727,581"/>
+<area shape="rect" id="node11" href="$_laser_generator_logic_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/LaserGeneratorLogic.cpp" alt="" coords="485,213,701,269"/>
 </map>

@@ -5,8 +5,8 @@
 <area shape="rect" id="node8" href="$class_i_player.html" title="IPlayer" alt="" coords="211,183,273,209"/>
 <area shape="rect" id="node10" href="$class_satellite_logic.html" title="SatelliteLogic" alt="" coords="192,233,292,260"/>
 <area shape="rect" id="node3" href="$class_enemy_bullet_logic.html" title="EnemyBulletLogic" alt="" coords="340,5,467,32"/>
-<area shape="rect" id="node4" href="$class_player_bullet.html" title="PlayerBullet" alt="" coords="357,56,449,83"/>
+<area shape="rect" id="node4" href="$class_player_bullet.html" title="Player bullet Class &#45; contols the logic of the bullet of the player. " alt="" coords="357,56,449,83"/>
 <area shape="rect" id="node6" href="$class_asteroid_logic.html" title="AsteroidLogic" alt="" coords="353,107,454,133"/>
-<area shape="rect" id="node7" href="$class_enemy_logic.html" title="EnemyLogic" alt="" coords="356,157,451,184"/>
-<area shape="rect" id="node9" href="$class_player_logic.html" title="PlayerLogic" alt="" coords="358,208,449,235"/>
+<area shape="rect" id="node7" href="$class_enemy_logic.html" title="Enemy Logic Class &#45; contols the logic of the main enemies. " alt="" coords="356,157,451,184"/>
+<area shape="rect" id="node9" href="$class_player_logic.html" title="Player Logic Class &#45; controls the movement and life of a player. " alt="" coords="358,208,449,235"/>
 </map>

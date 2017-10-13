@@ -1,9 +1,4 @@
 <map id="C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/EnemyPresentation.h" name="C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/EnemyPresentation.h">
-<area shape="rect" id="node5" href="$_game_common_data_8h.html" title="GameCommonData.h" alt="" coords="768,408,915,435"/>
-<area shape="rect" id="node8" href="$_enemy_bullet_presentation_8h.html" title="EnemyBulletPresentation.h" alt="" coords="286,109,466,136"/>
-<area shape="rect" id="node9" href="$_enemy_logic_8h.html" title="EnemyLogic.h" alt="" coords="622,109,727,136"/>
-<area shape="rect" id="node10" href="$_enemy_bullet_logic_8h.html" title="EnemyBulletLogic.h" alt="" coords="659,184,797,211"/>
-<area shape="rect" id="node17" href="$_i_enemy_8h.html" title="IEnemy.h" alt="" coords="771,259,848,285"/>
-<area shape="rect" id="node12" href="$_i_bullet_8h.html" title="IBullet.h" alt="" coords="677,259,747,285"/>
-<area shape="rect" id="node13" href="$_i_moving_game_object_8h.html" title="IMovingGameObject.h" alt="" coords="568,333,717,360"/>
+<area shape="rect" id="node5" href="$_game_common_data_8h.html" title="GameCommonData.h" alt="" coords="22,184,169,211"/>
+<area shape="rect" id="node8" href="$_enemy_bullet_presentation_8h.html" title="EnemyBulletPresentation.h" alt="" coords="263,109,443,136"/>
 </map>

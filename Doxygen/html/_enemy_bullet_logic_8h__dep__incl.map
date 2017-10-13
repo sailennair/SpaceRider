@@ -1,20 +1,16 @@
 <map id="C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/EnemyBulletLogic.h" name="C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/EnemyBulletLogic.h">
-<area shape="rect" id="node2" href="$_enemy_bullet_logic_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/EnemyBulletLogic.cpp" alt="" coords="175,109,391,165"/>
-<area shape="rect" id="node3" href="$_enemy_logic_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/EnemyLogic.h" alt="" coords="415,109,631,165"/>
-<area shape="rect" id="node16" href="$_laser_generator_logic_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/LaserGeneratorLogic.h" alt="" coords="560,213,776,269"/>
-<area shape="rect" id="node18" href="$_satellite_logic_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/SatelliteLogic.h" alt="" coords="705,109,921,165"/>
-<area shape="rect" id="node4" href="$_enemy_logic_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/EnemyLogic.cpp" alt="" coords="29,213,245,269"/>
-<area shape="rect" id="node5" href="$_enemy_presentation_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/EnemyPresentation.h" alt="" coords="269,213,485,269"/>
-<area shape="rect" id="node14" href="$_game_logic_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GameLogic.h" alt="" coords="560,317,776,373"/>
-<area shape="rect" id="node6" href="$_enemy_presentation_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/EnemyPresentation.cpp" alt="" coords="5,317,221,373"/>
-<area shape="rect" id="node7" href="$_game_presentation_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GamePresentation.h" alt="" coords="415,421,631,477"/>
-<area shape="rect" id="node12" href="$_laser_generator_presentation_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/LaserGeneratorPresentation.h" alt="" coords="245,317,485,373"/>
-<area shape="rect" id="node8" href="$_game_presentation_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GamePresentation.cpp" alt="" coords="320,525,536,581"/>
-<area shape="rect" id="node9" href="$_game_window_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GameWindow.h" alt="" coords="560,525,776,581"/>
-<area shape="rect" id="node10" href="$_game_window_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GameWindow.cpp" alt="" coords="440,629,656,685"/>
-<area shape="rect" id="node11" href="$main_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/main.cpp" alt="" coords="680,629,896,685"/>
-<area shape="rect" id="node13" href="$_laser_generator_presentation_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/LaserGeneratorPresentation.cpp" alt="" coords="135,421,390,477"/>
-<area shape="rect" id="node15" href="$_game_logic_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GameLogic.cpp" alt="" coords="705,421,921,477"/>
-<area shape="rect" id="node17" href="$_laser_generator_logic_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/LaserGeneratorLogic.cpp" alt="" coords="800,317,1016,373"/>
-<area shape="rect" id="node19" href="$_satellite_logic_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/SatelliteLogic.cpp" alt="" coords="851,213,1067,269"/>
+<area shape="rect" id="node2" href="$_enemy_bullet_logic_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/EnemyBulletLogic.cpp" alt="" coords="5,109,221,165"/>
+<area shape="rect" id="node3" href="$_enemy_logic_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/EnemyLogic.h" alt="" coords="296,109,512,165"/>
+<area shape="rect" id="node12" href="$_laser_generator_logic_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/LaserGeneratorLogic.h" alt="" coords="77,213,293,269"/>
+<area shape="rect" id="node14" href="$_satellite_logic_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/SatelliteLogic.h" alt="" coords="536,109,752,165"/>
+<area shape="rect" id="node4" href="$_enemy_logic_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/EnemyLogic.cpp" alt="" coords="317,213,533,269"/>
+<area shape="rect" id="node5" href="$_game_logic_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GameLogic.h" alt="" coords="463,317,679,373"/>
+<area shape="rect" id="node6" href="$_game_logic_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GameLogic.cpp" alt="" coords="223,421,439,477"/>
+<area shape="rect" id="node7" href="$_game_presentation_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GamePresentation.h" alt="" coords="463,421,679,477"/>
+<area shape="rect" id="node9" href="$_game_window_8h.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GameWindow.h" alt="" coords="608,525,824,581"/>
+<area shape="rect" id="node8" href="$_game_presentation_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GamePresentation.cpp" alt="" coords="368,525,584,581"/>
+<area shape="rect" id="node10" href="$_game_window_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/GameWindow.cpp" alt="" coords="488,629,704,685"/>
+<area shape="rect" id="node11" href="$main_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/main.cpp" alt="" coords="728,629,944,685"/>
+<area shape="rect" id="node13" href="$_laser_generator_logic_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/LaserGeneratorLogic.cpp" alt="" coords="77,317,293,373"/>
+<area shape="rect" id="node15" href="$_satellite_logic_8cpp.html" title="C:/Users/User/Documents\l/SoftwareDev2Project/SpaceRider\lProject/SatelliteLogic.cpp" alt="" coords="659,213,875,269"/>
 </map>

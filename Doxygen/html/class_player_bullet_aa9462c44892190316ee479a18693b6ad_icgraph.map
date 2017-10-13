@@ -1,4 +1,4 @@
 <map id="PlayerBullet::getXposition" name="PlayerBullet::getXposition">
-<area shape="rect" id="node2" href="$class_player_bullet.html#a8469319697d70e04399d8aaac3902c80" title="PlayerBullet::move" alt="" coords="224,5,355,32"/>
-<area shape="rect" id="node3" href="$class_player_bullet.html#a4ef09e533d8d3016d7e08d9efae238ff" title="PlayerBullet::fire" alt="" coords="403,5,520,32"/>
+<area shape="rect" id="node2" href="$class_player_bullet.html#a8469319697d70e04399d8aaac3902c80" title="Moves the bullet in the direction defined by the angle of direction. " alt="" coords="224,5,355,32"/>
+<area shape="rect" id="node3" href="$class_player_bullet.html#a4ef09e533d8d3016d7e08d9efae238ff" title="Moves the bullet in the direction of the initialized angle. " alt="" coords="403,5,520,32"/>
 </map>

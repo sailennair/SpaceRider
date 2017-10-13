@@ -8,6 +8,12 @@
 #include <iostream>
 #include "IEnemy.h"
 
+//! Enemy Logic Class - contols the logic of the main enemies.
+/*! This class is responsible for controlling the movement and the life of the main enemies.
+\author Sailen Nair and William Becerra
+ *
+*/
+
 class EnemyLogic : public IEnemy
 {
 public:

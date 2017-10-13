@@ -8,17 +8,21 @@
 #include <memory>
 #include "EnemyBulletPresentation.h"
 
-#include "EnemyLogic.h"
 
 using namespace sf;
 using namespace std;
 
+//! Enemy Presentation Class - contols the presentation of the main enemies.
+/*! This class is responsible drawing and updating position of the enemy sprites.
+\author Sailen Nair and William Becerra
+ *
+*/
 class EnemyPresentation
 {
 public:
-/**
- * Default constructor Inititalise the player texture, default position and scale. 
- */
+    /**
+     *@brief Default constructor Inititalise the player texture, default position and scale.
+     */
     EnemyPresentation();
     /**
      * @brief Constructor Inititalise the player texture, default position and scale for a type of enemy.
@@ -56,7 +60,7 @@ public:
      * @brief Deletes the EnemyBulletPresentation vector
      */
     void deleteEnemyBulletPresentation();
-   
+
 private:
     vector<EnemyBulletPresentation> _enemyBulletPresentationVector;
     Texture enemySpriteTexture;

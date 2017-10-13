@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Space Rider Project: PlayerBulletPresentation Class Reference</title>
+<title>Space Rider Game: PlayerBulletPresentation Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,11 +27,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="SpaceRiderLogo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Space Rider Project
+   <div id="projectname">Space Rider Game
+   &#160;<span id="projectnumber">v2.56</span>
    </div>
-   <div id="projectbrief">ELEN3009 Software Project</div>
+   <div id="projectbrief">ELEN3009 Software Project 2017</div>
   </td>
  </tr>
  </tbody>
@@ -94,12 +94,16 @@ $(document).ready(function(){initNavTree('class_player_bullet_presentation.html'
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a23a5d5d48c4baf65bc2a9beea2a5e3ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_presentation.html#a23a5d5d48c4baf65bc2a9beea2a5e3ef">PlayerBulletPresentation</a> (int xpos, int ypos, int type)</td></tr>
+<tr class="memdesc:a23a5d5d48c4baf65bc2a9beea2a5e3ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor Inititalise the bullet texture, default position, type and scale.  <a href="#a23a5d5d48c4baf65bc2a9beea2a5e3ef">More...</a><br /></td></tr>
 <tr class="separator:a23a5d5d48c4baf65bc2a9beea2a5e3ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f41436f86e00e6f2de1c81d66218790"><td class="memItemLeft" align="right" valign="top">CircleShape&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_presentation.html#a1f41436f86e00e6f2de1c81d66218790">getBullet</a> ()</td></tr>
+<tr class="memdesc:a1f41436f86e00e6f2de1c81d66218790"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the CircleShape bullet with all bullet characteristics.  <a href="#a1f41436f86e00e6f2de1c81d66218790">More...</a><br /></td></tr>
 <tr class="separator:a1f41436f86e00e6f2de1c81d66218790"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad75fe9d4316fc438389e1f323ac2c646"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_presentation.html#ad75fe9d4316fc438389e1f323ac2c646">draw</a> (RenderWindow &amp;window)</td></tr>
+<tr class="memdesc:ad75fe9d4316fc438389e1f323ac2c646"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the bullet in the window defined by the parameter window.  <a href="#ad75fe9d4316fc438389e1f323ac2c646">More...</a><br /></td></tr>
 <tr class="separator:ad75fe9d4316fc438389e1f323ac2c646"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8a28adf4326c03c52af77c7b91c5a0a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet_presentation.html#ad8a28adf4326c03c52af77c7b91c5a0a">updateBullet</a> (int xpos, int ypos)</td></tr>
+<tr class="memdesc:ad8a28adf4326c03c52af77c7b91c5a0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the bullet CircleShape position as the bullet moves.  <a href="#ad8a28adf4326c03c52af77c7b91c5a0a">More...</a><br /></td></tr>
 <tr class="separator:ad8a28adf4326c03c52af77c7b91c5a0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -135,6 +139,16 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Default constructor Inititalise the bullet texture, default position, type and scale. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xpos</td><td>x co-ordinate of the bullets position </td></tr>
+    <tr><td class="paramname">ypos</td><td>y co-ordinate of the bullets position </td></tr>
+    <tr><td class="paramname">type</td><td>type of bullet </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -154,6 +168,14 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Draws the bullet in the window defined by the parameter window. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td>to draw the bullet on. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a1f41436f86e00e6f2de1c81d66218790"></a>
@@ -170,6 +192,9 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns the CircleShape bullet with all bullet characteristics. </p>
+<dl class="section return"><dt>Returns</dt><dd>CircleShape containing the bullet deatils </dd></dl>
 
 </div>
 </div>
@@ -198,6 +223,15 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Updates the bullet CircleShape position as the bullet moves. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">xpos</td><td>x co-ordinate the bullet moved to </td></tr>
+    <tr><td class="paramname">ypos</td><td>y co-ordinate the bullet moved to </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

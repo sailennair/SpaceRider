@@ -2,15 +2,20 @@
 \label{class_game_logic}\index{Game\+Logic@{Game\+Logic}}
 
 
+Game Logic Class -\/ Controls all logic entities of the game.  
+
+
+
+
 {\ttfamily \#include $<$Game\+Logic.\+h$>$}
 
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{class_game_logic_a996cd781691c36922e7ce792fcb21640}{Game\+Logic} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Constructor Inititalise the Game Logic Class Creates objects of Logic classes needed for all functions. \end{DoxyCompactList}\item 
 void \hyperlink{class_game_logic_a3bb909e55fc7c811aa0e3e6a92b881bb}{player\+Update} (\hyperlink{_game_common_data_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} dir)
-\item 
+\begin{DoxyCompactList}\small\item\em Update the Position of the player. Move the players logic either left or right depending on the paramter passed back. \end{DoxyCompactList}\item 
 void \hyperlink{class_game_logic_a05dec53eb3c36cf1a669c973fa0b16ae}{create\+Player\+Bullet} ()
 \item 
 void \hyperlink{class_game_logic_a2293e862afa9caa43ac1c21757b9c914}{player\+Bullet\+Update} ()
@@ -103,12 +108,24 @@ int \hyperlink{class_game_logic_a56e4499d60c8784c3bf34ab91a75e273}{get\+Current\
 \end{DoxyCompactItemize}
 
 
+\subsection{Detailed Description}
+Game Logic Class -\/ Controls all logic entities of the game. 
+
+This class controls all the logic entities of the game and is responsible for creating, deleting and manipulating all game logic objects. \begin{DoxyAuthor}{Author}
+Sailen Nair and William Becerra 
+\end{DoxyAuthor}
+
+
 \subsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_game_logic_a996cd781691c36922e7ce792fcb21640}\label{class_game_logic_a996cd781691c36922e7ce792fcb21640}} 
 \index{Game\+Logic@{Game\+Logic}!Game\+Logic@{Game\+Logic}}
 \index{Game\+Logic@{Game\+Logic}!Game\+Logic@{Game\+Logic}}
 \subsubsection{\texorpdfstring{Game\+Logic()}{GameLogic()}}
 {\footnotesize\ttfamily Game\+Logic\+::\+Game\+Logic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructor Inititalise the Game Logic Class Creates objects of Logic classes needed for all functions. 
 
 
 
@@ -119,8 +136,7 @@ int \hyperlink{class_game_logic_a56e4499d60c8784c3bf34ab91a75e273}{get\+Current\
 \subsubsection{\texorpdfstring{check\+Asteroid\+Bounds()}{checkAsteroidBounds()}}
 {\footnotesize\ttfamily void Game\+Logic\+::check\+Asteroid\+Bounds (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -139,8 +155,7 @@ Here is the caller graph for this function\+:
 \subsubsection{\texorpdfstring{check\+Collision()}{checkCollision()}}
 {\footnotesize\ttfamily void Game\+Logic\+::check\+Collision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -159,8 +174,7 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{check\+Laser\+Generator\+Scope()}{checkLaserGeneratorScope()}}
 {\footnotesize\ttfamily void Game\+Logic\+::check\+Laser\+Generator\+Scope (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -173,8 +187,7 @@ Here is the caller graph for this function\+:
 \subsubsection{\texorpdfstring{check\+Player\+Life\+Dead()}{checkPlayerLifeDead()}}
 {\footnotesize\ttfamily bool Game\+Logic\+::check\+Player\+Life\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -199,8 +212,7 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{create\+Asteroid()}{createAsteroid()}}
 {\footnotesize\ttfamily void Game\+Logic\+::create\+Asteroid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -213,8 +225,7 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{create\+Enemy\+Logic\+Object()}{createEnemyLogicObject()}}
 {\footnotesize\ttfamily void Game\+Logic\+::create\+Enemy\+Logic\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -233,8 +244,7 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{create\+Player\+Bullet()}{createPlayerBullet()}}
 {\footnotesize\ttfamily void Game\+Logic\+::create\+Player\+Bullet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -247,8 +257,7 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{create\+Satellites()}{createSatellites()}}
 {\footnotesize\ttfamily void Game\+Logic\+::create\+Satellites (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -261,8 +270,7 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{delete\+Enemy\+Logic()}{deleteEnemyLogic()}}
 {\footnotesize\ttfamily void Game\+Logic\+::delete\+Enemy\+Logic (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -299,8 +307,7 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{delete\+Satellite\+Logic()}{deleteSatelliteLogic()}}
 {\footnotesize\ttfamily void Game\+Logic\+::delete\+Satellite\+Logic (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -313,8 +320,7 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{fire\+Satellite\+Bullet\+Logic()}{fireSatelliteBulletLogic()}}
 {\footnotesize\ttfamily void Game\+Logic\+::fire\+Satellite\+Bullet\+Logic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -333,8 +339,7 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{get\+Current\+Score()}{getCurrentScore()}}
 {\footnotesize\ttfamily int Game\+Logic\+::get\+Current\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -353,8 +358,7 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{get\+High\+Score()}{getHighScore()}}
 {\footnotesize\ttfamily int Game\+Logic\+::get\+High\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -385,8 +389,7 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{get\+Player\+Lives\+Remaining()}{getPlayerLivesRemaining()}}
 {\footnotesize\ttfamily int Game\+Logic\+::get\+Player\+Lives\+Remaining (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -423,8 +426,7 @@ Here is the caller graph for this function\+:
 \subsubsection{\texorpdfstring{is\+Player\+Dead()}{isPlayerDead()}}
 {\footnotesize\ttfamily bool Game\+Logic\+::is\+Player\+Dead (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -437,8 +439,7 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{move\+Enemy\+To\+Center()}{moveEnemyToCenter()}}
 {\footnotesize\ttfamily void Game\+Logic\+::move\+Enemy\+To\+Center (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -457,8 +458,16 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{player\+Update()}{playerUpdate()}}
 {\footnotesize\ttfamily void Game\+Logic\+::player\+Update (\begin{DoxyParamCaption}\item[{\hyperlink{_game_common_data_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}}]{dir }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+
+
+Update the Position of the player. Move the players logic either left or right depending on the paramter passed back. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & -\/ this is the direction that player needs to move. of Type Direction \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -471,8 +480,7 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{save\+Scoreto\+File()}{saveScoretoFile()}}
 {\footnotesize\ttfamily void Game\+Logic\+::save\+Scoreto\+File (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -497,8 +505,7 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{update\+Asteroid\+Logic()}{updateAsteroidLogic()}}
 {\footnotesize\ttfamily void Game\+Logic\+::update\+Asteroid\+Logic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -517,8 +524,7 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{update\+Laser\+Logic()}{updateLaserLogic()}}
 {\footnotesize\ttfamily void Game\+Logic\+::update\+Laser\+Logic (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -537,8 +543,7 @@ Here is the call graph for this function\+:
 \subsubsection{\texorpdfstring{update\+Player\+Life()}{updatePlayerLife()}}
 {\footnotesize\ttfamily void Game\+Logic\+::update\+Player\+Life (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

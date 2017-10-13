@@ -10,7 +10,7 @@
 <area shape="rect" id="node3" href="$class_game_presentation.html#a313bd414a0cc712fccd919df4b794b8a" title="GamePresentation::delete\lOutofScopeBullets" alt="" coords="531,5,704,47"/>
 <area shape="rect" id="node5" href="$class_game_presentation.html#ae83bb9e0751f6077f2480a36dec36787" title="GamePresentation::delete\lDeadEnemies" alt="" coords="531,71,704,112"/>
 <area shape="rect" id="node6" href="$class_game_presentation.html#acc8d59152c26b9dddc84081c5a4483f2" title="GamePresentation::delete\lDeadEnemyBullets" alt="" coords="531,136,704,177"/>
-<area shape="rect" id="node8" href="$class_player_presentation.html#a0ee08eeb4f0c8687450f60d635b4fe8a" title="PlayerPresentation\l::draw" alt="" coords="551,201,683,243"/>
+<area shape="rect" id="node8" href="$class_player_presentation.html#a0ee08eeb4f0c8687450f60d635b4fe8a" title="Draws the player sprite. " alt="" coords="551,201,683,243"/>
 <area shape="rect" id="node9" href="$class_life_presentation.html#a78c9fdc72d78cb619a885d251996c3ff" title="LifePresentation::draw" alt="" coords="542,267,693,294"/>
 <area shape="rect" id="node15" href="$class_score_presentation.html#adf2c954da3e73d5adbe0e8d30243ee25" title="ScorePresentation::\lsetScoreMessage" alt="" coords="549,472,686,513"/>
 <area shape="rect" id="node16" href="$class_score_presentation.html#af0e8b8532f70ae4a1d4a0a7ca473ff0f" title="ScorePresentation::draw" alt="" coords="535,538,699,565"/>

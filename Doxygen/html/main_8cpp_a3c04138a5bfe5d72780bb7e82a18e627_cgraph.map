@@ -22,8 +22,8 @@
 <area shape="rect" id="node46" href="$class_final_window.html#a3ad8ebeede5375c9cd4732e794f076ac" title="FinalWindow::setPLayerLostGame" alt="" coords="571,71,793,98"/>
 <area shape="rect" id="node47" href="$class_game_presentation.html#a903a8e09c19324b2380b5073abd570f0" title="GamePresentation::getEnemy\lPresentationVector" alt="" coords="583,123,781,164"/>
 <area shape="rect" id="node15" href="$class_game_presentation.html#a08abc97c6f65eda4ac7c54d55a9054b4" title="GamePresentation::upDate\lPlayerPosition" alt="" coords="1108,511,1287,552"/>
-<area shape="rect" id="node16" href="$class_player_presentation.html#aef6ba74848a34fb93528062bda98059e" title="PlayerPresentation\l::setPositionofPlayer" alt="" coords="1335,477,1477,519"/>
-<area shape="rect" id="node17" href="$class_player_presentation.html#af938e83bf3a90263076411e0935731bd" title="PlayerPresentation\l::rotateSprite" alt="" coords="1340,543,1472,584"/>
+<area shape="rect" id="node16" href="$class_player_presentation.html#aef6ba74848a34fb93528062bda98059e" title="Sets the position of the player sprite to the co&#45;ordinates given by the paramenters. " alt="" coords="1335,477,1477,519"/>
+<area shape="rect" id="node17" href="$class_player_presentation.html#af938e83bf3a90263076411e0935731bd" title="Rotates the player sprite by an angle. " alt="" coords="1340,543,1472,584"/>
 <area shape="rect" id="node19" href="$class_game_presentation.html#ac87927887e1afc5583036efb01ab35ca" title="GamePresentation::create\lPlayerBulletPresentation" alt="" coords="863,1709,1038,1751"/>
 <area shape="rect" id="node21" href="$class_game_presentation.html#ab2cf74842583bf5b63e5973fb8b657be" title="GamePresentation::update\lScorePresentation" alt="" coords="862,769,1039,811"/>
 <area shape="rect" id="node23" href="$class_game_presentation.html#af0a19d50c4099e7a19426cdffa5ebb82" title="GamePresentation::upDate\lPlayerBulletPresentation" alt="" coords="861,704,1040,745"/>
@@ -31,7 +31,7 @@
 <area shape="rect" id="node26" href="$class_game_presentation.html#a027b38ee9bf11018b4db7494d2e145a0" title="GamePresentation::checkPlayer\lPresentationLifeDead" alt="" coords="845,573,1056,615"/>
 <area shape="rect" id="node22" href="$class_score_presentation.html#adf2c954da3e73d5adbe0e8d30243ee25" title="ScorePresentation::\lsetScoreMessage" alt="" coords="1129,992,1266,1033"/>
 <area shape="rect" id="node25" href="$class_life_presentation.html#a4baba880082d5281a2fcb6b19d178418" title="LifePresentation::setLife\lCount" alt="" coords="1117,641,1278,683"/>
-<area shape="rect" id="node27" href="$class_player_presentation.html#ae4bf63751b63f582902d4ea31e06a486" title="PlayerPresentation\l::restartPlayerPresentation" alt="" coords="1109,576,1286,617"/>
+<area shape="rect" id="node27" href="$class_player_presentation.html#ae4bf63751b63f582902d4ea31e06a486" title="Resets the player&#39;s sprite position to the default starting position. " alt="" coords="1109,576,1286,617"/>
 <area shape="rect" id="node29" href="$class_game_presentation.html#a4ab96a6022c08f34aefa62f9a30c1cd8" title="GamePresentation::update\lEnemyPresentation" alt="" coords="862,835,1039,876"/>
 <area shape="rect" id="node30" href="$class_game_presentation.html#ae83bb9e0751f6077f2480a36dec36787" title="GamePresentation::delete\lDeadEnemies" alt="" coords="1111,1249,1284,1291"/>
 <area shape="rect" id="node31" href="$class_game_presentation.html#aa6d8e5e91de557ac2c39bb51e032f14f" title="GamePresentation::update\lLaserGeneratorPresentation" alt="" coords="859,900,1043,941"/>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Space Rider Project: GameLogic Class Reference</title>
+<title>Space Rider Game: GameLogic Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,11 +27,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="SpaceRiderLogo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Space Rider Project
+   <div id="projectname">Space Rider Game
+   &#160;<span id="projectnumber">v2.56</span>
    </div>
-   <div id="projectbrief">ELEN3009 Software Project</div>
+   <div id="projectbrief">ELEN3009 Software Project 2017</div>
   </td>
  </tr>
  </tbody>
@@ -89,13 +89,18 @@ $(document).ready(function(){initNavTree('class_game_logic.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Game Logic Class - Controls all logic entities of the game.  
+ <a href="class_game_logic.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_game_logic_8h_source.html">GameLogic.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a996cd781691c36922e7ce792fcb21640"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_logic.html#a996cd781691c36922e7ce792fcb21640">GameLogic</a> ()</td></tr>
+<tr class="memdesc:a996cd781691c36922e7ce792fcb21640"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor Inititalise the Game Logic Class Creates objects of Logic classes needed for all functions.  <a href="#a996cd781691c36922e7ce792fcb21640">More...</a><br /></td></tr>
 <tr class="separator:a996cd781691c36922e7ce792fcb21640"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3bb909e55fc7c811aa0e3e6a92b881bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_logic.html#a3bb909e55fc7c811aa0e3e6a92b881bb">playerUpdate</a> (<a class="el" href="_game_common_data_8h.html#a224b9163917ac32fc95a60d8c1eec3aa">Direction</a> dir)</td></tr>
+<tr class="memdesc:a3bb909e55fc7c811aa0e3e6a92b881bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the Position of the player. Move the players logic either left or right depending on the paramter passed back.  <a href="#a3bb909e55fc7c811aa0e3e6a92b881bb">More...</a><br /></td></tr>
 <tr class="separator:a3bb909e55fc7c811aa0e3e6a92b881bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05dec53eb3c36cf1a669c973fa0b16ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_logic.html#a05dec53eb3c36cf1a669c973fa0b16ae">createPlayerBullet</a> ()</td></tr>
 <tr class="separator:a05dec53eb3c36cf1a669c973fa0b16ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -188,7 +193,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a56e4499d60c8784c3bf34ab91a75e273"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_game_logic.html#a56e4499d60c8784c3bf34ab91a75e273">getCurrentScore</a> ()</td></tr>
 <tr class="separator:a56e4499d60c8784c3bf34ab91a75e273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Game Logic Class - Controls all logic entities of the game. </p>
+<p>This class controls all the logic entities of the game and is responsible for creating, deleting and manipulating all game logic objects. </p><dl class="section author"><dt>Author</dt><dd>Sailen Nair and William Becerra </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a996cd781691c36922e7ce792fcb21640"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a996cd781691c36922e7ce792fcb21640">&#9670;&nbsp;</a></span>GameLogic()</h2>
 
@@ -203,6 +211,8 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Constructor Inititalise the Game Logic Class Creates objects of Logic classes needed for all functions. </p>
 
 </div>
 </div>
@@ -962,6 +972,14 @@ Here is the call graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Update the Position of the player. Move the players logic either left or right depending on the paramter passed back. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dir</td><td>- this is the direction that player needs to move. of Type Direction </td></tr>
+  </table>
+  </dd>
+</dl>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">

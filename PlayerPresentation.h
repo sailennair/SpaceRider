@@ -10,6 +10,12 @@
 using namespace std;
 using namespace sf;
 
+//! Player Presentation Class - controls the presentation of the player.
+/*! This class is responsible creating the player sprite and putting it at a position on the screen.
+\author Sailen Nair and William Becerra
+ *
+*/
+
 class PlayerPresentation
 {
 public:

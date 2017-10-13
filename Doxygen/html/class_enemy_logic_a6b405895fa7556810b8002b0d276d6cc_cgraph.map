@@ -1,5 +1,5 @@
 <map id="EnemyLogic::EnemyLogic" name="EnemyLogic::EnemyLogic">
-<area shape="rect" id="node2" href="$class_enemy_logic.html#a7eed969ab8e3d2527cdac04ef39a5aba" title="EnemyLogic::getXposition" alt="" coords="247,5,419,32"/>
-<area shape="rect" id="node3" href="$class_enemy_logic.html#ae614032054926a4a25ed56f61111392b" title="EnemyLogic::getYposition" alt="" coords="246,56,421,83"/>
-<area shape="rect" id="node4" href="$class_enemy_logic.html#ade03be41505c71de49f20fc855c8fede" title="EnemyLogic::getAngleofRotation" alt="" coords="228,107,439,133"/>
+<area shape="rect" id="node2" href="$class_enemy_logic.html#a7eed969ab8e3d2527cdac04ef39a5aba" title="Returns the x co&#45;ordinate of the enemy. " alt="" coords="247,5,419,32"/>
+<area shape="rect" id="node3" href="$class_enemy_logic.html#ae614032054926a4a25ed56f61111392b" title="Returns the y co&#45;ordinate of the enemy. " alt="" coords="246,56,421,83"/>
+<area shape="rect" id="node4" href="$class_enemy_logic.html#ade03be41505c71de49f20fc855c8fede" title="Returns the angle of rotation of the enemy. " alt="" coords="228,107,439,133"/>
 </map>

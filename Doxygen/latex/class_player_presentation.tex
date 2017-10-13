@@ -2,6 +2,11 @@
 \label{class_player_presentation}\index{Player\+Presentation@{Player\+Presentation}}
 
 
+Player Presentation Class -\/ controls the presentation of the player.  
+
+
+
+
 {\ttfamily \#include $<$Player\+Presentation.\+h$>$}
 
 \subsection*{Public Member Functions}
@@ -10,15 +15,23 @@
 \hyperlink{class_player_presentation_ae5b2e1e54cb57697d020eb1afe45225f}{Player\+Presentation} ()
 \item 
 Sprite \hyperlink{class_player_presentation_a5ce015d2ac13d9e3eacf89b96da31ee2}{get\+Player} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Returns the player sprite. \end{DoxyCompactList}\item 
 void \hyperlink{class_player_presentation_a0ee08eeb4f0c8687450f60d635b4fe8a}{draw} (Render\+Window \&window)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws the player sprite. \end{DoxyCompactList}\item 
 void \hyperlink{class_player_presentation_af938e83bf3a90263076411e0935731bd}{rotate\+Sprite} (float angle)
-\item 
+\begin{DoxyCompactList}\small\item\em Rotates the player sprite by an angle. \end{DoxyCompactList}\item 
 void \hyperlink{class_player_presentation_aef6ba74848a34fb93528062bda98059e}{set\+Positionof\+Player} (float x\+Position, float y\+Position)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets the position of the player sprite to the co-\/ordinates given by the paramenters. \end{DoxyCompactList}\item 
 void \hyperlink{class_player_presentation_ae4bf63751b63f582902d4ea31e06a486}{restart\+Player\+Presentation} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Resets the player\textquotesingle{}s sprite position to the default starting position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Player Presentation Class -\/ controls the presentation of the player. 
+
+This class is responsible creating the player sprite and putting it at a position on the screen. \begin{DoxyAuthor}{Author}
+Sailen Nair and William Becerra 
+\end{DoxyAuthor}
 
 
 \subsection{Constructor \& Destructor Documentation}
@@ -28,7 +41,7 @@ void \hyperlink{class_player_presentation_ae4bf63751b63f582902d4ea31e06a486}{res
 \subsubsection{\texorpdfstring{Player\+Presentation()}{PlayerPresentation()}}
 {\footnotesize\ttfamily Player\+Presentation\+::\+Player\+Presentation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-
+Default constructor Inititalise the player texture, default position and scale. 
 
 \subsection{Member Function Documentation}
 \mbox{\Hypertarget{class_player_presentation_a0ee08eeb4f0c8687450f60d635b4fe8a}\label{class_player_presentation_a0ee08eeb4f0c8687450f60d635b4fe8a}} 
@@ -37,6 +50,15 @@ void \hyperlink{class_player_presentation_ae4bf63751b63f582902d4ea31e06a486}{res
 \subsubsection{\texorpdfstring{draw()}{draw()}}
 {\footnotesize\ttfamily void Player\+Presentation\+::draw (\begin{DoxyParamCaption}\item[{Render\+Window \&}]{window }\end{DoxyParamCaption})}
 
+
+
+Draws the player sprite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & to draw the player on. \\
+\hline
+\end{DoxyParams}
 Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -50,14 +72,24 @@ Here is the caller graph for this function\+:\nopagebreak
 \subsubsection{\texorpdfstring{get\+Player()}{getPlayer()}}
 {\footnotesize\ttfamily Sprite Player\+Presentation\+::get\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Returns the player sprite. 
+
+\begin{DoxyReturn}{Returns}
+Sprite containing the players graphics. 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_player_presentation_ae4bf63751b63f582902d4ea31e06a486}\label{class_player_presentation_ae4bf63751b63f582902d4ea31e06a486}} 
 \index{Player\+Presentation@{Player\+Presentation}!restart\+Player\+Presentation@{restart\+Player\+Presentation}}
 \index{restart\+Player\+Presentation@{restart\+Player\+Presentation}!Player\+Presentation@{Player\+Presentation}}
 \subsubsection{\texorpdfstring{restart\+Player\+Presentation()}{restartPlayerPresentation()}}
 {\footnotesize\ttfamily void Player\+Presentation\+::restart\+Player\+Presentation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Resets the player\textquotesingle{}s sprite position to the default starting position. 
+
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -70,8 +102,16 @@ Here is the caller graph for this function\+:
 \subsubsection{\texorpdfstring{rotate\+Sprite()}{rotateSprite()}}
 {\footnotesize\ttfamily void Player\+Presentation\+::rotate\+Sprite (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Rotates the player sprite by an angle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & Rotaion of the player in radians \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -84,8 +124,18 @@ Here is the caller graph for this function\+:
 \subsubsection{\texorpdfstring{set\+Positionof\+Player()}{setPositionofPlayer()}}
 {\footnotesize\ttfamily void Player\+Presentation\+::set\+Positionof\+Player (\begin{DoxyParamCaption}\item[{float}]{x\+Position,  }\item[{float}]{y\+Position }\end{DoxyParamCaption})}
 
-Here is the caller graph for this function\+:
-\nopagebreak
+
+
+Sets the position of the player sprite to the co-\/ordinates given by the paramenters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x\+Position} & x co-\/ordinate to set players position \\
+\hline
+{\em y\+Position} & y co-\/ordinate to set players position \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

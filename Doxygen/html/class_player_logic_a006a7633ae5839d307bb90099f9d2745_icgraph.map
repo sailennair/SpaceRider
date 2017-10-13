@@ -1,4 +1,4 @@
 <map id="PlayerLogic::moveLeftY" name="PlayerLogic::moveLeftY">
 <area shape="rect" id="node2" href="$class_player_logic.html#a2b63d2c01e898e5798c2801466c8b432" title="Moves the player left or right for depending on user input. " alt="" coords="212,5,375,32"/>
-<area shape="rect" id="node3" href="$class_game_logic.html#a3bb909e55fc7c811aa0e3e6a92b881bb" title="GameLogic::playerUpdate" alt="" coords="423,5,595,32"/>
+<area shape="rect" id="node3" href="$class_game_logic.html#a3bb909e55fc7c811aa0e3e6a92b881bb" title="Update the Position of the player. Move the players logic either left or right depending on the param..." alt="" coords="423,5,595,32"/>
 </map>

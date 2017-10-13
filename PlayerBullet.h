@@ -4,6 +4,13 @@
 #include "IBullet.h"
 #include "PlayerLogic.h"
 
+//! Player bullet Class - contols the logic of the bullet of the player.
+/*! This class is responsible for controlling the movement of the player bullet as well as its properties,
+ * such as its damage. This class also controls the bullet life.
+\author Sailen Nair and William Becerra
+ *
+*/
+
 class PlayerBullet : public IBullet
 {
 public:
@@ -26,7 +33,7 @@ public:
  */    
     int getDamage();
 /**
- * @brief Returns the life status of a bullet
+ * @brief Returns the life status of a bullet.
  * A bullets alive is defined by collisions. If a bullet has not collided its alive and if it has then it is dead.
  * @return boolean contatning the life status of the bulllet
  */

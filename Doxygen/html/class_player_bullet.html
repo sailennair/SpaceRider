@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Space Rider Project: PlayerBullet Class Reference</title>
+<title>Space Rider Game: PlayerBullet Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -27,11 +27,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="SpaceRiderLogo.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Space Rider Project
+   <div id="projectname">Space Rider Game
+   &#160;<span id="projectnumber">v2.56</span>
    </div>
-   <div id="projectbrief">ELEN3009 Software Project</div>
+   <div id="projectbrief">ELEN3009 Software Project 2017</div>
   </td>
  </tr>
  </tbody>
@@ -89,6 +89,9 @@ $(document).ready(function(){initNavTree('class_player_bullet.html','');});
 </div><!--header-->
 <div class="contents">
 
+<p>Player bullet Class - contols the logic of the bullet of the player.  
+ <a href="class_player_bullet.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="_player_bullet_8h_source.html">PlayerBullet.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for PlayerBullet:</div>
@@ -112,31 +115,46 @@ Collaboration diagram for PlayerBullet:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ab48e600824aa9c70206810e37f918d52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet.html#ab48e600824aa9c70206810e37f918d52">PlayerBullet</a> (int xPosition, int yPosition, float theta, int type)</td></tr>
+<tr class="memdesc:ab48e600824aa9c70206810e37f918d52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor Initializes the Player bullets position, angle of direction and the the type of bullet.  <a href="#ab48e600824aa9c70206810e37f918d52">More...</a><br /></td></tr>
 <tr class="separator:ab48e600824aa9c70206810e37f918d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8469319697d70e04399d8aaac3902c80"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet.html#a8469319697d70e04399d8aaac3902c80">move</a> ()</td></tr>
+<tr class="memdesc:a8469319697d70e04399d8aaac3902c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the bullet in the direction defined by the angle of direction.  <a href="#a8469319697d70e04399d8aaac3902c80">More...</a><br /></td></tr>
 <tr class="separator:a8469319697d70e04399d8aaac3902c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09347ab7665742fc7d492fe26c3a6bce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet.html#a09347ab7665742fc7d492fe26c3a6bce">setDamage</a> (int damage)</td></tr>
+<tr class="memdesc:a09347ab7665742fc7d492fe26c3a6bce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the damage that the bullet makes to an Enemy's health.  <a href="#a09347ab7665742fc7d492fe26c3a6bce">More...</a><br /></td></tr>
 <tr class="separator:a09347ab7665742fc7d492fe26c3a6bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55375b5c3f4f87d00daba1cda12b1e79"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet.html#a55375b5c3f4f87d00daba1cda12b1e79">getDamage</a> ()</td></tr>
+<tr class="memdesc:a55375b5c3f4f87d00daba1cda12b1e79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the damage amount that the bullet makes to an enemy.  <a href="#a55375b5c3f4f87d00daba1cda12b1e79">More...</a><br /></td></tr>
 <tr class="separator:a55375b5c3f4f87d00daba1cda12b1e79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4e6b1485e9a63ddc00effc7532a9b09"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet.html#ab4e6b1485e9a63ddc00effc7532a9b09">isAlive</a> ()</td></tr>
+<tr class="memdesc:ab4e6b1485e9a63ddc00effc7532a9b09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the life status of a bullet. A bullets alive is defined by collisions. If a bullet has not collided its alive and if it has then it is dead.  <a href="#ab4e6b1485e9a63ddc00effc7532a9b09">More...</a><br /></td></tr>
 <tr class="separator:ab4e6b1485e9a63ddc00effc7532a9b09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa9462c44892190316ee479a18693b6ad"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet.html#aa9462c44892190316ee479a18693b6ad">getXposition</a> ()</td></tr>
+<tr class="memdesc:aa9462c44892190316ee479a18693b6ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the x co-ordinate of the bullets current position.  <a href="#aa9462c44892190316ee479a18693b6ad">More...</a><br /></td></tr>
 <tr class="separator:aa9462c44892190316ee479a18693b6ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a240cab35d5d909366986b8661ee65d3c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet.html#a240cab35d5d909366986b8661ee65d3c">getYposition</a> ()</td></tr>
+<tr class="memdesc:a240cab35d5d909366986b8661ee65d3c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the y co-ordinate of the bullets current position.  <a href="#a240cab35d5d909366986b8661ee65d3c">More...</a><br /></td></tr>
 <tr class="separator:a240cab35d5d909366986b8661ee65d3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af713549c4bb9a2400a7929564f5b81ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet.html#af713549c4bb9a2400a7929564f5b81ff">setLife</a> (bool life)</td></tr>
+<tr class="memdesc:af713549c4bb9a2400a7929564f5b81ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the life status of the bullet.  <a href="#af713549c4bb9a2400a7929564f5b81ff">More...</a><br /></td></tr>
 <tr class="separator:af713549c4bb9a2400a7929564f5b81ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4ef09e533d8d3016d7e08d9efae238ff"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet.html#a4ef09e533d8d3016d7e08d9efae238ff">fire</a> ()</td></tr>
+<tr class="memdesc:a4ef09e533d8d3016d7e08d9efae238ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Moves the bullet in the direction of the initialized angle.  <a href="#a4ef09e533d8d3016d7e08d9efae238ff">More...</a><br /></td></tr>
 <tr class="separator:a4ef09e533d8d3016d7e08d9efae238ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ff56e38b1447500d2887b6fe1eeb674"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet.html#a1ff56e38b1447500d2887b6fe1eeb674">getRadius</a> ()</td></tr>
+<tr class="memdesc:a1ff56e38b1447500d2887b6fe1eeb674"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the raidus of the bullet.  <a href="#a1ff56e38b1447500d2887b6fe1eeb674">More...</a><br /></td></tr>
 <tr class="separator:a1ff56e38b1447500d2887b6fe1eeb674"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a73c27dca47ea3fdcecd82ce4b2089c4a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet.html#a73c27dca47ea3fdcecd82ce4b2089c4a">getCenterXPosition</a> ()</td></tr>
+<tr class="memdesc:a73c27dca47ea3fdcecd82ce4b2089c4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the x co-ordinate of the center of the bullet.  <a href="#a73c27dca47ea3fdcecd82ce4b2089c4a">More...</a><br /></td></tr>
 <tr class="separator:a73c27dca47ea3fdcecd82ce4b2089c4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ad2bc922595b9a11373fd42666926ef"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_player_bullet.html#a7ad2bc922595b9a11373fd42666926ef">getCenterYPosition</a> ()</td></tr>
+<tr class="memdesc:a7ad2bc922595b9a11373fd42666926ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the y co-ordinate of the center of the bullet.  <a href="#a7ad2bc922595b9a11373fd42666926ef">More...</a><br /></td></tr>
 <tr class="separator:a7ad2bc922595b9a11373fd42666926ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Player bullet Class - contols the logic of the bullet of the player. </p>
+<p>This class is responsible for controlling the movement of the player bullet as well as its properties, such as its damage. This class also controls the bullet life. </p><dl class="section author"><dt>Author</dt><dd>Sailen Nair and William Becerra </dd></dl>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="ab48e600824aa9c70206810e37f918d52"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab48e600824aa9c70206810e37f918d52">&#9670;&nbsp;</a></span>PlayerBullet()</h2>
 
@@ -175,6 +193,8 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructor Initializes the Player bullets position, angle of direction and the the type of bullet. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -192,14 +212,16 @@ Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Moves the bullet in the direction of the initialized angle. </p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player_bullet_a4ef09e533d8d3016d7e08d9efae238ff_cgraph.png" border="0" usemap="#class_player_bullet_a4ef09e533d8d3016d7e08d9efae238ff_cgraph" alt=""/></div>
 <map name="class_player_bullet_a4ef09e533d8d3016d7e08d9efae238ff_cgraph" id="class_player_bullet_a4ef09e533d8d3016d7e08d9efae238ff_cgraph">
-<area shape="rect" id="node2" href="class_player_bullet.html#a8469319697d70e04399d8aaac3902c80" title="PlayerBullet::move" alt="" coords="171,31,301,57"/>
-<area shape="rect" id="node3" href="class_player_bullet.html#aa9462c44892190316ee479a18693b6ad" title="PlayerBullet::getXposition" alt="" coords="350,5,521,32"/>
-<area shape="rect" id="node4" href="class_player_bullet.html#a240cab35d5d909366986b8661ee65d3c" title="PlayerBullet::getYposition" alt="" coords="349,56,521,83"/>
+<area shape="rect" id="node2" href="class_player_bullet.html#a8469319697d70e04399d8aaac3902c80" title="Moves the bullet in the direction defined by the angle of direction. " alt="" coords="171,31,301,57"/>
+<area shape="rect" id="node3" href="class_player_bullet.html#aa9462c44892190316ee479a18693b6ad" title="Returns the x co&#45;ordinate of the bullets current position. " alt="" coords="350,5,521,32"/>
+<area shape="rect" id="node4" href="class_player_bullet.html#a240cab35d5d909366986b8661ee65d3c" title="Returns the y co&#45;ordinate of the bullets current position. " alt="" coords="349,56,521,83"/>
 </map>
 </div>
 
@@ -228,6 +250,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Gets the x co-ordinate of the center of the bullet. </p>
+<dl class="section return"><dt>Returns</dt><dd>float containing the x co-orindate of the center of the bullet </dd></dl>
+
 <p>Implements <a class="el" href="class_i_bullet.html#a43a43e2df81e05a03be42d9025e6dd2a">IBullet</a>.</p>
 
 </div>
@@ -254,6 +279,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gets the y co-ordinate of the center of the bullet. </p>
+<dl class="section return"><dt>Returns</dt><dd>float containing the y co-orindate of the center of the bullet </dd></dl>
 
 <p>Implements <a class="el" href="class_i_bullet.html#a8245ed2bc72beed1d69547ce5f87a021">IBullet</a>.</p>
 
@@ -282,6 +310,9 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Gets the damage amount that the bullet makes to an enemy. </p>
+<dl class="section return"><dt>Returns</dt><dd>integer containing the damage amount </dd></dl>
+
 <p>Implements <a class="el" href="class_i_bullet.html#ab6643a4ad3888ee4ebfbc3d445c4b73d">IBullet</a>.</p>
 
 </div>
@@ -308,6 +339,9 @@ Here is the call graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Gets the raidus of the bullet. </p>
+<dl class="section return"><dt>Returns</dt><dd>integer containing the radius of the bullet </dd></dl>
 
 <p>Implements <a class="el" href="class_i_bullet.html#a327968e71126cdea5998076d8919354f">IBullet</a>.</p>
 
@@ -336,14 +370,17 @@ Here is the call graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the x co-ordinate of the bullets current position. </p>
+<dl class="section return"><dt>Returns</dt><dd>float containing the x co-ordinate of the bullet </dd></dl>
+
 <p>Implements <a class="el" href="class_i_bullet.html#a20babdd6c657ddda175e84a56564dcfa">IBullet</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player_bullet_aa9462c44892190316ee479a18693b6ad_icgraph.png" border="0" usemap="#class_player_bullet_aa9462c44892190316ee479a18693b6ad_icgraph" alt=""/></div>
 <map name="class_player_bullet_aa9462c44892190316ee479a18693b6ad_icgraph" id="class_player_bullet_aa9462c44892190316ee479a18693b6ad_icgraph">
-<area shape="rect" id="node2" href="class_player_bullet.html#a8469319697d70e04399d8aaac3902c80" title="PlayerBullet::move" alt="" coords="224,5,355,32"/>
-<area shape="rect" id="node3" href="class_player_bullet.html#a4ef09e533d8d3016d7e08d9efae238ff" title="PlayerBullet::fire" alt="" coords="403,5,520,32"/>
+<area shape="rect" id="node2" href="class_player_bullet.html#a8469319697d70e04399d8aaac3902c80" title="Moves the bullet in the direction defined by the angle of direction. " alt="" coords="224,5,355,32"/>
+<area shape="rect" id="node3" href="class_player_bullet.html#a4ef09e533d8d3016d7e08d9efae238ff" title="Moves the bullet in the direction of the initialized angle. " alt="" coords="403,5,520,32"/>
 </map>
 </div>
 
@@ -372,14 +409,17 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the y co-ordinate of the bullets current position. </p>
+<dl class="section return"><dt>Returns</dt><dd>float containing the y co-ordinate of the bullet </dd></dl>
+
 <p>Implements <a class="el" href="class_i_bullet.html#a36594de9a0c0ddd7083bca10ef5d8332">IBullet</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player_bullet_a240cab35d5d909366986b8661ee65d3c_icgraph.png" border="0" usemap="#class_player_bullet_a240cab35d5d909366986b8661ee65d3c_icgraph" alt=""/></div>
 <map name="class_player_bullet_a240cab35d5d909366986b8661ee65d3c_icgraph" id="class_player_bullet_a240cab35d5d909366986b8661ee65d3c_icgraph">
-<area shape="rect" id="node2" href="class_player_bullet.html#a8469319697d70e04399d8aaac3902c80" title="PlayerBullet::move" alt="" coords="225,5,356,32"/>
-<area shape="rect" id="node3" href="class_player_bullet.html#a4ef09e533d8d3016d7e08d9efae238ff" title="PlayerBullet::fire" alt="" coords="404,5,521,32"/>
+<area shape="rect" id="node2" href="class_player_bullet.html#a8469319697d70e04399d8aaac3902c80" title="Moves the bullet in the direction defined by the angle of direction. " alt="" coords="225,5,356,32"/>
+<area shape="rect" id="node3" href="class_player_bullet.html#a4ef09e533d8d3016d7e08d9efae238ff" title="Moves the bullet in the direction of the initialized angle. " alt="" coords="404,5,521,32"/>
 </map>
 </div>
 
@@ -408,6 +448,9 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Returns the life status of a bullet. A bullets alive is defined by collisions. If a bullet has not collided its alive and if it has then it is dead. </p>
+<dl class="section return"><dt>Returns</dt><dd>boolean contatning the life status of the bulllet </dd></dl>
+
 <p>Implements <a class="el" href="class_i_bullet.html#ac1252496738126ec94a97512011b9112">IBullet</a>.</p>
 
 </div>
@@ -435,14 +478,16 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Moves the bullet in the direction defined by the angle of direction. </p>
+
 <p>Implements <a class="el" href="class_i_bullet.html#a0884074f0bc793fb5a52ac33842622fd">IBullet</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player_bullet_a8469319697d70e04399d8aaac3902c80_cgraph.png" border="0" usemap="#class_player_bullet_a8469319697d70e04399d8aaac3902c80_cgraph" alt=""/></div>
 <map name="class_player_bullet_a8469319697d70e04399d8aaac3902c80_cgraph" id="class_player_bullet_a8469319697d70e04399d8aaac3902c80_cgraph">
-<area shape="rect" id="node2" href="class_player_bullet.html#aa9462c44892190316ee479a18693b6ad" title="PlayerBullet::getXposition" alt="" coords="185,5,355,32"/>
-<area shape="rect" id="node3" href="class_player_bullet.html#a240cab35d5d909366986b8661ee65d3c" title="PlayerBullet::getYposition" alt="" coords="184,56,356,83"/>
+<area shape="rect" id="node2" href="class_player_bullet.html#aa9462c44892190316ee479a18693b6ad" title="Returns the x co&#45;ordinate of the bullets current position. " alt="" coords="185,5,355,32"/>
+<area shape="rect" id="node3" href="class_player_bullet.html#a240cab35d5d909366986b8661ee65d3c" title="Returns the y co&#45;ordinate of the bullets current position. " alt="" coords="184,56,356,83"/>
 </map>
 </div>
 <div class="dynheader">
@@ -450,7 +495,7 @@ Here is the caller graph for this function:</div>
 <div class="dyncontent">
 <div class="center"><img src="class_player_bullet_a8469319697d70e04399d8aaac3902c80_icgraph.png" border="0" usemap="#class_player_bullet_a8469319697d70e04399d8aaac3902c80_icgraph" alt=""/></div>
 <map name="class_player_bullet_a8469319697d70e04399d8aaac3902c80_icgraph" id="class_player_bullet_a8469319697d70e04399d8aaac3902c80_icgraph">
-<area shape="rect" id="node2" href="class_player_bullet.html#a4ef09e533d8d3016d7e08d9efae238ff" title="PlayerBullet::fire" alt="" coords="184,5,301,32"/>
+<area shape="rect" id="node2" href="class_player_bullet.html#a4ef09e533d8d3016d7e08d9efae238ff" title="Moves the bullet in the direction of the initialized angle. " alt="" coords="184,5,301,32"/>
 </map>
 </div>
 
@@ -480,6 +525,14 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
+<p>Sets the damage that the bullet makes to an Enemy's health. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">damage</td><td>integer containing the damage amount </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Implements <a class="el" href="class_i_bullet.html#a072298555accb47f11b84f4c781ae876">IBullet</a>.</p>
 
 </div>
@@ -507,6 +560,15 @@ Here is the caller graph for this function:</div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Sets the life status of the bullet. </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="class_player_bullet.html#ab4e6b1485e9a63ddc00effc7532a9b09" title="Returns the life status of a bullet. A bullets alive is defined by collisions. If a bullet has not co...">isAlive()</a> </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">life</td><td>boolean containing the life status the bullet should be set to. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Implements <a class="el" href="class_i_bullet.html#abf99befdaa121e7c9ca2acc2ed75b513">IBullet</a>.</p>
 
