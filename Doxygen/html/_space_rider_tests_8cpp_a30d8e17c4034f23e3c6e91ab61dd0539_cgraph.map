@@ -1,0 +1,4 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="node2" href="$class_enemy_logic.html#a1429e91a81da7646d9b0280f26519d8c" title="EnemyLogic::getCenterXPosition" alt="" coords="151,5,363,32"/>
+<area shape="rect" id="node3" href="$class_enemy_logic.html#a7eed969ab8e3d2527cdac04ef39a5aba" title="EnemyLogic::getXposition" alt="" coords="171,56,343,83"/>
+</map>

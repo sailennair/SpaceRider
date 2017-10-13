@@ -1,0 +1,5 @@
+<map id="CollisionDetection::didObjectsCollide" name="CollisionDetection::didObjectsCollide">
+<area shape="rect" id="node2" href="$class_i_moving_game_object.html#ab2120f126d088beda46654aa3ccfd705" title="IMovingGameObject::\lgetRadius" alt="" coords="184,5,331,47"/>
+<area shape="rect" id="node3" href="$class_i_moving_game_object.html#ae4e6c21094ef1e2db32729270c8a7999" title="IMovingGameObject::\lgetCenterXPosition" alt="" coords="184,71,331,112"/>
+<area shape="rect" id="node4" href="$class_i_moving_game_object.html#a075f69d69fd38dc02a0ec3c7b1cb0534" title="IMovingGameObject::\lgetCenterYPosition" alt="" coords="184,136,331,177"/>
+</map>

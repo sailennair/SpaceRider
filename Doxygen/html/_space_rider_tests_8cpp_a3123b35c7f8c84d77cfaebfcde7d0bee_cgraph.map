@@ -1,0 +1,5 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="node2" href="$class_satellite_logic.html#a3a35c4c5b5ff051dbfcffc7ce85e40a2" title="SatelliteLogic::getXposition" alt="" coords="151,5,330,32"/>
+<area shape="rect" id="node3" href="$class_satellite_logic.html#a1b0cb67d5bdb3cb120ec12b2be65755c" title="SatelliteLogic::getYposition" alt="" coords="151,56,331,83"/>
+<area shape="rect" id="node4" href="$class_satellite_logic.html#a1ad746e5a17b9ac2bea379fca9a74147" title="SatelliteLogic::move" alt="" coords="171,107,310,133"/>
+</map>

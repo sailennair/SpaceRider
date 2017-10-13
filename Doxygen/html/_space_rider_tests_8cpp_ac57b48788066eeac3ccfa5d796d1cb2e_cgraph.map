@@ -1,0 +1,6 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="node2" href="$class_collision_detection.html#a8e58e83acc7de60673126754ac2246cd" title="CollisionDetection\l::didObjectsCollide" alt="" coords="151,71,281,112"/>
+<area shape="rect" id="node3" href="$class_i_moving_game_object.html#ab2120f126d088beda46654aa3ccfd705" title="IMovingGameObject::\lgetRadius" alt="" coords="329,5,476,47"/>
+<area shape="rect" id="node4" href="$class_i_moving_game_object.html#ae4e6c21094ef1e2db32729270c8a7999" title="IMovingGameObject::\lgetCenterXPosition" alt="" coords="329,71,476,112"/>
+<area shape="rect" id="node5" href="$class_i_moving_game_object.html#a075f69d69fd38dc02a0ec3c7b1cb0534" title="IMovingGameObject::\lgetCenterYPosition" alt="" coords="329,136,476,177"/>
+</map>

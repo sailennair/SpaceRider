@@ -1,0 +1,4 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="node2" href="$class_enemy_logic.html#a2e3e9e006259b36745beff4b55fd9bdc" title="EnemyLogic::isOutOfBounds" alt="" coords="153,5,343,32"/>
+<area shape="rect" id="node3" href="$class_enemy_logic.html#a0ac79ee7c0acf99b27aa4e22f98ce2d1" title="EnemyLogic::setOutofBounds" alt="" coords="151,56,345,83"/>
+</map>

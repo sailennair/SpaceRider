@@ -1,0 +1,5 @@
+<map id="FinalWindow::didPlayerLoseGame" name="FinalWindow::didPlayerLoseGame">
+<area shape="rect" id="node2" href="$class_final_window.html#ad0ff2789d7ab310a4b70e393f602deff" title="FinalWindow::run" alt="" coords="275,5,397,32"/>
+<area shape="rect" id="node3" href="$class_game_window.html#aa4188b605313be96d69cf32d3f143987" title="GameWindow::runGame" alt="" coords="445,5,609,32"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="657,5,708,32"/>
+</map>

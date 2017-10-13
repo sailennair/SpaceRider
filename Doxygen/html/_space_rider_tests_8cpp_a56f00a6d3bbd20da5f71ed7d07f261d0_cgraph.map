@@ -1,0 +1,4 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="node2" href="$class_player_bullet.html#a1ff56e38b1447500d2887b6fe1eeb674" title="PlayerBullet::getRadius" alt="" coords="155,5,313,32"/>
+<area shape="rect" id="node3" href="$class_player_bullet.html#a55375b5c3f4f87d00daba1cda12b1e79" title="PlayerBullet::getDamage" alt="" coords="151,56,317,83"/>
+</map>

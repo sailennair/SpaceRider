@@ -1,0 +1,9 @@
+<map id="PlayerPresentation::rotateSprite" name="PlayerPresentation::rotateSprite">
+<area shape="rect" id="node2" href="$class_game_presentation.html#a08abc97c6f65eda4ac7c54d55a9054b4" title="GamePresentation::upDate\lPlayerPosition" alt="" coords="185,35,364,76"/>
+<area shape="rect" id="node3" href="$class_game_presentation.html#a027b38ee9bf11018b4db7494d2e145a0" title="GamePresentation::checkPlayer\lPresentationLifeDead" alt="" coords="412,5,623,47"/>
+<area shape="rect" id="node8" href="$class_game_window.html#a6d969bf2a5284c731c5ba3eb03d4e3a1" title="GameWindow::checkKeyBoard\lEvent" alt="" coords="671,64,873,105"/>
+<area shape="rect" id="node4" href="$class_game_window.html#a9ebcf385e9ed9fd52f1d8b2c88f9c091" title="GameWindow::updatePlayer" alt="" coords="679,13,865,39"/>
+<area shape="rect" id="node5" href="$class_game_window.html#a43f64127a3b8836405f80242c1e997f4" title="GameWindow::generateWindow" alt="" coords="921,42,1128,69"/>
+<area shape="rect" id="node6" href="$class_game_window.html#aa4188b605313be96d69cf32d3f143987" title="GameWindow::runGame" alt="" coords="1176,42,1340,69"/>
+<area shape="rect" id="node7" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1388,42,1439,69"/>
+</map>

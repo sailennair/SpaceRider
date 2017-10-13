@@ -1,0 +1,168 @@
+\hypertarget{_game_common_data_8h}{}\section{C\+:/\+Users/\+User/\+Documents/\+Software\+Dev2\+Project/\+Space\+Rider\+Project/\+Game\+Common\+Data.h File Reference}
+\label{_game_common_data_8h}\index{C\+:/\+Users/\+User/\+Documents/\+Software\+Dev2\+Project/\+Space\+Rider\+Project/\+Game\+Common\+Data.\+h@{C\+:/\+Users/\+User/\+Documents/\+Software\+Dev2\+Project/\+Space\+Rider\+Project/\+Game\+Common\+Data.\+h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+Include dependency graph for Game\+Common\+Data.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{_game_common_data_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_game_common_data_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_player_details}{Player\+Details}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{_game_common_data_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction} \{ \hyperlink{_game_common_data_8h_a224b9163917ac32fc95a60d8c1eec3aaa684d325a7303f52e64011467ff5c5758}{Direction\+::\+L\+E\+FT}, 
+\hyperlink{_game_common_data_8h_a224b9163917ac32fc95a60d8c1eec3aaa21507b40c80068eda19865706fdc2403}{Direction\+::\+R\+I\+G\+HT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \hyperlink{_game_common_data_8h_a88be29e9f4583171c359f315c5cbc857}{Game\+X\+Window} = 800
+\item 
+const int \hyperlink{_game_common_data_8h_adec134d4ce2329a4ba0b2af8ec88251f}{Game\+Y\+Window} = 600
+\item 
+const int \hyperlink{_game_common_data_8h_a552d1cdee7e1d393190da6b3f1799bca}{Center\+X\+Game\+Window} = \hyperlink{_game_common_data_8h_a88be29e9f4583171c359f315c5cbc857}{Game\+X\+Window}/2
+\item 
+const int \hyperlink{_game_common_data_8h_ab8cb18ceaff4d090d4bad72aa7722da9}{Center\+Y\+Game\+Window} = \hyperlink{_game_common_data_8h_adec134d4ce2329a4ba0b2af8ec88251f}{Game\+Y\+Window}/2
+\item 
+const int \hyperlink{_game_common_data_8h_a7a0b0f33d1d3a820325a517a0d840748}{radius} = (\hyperlink{_game_common_data_8h_adec134d4ce2329a4ba0b2af8ec88251f}{Game\+Y\+Window} -\/ 70) / 2 -\/ 20
+\item 
+const int \hyperlink{_game_common_data_8h_ace3e96549f1542bbc87db3794270537f}{center\+Player\+Radius} = (\hyperlink{_game_common_data_8h_adec134d4ce2329a4ba0b2af8ec88251f}{Game\+Y\+Window} -\/ 30) / 2 -\/ 10
+\item 
+const int \hyperlink{_game_common_data_8h_ac4b41841661405222fee00d5b5f45cb2}{Number\+Of\+Enemies} = 5
+\item 
+const int \hyperlink{_game_common_data_8h_a42d1ad2ec90e13991389d45483f8d995}{Player\+Width} = 47
+\item 
+const int \hyperlink{_game_common_data_8h_ad09ba10d211f8163bf86edcabf3541de}{Player\+Height} = 70
+\item 
+const int \hyperlink{_game_common_data_8h_a4b1a8c2e4510dd545ab4a3d997582e31}{Player\+X\+Position} = (\hyperlink{_game_common_data_8h_a552d1cdee7e1d393190da6b3f1799bca}{Center\+X\+Game\+Window}) -\/ 20
+\item 
+const int \hyperlink{_game_common_data_8h_a8341c5c7de6a682d6c47cf51976014f6}{Player\+Y\+Position} = \hyperlink{_game_common_data_8h_adec134d4ce2329a4ba0b2af8ec88251f}{Game\+Y\+Window} -\/ 70
+\item 
+const int \hyperlink{_game_common_data_8h_a015425b1403594d2165a2b6f52866a6d}{Player\+Health} = 100
+\item 
+const int \hyperlink{_game_common_data_8h_a73b190bf99ce4d5f07f2b579a5e08fe3}{x\+Origin} = \hyperlink{_game_common_data_8h_a4b1a8c2e4510dd545ab4a3d997582e31}{Player\+X\+Position}
+\item 
+const int \hyperlink{_game_common_data_8h_a1ee55e6db21104d7010a2e7e7b79c0b4}{y\+Origin} = (\hyperlink{_game_common_data_8h_adec134d4ce2329a4ba0b2af8ec88251f}{Game\+Y\+Window} / 2)
+\end{DoxyCompactItemize}
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_game_common_data_8h_a224b9163917ac32fc95a60d8c1eec3aa}\label{_game_common_data_8h_a224b9163917ac32fc95a60d8c1eec3aa}} 
+\index{Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}!Direction@{Direction}}
+\index{Direction@{Direction}!Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}}
+\subsubsection{\texorpdfstring{Direction}{Direction}}
+{\footnotesize\ttfamily enum \hyperlink{_game_common_data_8h_a224b9163917ac32fc95a60d8c1eec3aa}{Direction}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{L\+E\+FT@{L\+E\+FT}!Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}}\index{Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}!L\+E\+FT@{L\+E\+FT}}}\mbox{\Hypertarget{_game_common_data_8h_a224b9163917ac32fc95a60d8c1eec3aaa684d325a7303f52e64011467ff5c5758}\label{_game_common_data_8h_a224b9163917ac32fc95a60d8c1eec3aaa684d325a7303f52e64011467ff5c5758}} 
+L\+E\+FT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{R\+I\+G\+HT@{R\+I\+G\+HT}!Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}}\index{Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}!R\+I\+G\+HT@{R\+I\+G\+HT}}}\mbox{\Hypertarget{_game_common_data_8h_a224b9163917ac32fc95a60d8c1eec3aaa21507b40c80068eda19865706fdc2403}\label{_game_common_data_8h_a224b9163917ac32fc95a60d8c1eec3aaa21507b40c80068eda19865706fdc2403}} 
+R\+I\+G\+HT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{_game_common_data_8h_ace3e96549f1542bbc87db3794270537f}\label{_game_common_data_8h_ace3e96549f1542bbc87db3794270537f}} 
+\index{Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}!center\+Player\+Radius@{center\+Player\+Radius}}
+\index{center\+Player\+Radius@{center\+Player\+Radius}!Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}}
+\subsubsection{\texorpdfstring{center\+Player\+Radius}{centerPlayerRadius}}
+{\footnotesize\ttfamily const int center\+Player\+Radius = (\hyperlink{_game_common_data_8h_adec134d4ce2329a4ba0b2af8ec88251f}{Game\+Y\+Window} -\/ 30) / 2 -\/ 10}
+
+\mbox{\Hypertarget{_game_common_data_8h_a552d1cdee7e1d393190da6b3f1799bca}\label{_game_common_data_8h_a552d1cdee7e1d393190da6b3f1799bca}} 
+\index{Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}!Center\+X\+Game\+Window@{Center\+X\+Game\+Window}}
+\index{Center\+X\+Game\+Window@{Center\+X\+Game\+Window}!Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}}
+\subsubsection{\texorpdfstring{Center\+X\+Game\+Window}{CenterXGameWindow}}
+{\footnotesize\ttfamily const int Center\+X\+Game\+Window = \hyperlink{_game_common_data_8h_a88be29e9f4583171c359f315c5cbc857}{Game\+X\+Window}/2}
+
+\mbox{\Hypertarget{_game_common_data_8h_ab8cb18ceaff4d090d4bad72aa7722da9}\label{_game_common_data_8h_ab8cb18ceaff4d090d4bad72aa7722da9}} 
+\index{Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}!Center\+Y\+Game\+Window@{Center\+Y\+Game\+Window}}
+\index{Center\+Y\+Game\+Window@{Center\+Y\+Game\+Window}!Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}}
+\subsubsection{\texorpdfstring{Center\+Y\+Game\+Window}{CenterYGameWindow}}
+{\footnotesize\ttfamily const int Center\+Y\+Game\+Window = \hyperlink{_game_common_data_8h_adec134d4ce2329a4ba0b2af8ec88251f}{Game\+Y\+Window}/2}
+
+\mbox{\Hypertarget{_game_common_data_8h_a88be29e9f4583171c359f315c5cbc857}\label{_game_common_data_8h_a88be29e9f4583171c359f315c5cbc857}} 
+\index{Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}!Game\+X\+Window@{Game\+X\+Window}}
+\index{Game\+X\+Window@{Game\+X\+Window}!Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}}
+\subsubsection{\texorpdfstring{Game\+X\+Window}{GameXWindow}}
+{\footnotesize\ttfamily const int Game\+X\+Window = 800}
+
+\mbox{\Hypertarget{_game_common_data_8h_adec134d4ce2329a4ba0b2af8ec88251f}\label{_game_common_data_8h_adec134d4ce2329a4ba0b2af8ec88251f}} 
+\index{Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}!Game\+Y\+Window@{Game\+Y\+Window}}
+\index{Game\+Y\+Window@{Game\+Y\+Window}!Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}}
+\subsubsection{\texorpdfstring{Game\+Y\+Window}{GameYWindow}}
+{\footnotesize\ttfamily const int Game\+Y\+Window = 600}
+
+\mbox{\Hypertarget{_game_common_data_8h_ac4b41841661405222fee00d5b5f45cb2}\label{_game_common_data_8h_ac4b41841661405222fee00d5b5f45cb2}} 
+\index{Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}!Number\+Of\+Enemies@{Number\+Of\+Enemies}}
+\index{Number\+Of\+Enemies@{Number\+Of\+Enemies}!Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}}
+\subsubsection{\texorpdfstring{Number\+Of\+Enemies}{NumberOfEnemies}}
+{\footnotesize\ttfamily const int Number\+Of\+Enemies = 5}
+
+\mbox{\Hypertarget{_game_common_data_8h_a015425b1403594d2165a2b6f52866a6d}\label{_game_common_data_8h_a015425b1403594d2165a2b6f52866a6d}} 
+\index{Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}!Player\+Health@{Player\+Health}}
+\index{Player\+Health@{Player\+Health}!Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}}
+\subsubsection{\texorpdfstring{Player\+Health}{PlayerHealth}}
+{\footnotesize\ttfamily const int Player\+Health = 100}
+
+\mbox{\Hypertarget{_game_common_data_8h_ad09ba10d211f8163bf86edcabf3541de}\label{_game_common_data_8h_ad09ba10d211f8163bf86edcabf3541de}} 
+\index{Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}!Player\+Height@{Player\+Height}}
+\index{Player\+Height@{Player\+Height}!Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}}
+\subsubsection{\texorpdfstring{Player\+Height}{PlayerHeight}}
+{\footnotesize\ttfamily const int Player\+Height = 70}
+
+\mbox{\Hypertarget{_game_common_data_8h_a42d1ad2ec90e13991389d45483f8d995}\label{_game_common_data_8h_a42d1ad2ec90e13991389d45483f8d995}} 
+\index{Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}!Player\+Width@{Player\+Width}}
+\index{Player\+Width@{Player\+Width}!Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}}
+\subsubsection{\texorpdfstring{Player\+Width}{PlayerWidth}}
+{\footnotesize\ttfamily const int Player\+Width = 47}
+
+\mbox{\Hypertarget{_game_common_data_8h_a4b1a8c2e4510dd545ab4a3d997582e31}\label{_game_common_data_8h_a4b1a8c2e4510dd545ab4a3d997582e31}} 
+\index{Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}!Player\+X\+Position@{Player\+X\+Position}}
+\index{Player\+X\+Position@{Player\+X\+Position}!Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}}
+\subsubsection{\texorpdfstring{Player\+X\+Position}{PlayerXPosition}}
+{\footnotesize\ttfamily const int Player\+X\+Position = (\hyperlink{_game_common_data_8h_a552d1cdee7e1d393190da6b3f1799bca}{Center\+X\+Game\+Window}) -\/ 20}
+
+\mbox{\Hypertarget{_game_common_data_8h_a8341c5c7de6a682d6c47cf51976014f6}\label{_game_common_data_8h_a8341c5c7de6a682d6c47cf51976014f6}} 
+\index{Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}!Player\+Y\+Position@{Player\+Y\+Position}}
+\index{Player\+Y\+Position@{Player\+Y\+Position}!Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}}
+\subsubsection{\texorpdfstring{Player\+Y\+Position}{PlayerYPosition}}
+{\footnotesize\ttfamily const int Player\+Y\+Position = \hyperlink{_game_common_data_8h_adec134d4ce2329a4ba0b2af8ec88251f}{Game\+Y\+Window} -\/ 70}
+
+\mbox{\Hypertarget{_game_common_data_8h_a7a0b0f33d1d3a820325a517a0d840748}\label{_game_common_data_8h_a7a0b0f33d1d3a820325a517a0d840748}} 
+\index{Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}!radius@{radius}}
+\index{radius@{radius}!Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}}
+\subsubsection{\texorpdfstring{radius}{radius}}
+{\footnotesize\ttfamily const int radius = (\hyperlink{_game_common_data_8h_adec134d4ce2329a4ba0b2af8ec88251f}{Game\+Y\+Window} -\/ 70) / 2 -\/ 20}
+
+\mbox{\Hypertarget{_game_common_data_8h_a73b190bf99ce4d5f07f2b579a5e08fe3}\label{_game_common_data_8h_a73b190bf99ce4d5f07f2b579a5e08fe3}} 
+\index{Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}!x\+Origin@{x\+Origin}}
+\index{x\+Origin@{x\+Origin}!Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}}
+\subsubsection{\texorpdfstring{x\+Origin}{xOrigin}}
+{\footnotesize\ttfamily const int x\+Origin = \hyperlink{_game_common_data_8h_a4b1a8c2e4510dd545ab4a3d997582e31}{Player\+X\+Position}}
+
+\mbox{\Hypertarget{_game_common_data_8h_a1ee55e6db21104d7010a2e7e7b79c0b4}\label{_game_common_data_8h_a1ee55e6db21104d7010a2e7e7b79c0b4}} 
+\index{Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}!y\+Origin@{y\+Origin}}
+\index{y\+Origin@{y\+Origin}!Game\+Common\+Data.\+h@{Game\+Common\+Data.\+h}}
+\subsubsection{\texorpdfstring{y\+Origin}{yOrigin}}
+{\footnotesize\ttfamily const int y\+Origin = (\hyperlink{_game_common_data_8h_adec134d4ce2329a4ba0b2af8ec88251f}{Game\+Y\+Window} / 2)}
+

@@ -1,0 +1,4 @@
+<map id="ScoreDatabase::writeScoreToFile" name="ScoreDatabase::writeScoreToFile">
+<area shape="rect" id="node2" href="$class_score.html#a8cc9e62ee4d086c0f2e1b8ef6d2cbf8d" title="This Will be for a Player Details Reading. " alt="" coords="233,13,360,39"/>
+<area shape="rect" id="node3" href="$class_game_logic.html#a594da37684d54d619214e8f96b80279c" title="GameLogic::saveScoretoFile" alt="" coords="408,13,596,39"/>
+</map>

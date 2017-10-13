@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['satellitelogic',['SatelliteLogic',['../class_satellite_logic.html#af35f51991748099bc492ed7ba82b3b75',1,'SatelliteLogic']]],
+  ['satellitepresentation',['SatellitePresentation',['../class_satellite_presentation.html#ac1d9b83f20c9f2ec34403979a00f26c5',1,'SatellitePresentation']]],
+  ['savescoretofile',['saveScoretoFile',['../class_game_logic.html#a594da37684d54d619214e8f96b80279c',1,'GameLogic']]],
+  ['score',['Score',['../class_score.html#a039c99843551e5e4b512ecee99e46617',1,'Score::Score()'],['../class_score.html#a7511b13acf59479d50c2c202d579168c',1,'Score::Score(std::string name)']]],
+  ['scoredatabase',['ScoreDatabase',['../class_score_database.html#a468f42e360810528ffc4aebdfac44694',1,'ScoreDatabase']]],
+  ['scorepresentation',['ScorePresentation',['../class_score_presentation.html#afe9c02aa48fe6961fe2bc9798ab18777',1,'ScorePresentation::ScorePresentation()'],['../class_score_presentation.html#ac12ced2076cf8686e0e2319cb8852875',1,'ScorePresentation::ScorePresentation(int highestScore)']]],
+  ['setbulletspeed',['setBulletSpeed',['../class_enemy_bullet_logic.html#a0263d2207f0d4332efa2cf8f8bbdc42c',1,'EnemyBulletLogic']]],
+  ['setdamage',['setDamage',['../class_enemy_bullet_logic.html#a3e4ce40e06e9fa23826bd74015fd75f2',1,'EnemyBulletLogic::setDamage()'],['../class_i_bullet.html#a072298555accb47f11b84f4c781ae876',1,'IBullet::setDamage()'],['../class_player_bullet.html#a09347ab7665742fc7d492fe26c3a6bce',1,'PlayerBullet::setDamage()']]],
+  ['setenemybounds',['setEnemyBounds',['../class_game_logic.html#a48f8e18378ed00053d83da991fcad264',1,'GameLogic']]],
+  ['setenemybulletlife',['setEnemyBulletLife',['../class_enemy_logic.html#a88584f95e49bfd6b174b9b1d9a274cc5',1,'EnemyLogic']]],
+  ['setenemyspeed',['setEnemySpeed',['../class_enemy_logic.html#aae66ecc1d28feaef7c814a0dff7eed95',1,'EnemyLogic']]],
+  ['setgeneratorenemylife',['setGeneratorEnemyLife',['../class_laser_generator_logic.html#a06cbb88e7126a023cb585ef873a2e094',1,'LaserGeneratorLogic']]],
+  ['setlife',['setLife',['../class_asteroid_logic.html#a594dc710574cac901e9999474b9379fe',1,'AsteroidLogic::setLife()'],['../class_enemy_bullet_logic.html#a92e4dfb6a528114ad58f9ae64924fbab',1,'EnemyBulletLogic::setLife()'],['../class_enemy_logic.html#a12bce0a6b6cad1af96aee3b401ea2c45',1,'EnemyLogic::setLife()'],['../class_i_bullet.html#abf99befdaa121e7c9ca2acc2ed75b513',1,'IBullet::setLife()'],['../class_i_enemy.html#ab58f2f6c2a8c08730aaf8771f088e1bf',1,'IEnemy::setLife()'],['../class_player_bullet.html#af713549c4bb9a2400a7929564f5b81ff',1,'PlayerBullet::setLife()'],['../class_player_logic.html#a3139e107a0eb76e7307f8657818b3007',1,'PlayerLogic::setLife()']]],
+  ['setlifecount',['setLifeCount',['../class_life_presentation.html#a4baba880082d5281a2fcb6b19d178418',1,'LifePresentation']]],
+  ['setoutofbounds',['setOutofBounds',['../class_enemy_logic.html#a0ac79ee7c0acf99b27aa4e22f98ce2d1',1,'EnemyLogic::setOutofBounds()'],['../class_asteroid_logic.html#ac9bfa7e9a3eed670f9264f15f395894e',1,'AsteroidLogic::setOutOfBounds()']]],
+  ['setplayerbullettype',['setPlayerBulletType',['../class_game_logic.html#a8463ab82ec024ace6457030f61430fc1',1,'GameLogic']]],
+  ['setplayerlifecount',['setPlayerLifeCount',['../class_game_presentation.html#a5a329f0403011b464c26218eeff38606',1,'GamePresentation']]],
+  ['setplayerlostgame',['setPLayerLostGame',['../class_final_window.html#a3ad8ebeede5375c9cd4732e794f076ac',1,'FinalWindow']]],
+  ['setposition',['setPosition',['../class_life_logic.html#a6080cbd8a0c6f6767504974999061209',1,'LifeLogic']]],
+  ['setpositionofplayer',['setPositionofPlayer',['../class_player_presentation.html#aef6ba74848a34fb93528062bda98059e',1,'PlayerPresentation']]],
+  ['setquittinggame',['setQuittingGame',['../class_final_window.html#afd73d524fd2f10486d86a2e0057fcb54',1,'FinalWindow']]],
+  ['setradius',['setRadius',['../class_enemy_logic.html#acabb2cb226edc71300ba1f2bc3e7a577',1,'EnemyLogic']]],
+  ['setscoremessage',['setScoreMessage',['../class_score_presentation.html#adf2c954da3e73d5adbe0e8d30243ee25',1,'ScorePresentation']]],
+  ['storescore',['storeScore',['../class_score.html#a8cc9e62ee4d086c0f2e1b8ef6d2cbf8d',1,'Score']]]
+];

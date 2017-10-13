@@ -1,0 +1,7 @@
+<map id="ScorePresentation::draw" name="ScorePresentation::draw">
+<area shape="rect" id="node2" href="$class_game_presentation.html#a38bab53e3d75b244e14ed2d7c2710fa0" title="GamePresentation::drawScore\lPresentation" alt="" coords="217,5,416,47"/>
+<area shape="rect" id="node3" href="$class_game_window.html#ac32c7b2e85e30f5bab516551c6277c3a" title="GameWindow::renderCharacters" alt="" coords="464,13,675,39"/>
+<area shape="rect" id="node4" href="$class_game_window.html#a43f64127a3b8836405f80242c1e997f4" title="GameWindow::generateWindow" alt="" coords="723,13,929,39"/>
+<area shape="rect" id="node5" href="$class_game_window.html#aa4188b605313be96d69cf32d3f143987" title="GameWindow::runGame" alt="" coords="977,13,1141,39"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1189,13,1240,39"/>
+</map>

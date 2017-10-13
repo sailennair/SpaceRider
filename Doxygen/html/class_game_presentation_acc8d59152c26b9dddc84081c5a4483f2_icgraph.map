@@ -1,0 +1,7 @@
+<map id="GamePresentation::deleteDeadEnemyBullets" name="GamePresentation::deleteDeadEnemyBullets">
+<area shape="rect" id="node2" href="$class_game_presentation.html#af29e04c4a89f0a6d1ca9eab33da5ace5" title="GamePresentation::drawAll\lEnemies" alt="" coords="227,5,407,47"/>
+<area shape="rect" id="node3" href="$class_game_window.html#ac32c7b2e85e30f5bab516551c6277c3a" title="GameWindow::renderCharacters" alt="" coords="455,13,665,39"/>
+<area shape="rect" id="node4" href="$class_game_window.html#a43f64127a3b8836405f80242c1e997f4" title="GameWindow::generateWindow" alt="" coords="713,13,920,39"/>
+<area shape="rect" id="node5" href="$class_game_window.html#aa4188b605313be96d69cf32d3f143987" title="GameWindow::runGame" alt="" coords="968,13,1132,39"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1180,13,1231,39"/>
+</map>

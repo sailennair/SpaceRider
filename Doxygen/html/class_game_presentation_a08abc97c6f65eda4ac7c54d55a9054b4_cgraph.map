@@ -1,0 +1,4 @@
+<map id="GamePresentation::upDatePlayerPosition" name="GamePresentation::upDatePlayerPosition">
+<area shape="rect" id="node2" href="$class_player_presentation.html#aef6ba74848a34fb93528062bda98059e" title="PlayerPresentation\l::setPositionofPlayer" alt="" coords="232,5,375,47"/>
+<area shape="rect" id="node3" href="$class_player_presentation.html#af938e83bf3a90263076411e0935731bd" title="PlayerPresentation\l::rotateSprite" alt="" coords="237,71,369,112"/>
+</map>

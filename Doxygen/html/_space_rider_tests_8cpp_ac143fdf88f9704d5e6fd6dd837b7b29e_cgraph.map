@@ -1,0 +1,4 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="node2" href="$class_asteroid_logic.html#a18e01f832db4f109799fc01c8c15efcd" title="AsteroidLogic::isAlive" alt="" coords="151,5,297,32"/>
+<area shape="rect" id="node3" href="$class_asteroid_logic.html#a594dc710574cac901e9999474b9379fe" title="AsteroidLogic::setLife" alt="" coords="151,56,297,83"/>
+</map>

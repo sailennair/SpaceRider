@@ -1,0 +1,8 @@
+<map id="GamePresentation::upDatePlayerPosition" name="GamePresentation::upDatePlayerPosition">
+<area shape="rect" id="node2" href="$class_game_presentation.html#a027b38ee9bf11018b4db7494d2e145a0" title="GamePresentation::checkPlayer\lPresentationLifeDead" alt="" coords="232,5,443,47"/>
+<area shape="rect" id="node7" href="$class_game_window.html#a6d969bf2a5284c731c5ba3eb03d4e3a1" title="GameWindow::checkKeyBoard\lEvent" alt="" coords="491,64,693,105"/>
+<area shape="rect" id="node3" href="$class_game_window.html#a9ebcf385e9ed9fd52f1d8b2c88f9c091" title="GameWindow::updatePlayer" alt="" coords="499,13,685,39"/>
+<area shape="rect" id="node4" href="$class_game_window.html#a43f64127a3b8836405f80242c1e997f4" title="GameWindow::generateWindow" alt="" coords="741,42,948,69"/>
+<area shape="rect" id="node5" href="$class_game_window.html#aa4188b605313be96d69cf32d3f143987" title="GameWindow::runGame" alt="" coords="996,42,1160,69"/>
+<area shape="rect" id="node6" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1208,42,1259,69"/>
+</map>

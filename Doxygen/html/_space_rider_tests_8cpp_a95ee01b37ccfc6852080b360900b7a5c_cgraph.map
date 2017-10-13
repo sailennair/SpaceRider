@@ -1,0 +1,4 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="node2" href="$class_enemy_logic.html#ae4e49b9f854bc0407510de8e3824c7c4" title="EnemyLogic::getEnemyBullet\lLogicVector" alt="" coords="161,5,355,47"/>
+<area shape="rect" id="node3" href="$class_enemy_logic.html#a88584f95e49bfd6b174b9b1d9a274cc5" title="EnemyLogic::setEnemyBulletLife" alt="" coords="151,71,365,98"/>
+</map>

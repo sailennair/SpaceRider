@@ -1,0 +1,179 @@
+\hypertarget{class_i_enemy}{}\section{I\+Enemy Class Reference}
+\label{class_i_enemy}\index{I\+Enemy@{I\+Enemy}}
+
+
+{\ttfamily \#include $<$I\+Enemy.\+h$>$}
+
+
+
+Inheritance diagram for I\+Enemy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{class_i_enemy__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for I\+Enemy\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{class_i_enemy__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual void \hyperlink{class_i_enemy_a0dbed8e8e15436305b6ede08b618c232}{move} ()=0
+\item 
+virtual float \hyperlink{class_i_enemy_a8a9780d5db69d910f264fd7ab89ebee6}{get\+Angleof\+Rotation} ()=0
+\item 
+virtual bool \hyperlink{class_i_enemy_a3e44ca5e5fabcfd71b26657eba26e5a2}{is\+Alive} ()=0
+\item 
+virtual void \hyperlink{class_i_enemy_acbc451cafee99cb405d9d9248820b6ea}{reduce\+Health} (int \+\_\+damage)=0
+\item 
+virtual float \hyperlink{class_i_enemy_a504ea7fa77b8984d5b9dd71352876943}{get\+Xposition} ()=0
+\item 
+virtual float \hyperlink{class_i_enemy_a8011be7f510f6630250f8b9529815773}{get\+Yposition} ()=0
+\item 
+virtual void \hyperlink{class_i_enemy_ab58f2f6c2a8c08730aaf8771f088e1bf}{set\+Life} (bool life)=0
+\item 
+virtual float \hyperlink{class_i_enemy_ab1fb8f6320916ef6a1497f9651704d05}{get\+Radius} ()=0
+\item 
+virtual float \hyperlink{class_i_enemy_ab5bc39484a8aeaf278c3d127ec5d9545}{get\+Center\+X\+Position} ()=0
+\item 
+virtual float \hyperlink{class_i_enemy_ac9a2d69103fa86d8344aa368fb33c714}{get\+Center\+Y\+Position} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_enemy_a8a9780d5db69d910f264fd7ab89ebee6}\label{class_i_enemy_a8a9780d5db69d910f264fd7ab89ebee6}} 
+\index{I\+Enemy@{I\+Enemy}!get\+Angleof\+Rotation@{get\+Angleof\+Rotation}}
+\index{get\+Angleof\+Rotation@{get\+Angleof\+Rotation}!I\+Enemy@{I\+Enemy}}
+\subsubsection{\texorpdfstring{get\+Angleof\+Rotation()}{getAngleofRotation()}}
+{\footnotesize\ttfamily virtual float I\+Enemy\+::get\+Angleof\+Rotation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{class_enemy_logic_ade03be41505c71de49f20fc855c8fede}{Enemy\+Logic}, and \hyperlink{class_asteroid_logic_a2087d2a3b9bf9e6f1367833454b2fb97}{Asteroid\+Logic}.
+
+\mbox{\Hypertarget{class_i_enemy_ab5bc39484a8aeaf278c3d127ec5d9545}\label{class_i_enemy_ab5bc39484a8aeaf278c3d127ec5d9545}} 
+\index{I\+Enemy@{I\+Enemy}!get\+Center\+X\+Position@{get\+Center\+X\+Position}}
+\index{get\+Center\+X\+Position@{get\+Center\+X\+Position}!I\+Enemy@{I\+Enemy}}
+\subsubsection{\texorpdfstring{get\+Center\+X\+Position()}{getCenterXPosition()}}
+{\footnotesize\ttfamily virtual float I\+Enemy\+::get\+Center\+X\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \hyperlink{class_i_moving_game_object_ae4e6c21094ef1e2db32729270c8a7999}{I\+Moving\+Game\+Object}.
+
+
+
+Implemented in \hyperlink{class_enemy_logic_a1429e91a81da7646d9b0280f26519d8c}{Enemy\+Logic}, and \hyperlink{class_asteroid_logic_a4bff0373a2cefe48c984b469ddbcb52d}{Asteroid\+Logic}.
+
+\mbox{\Hypertarget{class_i_enemy_ac9a2d69103fa86d8344aa368fb33c714}\label{class_i_enemy_ac9a2d69103fa86d8344aa368fb33c714}} 
+\index{I\+Enemy@{I\+Enemy}!get\+Center\+Y\+Position@{get\+Center\+Y\+Position}}
+\index{get\+Center\+Y\+Position@{get\+Center\+Y\+Position}!I\+Enemy@{I\+Enemy}}
+\subsubsection{\texorpdfstring{get\+Center\+Y\+Position()}{getCenterYPosition()}}
+{\footnotesize\ttfamily virtual float I\+Enemy\+::get\+Center\+Y\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \hyperlink{class_i_moving_game_object_a075f69d69fd38dc02a0ec3c7b1cb0534}{I\+Moving\+Game\+Object}.
+
+
+
+Implemented in \hyperlink{class_enemy_logic_a8eb47a87a47288783e0c8963c39d24e4}{Enemy\+Logic}, and \hyperlink{class_asteroid_logic_a00c9cda893b9dee7e2225377dd54a2eb}{Asteroid\+Logic}.
+
+\mbox{\Hypertarget{class_i_enemy_ab1fb8f6320916ef6a1497f9651704d05}\label{class_i_enemy_ab1fb8f6320916ef6a1497f9651704d05}} 
+\index{I\+Enemy@{I\+Enemy}!get\+Radius@{get\+Radius}}
+\index{get\+Radius@{get\+Radius}!I\+Enemy@{I\+Enemy}}
+\subsubsection{\texorpdfstring{get\+Radius()}{getRadius()}}
+{\footnotesize\ttfamily virtual float I\+Enemy\+::get\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \hyperlink{class_i_moving_game_object_ab2120f126d088beda46654aa3ccfd705}{I\+Moving\+Game\+Object}.
+
+
+
+Implemented in \hyperlink{class_enemy_logic_ab6736c870e69bc20bef8d6d010946eb2}{Enemy\+Logic}, and \hyperlink{class_asteroid_logic_a575d9f801770906960b65dafe937fba5}{Asteroid\+Logic}.
+
+\mbox{\Hypertarget{class_i_enemy_a504ea7fa77b8984d5b9dd71352876943}\label{class_i_enemy_a504ea7fa77b8984d5b9dd71352876943}} 
+\index{I\+Enemy@{I\+Enemy}!get\+Xposition@{get\+Xposition}}
+\index{get\+Xposition@{get\+Xposition}!I\+Enemy@{I\+Enemy}}
+\subsubsection{\texorpdfstring{get\+Xposition()}{getXposition()}}
+{\footnotesize\ttfamily virtual float I\+Enemy\+::get\+Xposition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \hyperlink{class_i_moving_game_object_acc7f0195491b1843558c8c558cbc7363}{I\+Moving\+Game\+Object}.
+
+
+
+Implemented in \hyperlink{class_enemy_logic_a7eed969ab8e3d2527cdac04ef39a5aba}{Enemy\+Logic}, and \hyperlink{class_asteroid_logic_a1d79a614c5e1a9409404f6a2def25761}{Asteroid\+Logic}.
+
+\mbox{\Hypertarget{class_i_enemy_a8011be7f510f6630250f8b9529815773}\label{class_i_enemy_a8011be7f510f6630250f8b9529815773}} 
+\index{I\+Enemy@{I\+Enemy}!get\+Yposition@{get\+Yposition}}
+\index{get\+Yposition@{get\+Yposition}!I\+Enemy@{I\+Enemy}}
+\subsubsection{\texorpdfstring{get\+Yposition()}{getYposition()}}
+{\footnotesize\ttfamily virtual float I\+Enemy\+::get\+Yposition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \hyperlink{class_i_moving_game_object_a153c0017219e17262a9cceddba3f61d6}{I\+Moving\+Game\+Object}.
+
+
+
+Implemented in \hyperlink{class_enemy_logic_ae614032054926a4a25ed56f61111392b}{Enemy\+Logic}, and \hyperlink{class_asteroid_logic_a83863c5262a29b2999d04ad443622bbc}{Asteroid\+Logic}.
+
+\mbox{\Hypertarget{class_i_enemy_a3e44ca5e5fabcfd71b26657eba26e5a2}\label{class_i_enemy_a3e44ca5e5fabcfd71b26657eba26e5a2}} 
+\index{I\+Enemy@{I\+Enemy}!is\+Alive@{is\+Alive}}
+\index{is\+Alive@{is\+Alive}!I\+Enemy@{I\+Enemy}}
+\subsubsection{\texorpdfstring{is\+Alive()}{isAlive()}}
+{\footnotesize\ttfamily virtual bool I\+Enemy\+::is\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implements \hyperlink{class_i_moving_game_object_ab88f75c872699dd1376e5e83f6188e34}{I\+Moving\+Game\+Object}.
+
+
+
+Implemented in \hyperlink{class_enemy_logic_a8dd48fa112c41249e46728d7ec8f820e}{Enemy\+Logic}, and \hyperlink{class_asteroid_logic_a18e01f832db4f109799fc01c8c15efcd}{Asteroid\+Logic}.
+
+\mbox{\Hypertarget{class_i_enemy_a0dbed8e8e15436305b6ede08b618c232}\label{class_i_enemy_a0dbed8e8e15436305b6ede08b618c232}} 
+\index{I\+Enemy@{I\+Enemy}!move@{move}}
+\index{move@{move}!I\+Enemy@{I\+Enemy}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily virtual void I\+Enemy\+::move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{class_enemy_logic_a2bc8ba642d677ab31f4b54ec00299e25}{Enemy\+Logic}, and \hyperlink{class_asteroid_logic_af20b202c4f5857279192733a0b2fdbd3}{Asteroid\+Logic}.
+
+\mbox{\Hypertarget{class_i_enemy_acbc451cafee99cb405d9d9248820b6ea}\label{class_i_enemy_acbc451cafee99cb405d9d9248820b6ea}} 
+\index{I\+Enemy@{I\+Enemy}!reduce\+Health@{reduce\+Health}}
+\index{reduce\+Health@{reduce\+Health}!I\+Enemy@{I\+Enemy}}
+\subsubsection{\texorpdfstring{reduce\+Health()}{reduceHealth()}}
+{\footnotesize\ttfamily virtual void I\+Enemy\+::reduce\+Health (\begin{DoxyParamCaption}\item[{int}]{\+\_\+damage }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{class_enemy_logic_aaf2f8ff785c8f7410e04cfb3cb192b9b}{Enemy\+Logic}, and \hyperlink{class_asteroid_logic_a54519e4b2719c70d17f5a28bb0d8fb56}{Asteroid\+Logic}.
+
+\mbox{\Hypertarget{class_i_enemy_ab58f2f6c2a8c08730aaf8771f088e1bf}\label{class_i_enemy_ab58f2f6c2a8c08730aaf8771f088e1bf}} 
+\index{I\+Enemy@{I\+Enemy}!set\+Life@{set\+Life}}
+\index{set\+Life@{set\+Life}!I\+Enemy@{I\+Enemy}}
+\subsubsection{\texorpdfstring{set\+Life()}{setLife()}}
+{\footnotesize\ttfamily virtual void I\+Enemy\+::set\+Life (\begin{DoxyParamCaption}\item[{bool}]{life }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \hyperlink{class_enemy_logic_a12bce0a6b6cad1af96aee3b401ea2c45}{Enemy\+Logic}, and \hyperlink{class_asteroid_logic_a594dc710574cac901e9999474b9379fe}{Asteroid\+Logic}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+User/\+Documents/\+Software\+Dev2\+Project/\+Space\+Rider\+Project/\hyperlink{_i_enemy_8h}{I\+Enemy.\+h}\end{DoxyCompactItemize}

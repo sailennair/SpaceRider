@@ -1,0 +1,5 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="node2" href="$class_player_bullet.html#aa9462c44892190316ee479a18693b6ad" title="PlayerBullet::getXposition" alt="" coords="330,5,501,32"/>
+<area shape="rect" id="node3" href="$class_player_bullet.html#a240cab35d5d909366986b8661ee65d3c" title="PlayerBullet::getYposition" alt="" coords="329,68,501,95"/>
+<area shape="rect" id="node4" href="$class_player_bullet.html#a8469319697d70e04399d8aaac3902c80" title="PlayerBullet::move" alt="" coords="151,31,281,57"/>
+</map>

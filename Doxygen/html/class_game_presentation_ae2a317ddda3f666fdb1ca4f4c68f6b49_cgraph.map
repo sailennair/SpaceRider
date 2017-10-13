@@ -1,0 +1,4 @@
+<map id="GamePresentation::renderSprite" name="GamePresentation::renderSprite">
+<area shape="rect" id="node2" href="$class_player_presentation.html#a0ee08eeb4f0c8687450f60d635b4fe8a" title="PlayerPresentation\l::draw" alt="" coords="237,5,369,47"/>
+<area shape="rect" id="node3" href="$class_life_presentation.html#a78c9fdc72d78cb619a885d251996c3ff" title="LifePresentation::draw" alt="" coords="228,71,379,98"/>
+</map>

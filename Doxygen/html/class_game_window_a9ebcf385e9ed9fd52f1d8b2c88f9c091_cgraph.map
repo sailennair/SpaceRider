@@ -1,0 +1,12 @@
+<map id="GameWindow::updatePlayer" name="GameWindow::updatePlayer">
+<area shape="rect" id="node2" href="$class_game_presentation.html#ab2cf74842583bf5b63e5973fb8b657be" title="GamePresentation::update\lScorePresentation" alt="" coords="257,5,434,47"/>
+<area shape="rect" id="node4" href="$class_game_presentation.html#af0a19d50c4099e7a19426cdffa5ebb82" title="GamePresentation::upDate\lPlayerBulletPresentation" alt="" coords="256,71,435,112"/>
+<area shape="rect" id="node5" href="$class_game_presentation.html#a5a329f0403011b464c26218eeff38606" title="GamePresentation::setPlayer\lLifeCount" alt="" coords="249,136,442,177"/>
+<area shape="rect" id="node7" href="$class_game_presentation.html#a027b38ee9bf11018b4db7494d2e145a0" title="GamePresentation::checkPlayer\lPresentationLifeDead" alt="" coords="240,201,451,243"/>
+<area shape="rect" id="node3" href="$class_score_presentation.html#adf2c954da3e73d5adbe0e8d30243ee25" title="ScorePresentation::\lsetScoreMessage" alt="" coords="519,5,657,47"/>
+<area shape="rect" id="node6" href="$class_life_presentation.html#a4baba880082d5281a2fcb6b19d178418" title="LifePresentation::setLife\lCount" alt="" coords="507,136,669,177"/>
+<area shape="rect" id="node8" href="$class_player_presentation.html#ae4bf63751b63f582902d4ea31e06a486" title="PlayerPresentation\l::restartPlayerPresentation" alt="" coords="499,201,677,243"/>
+<area shape="rect" id="node9" href="$class_game_presentation.html#a08abc97c6f65eda4ac7c54d55a9054b4" title="GamePresentation::upDate\lPlayerPosition" alt="" coords="499,267,677,308"/>
+<area shape="rect" id="node10" href="$class_player_presentation.html#aef6ba74848a34fb93528062bda98059e" title="PlayerPresentation\l::setPositionofPlayer" alt="" coords="725,233,868,275"/>
+<area shape="rect" id="node11" href="$class_player_presentation.html#af938e83bf3a90263076411e0935731bd" title="PlayerPresentation\l::rotateSprite" alt="" coords="731,299,863,340"/>
+</map>

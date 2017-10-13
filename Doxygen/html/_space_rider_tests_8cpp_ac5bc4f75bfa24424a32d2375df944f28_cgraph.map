@@ -1,0 +1,6 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="node2" href="$class_enemy_logic.html#a2bc8ba642d677ab31f4b54ec00299e25" title="EnemyLogic::move" alt="" coords="177,5,309,32"/>
+<area shape="rect" id="node3" href="$class_enemy_logic.html#a7eed969ab8e3d2527cdac04ef39a5aba" title="EnemyLogic::getXposition" alt="" coords="157,56,329,83"/>
+<area shape="rect" id="node4" href="$class_enemy_logic.html#ae614032054926a4a25ed56f61111392b" title="EnemyLogic::getYposition" alt="" coords="155,107,330,133"/>
+<area shape="rect" id="node5" href="$class_enemy_logic.html#a560cc578db8a77f250b63a111f51125e" title="EnemyLogic::moveToCenter" alt="" coords="151,157,335,184"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="TEST_CASE" name="TEST_CASE">
+<area shape="rect" id="node2" href="$class_player_logic.html#a006a7633ae5839d307bb90099f9d2745" title="Moves Player y co&#45;oridnate in a circular motion to the left. The circular movement keeps the same dis..." alt="" coords="157,5,315,32"/>
+<area shape="rect" id="node4" href="$class_player_logic.html#a58d683bde5ee078f3b21897f2a5f4677" title="Returns y co&#45;ordinate of the player&#39;s current position. " alt="" coords="151,56,321,83"/>
+<area shape="rect" id="node3" href="$class_player_logic.html#a425e0b7a5a4495958a41383525f059eb" title="Used to convert degrees to radians. " alt="" coords="369,5,575,32"/>
+</map>

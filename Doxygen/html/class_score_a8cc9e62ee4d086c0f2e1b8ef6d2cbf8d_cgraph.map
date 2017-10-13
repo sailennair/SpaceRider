@@ -1,0 +1,4 @@
+<map id="Score::storeScore" name="Score::storeScore">
+<area shape="rect" id="node2" href="$class_score.html#ab207e77378c558c261526487aa725db9" title="Score::insertScore" alt="" coords="205,5,335,32"/>
+<area shape="rect" id="node3" href="$class_score_database.html#a8e479ebb5c08413a4f34c9b0d019ff0e" title="ScoreDatabase::writeScore\lToFile" alt="" coords="180,57,360,98"/>
+</map>

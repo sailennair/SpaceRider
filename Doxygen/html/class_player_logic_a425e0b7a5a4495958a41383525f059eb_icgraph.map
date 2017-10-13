@@ -1,0 +1,8 @@
+<map id="PlayerLogic::degreesToRadians" name="PlayerLogic::degreesToRadians">
+<area shape="rect" id="node2" href="$class_player_logic.html#ac4d252e80757e05b5799ab689ee27d5e" title="Moves Player x co&#45;oridnate in a circular motion to the left. The circular movement keeps the same dis..." alt="" coords="264,5,420,32"/>
+<area shape="rect" id="node5" href="$class_player_logic.html#a006a7633ae5839d307bb90099f9d2745" title="Moves Player y co&#45;oridnate in a circular motion to the left. The circular movement keeps the same dis..." alt="" coords="263,56,421,83"/>
+<area shape="rect" id="node6" href="$class_player_logic.html#a9c96291506bb5347f2c503bba4100fd4" title="Moves Player x co&#45;oridnate in a circular motion to the right. The circular movement keeps the same di..." alt="" coords="259,107,425,133"/>
+<area shape="rect" id="node7" href="$class_player_logic.html#a4b77bba06ba630f974aaa85306109485" title="Moves Player y co&#45;oridnate in a circular motion to the right. The circular movement keeps the same di..." alt="" coords="259,157,425,184"/>
+<area shape="rect" id="node3" href="$class_player_logic.html#a2b63d2c01e898e5798c2801466c8b432" title="Moves the player left or right for depending on user input. " alt="" coords="473,81,636,108"/>
+<area shape="rect" id="node4" href="$class_game_logic.html#a3bb909e55fc7c811aa0e3e6a92b881bb" title="GameLogic::playerUpdate" alt="" coords="684,81,856,108"/>
+</map>
