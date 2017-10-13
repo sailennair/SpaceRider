@@ -17,7 +17,7 @@ void SatellitePresentation::draw(sf::RenderWindow& window, float x, float y)
     window.draw(_satellite);
 }
 
-Sprite SatellitePresentation::getSprite()
+sf::Sprite SatellitePresentation::getSprite()
 {
     return _satellite;
 }

@@ -85,13 +85,13 @@ public:
      * @return float containing players radius.
      */
     float getRadius();
-    /**
-     * @brief Returns the center x co-ordinate of the player's current position.
+    /** Returns the center x co-ordinate of the player's current position.
+     * @see getCenterYPosition().
      * @return float containing players x co-ordinate of the center.
      */
     float getCenterXPosition();
-    /**
-     * @brief Returns the center y co-ordinate of the player's current position.
+    /** Returns the center y co-ordinate of the player's current position.
+     * @see getCenterXPosition().
      * @return float containing players y co-ordinate of the center.
      */
     float getCenterYPosition();

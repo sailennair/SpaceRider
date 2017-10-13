@@ -23,7 +23,7 @@ all game logic objects.
 class GameLogic
 {
 public:
-    /**Constructor Inititalise the Game Logic Class
+    /**Constructor Inititalise the Game Logic Class.
     * Creates objects of Logic classes needed for all functions.
     */
     GameLogic();

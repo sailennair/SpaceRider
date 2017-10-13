@@ -14,8 +14,11 @@
 class PlayerBullet : public IBullet
 {
 public:
-/**
- * @brief Constructor Initializes the Player bullets position, angle of direction and the the type of bullet
+/** Constructor Initializes the Player bullets position, angle of direction and the the type of bullet.
+ * @param xPosition float containing the x co-ordinate to initilise the bullet.
+ * @param yPosition float containing the y co-ordinate to initilise the bullet.
+ * @param theta float containing the direction the bullet should move towards.
+ * @param type integer that the defines the type of bullet.
  */
     PlayerBullet(int xPosition, int yPosition, float theta, int type);
 /**

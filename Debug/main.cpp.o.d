@@ -35,7 +35,7 @@ Debug/main.cpp.o: main.cpp GameWindow.h GamePresentation.h \
  ScoreDatabase.h PlayerBulletPresentation.h EnemyPresentation.h \
  EnemyBulletPresentation.h SatellitePresentation.h LifePresentation.h \
  LaserGeneratorPresentation.h AsteroidPresentation.h ScorePresentation.h \
- IntroductionWindow.h
+ IntroductionWindow.h FinalWindow.h
 
 GameWindow.h:
 
@@ -232,3 +232,5 @@ AsteroidPresentation.h:
 ScorePresentation.h:
 
 IntroductionWindow.h:
+
+FinalWindow.h:

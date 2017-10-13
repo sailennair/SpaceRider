@@ -29,8 +29,7 @@ Debug/LaserGeneratorPresentation.cpp.o: LaserGeneratorPresentation.cpp \
  SFML/Graphics/RenderTarget.hpp SFML/Graphics/View.hpp \
  SFML/Graphics/RenderTexture.hpp SFML/Graphics/RenderWindow.hpp \
  SFML/Graphics/Shader.hpp SFML/Graphics/Sprite.hpp SFML/Graphics/Text.hpp \
- GameCommonData.h EnemyBulletPresentation.h EnemyPresentation.h \
- EnemyLogic.h EnemyBulletLogic.h IBullet.h IMovingGameObject.h IEnemy.h
+ GameCommonData.h EnemyBulletPresentation.h EnemyPresentation.h
 
 LaserGeneratorPresentation.h:
 
@@ -177,13 +176,3 @@ GameCommonData.h:
 EnemyBulletPresentation.h:
 
 EnemyPresentation.h:
-
-EnemyLogic.h:
-
-EnemyBulletLogic.h:
-
-IBullet.h:
-
-IMovingGameObject.h:
-
-IEnemy.h:

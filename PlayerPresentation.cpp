@@ -7,18 +7,18 @@ PlayerPresentation::PlayerPresentation()
     }
     _playerSpaceshipTexture.setSmooth(true);
     _Player.setTexture(_playerSpaceshipTexture);
-    _Player.setScale(Vector2f(0.1, 0.1));
+    _Player.setScale(sf::Vector2f(0.1, 0.1));
     _Player.setPosition(PlayerXPosition, PlayerYPosition);
 
 
 }
 
-Sprite PlayerPresentation::getPlayer()
+sf::Sprite PlayerPresentation::getPlayer()
 {
     return _Player;
 }
 
-void PlayerPresentation::draw(RenderWindow& window)
+void PlayerPresentation::draw(sf::RenderWindow& window)
 {
 
     window.draw(_Player);

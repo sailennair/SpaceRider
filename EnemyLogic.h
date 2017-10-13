@@ -58,14 +58,15 @@ public:
  * @param life boolean describing the life status the enemy should be set to
  */
     void setLife(bool life);
-/**
- * @brief Returns the outOfBounds status of the enemy.
- * outOfBounds is defined by the enemy mving outside of the screen.
+/** Returns the outOfBounds status of the enemy.
+ * outOfBounds is defined by the enemy moving outside of the screen.
+ * @see setOutofBounds(bool outOfBounds).
  * @return boolean containing the outOfBounds status of the enemy.
  */
     bool isOutOfBounds();
-/**
- * @brief Sets the outbounds status of the enemy to the outOfBounds parameter.
+/** Sets the outbounds status of the enemy to the outOfBounds parameter.
+ * outOfBounds is defined by the enemy moving outside of the screen.
+ * @see isOutOfBounds().
  * @param outOfBounds boolean containing enemy's out of bounds status.
  */  
     void setOutofBounds(bool outOfBounds);

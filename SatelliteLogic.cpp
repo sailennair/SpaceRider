@@ -1,5 +1,5 @@
 #include "SatelliteLogic.h"
-// 10 degrees  = 0.0175 rads
+
 SatelliteLogic::SatelliteLogic(float x, float y, float theta)
     : _xPos{ x }
     , _yPos{ y }
