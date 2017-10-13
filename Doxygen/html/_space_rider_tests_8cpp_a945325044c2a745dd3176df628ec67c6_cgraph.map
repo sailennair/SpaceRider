@@ -1,5 +1,0 @@
-<map id="TEST_CASE" name="TEST_CASE">
-<area shape="rect" id="node2" href="$class_player_logic.html#aa13b870627a1d38cd1c633ac8012e5af" title="Returns the players health. " alt="" coords="161,5,315,32"/>
-<area shape="rect" id="node3" href="$class_player_logic.html#a765133271ba47a6fa9b2b45136f1fe73" title="Returns true if the player is health is greater than zero. " alt="" coords="171,56,305,83"/>
-<area shape="rect" id="node4" href="$class_player_logic.html#a43c4cfcdfd439ff3ef8015c2170f9381" title="Subtructs a damge amount from the players health. " alt="" coords="151,107,325,133"/>
-</map>

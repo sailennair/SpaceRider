@@ -1,8 +1,0 @@
-<map id="GameWindow::updateAllEnemies" name="GameWindow::updateAllEnemies">
-<area shape="rect" id="node2" href="$class_game_presentation.html#a4ab96a6022c08f34aefa62f9a30c1cd8" title="GamePresentation::update\lEnemyPresentation" alt="" coords="290,5,467,47"/>
-<area shape="rect" id="node3" href="$class_game_presentation.html#ae83bb9e0751f6077f2480a36dec36787" title="GamePresentation::delete\lDeadEnemies" alt="" coords="292,71,465,112"/>
-<area shape="rect" id="node4" href="$class_game_presentation.html#aa6d8e5e91de557ac2c39bb51e032f14f" title="GamePresentation::update\lLaserGeneratorPresentation" alt="" coords="287,136,471,177"/>
-<area shape="rect" id="node5" href="$class_game_presentation.html#aebd299a3aa0c8e7a06d63f5cbc808c7d" title="GamePresentation::delete\lLaserGenerator" alt="" coords="292,201,465,243"/>
-<area shape="rect" id="node6" href="$class_game_presentation.html#a669fe49aef6332f78a23802cafa6681c" title="GamePresentation::update\lAsteroidPresentation" alt="" coords="290,267,467,308"/>
-<area shape="rect" id="node7" href="$class_game_presentation.html#acd19622d7ee0ae8b898f5805ae94f2b4" title="GamePresentation::delete\lOutofScopeAsteroidsPresentation" alt="" coords="269,332,488,373"/>
-</map>

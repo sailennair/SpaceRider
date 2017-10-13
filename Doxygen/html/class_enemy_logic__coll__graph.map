@@ -1,4 +1,0 @@
-<map id="EnemyLogic" name="EnemyLogic">
-<area shape="rect" id="node2" href="$class_i_enemy.html" title="IEnemy" alt="" coords="41,80,108,107"/>
-<area shape="rect" id="node3" href="$class_i_moving_game_object.html" title="IMovingGameObject" alt="" coords="5,5,144,32"/>
-</map>

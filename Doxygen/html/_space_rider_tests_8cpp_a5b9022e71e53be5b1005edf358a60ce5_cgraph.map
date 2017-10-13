@@ -1,7 +1,0 @@
-<map id="TEST_CASE" name="TEST_CASE">
-<area shape="rect" id="node2" href="$class_game_logic.html#a1110f512d8382700d322c6f1895810ea" title="GameLogic::getSatelliteLogic\lVector" alt="" coords="151,5,343,47"/>
-<area shape="rect" id="node3" href="$class_game_logic.html#ab2b56581a56239bb837e6eeea0a2991d" title="GameLogic::createSatellites" alt="" coords="153,71,340,98"/>
-<area shape="rect" id="node4" href="$class_player_logic.html#a9f92defe2d43690329bd6e334fb61e01" title="Returns x co&#45;ordinate of the player&#39;s current position. " alt="" coords="392,21,560,47"/>
-<area shape="rect" id="node5" href="$class_player_logic.html#a7ea2f59ddde028b5451ddbe60453de1c" title="Returns the angle of the player&#39;s current position from the players starting position. " alt="" coords="402,71,550,98"/>
-<area shape="rect" id="node6" href="$class_player_logic.html#a58d683bde5ee078f3b21897f2a5f4677" title="Returns y co&#45;ordinate of the player&#39;s current position. " alt="" coords="391,122,561,149"/>
-</map>

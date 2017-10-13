@@ -1,7 +1,0 @@
-<map id="TEST_CASE" name="TEST_CASE">
-<area shape="rect" id="node2" href="$class_game_logic.html#a7aeb038bd7a0feef3377745ae334011c" title="GameLogic::getPlayerLogic" alt="" coords="155,5,338,32"/>
-<area shape="rect" id="node3" href="$class_player_logic.html#aa13b870627a1d38cd1c633ac8012e5af" title="Returns the players health. " alt="" coords="407,56,561,83"/>
-<area shape="rect" id="node4" href="$class_game_logic.html#a1737f742ce3b179ea3b5f579a97e7d47" title="GameLogic::updatePlayerLife" alt="" coords="151,107,343,133"/>
-<area shape="rect" id="node6" href="$class_game_logic.html#a42fb536e1740b6eeb4f80840250d685f" title="GameLogic::getPlayerLives\lRemaining" alt="" coords="157,158,337,199"/>
-<area shape="rect" id="node5" href="$class_life_logic.html#aedae9924b6ebe33182c3b8b8150b8060" title="LifeLogic::getNumberOfLives\lRemaining" alt="" coords="391,107,577,149"/>
-</map>

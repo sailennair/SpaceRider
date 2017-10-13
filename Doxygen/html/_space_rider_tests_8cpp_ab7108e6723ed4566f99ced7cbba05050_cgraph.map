@@ -1,9 +1,0 @@
-<map id="TEST_CASE" name="TEST_CASE">
-<area shape="rect" id="node2" href="$class_game_logic.html#a05dec53eb3c36cf1a669c973fa0b16ae" title="GameLogic::createPlayerBullet" alt="" coords="152,56,355,83"/>
-<area shape="rect" id="node6" href="$class_game_logic.html#a52d34b124f0bf66dee3a144e4645e60c" title="GameLogic::getPlayerLogic\lBullets" alt="" coords="162,107,345,149"/>
-<area shape="rect" id="node7" href="$class_game_logic.html#a2293e862afa9caa43ac1c21757b9c914" title="GameLogic::playerBulletUpdate" alt="" coords="151,173,356,200"/>
-<area shape="rect" id="node8" href="$class_game_logic.html#aa0800f256ffc094ee5373d372c26c2ea" title="GameLogic::checkBulletScope" alt="" coords="153,224,354,251"/>
-<area shape="rect" id="node3" href="$class_player_logic.html#a9f92defe2d43690329bd6e334fb61e01" title="Returns x co&#45;ordinate of the player&#39;s current position. " alt="" coords="405,5,573,32"/>
-<area shape="rect" id="node4" href="$class_player_logic.html#a58d683bde5ee078f3b21897f2a5f4677" title="Returns y co&#45;ordinate of the player&#39;s current position. " alt="" coords="404,56,575,83"/>
-<area shape="rect" id="node5" href="$class_player_logic.html#a7ea2f59ddde028b5451ddbe60453de1c" title="Returns the angle of the player&#39;s current position from the players starting position. " alt="" coords="415,107,563,133"/>
-</map>

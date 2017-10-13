@@ -1,4 +1,0 @@
-<map id="TEST_CASE" name="TEST_CASE">
-<area shape="rect" id="node2" href="$class_player_bullet.html#ab4e6b1485e9a63ddc00effc7532a9b09" title="PlayerBullet::isAlive" alt="" coords="151,5,289,32"/>
-<area shape="rect" id="node3" href="$class_player_bullet.html#af713549c4bb9a2400a7929564f5b81ff" title="PlayerBullet::setLife" alt="" coords="151,56,289,83"/>
-</map>

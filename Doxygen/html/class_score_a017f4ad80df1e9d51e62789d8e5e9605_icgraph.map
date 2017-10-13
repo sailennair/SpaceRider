@@ -1,4 +1,0 @@
-<map id="Score::increasePoints" name="Score::increasePoints">
-<area shape="rect" id="node2" href="$class_game_logic.html#a34fd5f74aec0365dff0631384740a45b" title="GameLogic::deleteEnemyLogic" alt="" coords="204,5,407,32"/>
-<area shape="rect" id="node3" href="$class_game_logic.html#a3954ee824ac3acc8753f61f97d41ce89" title="GameLogic::deleteSatellite\lLogic" alt="" coords="216,57,395,98"/>
-</map>

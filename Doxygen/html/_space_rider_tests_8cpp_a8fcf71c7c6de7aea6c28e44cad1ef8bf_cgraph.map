@@ -1,8 +1,0 @@
-<map id="TEST_CASE" name="TEST_CASE">
-<area shape="rect" id="node2" href="$class_game_logic.html#ad88d3d16d008722d8a85449beb1ed589" title="GameLogic::createEnemyLogic\lObject" alt="" coords="151,5,355,47"/>
-<area shape="rect" id="node4" href="$class_game_logic.html#a56e4499d60c8784c3bf34ab91a75e273" title="GameLogic::getCurrentScore" alt="" coords="157,71,348,98"/>
-<area shape="rect" id="node6" href="$class_game_logic.html#a34fd5f74aec0365dff0631384740a45b" title="GameLogic::deleteEnemyLogic" alt="" coords="151,122,354,149"/>
-<area shape="rect" id="node3" href="$class_player_logic.html#a7ea2f59ddde028b5451ddbe60453de1c" title="Returns the angle of the player&#39;s current position from the players starting position. " alt="" coords="404,13,552,39"/>
-<area shape="rect" id="node5" href="$class_score.html#a8627c93270c188a3fd28a25b1d07a9e7" title="GETTERS. " alt="" coords="420,71,536,98"/>
-<area shape="rect" id="node7" href="$class_score.html#a017f4ad80df1e9d51e62789d8e5e9605" title="PLAYER SCORE MANAGEMENT. " alt="" coords="403,122,553,149"/>
-</map>

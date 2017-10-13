@@ -1,3 +1,0 @@
-<map id="PlayerBullet::move" name="PlayerBullet::move">
-<area shape="rect" id="node2" href="$class_player_bullet.html#a4ef09e533d8d3016d7e08d9efae238ff" title="Moves the bullet in the direction of the initialized angle. " alt="" coords="184,5,301,32"/>
-</map>

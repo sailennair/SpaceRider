@@ -1,9 +1,0 @@
-<map id="ScorePresentation::setScoreMessage" name="ScorePresentation::setScoreMessage">
-<area shape="rect" id="node2" href="$class_game_presentation.html#ab2cf74842583bf5b63e5973fb8b657be" title="GamePresentation::update\lScorePresentation" alt="" coords="201,5,379,47"/>
-<area shape="rect" id="node7" href="$class_game_presentation.html#a38bab53e3d75b244e14ed2d7c2710fa0" title="GamePresentation::drawScore\lPresentation" alt="" coords="191,71,389,112"/>
-<area shape="rect" id="node3" href="$class_game_window.html#a9ebcf385e9ed9fd52f1d8b2c88f9c091" title="GameWindow::updatePlayer" alt="" coords="449,17,636,43"/>
-<area shape="rect" id="node4" href="$class_game_window.html#a43f64127a3b8836405f80242c1e997f4" title="GameWindow::generateWindow" alt="" coords="696,45,903,71"/>
-<area shape="rect" id="node5" href="$class_game_window.html#aa4188b605313be96d69cf32d3f143987" title="GameWindow::runGame" alt="" coords="951,45,1115,71"/>
-<area shape="rect" id="node6" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="1163,45,1213,71"/>
-<area shape="rect" id="node8" href="$class_game_window.html#ac32c7b2e85e30f5bab516551c6277c3a" title="GameWindow::renderCharacters" alt="" coords="437,71,648,98"/>
-</map>

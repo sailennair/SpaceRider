@@ -1,4 +1,0 @@
-<map id="IMovingGameObject::getCenterXPosition" name="IMovingGameObject::getCenterXPosition">
-<area shape="rect" id="node2" href="$class_collision_detection.html#a8e58e83acc7de60673126754ac2246cd" title="CollisionDetection\l::didObjectsCollide" alt="" coords="200,5,331,47"/>
-<area shape="rect" id="node3" href="$class_game_logic.html#a2ff25304164107a3f4549f108db95a23" title="GameLogic::checkCollision" alt="" coords="379,13,559,39"/>
-</map>

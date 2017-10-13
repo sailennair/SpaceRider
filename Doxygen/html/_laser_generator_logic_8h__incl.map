@@ -1,8 +1,0 @@
-<map id="C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/LaserGeneratorLogic.h" name="C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/LaserGeneratorLogic.h">
-<area shape="rect" id="node2" href="$_game_common_data_8h.html" title="GameCommonData.h" alt="" coords="144,408,291,435"/>
-<area shape="rect" id="node5" href="$_enemy_logic_8h.html" title="EnemyLogic.h" alt="" coords="198,109,303,136"/>
-<area shape="rect" id="node6" href="$_enemy_bullet_logic_8h.html" title="EnemyBulletLogic.h" alt="" coords="397,184,536,211"/>
-<area shape="rect" id="node13" href="$_i_enemy_8h.html" title="IEnemy.h" alt="" coords="195,184,272,211"/>
-<area shape="rect" id="node8" href="$_i_bullet_8h.html" title="IBullet.h" alt="" coords="424,259,493,285"/>
-<area shape="rect" id="node9" href="$_i_moving_game_object_8h.html" title="IMovingGameObject.h" alt="" coords="341,333,491,360"/>
-</map>

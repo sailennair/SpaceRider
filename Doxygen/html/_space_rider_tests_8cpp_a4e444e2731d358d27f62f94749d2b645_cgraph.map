@@ -1,4 +1,0 @@
-<map id="TEST_CASE" name="TEST_CASE">
-<area shape="rect" id="node2" href="$class_enemy_bullet_logic.html#a08dd084364fc7efc689a7f98e1cee688" title="EnemyBulletLogic::getDamage" alt="" coords="151,5,352,32"/>
-<area shape="rect" id="node3" href="$class_enemy_bullet_logic.html#a3e4ce40e06e9fa23826bd74015fd75f2" title="EnemyBulletLogic::setDamage" alt="" coords="151,56,352,83"/>
-</map>

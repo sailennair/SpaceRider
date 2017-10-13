@@ -1,6 +1,0 @@
-<map id="GamePresentation::checkPlayerPresentationLifeDead" name="GamePresentation::checkPlayerPresentationLifeDead">
-<area shape="rect" id="node2" href="$class_game_window.html#a9ebcf385e9ed9fd52f1d8b2c88f9c091" title="GameWindow::updatePlayer" alt="" coords="264,13,451,39"/>
-<area shape="rect" id="node3" href="$class_game_window.html#a43f64127a3b8836405f80242c1e997f4" title="GameWindow::generateWindow" alt="" coords="499,13,705,39"/>
-<area shape="rect" id="node4" href="$class_game_window.html#aa4188b605313be96d69cf32d3f143987" title="GameWindow::runGame" alt="" coords="753,13,917,39"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="965,13,1016,39"/>
-</map>

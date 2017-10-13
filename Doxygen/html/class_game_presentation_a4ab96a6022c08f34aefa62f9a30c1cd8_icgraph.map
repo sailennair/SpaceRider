@@ -1,6 +1,0 @@
-<map id="GamePresentation::updateEnemyPresentation" name="GamePresentation::updateEnemyPresentation">
-<area shape="rect" id="node2" href="$class_game_window.html#a62ed57d80a4eb7945777f5d383747bdf" title="GameWindow::updateAllEnemies" alt="" coords="231,13,447,39"/>
-<area shape="rect" id="node3" href="$class_game_window.html#a43f64127a3b8836405f80242c1e997f4" title="GameWindow::generateWindow" alt="" coords="495,13,701,39"/>
-<area shape="rect" id="node4" href="$class_game_window.html#aa4188b605313be96d69cf32d3f143987" title="GameWindow::runGame" alt="" coords="749,13,913,39"/>
-<area shape="rect" id="node5" href="$main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="961,13,1012,39"/>
-</map>

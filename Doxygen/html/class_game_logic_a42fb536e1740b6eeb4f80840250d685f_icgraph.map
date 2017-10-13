@@ -1,4 +1,0 @@
-<map id="GameLogic::getPlayerLivesRemaining" name="GameLogic::getPlayerLivesRemaining">
-<area shape="rect" id="node2" href="$class_game_logic.html#a612e0df42ffe7ab590ce5a87c94aa6c9" title="GameLogic::checkPlayerLifeDead" alt="" coords="233,5,452,32"/>
-<area shape="rect" id="node3" href="$class_game_logic.html#a743d03f2c6dab3786addba9b2bc1e5dc" title="GameLogic::isPlayerDead" alt="" coords="256,56,429,83"/>
-</map>

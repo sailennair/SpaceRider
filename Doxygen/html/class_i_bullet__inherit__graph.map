@@ -1,5 +1,0 @@
-<map id="IBullet" name="IBullet">
-<area shape="rect" id="node3" href="$class_enemy_bullet_logic.html" title="EnemyBulletLogic" alt="" coords="5,155,132,181"/>
-<area shape="rect" id="node4" href="$class_player_bullet.html" title="Player bullet Class &#45; contols the logic of the bullet of the player. " alt="" coords="156,155,248,181"/>
-<area shape="rect" id="node2" href="$class_i_moving_game_object.html" title="IMovingGameObject" alt="" coords="66,5,205,32"/>
-</map>

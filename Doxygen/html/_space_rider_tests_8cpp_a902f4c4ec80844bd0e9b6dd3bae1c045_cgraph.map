@@ -1,6 +1,0 @@
-<map id="TEST_CASE" name="TEST_CASE">
-<area shape="rect" id="node2" href="$class_enemy_presentation.html#ad7d1f196be857ea51b2ced17b5199b40" title="EnemyPresentation::\lupdateEnemyBullet" alt="" coords="172,5,316,47"/>
-<area shape="rect" id="node3" href="$class_enemy_presentation.html#a64c5863ad2f83c1414cf69882293e4b9" title="EnemyPresentation::\lgetEnemyBulletPresentation\lVector" alt="" coords="151,71,337,127"/>
-<area shape="rect" id="node4" href="$_space_rider_tests_8cpp.html#afd4ff5e3b4755480224e709a8d99f3e8" title="TEST_CASE" alt="" coords="195,151,293,178"/>
-<area shape="rect" id="node5" href="$class_player_logic.html#a9f92defe2d43690329bd6e334fb61e01" title="Returns x co&#45;ordinate of the player&#39;s current position. " alt="" coords="385,151,553,178"/>
-</map>

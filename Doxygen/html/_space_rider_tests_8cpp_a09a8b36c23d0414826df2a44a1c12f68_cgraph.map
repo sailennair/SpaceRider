@@ -1,5 +1,0 @@
-<map id="TEST_CASE" name="TEST_CASE">
-<area shape="rect" id="node2" href="$class_game_logic.html#a084386ea39d66e3963ba248f7affabe0" title="GameLogic::getAsteroidLogic\lVector" alt="" coords="151,5,344,47"/>
-<area shape="rect" id="node3" href="$class_game_logic.html#ad9b8589c1559ac09ae5674c5c87be600" title="GameLogic::createAsteroid" alt="" coords="157,71,337,98"/>
-<area shape="rect" id="node4" href="$class_player_logic.html#a7ea2f59ddde028b5451ddbe60453de1c" title="Returns the angle of the player&#39;s current position from the players starting position. " alt="" coords="392,71,540,98"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="PlayerBullet::fire" name="PlayerBullet::fire">
-<area shape="rect" id="node2" href="$class_player_bullet.html#a8469319697d70e04399d8aaac3902c80" title="Moves the bullet in the direction defined by the angle of direction. " alt="" coords="171,31,301,57"/>
-<area shape="rect" id="node3" href="$class_player_bullet.html#aa9462c44892190316ee479a18693b6ad" title="Returns the x co&#45;ordinate of the bullets current position. " alt="" coords="350,5,521,32"/>
-<area shape="rect" id="node4" href="$class_player_bullet.html#a240cab35d5d909366986b8661ee65d3c" title="Returns the y co&#45;ordinate of the bullets current position. " alt="" coords="349,56,521,83"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="PlayerLogic::getYposition" name="PlayerLogic::getYposition">
-<area shape="rect" id="node2" href="$class_game_logic.html#a05dec53eb3c36cf1a669c973fa0b16ae" title="GameLogic::createPlayerBullet" alt="" coords="224,5,427,32"/>
-<area shape="rect" id="node3" href="$class_game_logic.html#ab2b56581a56239bb837e6eeea0a2991d" title="GameLogic::createSatellites" alt="" coords="232,56,419,83"/>
-</map>

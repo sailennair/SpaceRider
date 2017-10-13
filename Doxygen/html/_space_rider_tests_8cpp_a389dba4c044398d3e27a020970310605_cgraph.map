@@ -1,5 +1,0 @@
-<map id="TEST_CASE" name="TEST_CASE">
-<area shape="rect" id="node2" href="$class_enemy_bullet_logic.html#afe73016d27c33171a20c15e11026106e" title="EnemyBulletLogic::getXposition" alt="" coords="151,5,357,32"/>
-<area shape="rect" id="node3" href="$class_enemy_bullet_logic.html#a0cfb3013a7613f7f6de91a6db04d03b1" title="EnemyBulletLogic::getYposition" alt="" coords="151,56,357,83"/>
-<area shape="rect" id="node4" href="$class_enemy_bullet_logic.html#aaa5273b969347ce8c6e62261ccc3df3a" title="EnemyBulletLogic::move" alt="" coords="171,107,337,133"/>
-</map>

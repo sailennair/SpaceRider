@@ -1,4 +1,0 @@
-<map id="IPlayer" name="IPlayer">
-<area shape="rect" id="node3" href="$class_player_logic.html" title="Player Logic Class &#45; controls the movement and life of a player. " alt="" coords="29,155,120,181"/>
-<area shape="rect" id="node2" href="$class_i_moving_game_object.html" title="IMovingGameObject" alt="" coords="5,5,144,32"/>
-</map>

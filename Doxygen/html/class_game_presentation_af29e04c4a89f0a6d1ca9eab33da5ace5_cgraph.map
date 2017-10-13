@@ -1,4 +1,0 @@
-<map id="GamePresentation::drawAllEnemies" name="GamePresentation::drawAllEnemies">
-<area shape="rect" id="node2" href="$class_game_presentation.html#ae83bb9e0751f6077f2480a36dec36787" title="GamePresentation::delete\lDeadEnemies" alt="" coords="233,5,407,47"/>
-<area shape="rect" id="node3" href="$class_game_presentation.html#acc8d59152c26b9dddc84081c5a4483f2" title="GamePresentation::delete\lDeadEnemyBullets" alt="" coords="233,71,407,112"/>
-</map>

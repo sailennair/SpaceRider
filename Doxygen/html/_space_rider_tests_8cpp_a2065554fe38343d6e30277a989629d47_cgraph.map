@@ -1,5 +1,0 @@
-<map id="TEST_CASE" name="TEST_CASE">
-<area shape="rect" id="node2" href="$class_game_logic.html#a612e0df42ffe7ab590ce5a87c94aa6c9" title="GameLogic::checkPlayerLifeDead" alt="" coords="151,42,369,69"/>
-<area shape="rect" id="node3" href="$class_game_logic.html#a42fb536e1740b6eeb4f80840250d685f" title="GameLogic::getPlayerLives\lRemaining" alt="" coords="417,5,597,47"/>
-<area shape="rect" id="node4" href="$class_player_logic.html#aaaf0e8356e5af9753015960be7727724" title="Resets the player to its starting positon. " alt="" coords="420,71,595,98"/>
-</map>

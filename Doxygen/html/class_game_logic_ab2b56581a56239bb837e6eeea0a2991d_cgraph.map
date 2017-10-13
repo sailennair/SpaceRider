@@ -1,5 +1,0 @@
-<map id="GameLogic::createSatellites" name="GameLogic::createSatellites">
-<area shape="rect" id="node2" href="$class_player_logic.html#a9f92defe2d43690329bd6e334fb61e01" title="Returns x co&#45;ordinate of the player&#39;s current position. " alt="" coords="241,5,409,32"/>
-<area shape="rect" id="node3" href="$class_player_logic.html#a7ea2f59ddde028b5451ddbe60453de1c" title="Returns the angle of the player&#39;s current position from the players starting position. " alt="" coords="251,56,399,83"/>
-<area shape="rect" id="node4" href="$class_player_logic.html#a58d683bde5ee078f3b21897f2a5f4677" title="Returns y co&#45;ordinate of the player&#39;s current position. " alt="" coords="240,107,411,133"/>
-</map>

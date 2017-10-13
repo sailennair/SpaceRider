@@ -1,5 +1,0 @@
-<map id="TEST_CASE" name="TEST_CASE">
-<area shape="rect" id="node2" href="$class_asteroid_logic.html#a1d79a614c5e1a9409404f6a2def25761" title="AsteroidLogic::getXposition" alt="" coords="152,5,331,32"/>
-<area shape="rect" id="node3" href="$class_asteroid_logic.html#a83863c5262a29b2999d04ad443622bbc" title="AsteroidLogic::getYposition" alt="" coords="151,56,332,83"/>
-<area shape="rect" id="node4" href="$class_asteroid_logic.html#af20b202c4f5857279192733a0b2fdbd3" title="AsteroidLogic::move" alt="" coords="172,107,311,133"/>
-</map>

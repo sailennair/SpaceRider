@@ -1,4 +1,0 @@
-<map id="TEST_CASE" name="TEST_CASE">
-<area shape="rect" id="node2" href="$class_enemy_logic.html#a8dd48fa112c41249e46728d7ec8f820e" title="EnemyLogic::isAlive" alt="" coords="171,5,309,32"/>
-<area shape="rect" id="node3" href="$class_enemy_logic.html#aaf2f8ff785c8f7410e04cfb3cb192b9b" title="EnemyLogic::reduceHealth" alt="" coords="151,56,329,83"/>
-</map>

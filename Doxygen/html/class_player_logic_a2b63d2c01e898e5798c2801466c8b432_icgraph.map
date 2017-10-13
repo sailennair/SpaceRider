@@ -1,3 +1,0 @@
-<map id="PlayerLogic::playerMove" name="PlayerLogic::playerMove">
-<area shape="rect" id="node2" href="$class_game_logic.html#a3bb909e55fc7c811aa0e3e6a92b881bb" title="Update the Position of the player. Move the players logic either left or right depending on the param..." alt="" coords="216,5,388,32"/>
-</map>
