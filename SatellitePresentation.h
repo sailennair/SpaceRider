@@ -19,6 +19,8 @@ public:
     SatellitePresentation();
 /** Draws the satellite sprite.
  * @param window to draw the satellite on.
+ * @param x float containing the x co-ordinate to draw satellite.
+ * @param y float containing the y co-ordinate to draw satellite.
  */
     void draw(sf::RenderWindow& window, float x, float y);
 /** Returns the satellite sprite.

@@ -9,11 +9,11 @@ AsteroidPresentation::AsteroidPresentation()
     _asteroidTexture.setSmooth(true);
     _asteroidSprite.setTexture(_asteroidTexture);
     _asteroidSprite.setTextureRect(sf::IntRect(0, 72, 72, 72));
-    _asteroidSprite.setScale(Vector2f(0.75, 0.75));
+    _asteroidSprite.setScale(sf::Vector2f(0.75, 0.75));
     _asteroidSprite.setPosition(CenterXGameWindow, CenterYGameWindow);
 }
 
-void AsteroidPresentation::draw(RenderWindow& window)
+void AsteroidPresentation::draw(sf::RenderWindow& window)
 {
 
     if(_spriteSheetcount >= 5) {
@@ -30,7 +30,7 @@ void AsteroidPresentation::updateAsteroid(float xPosition, float yPosition)
     _asteroidSprite.setPosition(xPosition, yPosition);
 }
 
-Sprite AsteroidPresentation::getAsteroidSprite()
+sf::Sprite AsteroidPresentation::getAsteroidSprite()
 {
     return _asteroidSprite;
 }
