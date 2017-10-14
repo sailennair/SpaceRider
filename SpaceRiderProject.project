@@ -69,6 +69,8 @@
     <File Name="FinalWindow.h"/>
     <File Name="FinalWindow.cpp"/>
     <File Name="SpaceRiderTests.cpp" ExcludeProjConfig="Debug"/>
+    <File Name="ExplosionPresentation.h"/>
+    <File Name="ExplosionPresentation.cpp"/>
   </VirtualDirectory>
   <Settings Type="Executable">
     <GlobalSettings>
