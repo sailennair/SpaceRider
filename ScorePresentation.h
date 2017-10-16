@@ -3,7 +3,6 @@
 #include <string>
 #include <iostream>
 #include <SFML/Graphics.hpp>
-#include "ScoreDatabase.h"
 
 class ScorePresentation{
 public:
