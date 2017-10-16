@@ -46,6 +46,7 @@ void IntroductionWindow::settingUpText()
 
 void IntroductionWindow::run()
 {
+    ExplosionPresentation explosion(CenterXGameWindow, CenterYGameWindow);
     createWindow();
     settingUpText();
    
@@ -68,6 +69,7 @@ void IntroductionWindow::run()
         _window.draw(_instructionText);
         _window.draw(_gameRulesText);
         _window.draw(_continuePrompt);
+        explosion.draw(_window);
         _window.display();
     }
 }

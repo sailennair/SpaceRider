@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "GameCommonData.h"
+#include "ExplosionPresentation.h"
 
 using namespace sf;
 

@@ -268,7 +268,7 @@ public:
      * @return the highest score ever to be achieved in the game.
      */
     int getHighScore();
-    
+
     /**The current score of the player is returned.
      * @return the current score of the player.
      */

@@ -29,7 +29,7 @@ Debug/IntroductionWindow.cpp.o: IntroductionWindow.cpp \
  SFML/Graphics/RenderTarget.hpp SFML/Graphics/View.hpp \
  SFML/Graphics/RenderTexture.hpp SFML/Graphics/RenderWindow.hpp \
  SFML/Graphics/Shader.hpp SFML/Graphics/Sprite.hpp SFML/Graphics/Text.hpp \
- GameCommonData.h
+ GameCommonData.h ExplosionPresentation.h SFML/Graphics.hpp
 
 IntroductionWindow.h:
 
@@ -172,3 +172,7 @@ SFML/Graphics/Sprite.hpp:
 SFML/Graphics/Text.hpp:
 
 GameCommonData.h:
+
+ExplosionPresentation.h:
+
+SFML/Graphics.hpp:

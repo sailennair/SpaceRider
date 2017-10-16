@@ -8,7 +8,7 @@ class IBullet : public IMovingGameObject
 public:
     virtual void move() = 0;
 
-    virtual void setDamage(int damage) = 0;
+  //  virtual void setDamage(int damage) = 0;
 
     virtual int getDamage() = 0;
 

@@ -24,6 +24,8 @@ public:
     void closeWindow();
 
 private:
+
+
     // This function just loads the text and all the graphics. The purpose is to divide the resposibility and neaten up
     // code
     void setUpWindow();

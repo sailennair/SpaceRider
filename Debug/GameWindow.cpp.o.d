@@ -35,7 +35,8 @@ Debug/GameWindow.cpp.o: GameWindow.cpp GameWindow.h GamePresentation.h \
  ScoreDatabase.h PlayerBulletPresentation.h EnemyPresentation.h \
  EnemyBulletPresentation.h SatellitePresentation.h LifePresentation.h \
  LaserGeneratorPresentation.h AsteroidPresentation.h ScorePresentation.h \
- IntroductionWindow.h FinalWindow.h
+ ExplosionPresentation.h SFML/Graphics.hpp IntroductionWindow.h \
+ FinalWindow.h
 
 GameWindow.h:
 
@@ -230,6 +231,10 @@ LaserGeneratorPresentation.h:
 AsteroidPresentation.h:
 
 ScorePresentation.h:
+
+ExplosionPresentation.h:
+
+SFML/Graphics.hpp:
 
 IntroductionWindow.h:
 

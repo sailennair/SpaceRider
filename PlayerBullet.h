@@ -29,7 +29,7 @@ public:
  * @brief Sets the damage that the bullet makes to an Enemy's health
  * @param damage integer containing the damage amount
  */
-    void setDamage(int damage);
+//   void setDamage(int damage);
 /**
  * @brief Gets the damage amount that the bullet makes to an enemy. 
  * @return integer containing the damage amount

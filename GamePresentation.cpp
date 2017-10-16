@@ -5,6 +5,8 @@ GamePresentation::GamePresentation()
 
     gameLogic_shared_pointer = make_shared<GameLogic>();
     ScorePresentation scorePresentation(gameLogic_shared_pointer->getHighScore());
+    
+    
 }
 
 void GamePresentation::updateScorePresentation()
@@ -34,7 +36,7 @@ void GamePresentation::checkPlayerPresentationLifeDead()
     }
 }
 
-void GamePresentation::renderSprite(RenderWindow& window)
+void GamePresentation::renderPlayerSprite(RenderWindow& window)
 {
 
     _playerPresentation.draw(window);
@@ -110,7 +112,7 @@ void GamePresentation::updateEnemyPresentation()
 
     // This loop updates the enemies sprite position by checking the updated logics position
     if(enemyPresentationVector.size() > 0 && gameLogic_shared_pointer->getEnemyLogicVector().size() > 0) {
-        for(unsigned int iter = 0; iter <unsigned(enemyPresentationVector.size()); iter++) {
+        for(unsigned int iter = 0; iter < unsigned(enemyPresentationVector.size()); iter++) {
 
             enemyPresentationVector[iter].updateEnemy(
                 gameLogic_shared_pointer->getEnemyLogicVector()[iter].getXposition(),
@@ -138,14 +140,16 @@ void GamePresentation::updateEnemyPresentation()
 void GamePresentation::drawAllEnemies(RenderWindow& window)
 {
     // drawing all the enemies
-    gameLogic_shared_pointer->checkCollision();
     deleteDeadEnemies();
+    
     deleteDeadEnemyBullets();
     if(enemyPresentationVector.size() > 0) {
         for(auto& iter : enemyPresentationVector) {
             iter.draw(window);
         }
     }
+    
+   
 }
 
 vector<EnemyPresentation> GamePresentation::getEnemyPresentationVector()
@@ -163,6 +167,7 @@ void GamePresentation::deleteDeadEnemies()
                 enemyPresentationVector.erase(enemyPresentationVector.begin() + iter);
                 gameLogic_shared_pointer->deleteEnemyLogic(iter);
                 _enemiesKilled++;
+               
             }
         }
     }
@@ -217,6 +222,8 @@ void GamePresentation::drawSatellites(RenderWindow& window)
                 gameLogic_shared_pointer->getSatelliteLogicVector()[index].getYposition());
         }
     }
+    
+   
 }
 
 vector<SatellitePresentation> GamePresentation::getSatellitePresentationVector()
@@ -249,7 +256,8 @@ void GamePresentation::updateLaserGeneratorPresentation()
 {
     if(_laserGeneratorPresentation.size() > 0) {
         if(_laserGeneratorPresentation[0].getLaserGeneratorPresentationVector().size() > 0) {
-            for(unsigned int i = 0; i < unsigned(_laserGeneratorPresentation[0].getLaserGeneratorPresentationVector().size()); i++) {
+            for(unsigned int i = 0;
+                i < unsigned(_laserGeneratorPresentation[0].getLaserGeneratorPresentationVector().size()); i++) {
                 _laserGeneratorPresentation[0].updateLaserGeneratorEnemy(i,
                     gameLogic_shared_pointer->getlaserGeneratorLogic()[0]
                         .getLaserGeneratorEnemyLogicVector()[i]
@@ -258,7 +266,8 @@ void GamePresentation::updateLaserGeneratorPresentation()
                         .getLaserGeneratorEnemyLogicVector()[i]
                         .getYposition());
 
-                for(unsigned int i = 0; i < unsigned(_laserGeneratorPresentation[0].getLaserBulletPresentationVector().size()); i++) {
+                for(unsigned int i = 0;
+                    i < unsigned(_laserGeneratorPresentation[0].getLaserBulletPresentationVector().size()); i++) {
                     _laserGeneratorPresentation[0].updateLaserBulletPresentation(i,
                         gameLogic_shared_pointer->getlaserGeneratorLogic()[0]
                             .getLaserGeneratorBulletLogicVector()[i]

@@ -22,8 +22,6 @@ public:
     AsteroidPresentation();
 /** Draws the asteroid sprite.
  * @param window to draw the asteroid on.
- * @param x float containing the x co-ordinate to draw asteroid.
- * @param y float containing the y co-ordinate to draw asteroid.
  */
     void draw(sf::RenderWindow& window);
 /** Updates the asteroid sprite position as the asteroid moves.
@@ -41,5 +39,7 @@ private:
     sf::Sprite _asteroidSprite;
     sf::Texture _asteroidTexture;
 };
+
+
 
 #endif // ASTEROIDPRESENTATION_H

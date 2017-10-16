@@ -45,10 +45,10 @@ float PlayerBullet::getYposition()
     return _playerBulletYposition;
 }
 
-void PlayerBullet::setDamage(int damage)
-{
-    _damage = damage;
-}
+//void PlayerBullet::setDamage(int damage)
+//{
+//    _damage = damage;
+//}
 
 int PlayerBullet::getDamage()
 {

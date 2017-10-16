@@ -8,26 +8,28 @@ GameWindow::GameWindow()
 
 void GameWindow::runGame()
 {
-    //while(finalWindow.isPlayerQuittingGame() == false){
+    // while(finalWindow.isPlayerQuittingGame() == false){
+
         
     introductionWindow.run();
-    
+
     introductionWindow.closeWindow();
-    
+
     generateWindow();
-    
+
     _window.close();
-    
+
     finalWindow.run();
-    
+
     finalWindow.closeWindow();
-  //  }
-    
+    //  }
 }
 
 void GameWindow::generateWindow()
 
 {
+
+    ExplosionPresentation explosion(CenterXGameWindow, CenterYGameWindow);
 
     sf::RenderWindow _window(sf::VideoMode(GameXWindow, GameYWindow), "My Window");
 
@@ -95,31 +97,33 @@ void GameWindow::generateWindow()
             isFiring = false;
         }
 
+        _gamePresentation.gameLogic_shared_pointer->checkCollision();
         updatePlayer();
         updateAllEnemies();
 
         _window.clear(sf::Color::Black);
+        explosion.draw(_window);
         renderCharacters(_window);
+
         _window.display();
 
         timer++;
-        
-        if(_gamePresentation.getEnemiesKilled() == 5 || _gamePresentation.gameLogic_shared_pointer->isPlayerDead() == true){
-        break;
-            }
+
+        if(_gamePresentation.getEnemiesKilled() == 5 ||
+            _gamePresentation.gameLogic_shared_pointer->isPlayerDead() == true) {
+            break;
+        }
     }
-    
-    if(_gamePresentation.getEnemiesKilled() == 5){
+
+    if(_gamePresentation.getEnemiesKilled() == 5) {
         finalWindow.setPLayerLostGame(false);
-       
-    }else{
+
+    } else {
         finalWindow.setPLayerLostGame(true);
     }
-    
+
     _gamePresentation.gameLogic_shared_pointer->saveScoretoFile();
     std::cout << _gamePresentation.getEnemyPresentationVector().size() << std::endl;
-    
-   
 }
 
 void GameWindow::renderCharacters(RenderWindow& window)
@@ -127,7 +131,7 @@ void GameWindow::renderCharacters(RenderWindow& window)
 
     _gamePresentation.drawAllBullets(window);
     _gamePresentation.drawAllEnemies(window);
-    _gamePresentation.renderSprite(window);
+    _gamePresentation.renderPlayerSprite(window);
     _gamePresentation.drawSatellites(window);
     _gamePresentation.drawSatelliteBullets(window);
     _gamePresentation.drawLaserGenerator(window);
