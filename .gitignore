@@ -4,3 +4,7 @@ cmake-build-debug/
 \.idea/
 
 Doxygen/
+
+Debug/
+
+SpaceRiderProject\.mk
