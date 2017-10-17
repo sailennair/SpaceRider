@@ -17,6 +17,13 @@ void FinalWindow::setUpWindow()
     _window.create(sf::VideoMode(_width, _height), "Space Rider");
     _window.setMouseCursorVisible(false);
     _window.setVerticalSyncEnabled(true);
+    if(!_logoTexture.loadFromFile("SpaceRider.PNG")) {
+        std::cerr << "Error Loading logo Texture";
+    }
+    _logoTexture.setSmooth(true);
+    _logo.setTexture(_logoTexture);
+    _logo.setScale(sf::Vector2f(0.5, 0.5));
+    _logo.setPosition(CenterXGameWindow - 150, 10);
 }
 
 // Loads Font
@@ -31,7 +38,7 @@ void FinalWindow::loadText()
     _playerLostOrWonMessage.setFont(_font);
     int xPos = ((_width / 2) - 5 * (_prompUserToContinue.getCharacterSize()));
     _playerLostOrWonMessage.setCharacterSize(20);
-    _playerLostOrWonMessage.setPosition(xPos, 0);
+    _playerLostOrWonMessage.setPosition(CenterXGameWindow - 130 , CenterYGameWindow);
 
     _continueOrQuitMessage.setFont(_font);
 
@@ -55,7 +62,8 @@ void FinalWindow::run()
             if(didPlayerLoseGame()) {
                 _playerLostOrWonMessage.setString("Sorry, You have Lost the Game");
             } else {
-                _playerLostOrWonMessage.setString("CONGRATULATIONS, You have WON the Game!!");
+                _playerLostOrWonMessage.setString("   You have WON the Game!!   ");
+
             }
 
             if(event.type == sf::Event::KeyPressed) { // Need to check this because mouse was been picked up as input
@@ -73,6 +81,7 @@ void FinalWindow::run()
         _window.draw(_prompUserToContinue);
         _window.draw(_playerLostOrWonMessage);
         _window.draw(_continueOrQuitMessage);
+        _window.draw(_logo);
         _window.display();
     }
 }
@@ -81,12 +90,14 @@ void FinalWindow::hadleUserDecision(const sf::Event& event)
 {
     if(event.key.code == sf::Keyboard::Space) {
         _continueOrQuitMessage.setFont(_font);
-        _continueOrQuitMessage.setString("Good Luck Player!!");
+        _continueOrQuitMessage.setString("    Good Luck Player!!    "); // The spaces are import to get the correct screen postion
         _continueOrQuitMessage.setCharacterSize(30);
-        _continueOrQuitMessage.setPosition((_width / 2 - 3 * _continueOrQuitMessage.getCharacterSize()), _height / 2);
+        _continueOrQuitMessage.setPosition( CenterXGameWindow - 135 , CenterYGameWindow);
+        
 
         _window.clear(sf::Color::Black);
         _window.draw(_continueOrQuitMessage);
+        _window.draw(_logo);
         _window.display();
 
         sf::sleep(sf::milliseconds(1500));
@@ -96,12 +107,13 @@ void FinalWindow::hadleUserDecision(const sf::Event& event)
 
     if(event.key.code == sf::Keyboard::Escape) {
         _continueOrQuitMessage.setFont(_font);
-        _continueOrQuitMessage.setString("Good Bye See You Soon");
+        _continueOrQuitMessage.setString("   Good Bye See You Soon  ");
         _continueOrQuitMessage.setCharacterSize(24);
-        _continueOrQuitMessage.setPosition((_width / 2 - 4 * _continueOrQuitMessage.getCharacterSize()), _height / 2);
+        _continueOrQuitMessage.setPosition(CenterXGameWindow - 135 , CenterYGameWindow);
 
         _window.clear(sf::Color::Black);
         _window.draw(_continueOrQuitMessage);
+        _window.draw(_logo);
         _window.display();
 
         sf::sleep(sf::milliseconds(1500));

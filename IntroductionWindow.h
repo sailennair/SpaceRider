@@ -46,7 +46,10 @@ private:
     sf::Text _continueOrQuitText;
     sf::Text _continuePrompt;
     sf::Text _gameRulesText;
-    //    Vector2i _windowSize;
+    
+    sf::Sprite _logo;
+    sf::Texture _logoTexture;
+    
     sf::RenderWindow _window;
 };
 

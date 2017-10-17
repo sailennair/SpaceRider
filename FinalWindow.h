@@ -67,7 +67,9 @@ private:
 
     // Font used for the text in these window
     sf:: Font _font;
-
+    
+    sf::Sprite _logo;
+    sf::Texture _logoTexture;
     // The sfml-window
     sf::RenderWindow _window;
 
