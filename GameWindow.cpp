@@ -4,6 +4,7 @@ GameWindow::GameWindow()
 {
 
     GamePresentation _gamePresentation();
+
 }
 
 void GameWindow::runGame()
@@ -103,8 +104,9 @@ void GameWindow::generateWindow()
 
         _window.clear(sf::Color::Black);
         explosion.draw(_window);
-        renderCharacters(_window);
 
+        renderCharacters(_window);
+//        _window.draw(_logo);
         _window.display();
 
         timer++;
@@ -179,3 +181,13 @@ void GameWindow::updateAllEnemies()
     _gamePresentation.updateAsteroidPresentation();
     _gamePresentation.deleteOutofScopeAsteroidsPresentation();
 }
+
+//void GameWindow::createLogo(){
+//    if(!_logoTexture.loadFromFile("SpaceRider.PNG")) {
+//        std::cerr << "Error Loading logo Texture";
+//    }
+//    _logoTexture.setSmooth(true);
+//    _logo.setTexture(_logoTexture);
+//    _logo.setScale(sf::Vector2f(0.25, 0.25));
+//    _logo.setPosition(100, 100);
+//}

@@ -83,6 +83,10 @@ private:
     IntroductionWindow introductionWindow;
 
     FinalWindow finalWindow;
+    
+//    void createLogo();
+//    sf::Sprite _logo;
+//    sf::Texture _logoTexture;
 };
 
 #endif // GAMEWINDOW_H
