@@ -128,7 +128,7 @@ void GameWindow::generateWindow()
     _gamePresentation.gameLogic_shared_pointer->saveScoretoFile();
 }
 
-void GameWindow::renderCharacters(RenderWindow& window)
+void GameWindow::renderCharacters(sf::RenderWindow& window)
 {
 
     _gamePresentation.drawAllBullets(window);

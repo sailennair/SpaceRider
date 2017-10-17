@@ -17,7 +17,6 @@ using std::make_unique;
 using std::shared_ptr;
 using std::make_shared;
 
-using namespace sf;
 
 //! Game Window class - creates a game window and runs the game in sequence.
 /*! This class runs the game in sequence and renders all the game objects onto the screen.
@@ -53,7 +52,7 @@ public:
      * This fucntion will call all the draw functions in the presentaion domain to draw the characters onto the screen.
      * @param window
      */
-    void renderCharacters(RenderWindow& window);
+    void renderCharacters(sf::RenderWindow& window);
 
     /**Method will tell the logic domain to create a bullet.
      * This method is called when the player presses space bar.
@@ -77,7 +76,7 @@ public:
 private:
     GamePresentation _gamePresentation;
 
-    RenderWindow _window;
+    sf::RenderWindow _window;
 
     Direction _direction;
 

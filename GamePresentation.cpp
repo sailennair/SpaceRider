@@ -331,7 +331,7 @@ void GamePresentation::updateAsteroidPresentation()
     }
 }
 
-void GamePresentation::drawAsteroid(RenderWindow& window)
+void GamePresentation::drawAsteroid(sf::RenderWindow& window)
 {
     if(asteroidPresentationVector.size() > 0) {
         for(auto& iter : asteroidPresentationVector) {

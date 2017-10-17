@@ -88,10 +88,10 @@
     </GlobalSettings>
     <Configuration Name="Debug" CompilerType="MinGW ( TDM-GCC-32 )" DebuggerType="GNU gdb debugger" Type="Executable" BuildCmpWithGlobalSettings="append" BuildLnkWithGlobalSettings="append" BuildResWithGlobalSettings="append">
       <Compiler Options="-g;-O0;-Wall" C_Options="-g;-O0;-Wall" Assembler="" Required="yes" PreCompiledHeader="" PCHInCommandLine="no" PCHFlags="" PCHFlagsPolicy="0">
-        <IncludePath Value="C:\Users\User\Documents\SoftwareLab4\Lab_4\include"/>
+        <IncludePath Value="&quot;C:\Users\William\Documents\ELEN3009\SpaceRiderProject\include&quot;"/>
       </Compiler>
       <Linker Options="" Required="yes">
-        <LibraryPath Value="C:\Users\User\Documents\SoftwareLab4\Lab_4\lib"/>
+        <LibraryPath Value="&quot;C:\Users\William\Documents\ELEN3009\SpaceRiderProject\lib&quot;"/>
         <Library Value="sfml-audio"/>
         <Library Value="sfml-graphics"/>
         <Library Value="sfml-window"/>

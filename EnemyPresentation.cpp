@@ -7,7 +7,7 @@ EnemyPresentation::EnemyPresentation()
     }
     enemySpriteTexture.setSmooth(true);
     _enemySprite.setTexture(enemySpriteTexture);
-    _enemySprite.setScale(Vector2f(0.1, 0.1));
+    _enemySprite.setScale(sf::Vector2f(0.1, 0.1));
     _enemySprite.setPosition(CenterXGameWindow, CenterYGameWindow);
 
     EnemyBulletPresentation enemyBulletPresentation(CenterXGameWindow, CenterYGameWindow);
@@ -22,7 +22,7 @@ EnemyPresentation::EnemyPresentation(int type)
         }
         enemySpriteTexture.setSmooth(true);
         _enemySprite.setTexture(enemySpriteTexture);
-        _enemySprite.setScale(Vector2f(0.6, 0.6));
+        _enemySprite.setScale(sf::Vector2f(0.6, 0.6));
         _enemySprite.setPosition(CenterXGameWindow, CenterYGameWindow);
 
         EnemyBulletPresentation enemyBulletPresentation(CenterXGameWindow, CenterYGameWindow);
@@ -30,7 +30,7 @@ EnemyPresentation::EnemyPresentation(int type)
     }
 }
 
-void EnemyPresentation::draw(RenderWindow& window)
+void EnemyPresentation::draw(sf::RenderWindow& window)
 {
 
     if(_enemyBulletPresentationVector.size() > 0) {
@@ -39,7 +39,7 @@ void EnemyPresentation::draw(RenderWindow& window)
     window.draw(_enemySprite);
 }
 
-Sprite EnemyPresentation::getEnemySprite()
+sf::Sprite EnemyPresentation::getEnemySprite()
 {
     return _enemySprite;
 }

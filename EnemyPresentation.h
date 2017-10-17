@@ -8,8 +8,7 @@
 #include <memory>
 #include "EnemyBulletPresentation.h"
 
-using namespace sf;
-using namespace std;
+using std::vector;
 
 //! Enemy Presentation Class - contols the presentation of the main enemies.
 /*! This class is responsible drawing and updating position of the enemy sprites.
@@ -33,7 +32,7 @@ public:
     /** Draws the satellite sprite.
      * @param window to draw the enemy on.
      */
-    void draw(RenderWindow& window);
+    void draw(sf::RenderWindow& window);
     /**
      * @brief Updates the enemy Sprite's position after the enemy has moved.
      * @param xPosition  x co-ordinate the enemy has moved to.
@@ -44,7 +43,7 @@ public:
      * @brief Returns the enemy Sprite.
      * @return Sprite containing the enemy graphics.
      */
-    Sprite getEnemySprite();
+    sf::Sprite getEnemySprite();
     /**
      * @brief Updates the position of an enemy bullet.
      * @param xPosition x co-ordinate the bullet has moved to.
@@ -67,8 +66,8 @@ public:
 
 private:
     vector<EnemyBulletPresentation> _enemyBulletPresentationVector;
-    Texture enemySpriteTexture;
-    Sprite _enemySprite;
+    sf::Texture enemySpriteTexture;
+    sf::Sprite _enemySprite;
 };
 
 #endif // ENEMYPRESENTATION_H
