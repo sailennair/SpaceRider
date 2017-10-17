@@ -1,8 +1,8 @@
 #include "FinalWindow.h"
 
-FinalWindow::FinalWindow()
-    : _width(GameXWindow)
-    , _height(GameYWindow)
+FinalWindow::FinalWindow(): 
+    _width(GameXWindow),
+    _height(GameYWindow)
 {
 }
 
@@ -14,7 +14,7 @@ void FinalWindow::closeWindow()
 // Sets up Window dimensions and Settings
 void FinalWindow::setUpWindow()
 {
-    _window.create(VideoMode(_width, _height), "Gyruss");
+    _window.create(sf::VideoMode(_width, _height), "Space Rider");
     _window.setMouseCursorVisible(false);
     _window.setVerticalSyncEnabled(true);
 }
@@ -49,7 +49,7 @@ void FinalWindow::run()
     setUpWindow();
     while(_window.isOpen()) {
 
-        Event event;
+       sf::Event event;
         while(_window.pollEvent(event)) {
 
             if(didPlayerLoseGame()) {
@@ -58,17 +58,18 @@ void FinalWindow::run()
                 _playerLostOrWonMessage.setString("CONGRATULATIONS, You have WON the Game!!");
             }
 
-            if(event.type == Event::KeyPressed) { // Need to check this because mouse was been picked up as input
+            if(event.type == sf::Event::KeyPressed) { // Need to check this because mouse was been picked up as input
                 hadleUserDecision(event);
             }
 
-            if(event.type == Event::Closed) {
+            if(event.type == sf::Event::Closed) {
+                _isPlayerQuitting = true;
                 _window.close();
                 break;
             }
         }
 
-        _window.clear(Color::Black);
+        _window.clear(sf::Color::Black);
         _window.draw(_prompUserToContinue);
         _window.draw(_playerLostOrWonMessage);
         _window.draw(_continueOrQuitMessage);
@@ -76,34 +77,34 @@ void FinalWindow::run()
     }
 }
 
-void FinalWindow::hadleUserDecision(const Event& event)
+void FinalWindow::hadleUserDecision(const sf::Event& event)
 {
-    if(event.key.code == Keyboard::Space) {
+    if(event.key.code == sf::Keyboard::Space) {
         _continueOrQuitMessage.setFont(_font);
         _continueOrQuitMessage.setString("Good Luck Player!!");
         _continueOrQuitMessage.setCharacterSize(30);
         _continueOrQuitMessage.setPosition((_width / 2 - 3 * _continueOrQuitMessage.getCharacterSize()), _height / 2);
 
-        _window.clear(Color::Black);
+        _window.clear(sf::Color::Black);
         _window.draw(_continueOrQuitMessage);
         _window.display();
 
-        sleep(milliseconds(1500));
+        sf::sleep(sf::milliseconds(1500));
         _isPlayerQuitting = false;
         _window.close();
     }
 
-    if(event.key.code == Keyboard::Escape) {
+    if(event.key.code == sf::Keyboard::Escape) {
         _continueOrQuitMessage.setFont(_font);
         _continueOrQuitMessage.setString("Good Bye See You Soon");
         _continueOrQuitMessage.setCharacterSize(24);
         _continueOrQuitMessage.setPosition((_width / 2 - 4 * _continueOrQuitMessage.getCharacterSize()), _height / 2);
 
-        _window.clear(Color::Black);
+        _window.clear(sf::Color::Black);
         _window.draw(_continueOrQuitMessage);
         _window.display();
 
-        sleep(milliseconds(1500));
+        sf::sleep(sf::milliseconds(1500));
         _isPlayerQuitting = true;
         _window.close();
     }

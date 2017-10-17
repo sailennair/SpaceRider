@@ -26,9 +26,13 @@ public:
     EnemyPresentation();
     /**
      * @brief Constructor Inititalise the player texture, default position and scale for a type of enemy.
-     * @param window the window to draw the enemy into.
+     * @param type specifies if enemy is normal enemy or laser generator enemy. type 1 for normal enemey and type 2 laser generator.
      */
     EnemyPresentation(int type);
+    
+/** Draws the satellite sprite.
+ * @param window to draw the enemy on.
+ */
     void draw(RenderWindow& window);
     /**
      * @brief Updates the enemy Sprite's position after the enemy has moved.

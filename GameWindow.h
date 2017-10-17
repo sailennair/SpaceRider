@@ -18,8 +18,8 @@ using std::make_shared;
 
 using namespace sf;
 
-//! Game Window class - creates a gamw window and runs the game in sequence.
-/*! This class runs the game in sequence and renders all the game objects onto the scree.
+//! Game Window class - creates a game window and runs the game in sequence.
+/*! This class runs the game in sequence and renders all the game objects onto the screen.
 \author Sailen Nair and William Becerra
  *
 */

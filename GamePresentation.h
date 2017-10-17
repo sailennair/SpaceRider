@@ -28,7 +28,6 @@ the Game Logic class.
 \author Sailen Nair and William Becerra
  *
 */
-using namespace std;
 
 class GamePresentation
 {
@@ -40,7 +39,7 @@ public:
     /**Draws the player sprite aswell as the amount of lives the player has remaining.
      * @param window
      */
-    void renderPlayerSprite(RenderWindow& window);
+    void renderPlayerSprite(sf::RenderWindow& window);
 
     /**Gets the position of the player and updates the sprites position of the player.
      */
@@ -67,7 +66,7 @@ public:
      * Function calls the draw function implemented within the Player bullet class.
      * @param window
      */
-    void drawAllBullets(RenderWindow& window);
+    void drawAllBullets(sf::RenderWindow& window);
 
     /**Deletes the presentation objects of player bullets and satellite bullets when they go out of scope.
      * The function will chech if the satellite bullets and the player bullets are alive from the logic layer, if they
@@ -89,7 +88,7 @@ public:
     /**Will call the delete all enemies function, and the it will draw all the presentations of the enemies.
      * @param window
      */
-    void drawAllEnemies(RenderWindow& window);
+    void drawAllEnemies(sf::RenderWindow& window);
 
     /**Will delete the enemies and satelliet presentation objects that are set to dead in the logic domain
      */
@@ -102,7 +101,7 @@ public:
     /**Gets the position of the satellites and then draws the satellites.
      * @param window
      */
-    void drawSatellites(RenderWindow& window);
+    void drawSatellites(sf::RenderWindow& window);
 
     /**Funciton will delete all the enemy bullets whose lives are set to false in the logic layer.
      */
@@ -111,7 +110,7 @@ public:
     /**Will return the vector of satellite presentation objects.
      * @return Vector of type 'SatellitePresentation'
      */
-    vector<SatellitePresentation> getSatellitePresentationVector();
+    std::vector<SatellitePresentation> getSatellitePresentationVector();
 
     /**Creates bullets for the satellites that are still alive.
      * The bullets are stored in a vector of type 'EnemyBulletPresentation'
@@ -121,7 +120,7 @@ public:
     /**Gets the position of all the satellite bullets and draws them.
      * @param window
      */
-    void drawSatelliteBullets(RenderWindow& window);
+    void drawSatelliteBullets(sf::RenderWindow& window);
 
     /**Retrieves the current lives remaining from the logic domain and sends it to the life presentation class.
      */
@@ -134,7 +133,7 @@ public:
     /**Draws the laser generator.
      * @param window
      */
-    void drawLaserGenerator(RenderWindow& window);
+    void drawLaserGenerator(sf::RenderWindow& window);
 
     /**Updates the presentation of all the entities making up the laser generator.
      * The laser generator presentation is made up of enemy presentation and enemy bullet presentation. All these
@@ -159,7 +158,7 @@ public:
     /**Draws the Asteroid.
      * @param window
      */
-    void drawAsteroid(RenderWindow& window);
+    void drawAsteroid(sf::RenderWindow& window);
 
     /**Deletes the asteroid presentation object if its 'isOutOfBounds' property is set to false in the logic domain.
      */
@@ -172,7 +171,7 @@ public:
     /**Draws the score on the screen.
      * @param window
      */
-    void drawScorePresentation(RenderWindow& window);
+    void drawScorePresentation(sf::RenderWindow& window);
 
     /**Returns the amount of enemies have been killed.
      * @return number of enemies killed.
@@ -182,36 +181,36 @@ public:
     /**Returns a vector of type 'EnemyPresentation' with the enemy presentation objects.
      * @return vector of type 'EnemyPresentation'
      */
-    vector<EnemyPresentation> getEnemyPresentationVector();
+    std::vector<EnemyPresentation> getEnemyPresentationVector();
 
     /**Returns a vector of type 'LaserGeneratorPresntation'.
      * @return vector of type 'LaserGeneratorPresntation'
      */
-    vector<LaserGeneratorPresentation> getLaserGeneratorPresentation();
+    std::vector<LaserGeneratorPresentation> getLaserGeneratorPresentation();
 
     /**Returns a vector of type 'AsteroidPresentation'.
      * @return vector of type 'AsteroidPresentation'.
      */
-    vector<AsteroidPresentation> getAsteroidPresentationVector();
+    std::vector<AsteroidPresentation> getAsteroidPresentationVector();
 
     shared_ptr<GameLogic> gameLogic_shared_pointer;
 
 private:
     PlayerPresentation _playerPresentation;
 
-    vector<PlayerBulletPresentation> playerBulletPresentationVector;
+    std::vector<PlayerBulletPresentation> playerBulletPresentationVector;
 
-    vector<EnemyPresentation> enemyPresentationVector;
+    std::vector<EnemyPresentation> enemyPresentationVector;
 
     vector<SatellitePresentation> satellitePresentationVector;
 
     LifePresentation _lifePresentation;
 
-    vector<EnemyBulletPresentation> satelliteBulletPresentationVector;
+    std::vector<EnemyBulletPresentation> satelliteBulletPresentationVector;
 
-    vector<LaserGeneratorPresentation> _laserGeneratorPresentation;
+    std::vector<LaserGeneratorPresentation> _laserGeneratorPresentation;
 
-    vector<AsteroidPresentation> asteroidPresentationVector;
+    std::vector<AsteroidPresentation> asteroidPresentationVector;
 
     ScorePresentation scorePresentation;
 

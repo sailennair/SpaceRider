@@ -5,31 +5,49 @@
 #include "GameCommonData.h"
 #include "ExplosionPresentation.h"
 
-using namespace sf;
+//! Creates a  introduction game window.
+/*! Generates and appropiate message for the player. This include instructions and game rules
+ * Promps the player for to press space bar to continue
+\author Sailen Nair and William Becerra
+ *
+*/
 
 class IntroductionWindow
 {
 public:
+/** Default constructor
+ * Loads all the window graphics and textures
+ */ 
     IntroductionWindow();
+    
+/** Void function contains the window loop.
+ *  Is responsible for drawing all the graphics of the window and take in user input
+ */
     void run();
+    
+/** Boolean function to return the players decision.
+ *  @return bool true if the player decides to quit
+ */    
     bool isQuitingGame();
+/** Void function to close introduction window.
+ */
     void closeWindow();
 
 private:
     void createWindow();
     void settingUpText();
-    void hadleUserDecision(const Event& event);
+    void hadleUserDecision(const sf::Event& event);
 
     bool _isPlayerQuiting;
 
-    Font _font;
+    sf::Font _font;
 
-    Text _instructionText;
-    Text _continueOrQuitText;
-    Text _continuePrompt;
-    Text _gameRulesText;
+    sf::Text _instructionText;
+    sf::Text _continueOrQuitText;
+    sf::Text _continuePrompt;
+    sf::Text _gameRulesText;
     //    Vector2i _windowSize;
-    RenderWindow _window;
+    sf::RenderWindow _window;
 };
 
 #endif

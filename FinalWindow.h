@@ -5,22 +5,45 @@
 #include <iostream>
 #include "GameCommonData.h"
 
-using namespace sf;
+//! Creates a  final game window.
+/*! Generates and appropiate message for the player and promps the player for a replay
+\author Sailen Nair and William Becerra
+ *
+*/
 
 class FinalWindow
 {
 public:
+/** Default constructor.
+ * Loads all the graphics and text rendering of the final window.
+ */
     FinalWindow();
+/** Returns true if player decided to quite game
+ * @return boolean true for player quiting the game
+ */
+    bool isPlayerQuittingGame();
+    
+/** Returns true if player lost game
+ * @return boolean true for player losing the game
+ */
+    bool didPlayerLoseGame(); 
 
-    bool isPlayerQuittingGame(); // Returns true if player decides to quite the game
-    bool didPlayerLoseGame();    // Returns true if the player lost the game
-
-    // This function set whether the player lost or is quitting the game
+/** Setter function to set the players decision to quit the game.
+ * @param decision boolean containing player's decision.
+ */
     void setQuittingGame(bool decision);
+    
+/** Setter function to set the players losing game status.
+ * @param status boolean containing player's losing game status.
+ */    
     void setPLayerLostGame(bool status);
 
-    // This function runs the window loop and logic
+/** Void function that runs the window loop
+ * waits for players input to act acordingly
+ */
     void run();
+/** Void function to close the FinalWindow.
+ */
     void closeWindow();
 
 private:
@@ -31,22 +54,22 @@ private:
     void setUpWindow();
     void loadText();
     // Hnadles user input
-    void hadleUserDecision(const Event& event);
+    void hadleUserDecision(const sf::Event& event);
 
     // Player Status and Decision variables
     bool _isPlayerQuitting;
     bool _didPlayerLose;
 
     // Messages to display
-    Text _playerLostOrWonMessage;
-    Text _continueOrQuitMessage;
-    Text _prompUserToContinue;
+    sf::Text _playerLostOrWonMessage;
+    sf::Text _continueOrQuitMessage;
+    sf::Text _prompUserToContinue;
 
     // Font used for the text in these window
-    Font _font;
+    sf:: Font _font;
 
     // The sfml-window
-    RenderWindow _window;
+    sf::RenderWindow _window;
 
     // Window Dimensions
     unsigned int _width;

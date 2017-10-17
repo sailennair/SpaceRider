@@ -14,7 +14,7 @@ void GamePresentation::updateScorePresentation()
     scorePresentation.setScoreMessage(gameLogic_shared_pointer->getHighScore());
 }
 
-void GamePresentation::drawScorePresentation(RenderWindow& window)
+void GamePresentation::drawScorePresentation(sf::RenderWindow& window)
 {
     scorePresentation.setScoreMessage(gameLogic_shared_pointer->getHighScore());
     scorePresentation.draw(window, 10, 10);
@@ -36,7 +36,7 @@ void GamePresentation::checkPlayerPresentationLifeDead()
     }
 }
 
-void GamePresentation::renderPlayerSprite(RenderWindow& window)
+void GamePresentation::renderPlayerSprite(sf::RenderWindow& window)
 {
 
     _playerPresentation.draw(window);
@@ -72,7 +72,7 @@ void GamePresentation::upDatePlayerBulletPresentation()
     }
 }
 
-void GamePresentation::drawAllBullets(RenderWindow& window)
+void GamePresentation::drawAllBullets(sf::RenderWindow& window)
 {
     deleteOutofScopeBullets();
     for(auto& iter : playerBulletPresentationVector) {
@@ -137,7 +137,7 @@ void GamePresentation::updateEnemyPresentation()
     }
 }
 
-void GamePresentation::drawAllEnemies(RenderWindow& window)
+void GamePresentation::drawAllEnemies(sf::RenderWindow& window)
 {
     // drawing all the enemies
     deleteDeadEnemies();
@@ -213,7 +213,7 @@ void GamePresentation::createSatellitePresenetation()
     }
 }
 
-void GamePresentation::drawSatellites(RenderWindow& window)
+void GamePresentation::drawSatellites(sf::RenderWindow& window)
 {
     if(satellitePresentationVector.size() > 0 && gameLogic_shared_pointer->getSatelliteLogicVector().size() > 0) {
         for(unsigned int index = 0; index < unsigned(satellitePresentationVector.size()); index++) {
@@ -241,7 +241,7 @@ void GamePresentation::createSatelliteBulletPresentation()
     }
 }
 
-void GamePresentation::drawSatelliteBullets(RenderWindow& window)
+void GamePresentation::drawSatelliteBullets(sf::RenderWindow& window)
 {
     for(unsigned int i = 0; i < unsigned(satelliteBulletPresentationVector.size()); i++) {
         gameLogic_shared_pointer->updateSatelliteBullets(i);
@@ -281,7 +281,7 @@ void GamePresentation::updateLaserGeneratorPresentation()
     }
 }
 
-void GamePresentation::drawLaserGenerator(RenderWindow& window)
+void GamePresentation::drawLaserGenerator(sf::RenderWindow& window)
 {
     if(_laserGeneratorPresentation.size() > 0) {
         _laserGeneratorPresentation[0].draw(window);

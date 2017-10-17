@@ -11,7 +11,7 @@ void IntroductionWindow::closeWindow(){
 
 void IntroductionWindow::createWindow()
 {
-    _window.create(VideoMode(GameXWindow, GameYWindow), "Gyruss-Intro");
+    _window.create(sf::VideoMode(GameXWindow, GameYWindow), "Gyruss-Intro");
     _window.setMouseCursorVisible(false);
     _window.setVerticalSyncEnabled(true);
 }
@@ -52,20 +52,21 @@ void IntroductionWindow::run()
    
     while(_window.isOpen()) {
 
-        Event event;
+        sf::Event event;
         while(_window.pollEvent(event)) {
 
-            if(event.type == Event::Closed) {
+            if(event.type == sf::Event::Closed) {
+                _isPlayerQuiting = true;
                 _window.close();
                 break;
             }
 
-            if(event.type == Event::KeyPressed) { // Need to check this because mouse was been picked up as input
+            if(event.type == sf::Event::KeyPressed) { // Need to check this because mouse was been picked up as input
                 hadleUserDecision(event);
             }
         }
 
-        _window.clear(Color::Black);
+        _window.clear(sf::Color::Black);
         _window.draw(_instructionText);
         _window.draw(_gameRulesText);
         _window.draw(_continuePrompt);
@@ -79,34 +80,34 @@ bool IntroductionWindow::isQuitingGame()
     return _isPlayerQuiting;
 }
 
-void IntroductionWindow::hadleUserDecision(const Event& event)
+void IntroductionWindow::hadleUserDecision(const sf::Event& event)
 {
-    if(event.key.code == Keyboard::Space) {
+    if(event.key.code == sf::Keyboard::Space) {
         _continueOrQuitText.setFont(_font);
         _continueOrQuitText.setString("Good Luck Player");
         _continueOrQuitText.setCharacterSize(24);
         _continueOrQuitText.setPosition(300, 250);
 
-        _window.clear(Color::Black);
+        _window.clear(sf::Color::Black);
         _window.draw(_continueOrQuitText);
         _window.display();
 
-        sleep(milliseconds(1500));
+        sf::sleep(sf::milliseconds(1500));
         _isPlayerQuiting = false;
         _window.close();
     }
 
-    if(event.key.code == Keyboard::Escape) {
+    if(event.key.code == sf::Keyboard::Escape) {
         _continueOrQuitText.setFont(_font);
         _continueOrQuitText.setString("Good Bye See You Soon");
         _continueOrQuitText.setCharacterSize(24);
         _continueOrQuitText.setPosition(280, 250);
 
-        _window.clear(Color::Black);
+        _window.clear(sf::Color::Black);
         _window.draw(_continueOrQuitText);
         _window.display();
 
-        sleep(milliseconds(1500));
+        sf::sleep(sf::milliseconds(1500));
         _isPlayerQuiting = true;
         _window.close();
     }
