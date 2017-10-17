@@ -71,6 +71,8 @@
     <File Name="SpaceRiderTests.cpp" ExcludeProjConfig="Debug"/>
     <File Name="ExplosionPresentation.h"/>
     <File Name="ExplosionPresentation.cpp"/>
+    <File Name="FireAnimation.h"/>
+    <File Name="FireAnimation.cpp"/>
   </VirtualDirectory>
   <Dependencies Name="Debug"/>
   <Dependencies Name="Release"/>

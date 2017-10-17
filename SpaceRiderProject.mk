@@ -65,7 +65,7 @@ CodeLiteDir:=C:\Program Files\CodeLite
 Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/IMovingGameObject.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/GameWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/GamePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBullet.cpp$(ObjectSuffix) $(IntermediateDirectory)/PlayerBulletPresentation.cpp$(ObjectSuffix) \
 	$(IntermediateDirectory)/EnemyLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/EnemyBulletPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IPlayer.cpp$(ObjectSuffix) $(IntermediateDirectory)/IEnemy.cpp$(ObjectSuffix) $(IntermediateDirectory)/CollisionDetection.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatelliteLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/SatellitePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/LifeLogic.cpp$(ObjectSuffix) \
 	$(IntermediateDirectory)/LifePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/LaserGeneratorLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/LaserGeneratorPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/AsteroidLogic.cpp$(ObjectSuffix) $(IntermediateDirectory)/AsteroidPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/ScoreDatabase.cpp$(ObjectSuffix) $(IntermediateDirectory)/Score.cpp$(ObjectSuffix) $(IntermediateDirectory)/ScorePresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/IntroductionWindow.cpp$(ObjectSuffix) $(IntermediateDirectory)/FinalWindow.cpp$(ObjectSuffix) \
-	$(IntermediateDirectory)/ExplosionPresentation.cpp$(ObjectSuffix) 
+	$(IntermediateDirectory)/ExplosionPresentation.cpp$(ObjectSuffix) $(IntermediateDirectory)/FireAnimation.cpp$(ObjectSuffix) 
 
 
 
@@ -343,6 +343,14 @@ $(IntermediateDirectory)/ExplosionPresentation.cpp$(DependSuffix): ExplosionPres
 
 $(IntermediateDirectory)/ExplosionPresentation.cpp$(PreprocessSuffix): ExplosionPresentation.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/ExplosionPresentation.cpp$(PreprocessSuffix) ExplosionPresentation.cpp
+
+$(IntermediateDirectory)/FireAnimation.cpp$(ObjectSuffix): FireAnimation.cpp $(IntermediateDirectory)/FireAnimation.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/User/Documents/SoftwareDev2Project/SpaceRiderProject/FireAnimation.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/FireAnimation.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/FireAnimation.cpp$(DependSuffix): FireAnimation.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/FireAnimation.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/FireAnimation.cpp$(DependSuffix) -MM FireAnimation.cpp
+
+$(IntermediateDirectory)/FireAnimation.cpp$(PreprocessSuffix): FireAnimation.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/FireAnimation.cpp$(PreprocessSuffix) FireAnimation.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

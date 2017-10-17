@@ -343,6 +343,12 @@ TEST_CASE("PlayerBulletMovesCorrectly")
     CHECK(playerBulletLogic.getYposition() == 228);
 }
 
+TEST_CASE("PlayerBulletLifeISreturnedCorrectly")
+{
+    PlayerBullet playerBulletLogic(100, 200, PI / 4, 1);
+    CHECK(playerBulletLogic.isAlive() == true);
+}
+
 TEST_CASE("PlayerBulletlifeCanBeSet")
 {
     PlayerBullet playerBulletLogic(100, 200, PI / 4, 1);
@@ -369,6 +375,28 @@ TEST_CASE("PlayerBulletForConstructorType2")
     PlayerBullet playerBulletLogic(100, 200, PI / 4, 2);
     CHECK(playerBulletLogic.getRadius() == 6);
     CHECK(playerBulletLogic.getDamage() == 20);
+}
+
+TEST_CASE("PlayerBulletFiresCorrectly")
+{
+    PlayerBullet playerBulletLogic(100, 200, PI / 4, 2);
+    CHECK(playerBulletLogic.getXposition() == 133.0f);
+    CHECK(playerBulletLogic.getYposition() == 224.0f);
+    playerBulletLogic.fire();
+    CHECK(playerBulletLogic.getXposition() == 149.0f);
+    CHECK(playerBulletLogic.getYposition() == 228.0f);
+}
+
+TEST_CASE("PlayerBulletCenterXPositionIsReturnedCorrectly")
+{
+    PlayerBullet playerBulletLogic(100, 200, PI / 4, 2);
+    CHECK(playerBulletLogic.getCenterXPosition() == 103.0f);
+}
+
+TEST_CASE("PlayerBulletCenterYPositionIsReturnedCorrectly")
+{
+    PlayerBullet playerBulletLogic(100, 200, PI / 4, 2);
+    CHECK(playerBulletLogic.getCenterYPosition() == 203.0f);
 }
 
 //**** Tests for PlayerBulletPresentation ****//
@@ -459,6 +487,20 @@ TEST_CASE("EnemyBulletRadiusCanBeRetrieved")
     CHECK(enemyBulletLogic.getRadius() == 5);
 }
 
+TEST_CASE("EnemyBulletCenterXPositionisCorredr")
+{
+    EnemyBulletLogic enemyBulletLogic(100, 200, PI / 4);
+    int centerX = enemyBulletLogic.getCenterXPosition();
+    CHECK(centerX == 102);
+}
+
+TEST_CASE("EnemyBulletCenterXPositionisCorredr")
+{
+    EnemyBulletLogic enemyBulletLogic(100, 200, PI / 4);
+    int centerY = enemyBulletLogic.getCenterYPosition();
+    CHECK(centerY == 202);
+}
+
 //**** Tests for EnemyBulletPresentation ****//
 
 TEST_CASE("EnemyBulletDefaultConstructorHasLargeRadiusAndIsRed")
@@ -508,6 +550,12 @@ TEST_CASE("CheckIFSatellietMovesCorrectly")
     CHECK(y == 115);
 }
 
+TEST_CASE("SatellietLifeISRetrievec")
+{
+    SatelliteLogic satelliteLogic(100, 120, PI / 4);
+    CHECK(satelliteLogic.isAlive() == true);
+}
+
 TEST_CASE("SatelliteWillDieWhenHealthis0")
 {
     SatelliteLogic satellietLogic(100, 120, PI / 4);
@@ -520,6 +568,20 @@ TEST_CASE("SatelliteCollisionRadiusIsReturned")
 {
     SatelliteLogic satellietLogic(100, 120, PI / 4);
     CHECK(satellietLogic.getRadius() == 15);
+}
+
+TEST_CASE("SatelliteRerturnsTheCorrectCenterXPosition")
+{
+    SatelliteLogic satelliteLogic(100, 120, PI / 4);
+    int centerx = satelliteLogic.getCenterXPosition();
+    CHECK(centerx == 107);
+}
+
+TEST_CASE("SatelliteRerturnsTheCorrectCenterYPosition")
+{
+    SatelliteLogic satelliteLogic(100, 120, PI / 4);
+    int centerY = satelliteLogic.getCenterYPosition();
+    CHECK(centerY == 127);
 }
 
 //**** Tests for AsteroidLogic ****//
@@ -556,6 +618,11 @@ TEST_CASE("AngleOFAsteroidIsReturened")
     AsteroidLogic asteroidLogic(PI / 4);
     CHECK(doctest::Approx(asteroidLogic.getAngleofRotation()) == PI / 4);
 }
+TEST_CASE("AsteroidLifeCanBeRetrieved")
+{
+    AsteroidLogic asteroidLogic(PI / 4);
+    CHECK(asteroidLogic.isAlive() == true);
+}
 
 TEST_CASE("AsteroidLifeCanBeSet")
 {
@@ -565,12 +632,38 @@ TEST_CASE("AsteroidLifeCanBeSet")
     CHECK(asteroidLogic.isAlive() == false);
 }
 
+TEST_CASE("AsteroidBoundsCanBERetrived")
+{
+    AsteroidLogic asteroidLogic(PI / 4);
+    CHECK(asteroidLogic.isOutOfBounds() == false);
+}
+
 TEST_CASE("AsteroidOutOfBoundsCanBeSet")
 {
     AsteroidLogic asteroidLogic(PI / 4);
     CHECK(asteroidLogic.isOutOfBounds() == false);
     asteroidLogic.setOutOfBounds(true);
     CHECK(asteroidLogic.isOutOfBounds() == true);
+}
+
+TEST_CASE("AsteroidCenterXPositionCanBeRetrived")
+{
+    AsteroidLogic asteroidLogic(PI / 4);
+    int centerX = asteroidLogic.getCenterXPosition();
+    CHECK(centerX == 420);
+}
+
+TEST_CASE("AsteroidCenterYPositionCanBeRetrived")
+{
+    AsteroidLogic asteroidLogic(PI / 4);
+    int centerY = asteroidLogic.getCenterYPosition();
+    CHECK(centerY == 320);
+}
+
+TEST_CASE("AsteroidDamageCanbeREtrieved")
+{
+    AsteroidLogic asteroidLogic(PI / 4);
+    CHECK(asteroidLogic.getDamage() == 20);
 }
 
 //**** Tests for AsteroidPresentation ****//
@@ -716,8 +809,8 @@ TEST_CASE("PlayerBulletAndEnemyCollide")
 
 TEST_CASE("PlayerBulletAndAsteroidCollide")
 {
-    PlayerBullet playerBullet(CenterXGameWindow, CenterYGameWindow, PI / 4, 2);
     AsteroidLogic asteroid(PI / 4);
+    PlayerBullet playerBullet(asteroid.getCenterXPosition(), asteroid.getCenterYPosition(), PI / 4, 2);
     CollisionDetection collisionDetection;
     CHECK(collisionDetection.didObjectsCollide(playerBullet, asteroid) == true);
 }

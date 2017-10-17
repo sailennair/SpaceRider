@@ -36,7 +36,7 @@ Debug/GameWindow.cpp.o: GameWindow.cpp GameWindow.h GamePresentation.h \
  EnemyBulletPresentation.h SatellitePresentation.h LifePresentation.h \
  LaserGeneratorPresentation.h AsteroidPresentation.h ScorePresentation.h \
  ExplosionPresentation.h SFML/Graphics.hpp IntroductionWindow.h \
- FinalWindow.h
+ FinalWindow.h FireAnimation.h
 
 GameWindow.h:
 
@@ -239,3 +239,5 @@ SFML/Graphics.hpp:
 IntroductionWindow.h:
 
 FinalWindow.h:
+
+FireAnimation.h:
