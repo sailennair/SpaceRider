@@ -28,10 +28,18 @@ const int yOrigin = (GameYWindow / 2);
 
 enum class Direction { LEFT, RIGHT };
 
+/**This struct holds the players details to compare to other players highes score.
+ * This feature is not yet functional and therefore is not used in the game.
+ * @class PlayerDetails
+ * @author William and Sailen
+ * @date 17/10/2017
+ * @file GameCommonData.h
+ * @brief This struct holds the players details to compare to other players highes score
+ * 
+ */
 struct PlayerDetails {
     std::string name;
     int score;
 };
 
-// TEsting  the git communication
 #endif // GAMECOMMONDATA_H
