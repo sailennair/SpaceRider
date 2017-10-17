@@ -50,17 +50,17 @@ public:
     /**Returns a vector of type 'EnemyLogic' with the two laser generator enemies storred within.
      * @return - returns a vector of type 'EnemyLogic'
      */
-    vector<EnemyLogic> getLaserGeneratorEnemyLogicVector();
+    std::vector<EnemyLogic> getLaserGeneratorEnemyLogicVector();
 
     /**Returns a vector of type 'EnemyBulletLogic' with all the laser bullets storred within.
      * @return Returns a vector of type 'EnemyBulletLogic'
      */
-    vector<EnemyBulletLogic> getLaserGeneratorBulletLogicVector();
+    std::vector<EnemyBulletLogic> getLaserGeneratorBulletLogicVector();
 
 private:
-    vector<EnemyLogic> _laserGeneratorEnemyLogicVector;
+    std::vector<EnemyLogic> _laserGeneratorEnemyLogicVector;
 
-    vector<EnemyBulletLogic> _laserGeneratorEnemyBulletLogicVector;
+    std::vector<EnemyBulletLogic> _laserGeneratorEnemyBulletLogicVector;
 
     float _theta;
 

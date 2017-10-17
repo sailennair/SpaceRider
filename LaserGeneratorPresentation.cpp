@@ -17,7 +17,7 @@ LaserGeneratorPresentation::LaserGeneratorPresentation()
     }
 }
 
-void LaserGeneratorPresentation::draw(RenderWindow& window)
+void LaserGeneratorPresentation::draw(sf::RenderWindow& window)
 {
 
     for(auto& iter : laserBulletPresentationVector) {

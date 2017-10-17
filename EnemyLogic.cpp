@@ -43,7 +43,7 @@ void EnemyLogic::moveToCenter(float xPosition, float yPosition, float theta)
     _centerYPosition = _ypos + enemySize;
 }
 
-vector<EnemyBulletLogic> EnemyLogic::getEnemyBulletLogicVector()
+std::vector<EnemyBulletLogic> EnemyLogic::getEnemyBulletLogicVector()
 {
     return enemyBulletLogicVector;
 }

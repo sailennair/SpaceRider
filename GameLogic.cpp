@@ -39,14 +39,14 @@ void GameLogic::createPlayerBullet()
     playerBulletLogicVector.push_back(playerBullet);
 }
 
-vector<PlayerBullet> GameLogic::getPlayerLogicBullets()
+std::vector<PlayerBullet> GameLogic::getPlayerLogicBullets()
 {
     return playerBulletLogicVector;
 }
 
 void GameLogic::playerBulletUpdate()
 {
-    for(auto iter = 0; iter < unsigned(playerBulletLogicVector.size()); iter++) {
+    for(unsigned int iter = 0; iter < playerBulletLogicVector.size(); iter++) {
         playerBulletLogicVector[iter].fire();
     }
 }
@@ -125,7 +125,7 @@ void GameLogic::checkCollision()
 
     if(enemyLogicVector.size() > 0) {
         // Checking collision between player and enemy
-        for(auto index = 0; index < enemyLogicVector.size(); index++) {
+        for(unsigned int index = 0; index < enemyLogicVector.size(); index++) {
             if(collisionDetection.didObjectsCollide(player, enemyLogicVector[index]) == true) {
                 enemyLogicVector[index].setLife(false);
                 player.reduceHealth(20);
@@ -167,7 +167,7 @@ void GameLogic::checkCollision()
     }
 
     if(_laserGeneratorLogic.size() > 0) {
-        for(auto index = 0; index < _laserGeneratorLogic[0].getLaserGeneratorEnemyLogicVector().size(); index++) {
+        for(unsigned int index = 0; index < _laserGeneratorLogic[0].getLaserGeneratorEnemyLogicVector().size(); index++) {
             if(playerBulletLogicVector.size() > 0) {
                 for(auto& iter : playerBulletLogicVector) {
                     if(collisionDetection.didObjectsCollide(
@@ -182,7 +182,7 @@ void GameLogic::checkCollision()
                 player.reduceHealth(20);
             }
         }
-        for(int index = 0; index < _laserGeneratorLogic[0].getLaserGeneratorBulletLogicVector().size(); index++) {
+        for(unsigned int index = 0; index < _laserGeneratorLogic[0].getLaserGeneratorBulletLogicVector().size(); index++) {
             if(collisionDetection.didObjectsCollide(
                    player, _laserGeneratorLogic[0].getLaserGeneratorBulletLogicVector()[index]) == true) {
                 player.reduceHealth(20);
@@ -250,7 +250,7 @@ void GameLogic::checkSatelliteBulletScope()
     }
 }
 
-vector<EnemyBulletLogic> GameLogic::getSatellietBulletLogicVector()
+std::vector<EnemyBulletLogic> GameLogic::getSatellietBulletLogicVector()
 {
     return satelliteBulletLogic;
 }
@@ -329,7 +329,7 @@ void GameLogic::deleteOutOfScopeAsteroids(int index)
     }
 }
 
-vector<LaserGeneratorLogic> GameLogic::getlaserGeneratorLogic()
+std::vector<LaserGeneratorLogic> GameLogic::getlaserGeneratorLogic()
 {
     return _laserGeneratorLogic;
 }
@@ -346,7 +346,7 @@ void GameLogic::deletePlayerBullet(int index)
     playerBulletLogicVector.erase(playerBulletLogicVector.begin() + index);
 }
 
-vector<EnemyLogic> GameLogic::getEnemyLogicVector()
+std::vector<EnemyLogic> GameLogic::getEnemyLogicVector()
 {
     return enemyLogicVector;
 }
@@ -373,7 +373,7 @@ void GameLogic::clearEnemyBullet(int index)
     enemyLogicVector[index].clearEnemyBulletVector();
 }
 
-vector<SatelliteLogic> GameLogic::getSatelliteLogicVector()
+std::vector<SatelliteLogic> GameLogic::getSatelliteLogicVector()
 {
     return satelliteLogicVector;
 }
@@ -385,7 +385,7 @@ void GameLogic::deleteSatelliteLogic(int index)
     score.increasePoints(killedSatellitePoints);
 }
 
-vector<AsteroidLogic> GameLogic::getAsteroidLogicVector()
+std::vector<AsteroidLogic> GameLogic::getAsteroidLogicVector()
 {
     return asteroidLogicVector;
 }

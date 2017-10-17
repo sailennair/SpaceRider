@@ -71,13 +71,13 @@ public:
     float getTheta();
     /**
      * @brief Used to convert degrees to radians.
-     * @param angle in radians.
+     * @param x float angle in radians.
      * @return float angle in degrees.
      */
     float degreesToRadians(float x);
     /**
      * @brief Moves the player left or right for depending on user input.
-     * @param Direction strongly typed enum class.
+     * @param dir Direction strongly typed enum class.
      */
     void playerMove(Direction dir);
     /**
@@ -102,7 +102,7 @@ public:
     int getHealth();
     /**
      * @brief Sets the players alive status to dead or alive.
-     * @param boolean life status. false to set player to dead.
+     * @param  life boolean alive status. false to set player to dead.
      */
     void setLife(bool life);
     /**

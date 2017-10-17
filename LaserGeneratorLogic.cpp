@@ -1,7 +1,5 @@
 #include "LaserGeneratorLogic.h"
 
-// LaserGeneratorLogic::LaserGeneratorLogic(){}
-
 LaserGeneratorLogic::LaserGeneratorLogic()
 {
     float laserAngleMovement1 = 8.375;
@@ -75,7 +73,7 @@ void LaserGeneratorLogic::move()
     }
 }
 
-vector<EnemyLogic> LaserGeneratorLogic::getLaserGeneratorEnemyLogicVector()
+std::vector<EnemyLogic> LaserGeneratorLogic::getLaserGeneratorEnemyLogicVector()
 {
     return _laserGeneratorEnemyLogicVector;
 }
@@ -90,7 +88,7 @@ void LaserGeneratorLogic::setGeneratorEnemyLife(int index, bool life)
     _laserGeneratorEnemyLogicVector[index].setLife(life);
 }
 
-vector<EnemyBulletLogic> LaserGeneratorLogic::getLaserGeneratorBulletLogicVector()
+std::vector<EnemyBulletLogic> LaserGeneratorLogic::getLaserGeneratorBulletLogicVector()
 {
     return _laserGeneratorEnemyBulletLogicVector;
 }

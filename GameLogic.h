@@ -176,7 +176,7 @@ public:
     /**This will return the vector of Laser generators.
      * @return a vector of type LaserGeneratorLogic
      */
-    vector<LaserGeneratorLogic> getlaserGeneratorLogic();
+    std::vector<LaserGeneratorLogic> getlaserGeneratorLogic();
 
     /**This will clear the entire vector of LaserGenerators.
      * Since there is only laser generator on the screen at any point in time, by clearing the entire vector, the only
@@ -187,7 +187,7 @@ public:
     /**This will return a vector with all the player bullet objects stored within.
      * @return a vector of type PlayerBullet.
      */
-    vector<PlayerBullet> getPlayerLogicBullets();
+    std::vector<PlayerBullet> getPlayerLogicBullets();
 
     /**Will delete the player object stored in the vector at location passed into the fucntion.
      * @param index - the poisition within the vector, where the player bullet that is going to be deleted is storred.
@@ -202,7 +202,7 @@ public:
     /**Will return a vector with all the enemy objects storred within.
      * @return a vector of type EnemyLogic.
      */
-    vector<EnemyLogic> getEnemyLogicVector();
+    std::vector<EnemyLogic> getEnemyLogicVector();
     /**Will delete an enemy from the enemy Logic vector, and increase the player score.
      * The enemy at the position parsed into the funciton will be deleted as will as the player score will increase by
      * 15 points.
@@ -230,7 +230,7 @@ public:
     /**This will return the vector where the satellite objects are stored.
      * @return a vector of type SatelliteLogic
      */
-    vector<SatelliteLogic> getSatelliteLogicVector();
+    std::vector<SatelliteLogic> getSatelliteLogicVector();
 
     /**This will delete the satellite at position 'index' within the vector, the score will also increase.
      * When a satellite is deleted the score is increased by 25.
@@ -241,7 +241,7 @@ public:
     /**Will return a vector of the Satelliet bullet objects.
      * @return a vector of type SatelliteBulletLogic
      */
-    vector<EnemyBulletLogic> getSatellietBulletLogicVector();
+    std::vector<EnemyBulletLogic> getSatellietBulletLogicVector();
 
     /**Will delete the satellite bullet object stored at position 'index'
      * @param index - position at which the object is stored within the vector.
@@ -256,7 +256,7 @@ public:
     /**This will return the Asteroid vector where the asteroid objects are stored.
      * @return vector of type AsteroidLogic.
      */
-    vector<AsteroidLogic> getAsteroidLogicVector();
+    std::vector<AsteroidLogic> getAsteroidLogicVector();
 
     /**This will save the current score to a text file.
      * The storeScore function from the Score class will be called which will save the current score to a hidden
@@ -283,17 +283,17 @@ private:
 
     Score score;
 
-    vector<LaserGeneratorLogic> _laserGeneratorLogic;
+    std::vector<LaserGeneratorLogic> _laserGeneratorLogic;
 
-    vector<PlayerBullet> playerBulletLogicVector;
+    std::vector<PlayerBullet> playerBulletLogicVector;
 
-    vector<EnemyLogic> enemyLogicVector;
+    std::vector<EnemyLogic> enemyLogicVector;
 
-    vector<SatelliteLogic> satelliteLogicVector;
+    std::vector<SatelliteLogic> satelliteLogicVector;
 
-    vector<EnemyBulletLogic> satelliteBulletLogic;
+    std::vector<EnemyBulletLogic> satelliteBulletLogic;
 
-    vector<AsteroidLogic> asteroidLogicVector;
+    std::vector<AsteroidLogic> asteroidLogicVector;
 
     int _playerBulletType = 1;
 

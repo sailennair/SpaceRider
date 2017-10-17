@@ -14,8 +14,8 @@ public:
     LifeLogic();
 
 /** Constructor Initializes LifeLogic instance.
- * @param xPosition float containing the x co-ordinate to initilise the LifeLogic.
- * @param yPosition float containing the y co-ordinate to initilise the LifeLogic.
+ * @param x float containing the x co-ordinate to initilise the LifeLogic.
+ * @param y float containing the y co-ordinate to initilise the LifeLogic.
  */
     LifeLogic(float x, float y);
 
@@ -30,8 +30,8 @@ public:
     float getYpos() const;
 
 /** Sets the postion of the LifeLogic instance to a position given by the parameters.
- * @param  float containing the x co-ordinate of the LifeLogic.
- * @param float containing the y co-ordinate of the LifeLogic
+ * @param x float containing the x co-ordinate of the LifeLogic.
+ * @param y float containing the y co-ordinate of the LifeLogic
  */ 
     void setPosition(float x, float y);
 

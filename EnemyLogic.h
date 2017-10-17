@@ -106,7 +106,7 @@ public:
  * @brief Returns a vector of type EnemyBulletLogic.
  * @return EnemyBulletLogic containing the bullets the enemy fires
  */
-    vector<EnemyBulletLogic> getEnemyBulletLogicVector();
+    std::vector<EnemyBulletLogic> getEnemyBulletLogicVector();
 /**
  * @brief Clears the EnemyBulleVector
  */
@@ -120,7 +120,7 @@ public:
 
 
 private:
-vector<EnemyBulletLogic> enemyBulletLogicVector;
+std::vector<EnemyBulletLogic> enemyBulletLogicVector;
 
      int enemySize = 20;
     float _xpos;

@@ -33,7 +33,7 @@ public:
     std::vector<PlayerDetails> readScoreFromFile();
 
 /** Writes the information in the parameter to the database
- * @param vector of integers containing scores
+ * @param scoresVect vector of integers containing scores
  * @see readScoreFromFileInt
  */  
     void writeScoreToFile(const std::vector<int>& scoresVect);

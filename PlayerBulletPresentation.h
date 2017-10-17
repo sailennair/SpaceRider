@@ -13,8 +13,7 @@
 class PlayerBulletPresentation
 {
 public:
-/**
- * @brief Default constructor Inititalise the bullet texture, default position, type and scale. 
+/** Constructor inititalise the bullet texture, default position, type and scale. 
  * @param xpos x co-ordinate of the bullets position
  * @param ypos y co-ordinate of the bullets position
  * @param type type of bullet
@@ -26,8 +25,7 @@ public:
  */
 
     sf::CircleShape getBullet();
-/**
- * @brief Draws the bullet in the window defined by the parameter window
+/** Draws the bullet in the window defined by the parameter window
  * @param window to draw the bullet on.
  */
     void draw(sf::RenderWindow &window);
